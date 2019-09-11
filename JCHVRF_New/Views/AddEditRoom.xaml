@@ -1,0 +1,489 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.AddEditRoom"
+        x:Name="AddEditRoomWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+       xmlns:local="clr-namespace:JCHVRF_New.Views"
+              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             xmlns:jchcntrl="clr-namespace:JCHVRF_New.Common.Controls"
+              xmlns:prism="http://prismlibrary.com/"
+              xmlns:Lang="clr-namespace:JCHVRF_New.LanguageData"
+              prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:ext="clr-namespace:JCHVRF_New.Common.UI.Extensions"
+         xmlns:conv="clr-namespace:JCHVRF_New.Common.UI.Converters"
+        mc:Ignorable="d" Height="Auto" Width="Auto">
+
+    <Grid>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+           
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Row="0"  Margin="0,5,0,5">
+                <Button x:Name="btnAddUnit"  Style="{StaticResource styleButtonOnFloor}"  MinHeight="30"  Margin="10,0,0,0" Background="White">
+                    <TextBlock Text="   +   "  Height="17"  Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding AddRoomCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+                <Button  Style="{StaticResource styleButtonOnFloor}" IsEnabled="{Binding RoomList, Converter={conv:CollectionCountToBooleanConverter}}"  MinHeight="30"  Margin="10,0,0,0" Background="White">
+                    <TextBlock Text="   -   "  Height="17"  Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding RemoveRoomCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+                <Button x:Name="btnAdd" Style="{StaticResource styleButtonOnFloor}" MinHeight="20"  Margin="10,0,0,0" Background="White">
+                    <TextBlock Name="BulkAdd" Text="{Lang:LocalisedText Key=BULK_ADD}"  Height="17"  Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding BulkAddCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+                <Button x:Name="btnRemove" Style="{StaticResource styleButtonOnFloor}" MinHeight="20"  Margin="10,0,0,0" Background="White">
+                    <TextBlock Name="Remove" Text="{Lang:LocalisedText Key=REMOVE}"  Height="17"  Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding BulkRemoveRoomCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+                <Button  x:Name="btnUploadExcel" Style="{StaticResource styleButtonOnFloor}" IsEnabled="False" MinHeight="20"  Margin="10,0,0,0"  Background="White">
+                    <TextBlock Name="UploadExcel" Text="{Lang:LocalisedText Key=UPLOAD_EXCEL}" Foreground="Gray"   Height="17" Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                </Button>
+                <Button x:Name="btnDownloadTemplete" Style="{StaticResource styleButtonOnFloor}" IsEnabled="False"  MinHeight="20"  Margin="10,0,0,0"  Background="White">
+                    <TextBlock Name="DownloadTemplate" Text="{Lang:LocalisedText Key=DOWNLOAD_TEMPLATE}" Foreground="Gray" Height="17"  Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                </Button>
+            </StackPanel>
+
+            <DataGrid  Grid.Row="1"  HorizontalScrollBarVisibility="Visible"  AutoGenerateColumns="False" AlternatingRowBackground="{StaticResource OtherColor4}" CanUserAddRows="False" ItemsSource="{ Binding RoomList}">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding Path=DataContext.AreAllRoomChecked, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}}">
+                                </CheckBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding Path=IsRoomChecked, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="Click">
+                                            <i:InvokeCommandAction Command="{Binding  Path=DataContext.RoomCheckChangedCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </CheckBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="{Lang:LocalisedText Key=ROOM_NAME}">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox VerticalAlignment="Top" Text="{Binding Name,UpdateSourceTrigger=PropertyChanged}" >
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="LostKeyboardFocus">
+                                            <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </TextBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Cooling">
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.Column="1">
+                                        <TextBlock Name="Cooling" Text="{Lang:LocalisedText Key=COOLING}" Height="17" HorizontalAlignment="Center" FontSize="12"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left">
+                                        <TextBlock Text="{Lang:LocalisedText Key=DRY_BULB}"  TextWrapping="Wrap"  FontSize="12"><LineBreak/>
+                                                  <Run BaselineAlignment="Center"  Text="{Binding DataContext.TemperatureUnit, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, Mode=FindAncestor}, StringFormat=(\{0\})}"/>
+                                                     <i:Interaction.Triggers>
+                                          <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="1">
+                                        <TextBlock  HorizontalAlignment="Left" Text="{Lang:LocalisedText Key=WET_BULB}"> <LineBreak/>
+                                             <Run BaselineAlignment="Center"  Text="{Binding DataContext.TemperatureUnit, RelativeSource={RelativeSource AncestorType={x:Type UserControl}, Mode=FindAncestor}, StringFormat=(\{0\})}"/>
+                                                <i:Interaction.Triggers>
+                                 <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="2" >
+                                        <TextBlock  HorizontalAlignment="Left" Text="{Lang:LocalisedText Key=RELATIVE_HUMIDITY}"><LineBreak/>
+                                                   <Run BaselineAlignment="Center"  Text="(%)"/> <i:Interaction.Triggers>
+                                          <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                   
+                                    <StackPanel Orientation="Vertical"  Grid.Column="0">
+                                        <TextBox MaxLength="5" Name="NumericDryBulb" Text="{Binding CoolingDryBulb ,Converter={StaticResource ValueToControlConverter}, ConverterParameter=Temperature,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  TextWrapping="Wrap" BorderThickness="0" BorderBrush="Transparent"  FontSize="12">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </TextBox>
+                                        <Label Name="lblValCoolDryBulb" Width="auto" Height="15" Padding="1" FontSize="10" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{Binding lblindoorCoolingDB}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical" Grid.Column="1">
+                                        <TextBox MaxLength="5" Text="{Binding CoolingWetBulb ,Converter={StaticResource ValueToControlConverter}, ConverterParameter=Temperature,UpdateSourceTrigger=PropertyChanged}"   HorizontalAlignment="Left" TextWrapping="Wrap" BorderThickness="0" BorderBrush="Transparent"   FontSize="12">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </TextBox>
+                                        <Label Name="lblValCoolWetBulb" Width="auto" Height="15" Padding="1" FontSize="10" Foreground="Red" HorizontalAlignment="Left" VerticalAlignment="Top" Content="{Binding Path=lblindoorCoolingWB}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical" Grid.Column="2">
+                                        <TextBox  MaxLength="5" IsEnabled="False" Text="{Binding CoolingRelativeHumidity ,Converter={StaticResource ValueToControlConverter}, ConverterParameter=Temperature,UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" TextWrapping="Wrap" BorderThickness="0" BorderBrush="Transparent"    FontSize="12">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </TextBox>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Heating">
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30"></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" >
+                                        <TextBlock Text="{Lang:LocalisedText Key=HEATING}" Height="17" FontSize="12"  HorizontalAlignment="Center"> 
+                                           </TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1">
+                                        <TextBlock  FontSize="12" Text="{Lang:LocalisedText Key=DRY_BULB}"> <LineBreak/></TextBlock>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="3">
+                                        <TextBox Grid.Row="0" Grid.Column="0" MaxLength="5" Text="{Binding HeatingDryBulb ,Converter={StaticResource ValueToControlConverter}, ConverterParameter=Temperature,UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="12">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </TextBox>
+                                        <Label Name="lblValHeatDryBulb" Width="auto" Height="15" Padding="1" FontSize="10" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Top" Content="{Binding Path=lblindoorHeatingDB}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Room Dimensions">
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="50"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="25" />
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                                        <TextBlock Text="{Lang:LocalisedText Key=ROOM_DIMENSIONS}" Height="17" FontSize="12" HorizontalAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="0">
+                                        <TextBlock  Text="{Lang:LocalisedText Key=AREA}"  HorizontalAlignment="Left" TextWrapping="Wrap"  FontSize="12"><LineBreak/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Lang:LocalisedText Key=NO_OF_PEOPLE}" HorizontalAlignment="Left" TextWrapping="Wrap"  FontSize="12"> <LineBreak/></TextBlock>
+                                   </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid Width="Auto">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50" ></ColumnDefinition>
+                                        <ColumnDefinition Width="50"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackPanel  Grid.Column="0" HorizontalAlignment="Left">
+                                        <TextBox HorizontalAlignment="Center" Text="{Binding Area, Converter={StaticResource ValueToControlConverter}, ConverterParameter=AREA,UpdateSourceTrigger=PropertyChanged}"  MaxLength="10"  BorderBrush="Transparent" TextWrapping="Wrap"  FontSize="12"></TextBox>
+
+                                    </StackPanel>
+                                    <StackPanel  Grid.Column="1"  HorizontalAlignment="Left">
+                                        <TextBox  Text="{Binding PeopleNumber , Converter={conv:EmptyStringConverter},UpdateSourceTrigger=PropertyChanged}" MaxLength="10" HorizontalAlignment="Center" BorderBrush="Transparent" TextWrapping="Wrap"  FontSize="12">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </TextBox>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Room Load">
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="70"></ColumnDefinition>
+                                        <ColumnDefinition Width="70"></ColumnDefinition>
+                                        <ColumnDefinition Width="70"></ColumnDefinition>
+                                        <ColumnDefinition Width="70"></ColumnDefinition>
+                                        <ColumnDefinition Width="70"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center">
+                                        <TextBlock Name="RoomLoad" Text="{Lang:LocalisedText Key=ROOM_LOAD}"  FontSize="12" >
+                                                <i:Interaction.Triggers>
+                              <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                                    </i:Interaction.Triggers>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left">
+                                        <TextBlock TextWrapping="Wrap" FontSize="12">
+                                 <Run Name="RoomLoadCooling" Text="{Lang:LocalisedText Key=COOLING}"/>
+                                 <LineBreak/>
+                                 <Run BaselineAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.PowerUnit, StringFormat='(\{0}\)'}"/>
+                                                <i:Interaction.Triggers>
+                              <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger></i:Interaction.Triggers></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" >
+                                        <TextBlock >
+                                             <Run Name="RoomLoadSensibleCapacity" Text="{Lang:LocalisedText Key=SENSIBLE}"/>
+                                             <Run Text="{Lang:LocalisedText Key=CAPACITY}"></Run>
+                                             <LineBreak/>
+                                             <Run BaselineAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.PowerUnit, StringFormat='(\{0}\)'}"/>
+                                                 <i:Interaction.Triggers>
+                 <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left">
+                                        <TextBlock >
+                                 <Run Name="RoomLoadHeating" Text="{Lang:LocalisedText Key=HEATING}"/>
+                                 <Run Text=" "></Run>
+                                 <LineBreak/>
+                                 <Run BaselineAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.PowerUnit, StringFormat='(\{0}\)'}"/>
+                                                <i:Interaction.Triggers>
+             <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left">
+                                        <TextBlock>
+                                 <Run Name="RoomLoadAirFlow" Text="{Lang:LocalisedText Key=AIR_FLOW}"/>
+                                                    <Run Text=" "></Run>
+                                 <LineBreak/>
+                                 <Run BaselineAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.AirFlowRateUnit, StringFormat='(\{0}\)'}"/>
+                                                <i:Interaction.Triggers>
+                                       <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left">
+                                        <TextBlock >
+                                 <Run Name="RoomLoadESP" Text="{Lang:LocalisedText Key=ESP}"/>
+                                 <LineBreak/>
+                                 <Run BaselineAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.PressureUnit, StringFormat='(\{0}\)'}"/>
+                                               <i:Interaction.Triggers>
+                                                 <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers></TextBlock>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="70"></ColumnDefinition>
+                                        <ColumnDefinition Width="70"></ColumnDefinition>
+                                        <ColumnDefinition Width="70"></ColumnDefinition>
+                                        <ColumnDefinition Width="70"></ColumnDefinition>
+                                        <ColumnDefinition Width="70"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBox ext:JCHInputService.InputMask="Decimal" Grid.Column="0"  MaxLength="10"  Text="{Binding RqCapacityCool,UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Transparent" TextWrapping="Wrap"  FontSize="12">
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="LostKeyboardFocus">
+                                                <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </TextBox>
+                                    <StackPanel Orientation="Vertical" Grid.Column="1" >
+                                        <TextBox  MaxLength="10" ext:JCHInputService.InputMask="Decimal" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{Binding SensibleHeat,UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" TextWrapping="Wrap"  FontSize="12">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="LostKeyboardFocus">
+                                                    <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </TextBox>
+                                        <Label  Name="lblindoorSensible"  Width="auto" Height="Auto"  FontSize="10" Foreground="Red" HorizontalAlignment="Left"  Content="{Binding lblindoorSensible}"/>
+                                    </StackPanel>
+                                    <TextBox ext:JCHInputService.InputMask="Decimal" Grid.Column="2" MaxLength="10" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{Binding RqCapacityHeat,UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" TextWrapping="Wrap"  FontSize="12">
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="LostKeyboardFocus">
+                                                <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </TextBox>
+                                    <TextBox  ext:JCHInputService.InputMask="Decimal" Grid.Column="3" MaxLength="10" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{Binding AirFlow,UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" TextWrapping="Wrap"  FontSize="12">
+                                        <i:Interaction.Triggers>
+
+                                            <i:EventTrigger EventName="LostKeyboardFocus">
+                                                <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </TextBox>
+                                    <TextBox ext:JCHInputService.InputMask="Decimal" Grid.Column="4" MaxLength="10" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{Binding StaticPressure,UpdateSourceTrigger=PropertyChanged}" BorderBrush="Transparent" TextWrapping="Wrap"  FontSize="12">
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="LostKeyboardFocus">
+                                                <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </TextBox>
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn  Header="Required Fresh Air" >
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0">
+                                        <TextBlock Name="RequiredFreshAir" Text="{Lang:LocalisedText Key=REQUIRED_FRESH_AIR}" Height="17" FontSize="12" HorizontalAlignment="Center"> </TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1">
+                                        <TextBlock Text="Dry bulb" HorizontalAlignment="Left"  FontSize="12"> <LineBreak/></TextBlock>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition ></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBox Grid.Row="0" MaxLength="10" Text="{Binding FreshAir ,Converter={conv:EmptyStringConverter},UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" BorderBrush="Transparent" TextWrapping="Wrap"  FontSize="12">
+                                        <i:Interaction.Triggers>
+
+                                            <i:EventTrigger EventName="LostKeyboardFocus">
+                                                <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.GridTextchanged}"/>
+
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </TextBox>
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Visibility="{Binding AreSaveCancelVisible, Converter={conv:BoolToVisibilityConverter}}" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,10" >
+                <jchcntrl:JCHButton Content="{Lang:LocalisedText Key=CANCEL}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <ei:CallMethodAction TargetObject="{Binding RelativeSource={RelativeSource AncestorType=jchcntrl:JCHModalWindow,Mode=FindAncestor}}" MethodName="Close"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </jchcntrl:JCHButton>
+                <jchcntrl:JCHButton Margin="5,0,0,0" Content="{Lang:LocalisedText Key=SAVE}" Type="Primary">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding SaveClickCommand}"/>
+                            <!--<ei:CallMethodAction TargetObject="{Binding RelativeSource={RelativeSource AncestorType=jchcntrl:JCHModalWindow,Mode=FindAncestor}}" MethodName="Close"/>-->
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </jchcntrl:JCHButton>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

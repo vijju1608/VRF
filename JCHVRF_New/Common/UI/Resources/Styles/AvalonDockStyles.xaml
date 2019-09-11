@@ -1,0 +1,229 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:JCHVRF_New.Common.UI.Resources.Styles"
+                    xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Xceed.Wpf.AvalonDock"
+                    xmlns:avalonDock="clr-namespace:Xceed.Wpf.AvalonDock;assembly=Xceed.Wpf.AvalonDock"
+                    xmlns:avalonDockLayout="clr-namespace:Xceed.Wpf.AvalonDock.Layout;assembly=Xceed.Wpf.AvalonDock"
+                    xmlns:avalonDockControls="clr-namespace:Xceed.Wpf.AvalonDock.Controls;assembly=Xceed.Wpf.AvalonDock"
+                    xmlns:avalonDockConverters="clr-namespace:Xceed.Wpf.AvalonDock.Converters;assembly=Xceed.Wpf.AvalonDock"
+                    xmlns:avalonDockProperties="clr-namespace:Xceed.Wpf.AvalonDock.Properties;assembly=Xceed.Wpf.AvalonDock"
+                    xmlns:fa="http://schemas.fontawesome.io/icons/"
+                    xmlns:conv="clr-namespace:JCHVRF_New.Common.UI.Converters"
+                    xmlns:ext="clr-namespace:JCHVRF_New.Common.UI.Extensions"
+                    xmlns:jchctrl="clr-namespace:JCHVRF_New.Common.Controls"
+                    xmlns:si="http://schemas.microsoft.com/expression/2010/interactions"
+                    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity">
+    <Style TargetType="{x:Type avalonDockControls:LayoutAnchorableFloatingWindowControl}">
+        <Setter Property="MinWidth" Value="150"/>
+        <Setter Property="MinHeight" Value="10"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type avalonDockControls:LayoutAnchorableFloatingWindowControl}">
+                    <Border BorderThickness="2" BorderBrush="{StaticResource OtherColor4}">
+                    <Grid Background="{StaticResource OtherColor5}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="25" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid Background="{StaticResource OtherColor4}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <jchctrl:JCHIcon Margin="5"
+                            shell:WindowChrome.IsHitTestVisibleInChrome="True" AwesomeIcon="ArrowLeft" Cursor="Hand" Foreground="{StaticResource OtherColor2}">
+                                    <jchctrl:JCHIcon.RenderTransform>
+                                        <RotateTransform Angle="315" CenterX="8" CenterY="8"/>
+                                    </jchctrl:JCHIcon.RenderTransform>
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="MouseDown">
+                                            <i:InvokeCommandAction Command="{Binding SingleContentLayoutItem.DockCommand, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </jchctrl:JCHIcon>
+                                <ContentPresenter VerticalAlignment="Center" Margin="5,0,0,0" Grid.Column="1" Content="{Binding Model.SinglePane.SelectedContent, RelativeSource={RelativeSource TemplatedParent}}"
+                                          ContentTemplate="{Binding Model.Root.Manager.AnchorableTitleTemplate, RelativeSource={RelativeSource TemplatedParent}}"
+                                          ContentTemplateSelector="{Binding Model.Root.Manager.AnchorableTitleTemplateSelector, RelativeSource={RelativeSource TemplatedParent}}" />
+                                <!--<ToggleButton Grid.Column="2" Margin="5" IsChecked="False" x:Name="MinimizeToggleButton">
+                                    <ToggleButton.Template>
+                                        <ControlTemplate TargetType="ToggleButton">
+                                            <jchctrl:JCHIcon x:Name="ToggleIcon"
+                            shell:WindowChrome.IsHitTestVisibleInChrome="True" AwesomeIcon="AngleDoubleLeft" Cursor="Hand" Foreground="{StaticResource OtherColor2}">
+                                         </jchctrl:JCHIcon>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter TargetName="ToggleIcon" Property="AwesomeIcon" Value="AngleDoubleRight"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </ToggleButton.Template>
+                                </ToggleButton>-->
+                                <jchctrl:JCHIcon Grid.Column="3" Margin="5"
+                            shell:WindowChrome.IsHitTestVisibleInChrome="True" AwesomeIcon="Times" Cursor="Hand" Foreground="{StaticResource OtherColor2}">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="MouseDown">
+                                            <i:InvokeCommandAction Command="{Binding HideWindowCommand, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </jchctrl:JCHIcon>
+                            </Grid>
+                            <ContentPresenter Content="{TemplateBinding Content}"
+                             Margin="5" Grid.Row="1" />
+                        </Grid>
+                    </Border>
+                    <!--<ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=MinimizeToggleButton, Path=IsChecked}" Value="True">
+                            <Setter Property="Height" Value="25"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>-->
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type avalonDockControls:LayoutAnchorableTabItem}">
+        <Setter Property="Width" Value="105"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type avalonDockControls:LayoutAnchorableTabItem}">
+                    <avalonDockControls:DropDownControlArea DropDownContextMenu="{Binding Root.Manager.DocumentContextMenu}" DropDownContextMenuDataContext="{Binding LayoutItem, RelativeSource={RelativeSource TemplatedParent}}">
+                        <Border Margin="0,3,0,3"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Visibility="{TemplateBinding Visibility}">
+                            <StackPanel Orientation="Horizontal">
+                                <jchctrl:JCHIcon Foreground="{StaticResource OtherColor2}" Height="15" Width="15" AwesomeIcon="ArrowLeft" Grid.Column="0" Cursor="Hand">
+                                    <jchctrl:JCHIcon.RenderTransform>
+                                        <RotateTransform Angle="45" CenterX="7.5" CenterY="7.5"/>
+                                    </jchctrl:JCHIcon.RenderTransform>
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="MouseDown">
+                                            <si:CallMethodAction MethodName="Float" TargetObject="{Binding}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </jchctrl:JCHIcon>
+                                <ContentPresenter Grid.Row="1" Margin="2,0,0,0"
+                                                  TextElement.FontSize="11"
+                                                  Content="{Binding Model,
+                                                                    RelativeSource={RelativeSource TemplatedParent}}"
+                                                  ContentTemplate="{Binding DocumentHeaderTemplate,
+                                                                            Mode=OneWay,
+                                                                            RelativeSource={RelativeSource AncestorType={x:Type avalonDock:DockingManager},
+                                                                                                           Mode=FindAncestor}}"
+                                                  ContentTemplateSelector="{Binding DocumentHeaderTemplateSelector,
+                                                                                    Mode=OneWay,
+                                                                                    RelativeSource={RelativeSource AncestorType={x:Type avalonDock:DockingManager},
+                                                                                                                   Mode=FindAncestor}}" />
+                            </StackPanel>
+                        </Border>
+                    </avalonDockControls:DropDownControlArea>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="avalonDockControls:AnchorablePaneTitle">
+        <!--<Style.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TabControl}}, Path=Items.Count, FallbackValue=2}" Value="1">
+                <Setter Property="Visibility" Value="Visible"/>
+            </DataTrigger>
+        </Style.Triggers>-->
+        <Setter Property="Visibility" Value="Collapsed"/>
+        <!--<Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="avalonDockControls:AnchorablePaneTitle">
+                    <Border Background="{TemplateBinding Background}"
+                  BorderBrush="{TemplateBinding BorderBrush}"
+                  BorderThickness="{TemplateBinding BorderThickness}"
+                  CornerRadius="2,2,0,0"
+                  Padding="0,2,0,1">
+                        <StackPanel Orientation="Horizontal">
+                            <jchctrl:JCHIcon Foreground="{StaticResource OtherColor2}" Height="15" Width="15" AwesomeIcon="ArrowLeft" Grid.Column="0" Cursor="Hand">
+                                <jchctrl:JCHIcon.RenderTransform>
+                                    <RotateTransform Angle="45" CenterX="7.5" CenterY="7.5"/>
+                                </jchctrl:JCHIcon.RenderTransform>
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="MouseDown">
+                                        <si:CallMethodAction MethodName="Float" TargetObject="{Binding}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </jchctrl:JCHIcon>
+                            <ContentPresenter x:Name="Header"
+                                  Margin="2,0,0,0"
+                                  Content="{Binding Model, RelativeSource={RelativeSource TemplatedParent}}"
+                                  ContentTemplate="{Binding Model.Root.Manager.AnchorableTitleTemplate, RelativeSource={RelativeSource TemplatedParent}}"
+                                  ContentTemplateSelector="{Binding Model.Root.Manager.AnchorableTitleTemplateSelector, RelativeSource={RelativeSource TemplatedParent}}" />
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>-->
+    </Style>
+
+    <Style TargetType="avalonDock:DockingManager">
+        <Setter Property="AnchorablePaneControlStyle">
+            <Setter.Value>
+                <Style TargetType="avalonDockControls:LayoutAnchorablePaneControl">
+                    <Setter Property="TabStripPlacement" Value="Top"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type avalonDockControls:LayoutAnchorablePaneControl}">
+                                <Grid ClipToBounds="true" SnapsToDevicePixels="true" KeyboardNavigation.TabNavigation="Local">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <!--Following border is required to catch mouse events-->
+                                    <Border Background="Transparent" Grid.RowSpan="2"/>
+
+                                    <avalonDockControls:AnchorablePaneTabPanel x:Name="HeaderPanel" Margin="2,2,2,0" IsItemsHost="true" Grid.Row="0" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1"/>
+
+                                    <Border x:Name="ContentPanel" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="0" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Row="1" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Cycle">
+                                        <ContentPresenter x:Name="PART_SelectedContentHost" ContentSource="SelectedContent" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                    </Border>
+
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsEnabled" Value="false">
+                                        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="ItemContainerStyle">
+                        <Setter.Value>
+                            <Style TargetType="{x:Type TabItem}">
+                                <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
+                                <Setter Property="ToolTip" Value="{Binding ToolTip}"/>
+                                <Setter Property="Visibility" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type avalonDockControls:LayoutAnchorablePaneControl}}, Path=Model.IsHostedInFloatingWindow, Converter={conv:BoolToVisibilityConverter}, ConverterParameter=Invert}"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type TabControl}}, Path=Items.Count}" Value="100">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="ItemTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <avalonDockControls:LayoutAnchorableTabItem Model="{Binding}"/>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="ContentTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <avalonDockControls:LayoutAnchorableControl Model="{Binding}"/>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

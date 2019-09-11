@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.ODUEquipmentProperties"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JCHVRF_New.ViewModels"
+             mc:Ignorable="d" 
+             
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             d:DesignHeight="100" d:DesignWidth="150">
+    <Grid>
+            <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="80"></ColumnDefinition>
+           
+            </Grid.ColumnDefinitions>
+        <Label Content="Outdoor Unit" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" Margin="-35,0,0,0"></Label>
+        <Label Content="ODU Name" Grid.Column="0" Grid.Row="2" Margin="-35,0,0,0"></Label>
+        <Label Content="Type" Grid.Column="0" Grid.Row="3" Margin="-35,0,0,0"></Label>
+        <Label Content="Power" Grid.Column="0" Grid.Row="4" Margin="-35,0,0,0"></Label>
+        <Label Content="Outdoor" Grid.Column="0" Grid.Row="5" Margin="-35,0,0,0"></Label>
+        <Label Content="Auto\Maunual" Grid.Column="0" Grid.Row="6" Margin="-35,0,0,0"></Label>
+        <Label Content="Indoor and Fresh Air" Grid.Column="0" Grid.Row="8"   Margin="-35,0,-10,0"></Label>
+        <Label Content="Max Ratio" Grid.Column="0" Grid.Row="9" Margin="-35,25,0,0"></Label>
+
+        <fa:ImageAwesome Icon="Edit" Grid.Column="1" Grid.Row="1" Height="30" Width="30" Margin="5"/>
+        <TextBox Name="txtOduName" TextChanged="txtBindPropertyChange_TextChanged" Text="{Binding Path=OduName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="2" Width="80" Margin="-20,0,0,0"></TextBox>
+
+        <ComboBox SelectionChanged="cmb_SelectionChanged" ItemsSource="{Binding ListType,Mode=TwoWay}" Grid.Row="3" SelectedItem="{Binding SelectedType, Mode=TwoWay  ,UpdateSourceTrigger=PropertyChanged}"   Name="cmbType"  Grid.Column="1"  Width="80" Margin="-20,5,0,0" SelectedIndex="0">
+           </ComboBox>
+        <ComboBox SelectionChanged="cmb_SelectionChanged" Name="cmbPower" ItemsSource="{Binding Path=ListPower, Mode=TwoWay  }" DisplayMemberPath="DisplayName" SelectedValuePath="SelectedValues" SelectedValue="{Binding SelectedPower, Mode=TwoWay  ,UpdateSourceTrigger=PropertyChanged}" Width="80" Margin="-20,5,0,0"   Grid.Column="1" Grid.Row="4"></ComboBox>
+        <ComboBox SelectionChanged="cmb_SelectionChanged" Name="cmbOutdoor"  ItemsSource="{Binding Path=ListModel, Mode=TwoWay }" SelectedValue="{Binding SelectedOutdoor, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"  DisplayMemberPath="DisplayName" SelectedValuePath="Value"  Grid.Column="1" Grid.Row="5" Width="80" Margin="-20,5,0,0"></ComboBox>
+        <CheckBox  Name="chkAutoManual" Unchecked="chk_Checked" Checked="chk_Checked" IsChecked="{Binding IsAuto, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.Row="6" Margin="10"></CheckBox>
+        <CheckBox  Name="chkIndoreFreshAir" Unchecked="chk_Checked" Checked="chk_Checked" IsChecked="{Binding IsBothIndoreFreshAir, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  Grid.Column="1" Grid.Row="8" Margin="10"></CheckBox>
+        <ComboBox SelectionChanged="cmb_SelectionChanged" Name="cmbMaxRatio" ItemsSource="{Binding Path=ListMaxRatio, Mode=TwoWay }" SelectedItem="{Binding SelectedMaxRatio, Mode=TwoWay  ,UpdateSourceTrigger=PropertyChanged}"  Grid.Column="1" Width="80" Grid.Row="9" Margin="-20,30,5,0" ></ComboBox>
+
+    </Grid>
+
+
+</UserControl>

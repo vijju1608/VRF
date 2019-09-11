@@ -1,0 +1,223 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.IndoorUnitInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JCHVRF_New.Views"
+             xmlns:xc="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" MinWidth="890"
+             xmlns:Lang="clr-namespace:JCHVRF_New.LanguageData"
+               >
+    <DockPanel>
+        <Grid Margin="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Grid.Row="0"  Margin="0,24,0,10" Height="40">
+                <Button x:Name="btnAddUnit"  Style="{StaticResource styleButtonOnFloor}"  MinHeight="30"  Margin="10,0,0,0" Padding="17,0" Background="White" Command="{Binding OpenAddIndoorUnit}">
+                    <TextBlock   Height="17"  Margin="2,0,2,0" FontSize="12" FontStyle="Normal">
+                            <Run Text="+"></Run>
+                            <Run Text="{Lang:LocalisedText Key=ADD_UNITS}"/>
+                    </TextBlock>
+                </Button>
+                <Button x:Name="btnRemove"  Style="{StaticResource styleButtonOnFloor}" MinHeight="20"  Margin="10,0,0,0" Padding="17,0" Background="White" IsEnabled="{Binding CanRemove}"
+                        Command="{Binding Path=DataContext.RemoveCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}">
+
+                    <TextBlock Text="{Lang:LocalisedText Key=REMOVE}"  Height="17"  Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                </Button>
+                <Button x:Name="btnUploadExcel" Style="{StaticResource styleButtonOnFloor}" IsEnabled="False" MinHeight="20"  Margin="10,0,0,0" Padding="17,0" Background="White">
+                    <TextBlock Text="{Lang:LocalisedText Key=UPLOAD_EXCEL}"  Height="17" Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                </Button>
+                <Button x:Name="btnDownloadTemplete" Style="{StaticResource styleButtonOnFloor}" IsEnabled="False"  MinHeight="20"  Margin="10,0,0,0"  Padding="17,0" Background="White">
+                    <TextBlock Text="{Lang:LocalisedText Key=DOWNLOAD_TEMPLATE}"  Height="17"  Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                </Button>
+            </StackPanel>
+
+            <DataGrid Grid.Row="1"  HorizontalScrollBarVisibility="Visible" AutoGenerateColumns="False" AlternatingRowBackground="{StaticResource OtherColor4}" CanUserAddRows="False" ItemsSource="{Binding SelectedIDU, Mode=TwoWay}">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <CheckBox HorizontalAlignment="Center" IsChecked="{Binding Path=DataContext.IsCheckAll, Mode=TwoWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox HorizontalAlignment="Center" IsChecked="{Binding Path=IsChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="Click">
+                                            <i:InvokeCommandAction Command="{Binding Path=DataContext.SelectCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </CheckBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTextColumn Header="{Lang:LocalisedText Key=UNIT_NAME}" Binding="{Binding RoomIndoor.IndoorName}"/>
+                    <DataGridTextColumn Header="{Lang:LocalisedText Key=FLOOR}" Binding="{Binding RoomIndoor.SelectedFloor.Name}"/>
+                    <DataGridTextColumn Header="{Lang:LocalisedText Key=ROOM}" Binding="{Binding RoomIndoor.selectedRoom.Name}"/>
+                    <DataGridTextColumn Header="{Lang:LocalisedText Key=MODEL}" Binding="{Binding DisplayModelName}"/>
+                    <DataGridTemplateColumn Header="{Lang:LocalisedText Key=CAPACITY_REQUIREMENTS}">
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.ColumnSpan="4">
+                                        <TextBlock Text="{Lang:LocalisedText Key=CAPACITY_REQUIREMENTS}" Height="30" FontSize="12" HorizontalAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="0" >
+                                        <TextBlock HorizontalAlignment="Left" Text="{Lang:LocalisedText Key=COOLING}"  TextWrapping="Wrap"  FontSize="12"><LineBreak/>
+                                            <Run BaselineAlignment="Center"  Text="{Binding DataContext.PowerUnit, Mode=OneWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="1"  >
+                                        <TextBlock Text="{Lang:LocalisedText Key=SENSIBLE}" HorizontalAlignment="Left"><LineBreak/>
+                                             <Run BaselineAlignment="Center"  Text="{Binding DataContext.PowerUnit, Mode=OneWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="2" >
+                                        <TextBlock  Text="{Lang:LocalisedText Key=HEATING}"><LineBreak/>
+                                 <Run BaselineAlignment="Center" Text="{Binding DataContext.PowerUnit, Mode=OneWay,  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="3">
+                                        <TextBlock HorizontalAlignment="Left" Text="{Lang:LocalisedText Key=AIR_FLOW}"><LineBreak/>
+                                 <Run BaselineAlignment="Center"  Text="{Binding DataContext.AirFlowUnit, Mode=OneWay,  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" />
+
+                                        </TextBlock>
+                                    </StackPanel>
+
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid Width="auto">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                        <ColumnDefinition Width="80"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" Grid.Column="0" Width="80"  HorizontalAlignment="Center" Text="{Binding RoomIndoor.CoolingCapacity, Converter={StaticResource ValueToControlConverter}, ConverterParameter=Power}"  TextWrapping="Wrap"  FontSize="12"></TextBlock>
+
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Width="80"  HorizontalAlignment="Center"  Text="{Binding RoomIndoor.SensibleHeat, Converter={StaticResource ValueToControlConverter}, ConverterParameter=Power}" TextWrapping="Wrap"  FontSize="12"></TextBlock>
+
+                                    <TextBlock  Grid.Row="1" Grid.Column="2" Width="80" HorizontalAlignment="Center" Text="{Binding RoomIndoor.HeatingCapacity, Converter={StaticResource ValueToControlConverter}, ConverterParameter=Power}" TextWrapping="Wrap"  FontSize="12"></TextBlock>
+
+                                    <TextBlock Grid.Row="1" Grid.Column="3" Width="80" HorizontalAlignment="Center"  Text="{Binding RoomIndoor.AirFlow, Converter={StaticResource ValueToControlConverter}, ConverterParameter=AirFlow}" TextWrapping="Wrap"  FontSize="12"></TextBlock>
+                                </Grid>
+                            </DataTemplate>
+
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="{Lang:LocalisedText Key=TEMPERATURE}">
+                        <DataGridTemplateColumn.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.ColumnSpan="4" Margin="0,0,0,0">
+                                        <TextBlock Text="{Lang:LocalisedText Key=TEMPERATURE}" Height="30" Margin="0,0,0,0" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="0" >
+                                        <TextBlock  TextWrapping="Wrap"  FontSize="12">
+                                 <Run  Text="{Lang:LocalisedText Key=COOLING_DRY}"/>
+                                 <LineBreak/>
+                                                    <Run  Text="{Lang:LocalisedText Key=BULB}"/>
+                                 <Run BaselineAlignment="Center"  Text="{Binding DataContext.TemperatureUnit, Mode=OneWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="1">
+                                        <TextBlock>
+                                             <Run Text="{Lang:LocalisedText Key=COOLING_WET}"/>
+                                              <LineBreak/>
+                                                    <Run  Text="{Lang:LocalisedText Key=BULB}"/>
+                                             <Run BaselineAlignment="Center"  Text="{Binding DataContext.TemperatureUnit, Mode=OneWay,  RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}" />
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="2" >
+                                        <TextBlock>
+                                 <Run Text="{Lang:LocalisedText Key=COOLING_RELATIVE}"/>
+                                 <LineBreak/>
+                                                     <Run Text="{Lang:LocalisedText Key=HUMIDITY}"/>
+                                 <Run BaselineAlignment="Center"  Text="(%)"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="3" >
+                                        <TextBlock>
+                                 <Run Text="{Lang:LocalisedText Key=HEATING_DRY}"/>
+                                 <LineBreak/>
+                                                     <Run Text="{Lang:LocalisedText Key=BULB}"/>
+                                 <Run BaselineAlignment="Center"  Text="{Binding DataContext.TemperatureUnit, Mode=OneWay, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.HeaderTemplate>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Grid Width="Auto">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="102"></ColumnDefinition>
+                                        <ColumnDefinition Width="102"></ColumnDefinition>
+                                        <ColumnDefinition Width="102"></ColumnDefinition>
+                                        <ColumnDefinition Width="102"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <StackPanel Grid.Row="0" Grid.Column="0" Margin="2,0">
+                                        <TextBlock HorizontalAlignment="Left" Text="{Binding RoomIndoor.DBCooling, Converter={StaticResource ValueToControlConverter}, ConverterParameter=Temperature}"  TextWrapping="Wrap"  FontSize="12"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="1" >
+                                        <TextBlock  HorizontalAlignment="Left" Text="{Binding RoomIndoor.WBCooling, Converter={StaticResource ValueToControlConverter}, ConverterParameter=Temperature}" TextWrapping="Wrap"  FontSize="12"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="2" >
+                                        <TextBlock HorizontalAlignment="Left"  Text="{Binding RoomIndoor.RHCooling}" TextWrapping="Wrap"  FontSize="12"></TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="3" >
+                                        <TextBlock HorizontalAlignment="Left"  Text="{Binding RoomIndoor.DBHeating, Converter={StaticResource ValueToControlConverter}, ConverterParameter=Temperature}" TextWrapping="Wrap"  FontSize="12"></TextBlock>
+                                    </StackPanel>
+
+                                </Grid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </Grid>
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.CanvasProperties"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsofalignt.com/expression/blend/2008" 
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:local="clr-namespace:JCHVRF_New.Views"
+             xmlns:ext="clr-namespace:JCHVRF_New.Common.UI.Extensions"  
+             mc:Ignorable="d" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:xc="http://schemas.xceed.com/wpf/xaml/toolkit"         
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:Lang="clr-namespace:JCHVRF_New.LanguageData"
+             xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+             ext:JCHDockerService.Title ="{Lang:LocalisedText Key=PROPERTIES}"  
+             d:DesignHeight="Auto" d:DesignWidth="300">
+    <UserControl.Resources>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+    </UserControl.Resources>
+    <StackPanel MinWidth="90">
+        <TextBlock  FontSize="10" Text="{Lang:LocalisedText Key=CANVAS}" Padding="2"/>
+        <Grid>
+            <TextBlock FontSize="10" Text="{Lang:LocalisedText Key=ALLIGN_SCHEMATIC}" HorizontalAlignment="Left" Padding="2,0,0,0"/>
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
+                <Border Background="White" BorderBrush="Black" BorderThickness="0.6">
+                    <fa:ImageAwesome Icon="AlignLeft" Height="15" Width="15" Margin="2" />
+                </Border>
+                <Border Background="White" BorderBrush="Black" BorderThickness="0.6">
+                    <fa:ImageAwesome Icon="AlignCenter" Height="15" Width="15" Margin="2" />
+                </Border>
+                <Border Background="White" BorderBrush="Black" BorderThickness="0.6">
+                    <fa:ImageAwesome Icon="AlignRight" Height="15" Width="15" Margin="2" />
+                </Border>
+            </StackPanel>
+        </Grid>
+        <Separator Margin="0,5,0,2"></Separator>
+        <Grid>
+            <TextBlock FontSize="10" Text="{Lang:LocalisedText Key=BACK_IMAGE}" Padding="2"/>
+            <CheckBox Content="{Lang:LocalisedText Key=Lock}" FontSize="10" HorizontalAlignment="Right" Padding="2" Margin="0,0,10,0" Command="{Binding LockImageCheckedCommand}" IsChecked="{Binding IsLockChecked}"/>
+            <fa:ImageAwesome Icon="Lock" Foreground="DimGray" HorizontalAlignment="Right" Height="10" Width="10" Margin="0,0,2,0" />
+        </Grid>
+        <StackPanel IsEnabled="False" Orientation="Horizontal" Margin="5,0,0,2">
+            <Button FontSize="9"  Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Lang:LocalisedText Key=IMPORT}" Command="{Binding ImportImageClickCommand}" Padding="5" Width="55" Height="21"/>
+            <Button Margin="10,0,0,0" FontSize="9" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ClearImageClickCommand}" Padding="5" Width="55" Height="21">
+                <StackPanel Orientation="Horizontal">
+                    <Image Margin="0,0,2,0"  Source="/Image\Clear.png" Stretch="UniformToFill"/>
+                    <Label Padding="0" Content="{Lang:LocalisedText Key=Clear}"></Label>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+        <TextBlock Text="{Lang:LocalisedText Key=OPACITY}" FontSize="10" Padding="3"/>
+        <DockPanel IsEnabled="False" >
+            <TextBlock VerticalAlignment="Top" DockPanel.Dock="Right" Text="{Binding ElementName=SliderOpacity, Path=Value, StringFormat=N0}"  Margin="2,2,10,2"/>
+            <Slider Margin="4,0,0,0" x:Name="SliderOpacity" Value="{Binding Opacity}" Maximum="100" Minimum="0" Interval="10" />
+            
+        </DockPanel>
+        <Separator></Separator>
+        <Grid>
+            <CheckBox x:Name="chkPlottingScale" Content="{Lang:LocalisedText Key=ENABLE_PLOTTING_SCALING}" IsChecked="{Binding IsPlottingScaleEnabled}" FontSize="10" HorizontalAlignment="Left" Margin="2"/>
+            <xc:ColorPicker IsEnabled="{Binding IsChecked, ElementName=chkPlottingScale, Mode=OneWay}" Name="ClrPcker_Background" SelectedColor="{Binding PlottingScaleColor}" Width="40" HorizontalAlignment="Right" Height="22" Margin="2,2,15,2"></xc:ColorPicker>
+        </Grid>
+        <StackPanel Orientation="Horizontal"  Margin="2" IsEnabled="{Binding IsChecked, ElementName=chkPlottingScale, Mode=OneWay}">
+            <RadioButton   FontSize="10" Content="{Lang:LocalisedText Key=HORIZONTAL}" IsChecked="{Binding IsChecked, ElementName=chkPlottingScale, Mode=OneWay}"/>
+            <fa:ImageAwesome Icon="ArrowsH" Foreground="{Binding IsChecked, ElementName=chkPlottingScale, Mode=OneWay}" Height="15" Width="15" Margin="2" />
+
+            <RadioButton Margin="20,0,0,0"  FontSize="10" Content="{Lang:LocalisedText Key=VERTICAL}" IsChecked="{Binding IsPlotScaleVertical}" />
+            <fa:ImageAwesome Icon="ArrowsH" Rotation="90" Height="15" Width="15" Margin="2" />
+
+        </StackPanel >
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" IsEnabled="{Binding IsChecked, ElementName=chkPlottingScale, Mode=OneWay}" Margin="5,2,0,2">
+            <!--<TextBox Height="20" Width="30" ></TextBox>-->
+            <xc:IntegerUpDown   Name="myUpDownControl" Value="{Binding ScalingMeterValue}" />
+            <TextBlock Padding="2">m</TextBlock>
+        </StackPanel>
+        <Separator></Separator>
+        <StackPanel>
+            <TextBlock  FontSize="10" Text="{Lang:LocalisedText Key=APPEARANCE}" Margin="5,0,0,0"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Margin="2" Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+                    <xc:ColorPicker Name="ClrPcker_Text" SelectedColor="{Binding NodeTextColor}" Width="40" HorizontalAlignment="Left" Height="22" Margin="2"></xc:ColorPicker>
+                    <TextBlock FontSize="10" Text="{Lang:LocalisedText Key=TEXT}"></TextBlock>
+                </StackPanel>
+                <StackPanel Margin="2" Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                    <xc:ColorPicker Name="ClrPcker_Pipe" SelectedColor="{Binding PipeColor}"  Width="40" HorizontalAlignment="Right" Height="22" Margin="2"></xc:ColorPicker>
+                    <TextBlock FontSize="10" Text="{Lang:LocalisedText Key=PIPE}"></TextBlock>
+                </StackPanel>
+                <StackPanel Margin="2" Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
+                    <xc:ColorPicker Name="ClrPcker_Back" SelectedColor="{Binding NodeBackgroundColor}"  Width="40" HorizontalAlignment="Right" Height="22" Margin="2,2,2,6"></xc:ColorPicker>
+                    <TextBlock FontSize="10" Text="{Lang:LocalisedText Key=BACK_GROUND}"></TextBlock>
+                </StackPanel>
+                <StackPanel Margin="2" Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                    <xc:ColorPicker Name="ClrPcker_BranchKit" SelectedColor="{Binding BranchKitColor}"  Width="40" HorizontalAlignment="Left" Height="22" Margin="2,2,2,6"></xc:ColorPicker>
+                    <TextBlock FontSize="10" Text="{Lang:LocalisedText Key=BRANCH_KIT}"></TextBlock>
+                </StackPanel>
+
+            </Grid>
+
+        </StackPanel>
+
+    </StackPanel>
+</UserControl>

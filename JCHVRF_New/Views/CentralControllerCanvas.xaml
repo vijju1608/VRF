@@ -1,0 +1,284 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.CentralControllerCanvas"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JCHVRF_New.Views"
+             xmlns:xc="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:helpers="clr-namespace:JCHVRF_New.Helpers" 
+             xmlns:models="clr-namespace:JCHVRF_New.Model"            
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+              xmlns:prism="http://prismlibrary.com/"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:controls="clr-namespace:JCHVRF_New.Common.Controls"
+             prism:ViewModelLocator.AutoWireViewModel="True" 
+             xmlns:Lang="clr-namespace:JCHVRF_New.LanguageData"
+             xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+             AllowDrop="True"
+             mc:Ignorable="d" Background="white" Height="210">
+    <UserControl.Resources>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+    </UserControl.Resources>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="MouseDown">
+            <i:InvokeCommandAction Command="{Binding MouseDownCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <Grid Height="auto">
+
+        <StackPanel Width="auto" Height="auto"  Opacity="10" >
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="4*" />
+
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0"  Background="White" >
+                    <Border Background="White" BorderBrush="Gray" BorderThickness="1">
+                        <TextBlock  Text="{Lang:LocalisedText Key=Controller_Grp}" Foreground="Black" Margin="10"  HorizontalAlignment="Center" FontWeight="ExtraBold" Padding="2" />
+                    </Border>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Background="White" >
+                    <Border Background="White" BorderBrush="Gray" Margin="-1,0,-1,0" BorderThickness="1">
+                        <TextBlock Text="{Lang:LocalisedText Key=Selected_Sys}" Foreground="Black" Margin="10,10,10,10" HorizontalAlignment="Center" FontWeight="ExtraBold" Padding="2"/>
+                    </Border>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Background="white" >
+                    <Border Background="White" BorderBrush="Gray" BorderThickness="1">
+                        <TextBlock  Text="{Lang:LocalisedText Key=CONTROLLER}" Foreground="Black" Margin="10" HorizontalAlignment="Center" FontWeight="ExtraBold" Padding="2"/>
+                    </Border>
+                </StackPanel>
+            </Grid>
+
+            <Grid Height="305">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Background="White" Height="140"  VerticalAlignment="Top"  Grid.Column="0" BorderBrush="Gray" Margin="0,0,-1,0" Width="204.5" BorderThickness="1">
+                    <StackPanel Background="White" Height="auto">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox x:Name="txtGroupName" Grid.Column="0" MaxLength="30" Text="{Binding GroupName, Mode=TwoWay}" VerticalAlignment="Center" FontSize="10"  Padding="1" Background="White" Margin="10,2,11,2">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="LostFocus">
+                                        <i:InvokeCommandAction Command="{Binding LostFocusGroupName}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </TextBox>
+                            <Button Grid.Column="1" Cursor="Hand" >
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <fa:ImageAwesome  Foreground="Gray" Height="20" Width="20" Icon="Edit" />
+                                    </ControlTemplate>
+                                </Button.Template>
+                                <!--<i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Click">
+                                        <i:InvokeCommandAction Command="{Binding btnEditGroupNameCommand}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>-->
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+                <Border Grid.Column="1" Height="140" VerticalAlignment="Top" BorderBrush="Gray" BorderThickness="1">
+                    <DockPanel Name="DckPnl" Height="auto" LastChildFill="False">
+
+                        <StackPanel Orientation="Vertical" MinWidth="80" DockPanel.Dock="Top" MaxHeight="114">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="110" BorderThickness="0.1" Style="{DynamicResource MaterialDesignScrollViewer}">
+                                <ItemsControl x:Name="selectedSystems" ItemsSource="{Binding SelectedSystems}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Vertical"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+
+                                            <StackPanel Height="48" Orientation="Vertical">
+
+                                                <Border Background="#f6f6f6" BorderBrush="Gray" BorderThickness="1" Height="48">
+
+                                                    <StackPanel Name="itemsAdded" Orientation="Horizontal">
+                                                        <StackPanel MinWidth="163.5" Orientation="Vertical" Background="#f6f6f6">
+                                                            <TextBlock Text="{Binding SystemName}" FontSize="12" FontWeight="ExtraBold" />
+                                                            <TextBlock Text="No. of ODU:" Opacity="0.5" FontSize="10" FontWeight="Black"  Height="15" Visibility="{Binding CountVisibility}"><InlineUIContainer>
+                                            <TextBlock Width="auto" Text="{Binding NoOfODU}" Height="auto" Visibility="{Binding CountVisibility}"/>
+                                        </InlineUIContainer></TextBlock>
+                                                            <TextBlock Text="No. of IDU:" Opacity="0.5" FontSize="10" FontWeight="Black" Height="15" Visibility="{Binding CountVisibility}"><InlineUIContainer>                                  
+                                            <TextBlock Width="auto" Text="{Binding NoOfIDU}" Height="auto" Visibility="{Binding CountVisibility}" />
+                                        </InlineUIContainer></TextBlock>
+
+                                                        </StackPanel>
+                                                        <StackPanel Background="#e2e2e2" HorizontalAlignment="Right">
+                                                            <Border BorderBrush="Gray">
+                                                                <Button Cursor="Hand" Command="{Binding RelativeSource={RelativeSource
+                                                              AncestorType=UserControl},Path=DataContext.UnSelectSystemCommand}" CommandParameter="{Binding}">
+                                                                    <!--<i:Interaction.Triggers>
+                                                        <i:EventTrigger EventName="MouseLeftButtonUp">
+                                                            <i:InvokeCommandAction Command="{Binding UnSelectSystem}" CommandParameter="{Binding}" />
+                                                        </i:EventTrigger>
+                                                    </i:Interaction.Triggers>-->
+                                                                    <Button.Template>
+                                                                        <ControlTemplate>
+                                                                            <fa:ImageAwesome x:Name="iconDelete" Height="16" Margin="3,15,0,0"  Foreground="Gray" Width="16" Icon="Trash" VerticalAlignment="Center"/>
+                                                                        </ControlTemplate>
+                                                                    </Button.Template>
+                                                                </Button>
+                                                            </Border>
+                                                        </StackPanel>
+                                                    </StackPanel>
+
+                                                </Border>
+
+                                            </StackPanel>
+
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </ScrollViewer>
+                        </StackPanel>
+
+
+                        <!--  </Border>-->
+
+                        <StackPanel  Width="{Binding ActualWidth, ElementName=DckPnl}" VerticalAlignment="Bottom" DockPanel.Dock="Top">
+                            <Expander FlowDirection="RightToLeft" Style="{StaticResource {x:Type Expander}}" 
+                        		IsExpanded="False" ExpandDirection="Down" Height="27" VerticalAlignment="Center" Width="auto" BorderThickness="0.7" BorderBrush="Gray">
+                                <Expander.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Center" FontSize="10" Foreground="Gray" Height="21" Width="145" Text="{Lang:LocalisedText Key=Available_Sys}" />
+                                    </DataTemplate>
+                                </Expander.HeaderTemplate>
+                                <Grid Height="auto">
+                                    <!--</Border>-->
+
+                                    <!--<Border Background="White" BorderBrush="Gray" BorderThickness="0.5" Height="auto" Width="auto">-->
+
+                                    <TreeView x:Name="ListView" BorderBrush="Gray" BorderThickness="0.5" FlowDirection="LeftToRight" ItemsSource="{Binding SystemsAvailableForSelection, Mode=TwoWay}"  
+                        				helpers:TreeViewHelper.SelectedItem="{Binding SelectedTreeItem, Mode=TwoWay}" HorizontalContentAlignment="Left" Background="WhiteSmoke" Margin="0,2,0,-180">
+                                        <TreeView.Resources>
+
+
+                                            <Style TargetType="{x:Type TreeViewItem}" BasedOn="{StaticResource {x:Type TreeViewItem}}">
+                                                <Setter Property="Padding" Value="6"/>
+                                                <Setter Property="Cursor" Value="Hand"/>
+                                                <Setter Property="IsExpanded" Value="True"/>
+                                                <Setter Property="IsSelected" Value="{Binding IsSelected}"/>
+                                            </Style>
+                                            <HierarchicalDataTemplate DataType="{x:Type models:CanvasListItem}" ItemsSource="{Binding Children}">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <!--<fa:ImageAwesome x:Name="SidebarParentIcon" Icon="PlusSquareOutline"  Foreground="{StaticResource ForegroundBrush}"  Height="18"   />-->
+                                                    <TextBlock x:Name="SidebarParentTextBlock" FontFamily="Arial" FontSize="10" VerticalAlignment="Center" Text="{Binding Header}" />
+                                                </StackPanel>
+                                            </HierarchicalDataTemplate>
+                                            <HierarchicalDataTemplate DataType="{x:Type models:CanvasItemChild}" ItemsSource="{Binding Children}">
+                                                <StackPanel Orientation="Horizontal">
+                                                    <!--<fa:ImageAwesome x:Name="SidebarParentIcon" Icon="Plus"  Height="12"   />-->
+                                                    <TextBlock x:Name="SidebarChildTextBlock" FontSize="10" FontFamily="Arial" Margin="5,0,0,0" Text="{Binding Header}" />
+                                                </StackPanel>
+                                            </HierarchicalDataTemplate>
+                                        </TreeView.Resources>
+
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="MouseLeftButtonUp">
+                                                <i:InvokeCommandAction Command="{Binding SelectedSystemCommand}" CommandParameter="{Binding SelectedItem, ElementName=ListView}" />
+                                                <!--<i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}, Path=DataContext.SelectedTreeViewItemCommand}"/>-->
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </TreeView>
+                                </Grid>
+                            </Expander>
+
+
+                        </StackPanel>
+                    </DockPanel>
+                </Border>
+                <Border Grid.Column="2" Height="140"  BorderBrush="Gray" BorderThickness="1" VerticalAlignment="Top">
+                    <StackPanel  Height="auto" Margin="0,0,1,0">
+
+                        <Border Background="White" Height="auto" VerticalAlignment="Top">
+
+                            <ScrollViewer Name="scrvControllers" HorizontalScrollBarVisibility="Auto" >
+                                <StackPanel x:Name="ControllerList" Height="auto" Width="auto" Orientation="Horizontal" AllowDrop="True" Drop="controller_Drop">
+                                    <ItemsControl  ItemsSource="{Binding SelectedControllerSystems}" HorizontalContentAlignment="Left" >
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal"/>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+
+                                                <StackPanel x:Name="dragHere" Background="white" Height="auto" Width="105" Orientation ="Horizontal" Margin="5,2,5,2">
+                                                    <Border Background="#f6f6f6" BorderBrush="LightGray" BorderThickness="1">
+                                                        <StackPanel x:Name="ChildPanel" Height="120" Width="100">
+                                                            <StackPanel Height="60">
+                                                                <Border Height="Auto" Width="55"  BorderThickness="1" Margin="5" >
+                                                                    <Image Source="{Binding Image}" HorizontalAlignment="Center" VerticalAlignment="Center"></Image>
+                                                                </Border>
+                                                                <!--<TextBlock Text="{Binding TextdragImage}" TextWrapping="Wrap" TextAlignment="Center" Height="Auto" Width="70" VerticalAlignment="Top" FontSize="8"></TextBlock> -->
+                                                            </StackPanel>
+                                                            <StackPanel Height="30">
+                                                                <TextBlock Grid.Column="1" Text="{Binding ModelName}" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="10"></TextBlock>
+                                                            </StackPanel>
+                                                            <Grid Height="20"  Margin="15,0,15,0">
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="1.5*"/>
+                                                                    <ColumnDefinition Width="2*"/>
+                                                                    <ColumnDefinition Width="1.5*"/>
+                                                                </Grid.ColumnDefinitions>
+
+                                                                <Border Background="White" BorderBrush="LightGray" BorderThickness="1">
+                                                                    <Button Grid.Column="0"  Background="White" HorizontalContentAlignment="Center" Cursor="Hand" Command="{Binding RelativeSource={RelativeSource
+     AncestorType=UserControl},Path=DataContext.DeleteControllerCommand}" CommandParameter="{Binding}" HorizontalAlignment="Left"  Width="21" Margin="-1,-1,0,0" >
+                                                                        <Button.Template>
+                                                                            <ControlTemplate>
+                                                                                <fa:ImageAwesome Foreground="Gray" Height="10" Width="10" Icon="Trash" VerticalAlignment="Top" Margin="0,5,0,0"/>
+                                                                            </ControlTemplate>
+                                                                        </Button.Template>
+                                                                    </Button>
+                                                                </Border>
+                                                                <Border Grid.Column="1" Background="White" Margin="-1,0,-1,0" BorderBrush="LightGray" BorderThickness="1">
+                                                                    <TextBlock x:Name="textBoxNoOfCC" Grid.Column="1"  Text="{Binding Quantity, Mode=TwoWay}" TextAlignment="Center" Height="20" HorizontalAlignment="Center" Width="30"  VerticalAlignment="Center" Margin="-1,3,0,0" />
+
+                                                                </Border>
+                                                                <Border Grid.Column="2" Background="White" BorderBrush="LightGray" BorderThickness="1">
+                                                                    <Button Grid.Column="2" FontWeight="ExtraLight" Width="auto" HorizontalContentAlignment="Center" Cursor="Hand"  Margin="-1,-1,0,0" Command="{Binding RelativeSource={RelativeSource
+     AncestorType=UserControl},Path=DataContext.IncrementControllersCommand}" CommandParameter="{Binding}" >
+                                                                        <Button.Template>
+                                                                            <ControlTemplate >
+                                                                                <fa:ImageAwesome x:Name="add" Foreground="Gray" Height="10" Width="10"  Icon="Plus" VerticalAlignment="Top" Margin="0,5,0,0"/>
+                                                                            </ControlTemplate>
+                                                                        </Button.Template>
+                                                                    </Button>
+                                                                </Border>
+                                                            </Grid>
+                                                        </StackPanel>
+                                                    </Border>
+                                                </StackPanel>
+
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </ScrollViewer>
+                            <!--  </StackPanel> -->
+                        </Border>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

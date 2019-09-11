@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7829FB6-7909-4467-A603-FE8F78DF33BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JCHVRF.BLL</RootNamespace>
+    <AssemblyName>JCHVRF.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\dll\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="CDF">
+      <HintPath>..\dll\CDF.dll</HintPath>
+    </Reference>
+    <Reference Include="CDL, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\CDL.dll</HintPath>
+    </Reference>
+    <Reference Include="JCBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\JCBase.dll</HintPath>
+    </Reference>
+    <Reference Include="JCBase.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\JCBase.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Lassalle.Flow, Version=2.3.2.1, Culture=neutral, PublicKeyToken=bfc5c756e54a9d2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Lassalle.Flow.DLL</HintPath>
+    </Reference>
+    <Reference Include="Lassalle.WPF.Flow, Version=2.1.0.6, Culture=neutral, PublicKeyToken=8e9784929b011e15" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="YAMIntegration, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\YAMIntegration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessoryBLL.cs" />
+    <Compile Include="AccessoryDisplayType.cs" />
+    <Compile Include="CachTableBLL.cs" />
+    <Compile Include="CentralControllerBLL.cs" />
+    <Compile Include="CommonBLL.cs" />
+    <Compile Include="IVXCombinationBLL.cs" />
+    <Compile Include="MyDictionaryBLL.cs" />
+    <Compile Include="MyProductTypeBLL.cs" />
+    <Compile Include="New\ProjectBLLLocation.cs" />
+    <Compile Include="New\ProjectInfoBLL.cs" />
+    <Compile Include="NextGen\OutdoorBLL.cs" />
+    <Compile Include="NextGen\Registration.cs" />
+    <Compile Include="OutdoorBLL.cs" />
+    <Compile Include="IndoorBLL.cs" />
+    <Compile Include="ProjectBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionBLL.cs" />
+    <Compile Include="RoomLoadIndexBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JCHVRF.Const\JCHVRF.Const.csproj">
+      <Project>{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}</Project>
+      <Name>JCHVRF.Const</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.DAL\JCHVRF.DAL.csproj">
+      <Project>{B472C47D-C465-4867-8589-AAF860A26046}</Project>
+      <Name>JCHVRF.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Entity\JCHVRF.Entity.csproj">
+      <Project>{798a74b8-f22c-4b72-8cfb-3835306ce2c4}</Project>
+      <Name>JCHVRF.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Model\JCHVRF.Model.csproj">
+      <Project>{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}</Project>
+      <Name>JCHVRF.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.VRFMessage\JCHVRF.VRFMessage.csproj">
+      <Project>{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}</Project>
+      <Name>JCHVRF.VRFMessage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.VRFTrans\JCHVRF.VRFTrans.csproj">
+      <Project>{110c64cb-388a-4b74-8f21-6c1c28fded40}</Project>
+      <Name>JCHVRF.VRFTrans</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+	RePaver
+	
+	Copyright (c)2009, Daniel McGaughran
+ 
+	Licence:	CodeProject Open Licence (CPOL) 1.2
+				Please refer to 'Licence.txt' for further details of this licence.
+				Alternatively, the licence may be viewed at:
+				http://www.codeproject.com/info/cpol10.aspx
+-->
+
+<LangNames>
+	<Language code="en">English</Language>
+
+	<Language code="ar">العربية</Language>
+	<Language code="de">Deutsch</Language>
+	<Language code="el">Ελληνικά</Language>
+	<Language code="es">Español</Language>
+	<Language code="fr">Français</Language>
+	<Language code="he">עברית</Language>
+	<Language code="hi">हिन्दी</Language>
+	<Language code="it">Italiano</Language>
+	<Language code="jp">日本語</Language>
+	<Language code="ko">한국어</Language>
+	<Language code="ru">Русский</Language>
+	<Language code="sv">Svenska</Language>
+</LangNames>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="24">
+  <defs>
+    <clipPath id="a">
+      <path d="M0 0h45v24H0z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)">
+    <path id="branch-kit" d="M-.138 24V5.677h17.791V0h7.325v5.677h19.884V24h-6.279V12.13h-6.28V24h-7.326V12.387h-6.279V24h-6.279V12.13h-6.28V24H-.138z" fill="#532b66" stroke="rgba(0,0,0,0)"/>
+  </g>
+</svg>

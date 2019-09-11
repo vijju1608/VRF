@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Menu_Save_as_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Save as_High.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Simple_unit_Info_nr_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Simple_unit_Info_nr_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Open_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Open_High.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_New_Pro_CH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_New_Pro_CH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="undohov" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\undohov.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Open_Pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Open_Pro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_New_Pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_New_Pro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Simple_unit_edit_hi_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Simple_unit_edit_hi_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_140103_05_piping_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\140103_05_piping_arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Save_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Save_High.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copy_place_nr_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copy_place_nr_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="default_area_nr_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\default_area_nr_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Save_as_CN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Save as_CN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_area_nr_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_area_nr_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_140103_07_System_arrow_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\140103_07_System_arrow_right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LineStyle_HV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LineStyle_HV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlottingScale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlottingScale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Import_Pro_CH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Import_Pro_CH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Help_info_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Help_info_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit_option_nr_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit_option_nr_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LineStyle_Polyline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LineStyle_Polyline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_place_nr_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_place_nr_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Open_Nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Open_Nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Setting_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Setting_High.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit_option_hi_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit_option_hi_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hitachi_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hitachi_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Simple_unit_Info_hi_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Simple_unit_Info_hi_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_place_hi_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_place_hi_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="copy_place_hi_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copy_place_hi_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Project_info_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Project_info_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redohov" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\redohov.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\undo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Export_Nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Export_Nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo_Hitachi_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_Hitachi_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlottingScale_V" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlottingScale_V.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LineStyle_VHV" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LineStyle_VHV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Import_Pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Import_Pro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_New_Nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_New_Nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chart_indoor_white_40x28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chart_indoor_white_40x28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Simple_unit_delete_nr_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Simple_unit_delete_nr_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LineStyle_VH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LineStyle_VH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Default_option_nr_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Default_option_nr_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setting_White" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\setting_White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Open_CN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Open_CN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="YORK_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\YORK_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Simple_unit_add_nr_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Simple_unit_add_nr_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="setting_Nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\setting_Nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_info_hi_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu info_hi_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CC_controller" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CC_controller.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_place_nr_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_place_nr_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Save_CN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Save_CN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Save_Pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Save_Pro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_area_nr_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_area_nr_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_area_hi_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_area_hi_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="language_pull_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\language_pull_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_area_nr_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_area_nr_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Simple_unit_edit_nr_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Simple_unit_edit_nr_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_info_nr_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu info_nr_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_place_hi_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_place_hi_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LineStyle_Polyline1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LineStyle_Polyline1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search_region_hi_18x18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search_region_hi_18x18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_area_hi_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_area_hi_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LineStyle_HVH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LineStyle_HVH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_140103_07_System_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\140103_07_System_arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Export_Pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Export_Pro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="York_VRF_color_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\York_VRF_color_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Save_as_Nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Save as_Nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Import_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Import_High.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="default_area_hi_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\default_area_hi_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Simple_unit_add_hi_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Simple_unit_add_hi_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Default_option_hi_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Default_option_hi_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="On_Off_controller" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\On_Off_controller.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_area_hi_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_area_hi_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Simple_unit_copy_hi_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Simple_unit_copy_hi_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="default_place_nr_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\default_place_nr_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chart_indoor_grey_40x28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chart_indoor_grey_40x28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_file_icon24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete-file-icon24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Setting_Nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Setting_Nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Setting_CN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Setting_CN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Export_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Export_High.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="default_place_hi_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\default_place_hi_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_140103_04_piping_arrow_left_to_right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\140103_04_piping arrow_left to right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Import_Nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Import_Nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Simple_unit_delete_hi_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Simple_unit_delete_hi_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Save_Nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Save_Nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search_region_18x18" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search_region_18x18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_140103_04_piping_arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\140103_04_piping_arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_exit_nr_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu exit_nr_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Save_as_Pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Save_as_Pro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_place_hi_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_place_hi_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_area_nr_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_area_nr_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Setting_Pro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Setting_Pro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_exit_hi_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu exit_hi_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_Export_Pro_CH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_Export_Pro_CH.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Simple_unit_copy_nr_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Simple_unit_copy_nr_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JCI_color_logo_58x28" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\JCI_color_logo_58x28.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Menu_New_High" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Menu_New_High.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="edit_place_nr_36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit_place_nr_36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="piping_error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\piping_error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="piping_ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\piping_ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="piping_Transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\piping_Transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_02_2__active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\02-2__active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trash_can_nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trash_can_nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trash_can_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trash_can_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remove_nor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove_nor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remove_tab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove_tab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

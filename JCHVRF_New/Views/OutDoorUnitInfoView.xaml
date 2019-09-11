@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.OutDoorUnitInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JCHVRF_New.Views"   
+             xmlns:jchctrl="clr-namespace:JCHVRF_New.Common.Controls"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Classic"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:Lang="clr-namespace:JCHVRF_New.LanguageData"
+             xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+             mc:Ignorable="d">
+    <UserControl.Resources>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+        <Style TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="0,2,0,0"/>
+        </Style>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="Margin" Value="0,2,0,0"/>
+        </Style>
+    </UserControl.Resources>
+    <DockPanel LastChildFill="True">
+        <md:Snackbar DockPanel.Dock="Top" HorizontalAlignment="Stretch" IsActive="{Binding IsError}" Height="Auto"  Background="LightPink" BorderBrush="DeepPink" >
+            <md:SnackbarMessage Foreground="Gray" >
+                <md:SnackbarMessage.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <jchctrl:JCHIcon AwesomeIcon="ExclamationCircle" Foreground="HotPink" Width="20" Height="20"/>
+                        <TextBlock  Margin="20,0,0,0"  Text="{Binding ODUErrorMessage}"></TextBlock>
+                    </StackPanel>
+                </md:SnackbarMessage.Content>
+            </md:SnackbarMessage>
+        </md:Snackbar>
+        <StackPanel Orientation="Vertical" Width="350">
+            <TextBlock Text="{Lang:LocalisedText Key=PRODUCT_TYPE}"/>
+            <ComboBox  ItemsSource="{Binding ListProductCategory,Mode=TwoWay}" md:HintAssist.Hint="Product Type"
+                      SelectedItem="{Binding SelectedProductCategory, Mode=TwoWay  ,UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock Text="{Lang:LocalisedText Key=SERIES_NAME}"/>
+            <ComboBox md:HintAssist.Hint="Series Name" DisplayMemberPath="DisplayName" SelectedValuePath="SelectedValues"  SelectedItem="{Binding SelProductSeries}" SelectedValue="{Binding SelectedSeries, Mode=TwoWay  ,UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding ListSeries,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock Text="{Lang:LocalisedText Key=Max_Ratio}"/>
+            <ComboBox md:HintAssist.Hint="Max Ratio" ItemsSource="{Binding Path=ListMaxRatio,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedMaxRatio, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </StackPanel>
+        <Border Margin="100,22,4,0" VerticalAlignment="Top" Padding="10" Height="300" Background="{StaticResource OtherColor5}">
+            <Image  Stretch="None" Source="{Binding Path=OduImagePath, Mode=TwoWay,UpdateSourceTrigger=LostFocus}"/>
+        </Border>
+    </DockPanel>
+</UserControl>

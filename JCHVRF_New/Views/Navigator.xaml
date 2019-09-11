@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.Navigator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JCHVRF_New.Views"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             mc:Ignorable="d" 
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:ext="clr-namespace:JCHVRF_New.Common.UI.Extensions"  
+             prism:ViewModelLocator.AutoWireViewModel="True"
+              xmlns:Lang="clr-namespace:JCHVRF_New.LanguageData"
+              xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+              d:DesignHeight="300" d:DesignWidth="300">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}" CommandParameter="{Binding ElementName=ViewFinder}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+        
+    <UserControl.Resources>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel.Resources>
+                <Pen x:Key="ViewportPen"
+                     Thickness="1.0"
+                     Brush="Red" />
+            </StackPanel.Resources>
+            <Border Name="ViewFinder"
+                    RenderTransformOrigin="1,1"
+                    BorderBrush="Black" 
+                    BorderThickness="1" 
+                    Margin="5" 
+                    Width="180" 
+                    Height="200" 
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <xctk:ZoomboxViewFinderDisplay
+                                               Name="ViewFinderDisplay"
+                                               ClipToBounds="True"
+                                               Background="#C0FFFFFF"
+                                               Margin="1"
+                                               ShadowBrush="#80FFFFFF"
+                                               ViewportBrush="Transparent"
+                                               ViewportPen="{StaticResource ViewportPen}" 
+                />
+            </Border>
+            <DockPanel>
+                <TextBox TextAlignment="Center" DockPanel.Dock="Left" Height="25" Width="45" Margin="5" Foreground="Black" Text="{Binding ElementName=SliderNavigate, Path=Value, StringFormat=N0}"/>
+                <fa:ImageAwesome Foreground="Black"  Icon="Cloud" Margin="5" Height="8" Width="8" />
+                <StackPanel Margin="5" Height="22" Width="100">
+                    <Slider x:Name="SliderNavigate" Value="{Binding SliderValue}" Maximum="100" Minimum="0" Interval="10"/>
+                </StackPanel>
+                <fa:ImageAwesome Foreground="Black"  Icon="Cloud" Margin="5" Height="15" Width="15" />
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,1594 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.IDUProperties"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xc="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:JCHVRF_New.ViewModels"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:prism="http://prismlibrary.com/"
+              xmlns:ext="clr-namespace:JCHVRF_New.Common.UI.Extensions"
+             xmlns:jchctrl="clr-namespace:JCHVRF_New.Common.Controls"
+              xmlns:conv="clr-namespace:JCHVRF_New.Common.UI.Converters"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:ext1="clr-namespace:JCHVRF_New.LanguageData"
+              xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+             xmlns:controls="clr-namespace:JCHVRF_New.Common.Controls"
+              ext:JCHDockerService.Title ="{ext1:LocalisedText Key=PROPERTIES}"   
+             mc:Ignorable="d" Height="Auto" Width="Auto">
+    <UserControl.Resources>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+        <Style x:Key="CornerRoundComboBox" TargetType="ComboBox">
+            <Style.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"  />
+                    <Setter Property="Background" Value="Red"></Setter>
+                </Style>
+            </Style.Resources>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Background" Value="{StaticResource OtherColor6}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ButtonBase}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <Grid>
+                                <Border x:Name="NotificationBorder" VerticalAlignment="Top" HorizontalAlignment="Right" CornerRadius="5" Background="{StaticResource OtherColor2}">
+                                    <TextBlock HorizontalAlignment="Center" FontSize="9" Foreground="White" Margin="5,0,5,0" Text="{Binding (ext:JCHUIService.NotificationCount), RelativeSource={RelativeSource TemplatedParent}}"/>
+                                </Border>
+                                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{TemplateBinding Content}" TextWrapping="Wrap"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="ext:JCHUIService.NotificationCount" Value="0">
+                                <Setter  Property="Visibility" TargetName="NotificationBorder" Value="Collapsed"/>
+                            </Trigger>
+                            <Trigger Property="Button.IsDefaulted" Value="True">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                                <Setter Property="Foreground" Value="#FF838383"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" BorderThickness="1" BorderBrush="{StaticResource OtherColor6}" Background="{StaticResource OtherColor6}" SnapsToDevicePixels="True">
+                            <DockPanel LastChildFill="True">
+                                <ToggleButton IsChecked="False" x:Name="ToggleEdit" DockPanel.Dock="Right" Cursor="Hand" IsHitTestVisible="True">
+                                    <ToggleButton.Template>
+                                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                            <jchctrl:JCHIcon Foreground="{StaticResource OtherColor2}" AwesomeIcon="PencilSquare"/>
+                                        </ControlTemplate>
+                                    </ToggleButton.Template>
+                                </ToggleButton>
+                                <ScrollViewer Visibility="Collapsed" VerticalContentAlignment="Center" IsEnabled="False" x:Name="PART_ContentHost" Focusable="False" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                                <TextBlock VerticalAlignment="Center" x:Name="Part_Label" FontSize="{TemplateBinding FontSize}" Text="{TemplateBinding Text}"/>
+                            </DockPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding IsChecked, ElementName=ToggleEdit}" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="White"/>
+                                <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource OtherColor2}"/>
+                                <Setter TargetName="PART_ContentHost" Property="Visibility" Value="Visible"/>
+                                <Setter TargetName="Part_Label" Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <ControlTemplate x:Key="ExpanderUnitDetail" TargetType="{x:Type Expander}">
+            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3" SnapsToDevicePixels="True">
+                <DockPanel>
+                    <ToggleButton x:Name="HeaderSite" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" DockPanel.Dock="Top" Foreground="{TemplateBinding Foreground}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" FontStretch="{TemplateBinding FontStretch}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Margin="1" MinWidth="0" MinHeight="0" Padding="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}">
+                        <ToggleButton.FocusVisualStyle>
+                            <Style>
+                                <Setter Property="Control.Template">
+                                    <Setter.Value>
+                                        <ControlTemplate>
+                                            <Border>
+                                                <Rectangle Margin="0" SnapsToDevicePixels="True" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ToggleButton.FocusVisualStyle>
+                        <ToggleButton.Style>
+                            <Style TargetType="{x:Type ToggleButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                            <Border Padding="{TemplateBinding Padding}">
+                                                <Grid Background="Transparent" SnapsToDevicePixels="False">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="19"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Ellipse x:Name="circle"  HorizontalAlignment="Center" Height="19"  VerticalAlignment="Center" Width="19"/>
+                                                    <Path x:Name="arrow" Data="M1,1.5L4.5,5 8,1.5" HorizontalAlignment="Center" SnapsToDevicePixels="False" Stroke="#FF333333" StrokeThickness="2" VerticalAlignment="Center"/>
+                                                    <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Grid.Column="1" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="Left" Margin="4,0,0,0" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Center"/>
+                                                </Grid>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Data" TargetName="arrow" Value="M1,4.5L4.5,1 8,4.5"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ToggleButton.Style>
+                    </ToggleButton>
+                    <ContentPresenter x:Name="ExpandSite" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" DockPanel.Dock="Bottom" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" Visibility="Collapsed" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                </DockPanel>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsExpanded" Value="True">
+                    <Setter Property="Visibility" TargetName="ExpandSite" Value="Visible"/>
+                </Trigger>
+                <Trigger Property="ExpandDirection" Value="Right">
+                    <Setter Property="DockPanel.Dock" TargetName="ExpandSite" Value="Right"/>
+                    <Setter Property="DockPanel.Dock" TargetName="HeaderSite" Value="Left"/>
+                    <Setter Property="Style" TargetName="HeaderSite">
+                        <Setter.Value>
+                            <Style TargetType="{x:Type ToggleButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                            <Border Padding="{TemplateBinding Padding}">
+                                                <Grid Background="Transparent" SnapsToDevicePixels="False">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="19"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid>
+                                                        <Grid.LayoutTransform>
+                                                            <TransformGroup>
+                                                                <RotateTransform Angle="-90"/>
+                                                            </TransformGroup>
+                                                        </Grid.LayoutTransform>
+                                                        <Ellipse x:Name="circle"  HorizontalAlignment="Center" Height="19" VerticalAlignment="Center" Width="19"/>
+                                                        <Path x:Name="arrow" Data="M1,1.5L4.5,5 8,1.5" HorizontalAlignment="Center" SnapsToDevicePixels="False" Stroke="#FF333333" StrokeThickness="2" VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                    <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="Center" Margin="0,4,0,0" Grid.Row="1" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Top"/>
+                                                </Grid>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Data" TargetName="arrow" Value="M1,4.5L4.5,1 8,4.5"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="ExpandDirection" Value="Up">
+                    <Setter Property="DockPanel.Dock" TargetName="ExpandSite" Value="Top"/>
+                    <Setter Property="DockPanel.Dock" TargetName="HeaderSite" Value="Bottom"/>
+                    <Setter Property="Style" TargetName="HeaderSite">
+                        <Setter.Value>
+                            <Style TargetType="{x:Type ToggleButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                            <Border Padding="{TemplateBinding Padding}">
+                                                <Grid Background="Transparent" SnapsToDevicePixels="False">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="19"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid>
+                                                        <Grid.LayoutTransform>
+                                                            <TransformGroup>
+                                                                <RotateTransform Angle="180"/>
+                                                            </TransformGroup>
+                                                        </Grid.LayoutTransform>
+                                                        <Ellipse x:Name="circle"  HorizontalAlignment="Center" Height="19"  VerticalAlignment="Center" Width="19"/>
+                                                        <Path x:Name="arrow" Data="M1,1.5L4.5,5 8,1.5" HorizontalAlignment="Center" SnapsToDevicePixels="False" Stroke="#FF333333" StrokeThickness="2" VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                    <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Grid.Column="1" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="Left" Margin="4,0,0,0" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Center"/>
+                                                </Grid>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Data" TargetName="arrow" Value="M1,4.5L4.5,1 8,4.5"/>
+                                                </Trigger>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Stroke" TargetName="circle" Value="#FF5593FF"/>
+                                                    <Setter Property="Fill" TargetName="circle" Value="#FFF3F9FF"/>
+                                                    <Setter Property="Stroke" TargetName="arrow" Value="Black"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="ExpandDirection" Value="Left">
+                    <Setter Property="DockPanel.Dock" TargetName="ExpandSite" Value="Left"/>
+                    <Setter Property="DockPanel.Dock" TargetName="HeaderSite" Value="Right"/>
+                    <Setter Property="Style" TargetName="HeaderSite">
+                        <Setter.Value>
+                            <Style TargetType="{x:Type ToggleButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                            <Border Padding="{TemplateBinding Padding}">
+                                                <Grid Background="Transparent" SnapsToDevicePixels="False">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="19"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid>
+                                                        <Grid.LayoutTransform>
+                                                            <TransformGroup>
+                                                                <RotateTransform Angle="90"/>
+                                                            </TransformGroup>
+                                                        </Grid.LayoutTransform>
+                                                        <Ellipse x:Name="circle" Fill="White" HorizontalAlignment="Center" Height="19" Stroke="#FF333333" VerticalAlignment="Center" Width="19"/>
+                                                        <Path x:Name="arrow" Data="M1,1.5L4.5,5 8,1.5" HorizontalAlignment="Center" SnapsToDevicePixels="False" Stroke="#FF333333" StrokeThickness="2" VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                    <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="Center" Margin="0,4,0,0" Grid.Row="1" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Top"/>
+                                                </Grid>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Data" TargetName="arrow" Value="M1,4.5L4.5,1 8,4.5"/>
+                                                </Trigger>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Stroke" TargetName="circle" Value="#FF5593FF"/>
+                                                    <Setter Property="Fill" TargetName="circle" Value="#FFF3F9FF"/>
+                                                    <Setter Property="Stroke" TargetName="arrow" Value="Black"/>
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Stroke" TargetName="circle" Value="#FF3C77DD"/>
+                                                    <Setter Property="StrokeThickness" TargetName="circle" Value="1.5"/>
+                                                    <Setter Property="Fill" TargetName="circle" Value="#FFD9ECFF"/>
+                                                    <Setter Property="Stroke" TargetName="arrow" Value="Black"/>
+                                                </Trigger>
+                                                <Trigger Property="IsEnabled" Value="False">
+                                                    <Setter Property="Stroke" TargetName="circle" Value="#FFBCBCBC"/>
+                                                    <Setter Property="Fill" TargetName="circle" Value="#FFE6E6E6"/>
+                                                    <Setter Property="Stroke" TargetName="arrow" Value="#FF707070"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <ControlTemplate x:Key="ExpanderUnitLocation" TargetType="{x:Type Expander}">
+            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" CornerRadius="3" SnapsToDevicePixels="True">
+                <DockPanel>
+                    <ToggleButton x:Name="HeaderSite" ContentTemplate="{TemplateBinding HeaderTemplate}" Content="{TemplateBinding Header}" DockPanel.Dock="Top" Foreground="{TemplateBinding Foreground}" FontWeight="{TemplateBinding FontWeight}" FontStyle="{TemplateBinding FontStyle}" FontStretch="{TemplateBinding FontStretch}" FontSize="{TemplateBinding FontSize}" FontFamily="{TemplateBinding FontFamily}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" Margin="1" MinWidth="0" MinHeight="0" Padding="{TemplateBinding Padding}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}">
+                        <ToggleButton.FocusVisualStyle>
+                            <Style>
+                                <Setter Property="Control.Template">
+                                    <Setter.Value>
+                                        <ControlTemplate>
+                                            <Border>
+                                                <Rectangle Margin="0" SnapsToDevicePixels="True" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ToggleButton.FocusVisualStyle>
+                        <ToggleButton.Style>
+                            <Style TargetType="{x:Type ToggleButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                            <Border Padding="{TemplateBinding Padding}">
+                                                <Grid Background="Transparent" SnapsToDevicePixels="False">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="19"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Ellipse x:Name="circle"  HorizontalAlignment="Center" Height="19"  VerticalAlignment="Center" Width="19"/>
+                                                    <Path x:Name="arrow" Data="M1,1.5L4.5,5 8,1.5" HorizontalAlignment="Center" SnapsToDevicePixels="False" Stroke="#FF333333" StrokeThickness="2" VerticalAlignment="Center"/>
+                                                    <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Grid.Column="1" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="Left" Margin="4,0,0,0" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Center"/>
+                                                </Grid>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Data" TargetName="arrow" Value="M1,4.5L4.5,1 8,4.5"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ToggleButton.Style>
+                    </ToggleButton>
+                    <ContentPresenter x:Name="ExpandSite" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" DockPanel.Dock="Bottom" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" Visibility="Collapsed" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                </DockPanel>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsExpanded" Value="True">
+                    <Setter Property="Visibility" TargetName="ExpandSite" Value="Visible"/>
+                </Trigger>
+                <Trigger Property="ExpandDirection" Value="Right">
+                    <Setter Property="DockPanel.Dock" TargetName="ExpandSite" Value="Right"/>
+                    <Setter Property="DockPanel.Dock" TargetName="HeaderSite" Value="Left"/>
+                    <Setter Property="Style" TargetName="HeaderSite">
+                        <Setter.Value>
+                            <Style TargetType="{x:Type ToggleButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                            <Border Padding="{TemplateBinding Padding}">
+                                                <Grid Background="Transparent" SnapsToDevicePixels="False">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="19"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid>
+                                                        <Grid.LayoutTransform>
+                                                            <TransformGroup>
+                                                                <RotateTransform Angle="-90"/>
+                                                            </TransformGroup>
+                                                        </Grid.LayoutTransform>
+                                                        <Ellipse x:Name="circle"  HorizontalAlignment="Center" Height="19" VerticalAlignment="Center" Width="19"/>
+                                                        <Path x:Name="arrow" Data="M1,1.5L4.5,5 8,1.5" HorizontalAlignment="Center" SnapsToDevicePixels="False" Stroke="#FF333333" StrokeThickness="2" VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                    <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="Center" Margin="0,4,0,0" Grid.Row="1" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Top"/>
+                                                </Grid>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Data" TargetName="arrow" Value="M1,4.5L4.5,1 8,4.5"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="ExpandDirection" Value="Up">
+                    <Setter Property="DockPanel.Dock" TargetName="ExpandSite" Value="Top"/>
+                    <Setter Property="DockPanel.Dock" TargetName="HeaderSite" Value="Bottom"/>
+                    <Setter Property="Style" TargetName="HeaderSite">
+                        <Setter.Value>
+                            <Style TargetType="{x:Type ToggleButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                            <Border Padding="{TemplateBinding Padding}">
+                                                <Grid Background="Transparent" SnapsToDevicePixels="False">
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="19"/>
+                                                        <ColumnDefinition Width="*"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <Grid>
+                                                        <Grid.LayoutTransform>
+                                                            <TransformGroup>
+                                                                <RotateTransform Angle="180"/>
+                                                            </TransformGroup>
+                                                        </Grid.LayoutTransform>
+                                                        <Ellipse x:Name="circle"  HorizontalAlignment="Center" Height="19"  VerticalAlignment="Center" Width="19"/>
+                                                        <Path x:Name="arrow" Data="M1,1.5L4.5,5 8,1.5" HorizontalAlignment="Center" SnapsToDevicePixels="False" Stroke="#FF333333" StrokeThickness="2" VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                    <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Grid.Column="1" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="Left" Margin="4,0,0,0" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Center"/>
+                                                </Grid>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Data" TargetName="arrow" Value="M1,4.5L4.5,1 8,4.5"/>
+                                                </Trigger>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Stroke" TargetName="circle" Value="#FF5593FF"/>
+                                                    <Setter Property="Fill" TargetName="circle" Value="#FFF3F9FF"/>
+                                                    <Setter Property="Stroke" TargetName="arrow" Value="Black"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="ExpandDirection" Value="Left">
+                    <Setter Property="DockPanel.Dock" TargetName="ExpandSite" Value="Left"/>
+                    <Setter Property="DockPanel.Dock" TargetName="HeaderSite" Value="Right"/>
+                    <Setter Property="Style" TargetName="HeaderSite">
+                        <Setter.Value>
+                            <Style TargetType="{x:Type ToggleButton}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+                                            <Border Padding="{TemplateBinding Padding}">
+                                                <Grid Background="Transparent" SnapsToDevicePixels="False">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="19"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid>
+                                                        <Grid.LayoutTransform>
+                                                            <TransformGroup>
+                                                                <RotateTransform Angle="90"/>
+                                                            </TransformGroup>
+                                                        </Grid.LayoutTransform>
+                                                        <Ellipse x:Name="circle" Fill="White" HorizontalAlignment="Center" Height="19" Stroke="#FF333333" VerticalAlignment="Center" Width="19"/>
+                                                        <Path x:Name="arrow" Data="M1,1.5L4.5,5 8,1.5" HorizontalAlignment="Center" SnapsToDevicePixels="False" Stroke="#FF333333" StrokeThickness="2" VerticalAlignment="Center"/>
+                                                    </Grid>
+                                                    <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="Center" Margin="0,4,0,0" Grid.Row="1" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="Top"/>
+                                                </Grid>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Data" TargetName="arrow" Value="M1,4.5L4.5,1 8,4.5"/>
+                                                </Trigger>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Stroke" TargetName="circle" Value="#FF5593FF"/>
+                                                    <Setter Property="Fill" TargetName="circle" Value="#FFF3F9FF"/>
+                                                    <Setter Property="Stroke" TargetName="arrow" Value="Black"/>
+                                                </Trigger>
+                                                <Trigger Property="IsPressed" Value="True">
+                                                    <Setter Property="Stroke" TargetName="circle" Value="#FF3C77DD"/>
+                                                    <Setter Property="StrokeThickness" TargetName="circle" Value="1.5"/>
+                                                    <Setter Property="Fill" TargetName="circle" Value="#FFD9ECFF"/>
+                                                    <Setter Property="Stroke" TargetName="arrow" Value="Black"/>
+                                                </Trigger>
+                                                <Trigger Property="IsEnabled" Value="False">
+                                                    <Setter Property="Stroke" TargetName="circle" Value="#FFBCBCBC"/>
+                                                    <Setter Property="Fill" TargetName="circle" Value="#FFE6E6E6"/>
+                                                    <Setter Property="Stroke" TargetName="arrow" Value="#FF707070"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <Grid x:Name="MainGrid" >
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical">
+                <StackPanel.Style>
+                    <Style TargetType="StackPanel">
+                        <Setter Property="Visibility" Value="Visible"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=ActualWidth, Converter={conv:DoubleGreaterThanParameterConverter}, ConverterParameter=300}" Value="True">
+                                <Setter Property="Visibility" Value="Collapsed"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </StackPanel.Style>
+                <StackPanel>
+                    <!--<StackPanel Orientation="Horizontal" Height="auto" Width="auto" Background="{StaticResource OtherColor5}">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox IsEnabled="{Binding Path=IsEnabledName}" x:Name ="txtIndoorName" FontSize="15"  Margin="5" Height="25" Width="100" Text="{Binding Path=IndoorUnitName,Mode=TwoWay}" VerticalAlignment="Center" >
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="LostFocus">
+                                            <i:InvokeCommandAction Command="{Binding LostFocusIndoorUnitName}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </TextBox>
+                                <Button  Name="btnEdit" Background="Transparent" BorderThickness="0"  Margin="0,0,0,0">
+                                    <fa:ImageAwesome Icon="Edit" HorizontalAlignment="Left"   VerticalAlignment="Center"   Height="20" Width="20" />
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="Click">
+                                            <i:InvokeCommandAction Command="{Binding btnEditIndoorUnitNameCommand}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </Button>
+                            </StackPanel>
+                            <Label  Margin="0,-5,0,0" FontSize="8" Foreground="Red" HorizontalAlignment="Left" Content="{Binding IndoorError}" VerticalAlignment="Top"/>
+                        </StackPanel>
+
+                    </StackPanel>-->
+                    <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" >
+                        <Button  Content="Installation&#xa;Guide" IsEnabled="False" Padding="5"  FontSize="9" Height="34" Background="{StaticResource OtherColor5}" Width="80" Margin="5" HorizontalAlignment="Stretch"></Button>
+                        <Button Content="Sales Data" FontSize="9" Background="{StaticResource OtherColor5}" Width="80" IsEnabled="False" Padding="10"  Height="34" ></Button>
+                    </StackPanel>
+                    <DockPanel>
+                        <TextBlock Text="GA Drawings" FontSize="9"  Background="{StaticResource OtherColor5}" TextAlignment="Center" Padding="10" Width="80"  Margin="5,5,5,0" HorizontalAlignment="Left"></TextBlock>
+                        <Button Content="Accessories" FontSize="9"  Background="{StaticResource OtherColor5}" Width="80" Margin="-2,5,0,0" Height="35"  
+                                HorizontalAlignment="Stretch" 
+                                >
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding AddAccessoryCommand}"></i:InvokeCommandAction>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Button>
+                    </DockPanel>-->
+                    <TextBox Text="{Binding Path=IndoorUnitName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="LostFocus">
+                                <i:InvokeCommandAction Command="{Binding LostFocusIndoorUnitName}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </TextBox>
+                    <UniformGrid Rows="2" Columns="2">
+                        <Button Content="{ext1:LocalisedText Key=INSTALLATION_GUIDE}" IsEnabled="False"/>
+                        <Button Content="{ext1:LocalisedText Key=SALES_DATA}" IsEnabled="False"/>
+                        <Button Content="{ext1:LocalisedText Key=GA_DRAWINGS}" IsEnabled="False"/>
+                        <Button Content="{ext1:LocalisedText Key=ACCESSORIES}" ext:JCHUIService.NotificationCount="{Binding AccessoriesCount}" IsEnabled="True">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding AddAccessoryCommand}"></i:InvokeCommandAction>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Button>
+                    </UniformGrid>
+                    <Grid Margin="0,10,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0">
+                            <Expander FlowDirection="LeftToRight"  Style="{StaticResource ExpanderStyle}" IsExpanded="True" ExpandDirection="Down" Height="Auto" Template="{DynamicResource ExpanderUnitDetail}">
+                                <Expander.HeaderTemplate>
+                                    <DataTemplate >
+                                        <TextBlock Height="20" Text="{ext1:LocalisedText Key=UNIT_DETAILS}" HorizontalAlignment="Right" />
+                                    </DataTemplate>
+                                </Expander.HeaderTemplate>
+                                <StackPanel Orientation="Vertical" Background="White" Margin="0,5,2,5">
+                                    <StackPanel Background="{StaticResource OtherColor4}">
+                                        <Image Stretch="Uniform" Width="210" Height="100" Source="{Binding Path=IduImagePath, Mode=TwoWay,UpdateSourceTrigger=LostFocus}"></Image>
+                                    </StackPanel>
+                                    <StackPanel>
+                                        <Label Height="25" Margin="6,0,0,0" Name="IDUType" Content="{ext1:LocalisedText Key=IDU_TYPE}" FontFamily="Arial" FontSize="10" FontStyle="Normal" HorizontalAlignment="Left"></Label>
+                                    </StackPanel>
+                                    <StackPanel>
+                                        <ComboBox  Name="cmbIDUType" Margin="5,0,5,0" Height="25" Width="Auto" ItemsSource="{Binding Path=ListIndoorType}" SelectedValue="{Binding SelectedIndoorType, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"  DisplayMemberPath="DisplayName" SelectedValuePath="DisplayName"  Style="{StaticResource CornerRoundComboBox}">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="SelectionChanged">
+                                                    <i:InvokeCommandAction Command="{Binding SelectionChangedSelectedIndoorType}"/>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <CheckBox Content="{ext1:LocalisedText Key=MANUAL_SELECTION}" IsChecked="{Binding EnableManualSelection,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="Checked">
+                                                    <i:InvokeCommandAction Command="{Binding ManualSelectionCheckedCommand}"/>
+                                                </i:EventTrigger>
+                                                <i:EventTrigger EventName="Unchecked">
+                                                    <i:InvokeCommandAction Command="{Binding ManualSelectionUnCheckedCommand}"/>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </CheckBox>
+                                        <!--<CheckBox Height="30" Margin="6,3,0,0" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Content="Manual Selection" IsEnabled="{Binding EnableManualselectionIduModel,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"></CheckBox>-->
+                                    </StackPanel>
+                                    <StackPanel>
+                                        <Label Height="25" Name="IduModel" Margin="6,0,0,0" Content="{ext1:LocalisedText Key=MODEL}"  FontFamily="Arial" FontSize="10" FontStyle="Normal" HorizontalAlignment="Left"></Label>
+                                    </StackPanel>
+                                    <StackPanel>
+                                        <ComboBox Name="cmbIDUModel" Margin="5,0,5,0" Height="25" IsEnabled="{Binding EnableManualselectionIduModel,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=ListModel}" SelectedValue="{Binding SelectedModel, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"  DisplayMemberPath="DisplayName" SelectedValuePath="Value" Style="{StaticResource CornerRoundComboBox}" Width="Auto">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="SelectionChanged">
+                                                    <i:InvokeCommandAction Command="{Binding SelectionChangedSelectedModel}"/>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </ComboBox>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Expander>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1">
+                            <Expander FlowDirection="LeftToRight" Style="{StaticResource ExpanderStyle}" IsExpanded="True"  ExpandDirection="Down" Height="Auto" Template="{DynamicResource ExpanderUnitLocation}">
+                                <Expander.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Height="20" Text="{ext1:LocalisedText Key=UNIT_LOCATION}"  HorizontalAlignment="Right" />
+                                    </DataTemplate>
+                                </Expander.HeaderTemplate>
+                                <StackPanel Orientation="Vertical" Background="White" Margin="3,5,2,5">
+                                    <StackPanel>
+                                        <Label Height="25" Name="IduFloor" Content="{ext1:LocalisedText Key=FLOOR}" FontFamily="Arial" FontSize="11" FontStretch="ExtraExpanded" FontStyle="Normal"  HorizontalAlignment="Left"></Label>
+                                    </StackPanel>
+                                    <StackPanel>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="80*"></ColumnDefinition>
+                                                <ColumnDefinition Width="20*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <ComboBox Grid.Column="0" Margin="5,0,0,0" Style="{StaticResource CornerRoundComboBox}" ItemsSource="{Binding Path=ListFloor}" SelectedValue="{Binding SelectedFloor, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"  DisplayMemberPath="Name" SelectedValuePath="Id" Name="cmbIDUFloor">
+                                                <i:Interaction.Triggers>
+                                                    <i:EventTrigger EventName="SelectionChanged">
+                                                        <i:InvokeCommandAction Command="{Binding SelectionChangedSelectedFloor}"/>
+                                                    </i:EventTrigger>
+                                                </i:Interaction.Triggers>
+                                            </ComboBox>
+                                            <Button Grid.Column="1" x:Name="btnAddFloor"  Style="{StaticResource styleButtonOnFloor}"  Height="25" Width="30" Margin="2,0,0,0" Background="White">
+                                                <TextBlock Text="+"  Height="17"  Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                                                <i:Interaction.Triggers>
+                                                    <i:EventTrigger EventName="Click">
+                                                        <i:InvokeCommandAction Command="{Binding OpenAddFloorWindowCommand}"/>
+                                                    </i:EventTrigger>
+                                                </i:Interaction.Triggers>
+                                            </Button>
+                                        </Grid>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel>
+                                            <Label Height="25" Name="IduRoom" Content="{ext1:LocalisedText Key=ROOM}" FontFamily="Arial" FontSize="11" FontStretch="ExtraExpanded" FontStyle="Normal" HorizontalAlignment="Left"></Label>
+                                        </StackPanel>
+                                        <StackPanel>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="80*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="20*"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <ComboBox Grid.Column="0" Margin="5,0,0,0" ItemsSource="{Binding Path=ListRoom, Mode=TwoWay }" SelectedItem="{Binding SelectedRoom, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"  DisplayMemberPath="Name"   Style="{StaticResource CornerRoundComboBox}" BorderThickness="1"   Height="25" >
+                                                    <i:Interaction.Triggers>
+                                                        <i:EventTrigger EventName="SelectionChanged">
+                                                            <i:InvokeCommandAction Command="{Binding SelectionChangedSelectedRoom}"/>
+                                                        </i:EventTrigger>
+                                                    </i:Interaction.Triggers>
+                                                </ComboBox>
+                                                <Button Grid.Column="1" x:Name="btnAddRoom"  Style="{StaticResource styleButtonOnFloor}"  Height="25" Width="30" Margin="2,0,0,0" Background="White">
+                                                    <TextBlock Text="+"  Height="17"  Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                                                    <i:Interaction.Triggers>
+                                                        <i:EventTrigger EventName="Click">
+                                                            <i:InvokeCommandAction Command="{Binding OpenAddRoomWindowCommand}"/>
+                                                        </i:EventTrigger>
+                                                    </i:Interaction.Triggers>
+                                                </Button>
+                                            </Grid>
+                                        </StackPanel>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel>
+                                            <Label Height="25" Name="IduPostion" FontSize="11" Content="{ext1:LocalisedText Key=IDU_POSITION_ODU}" Margin="5,5,0,0" HorizontalAlignment="Stretch"></Label>
+                                        </StackPanel>
+                                        <StackPanel>
+                                            <Grid>
+                                                <ComboBox  Style="{StaticResource CornerRoundComboBox}" Width="auto" Height="25" ItemsSource="{Binding IduPosition}" SelectedItem="{Binding SelectedIduPosition, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Name="cmbIDUPostion">
+                                                    <i:Interaction.Triggers>
+                                                        <i:EventTrigger EventName="SelectionChanged">
+                                                            <i:InvokeCommandAction Command="{Binding SelectionChangedSelectedIduPosition}"/>
+                                                        </i:EventTrigger>
+                                                    </i:Interaction.Triggers>
+                                                </ComboBox>
+                                            </Grid>
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="60"></ColumnDefinition>
+                                            <ColumnDefinition Width="20"></ColumnDefinition>
+                                            <ColumnDefinition Width="70"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="50*"/>
+                                            <RowDefinition Height="50*"/>
+                                        </Grid.RowDefinitions>
+                                        <Label Height="25" Name="IduHeightDifference" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="{ext1:LocalisedText Key=HEIGHT_DIFFERENCE}" HorizontalAlignment="Left"></Label>
+                                        <Label Height="25" Name="IduFanSpeed" Content="{ext1:LocalisedText Key=FAN_SPEED}" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Center"></Label>
+                                        <xc:DecimalUpDown  Name="HeightDiff" Grid.Column="0" Grid.Row="1"  AllowSpin="True" AllowTextInput="True" HorizontalAlignment="Stretch" Value="{Binding HeightDifference}"  AutoMoveFocus="True" FormatString="N1">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="LostFocus">
+                                                    <i:InvokeCommandAction Command="{Binding LostFocusHeightDifference}"/>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </xc:DecimalUpDown>
+                                        <Label Height="25"  Grid.Column="1" Grid.Row="1" Content="m" Margin="0,0,0,0" ></Label>
+                                        <ComboBox Width="auto" HorizontalAlignment="Stretch" Grid.Column="2" Grid.Row="1" Style="{StaticResource CornerRoundComboBox}" ItemsSource="{Binding FanSpeed}" SelectedItem="{Binding SelectedFanSpeed, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Name="cmbFanspeed">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="SelectionChanged">
+                                                    <i:InvokeCommandAction Command="{Binding SelectionChangedSelectedFanSpeed}"/>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </ComboBox>
+
+
+                                        <!--<StackPanel Grid.Column="0" Grid.Row="0">
+                                                    <StackPanel Orientation="Vertical">
+                                                        <StackPanel>
+                                                            <Label Height="25" Name="IduHeightDifference" Content="Height Difference" HorizontalAlignment="Left"></Label>
+                                                        </StackPanel>
+                                                        <StackPanel>
+                                                            <Grid>
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="80*"></ColumnDefinition>
+                                                                    <ColumnDefinition Width="20*"></ColumnDefinition>
+                                                                </Grid.ColumnDefinitions>
+                                                                <Grid.RowDefinitions>
+                                                                    <RowDefinition Height="Auto"/>
+                                                                </Grid.RowDefinitions>
+                                                                <StackPanel Orientation="Horizontal">
+                                                                    <xc:DecimalUpDown Name="HeightDiff" AllowSpin="True" AllowTextInput="True" HorizontalAlignment="Left" AutoMoveFocus="True"  Width="60" Height="25"  FormatString="N1"></xc:DecimalUpDown>
+                                                                    <Label Height="25" Grid.Column="1" Grid.Row="0" Content="m" ></Label>
+                                                                </StackPanel>
+                                                            </Grid>
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </StackPanel>
+                                                <StackPanel  Grid.Column="1" Grid.Row="0">
+                                                    <StackPanel>
+                                                        <Label Height="25" Name="IduFanSpeed" Content="FanSpeed" HorizontalAlignment="Left"></Label>
+                                                    </StackPanel>
+                                                    <StackPanel>
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="100*"></ColumnDefinition>
+                                                            </Grid.ColumnDefinitions>
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="Auto"/>
+                                                            </Grid.RowDefinitions>
+                                                            <StackPanel Grid.Column="0" Orientation="Horizontal" Width="auto">
+                                                                <ComboBox Width="100" Style="{StaticResource CornerRoundComboBox}" ItemsSource="{Binding FanSpeed}" SelectedItem="{Binding SelectedFanSpeed, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Name="cmbFanspeed"></ComboBox>
+                                                            </StackPanel>
+                                                        </Grid>
+                                                    </StackPanel>
+                                                </StackPanel>-->
+                                    </Grid>
+
+                                </StackPanel>
+
+                            </Expander>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Margin="3">
+                            <Expander FlowDirection="LeftToRight" Style="{StaticResource ExpanderStyle}" IsExpanded="True"  ExpandDirection="Down" Height="Auto" Template="{DynamicResource ExpanderUnitLocation}">
+                                <Expander.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Height="20" Text="{ext1:LocalisedText Key=MODEL_SPEFICATIONS}"  HorizontalAlignment="Right" />
+                                    </DataTemplate>
+                                </Expander.HeaderTemplate>
+                                <Grid Background="White" Margin="3,5,2,5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition ></ColumnDefinition>
+                                        <ColumnDefinition Width="50"></ColumnDefinition>
+                                        <ColumnDefinition Width="50"></ColumnDefinition>
+                                        <ColumnDefinition Width="50"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.Column="1" Margin="0,0,0,0">
+                                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap"  FontSize="10">
+                                                  <Run  Text="{ext1:LocalisedText Key=REQUIRED_CAPACITY}"/>
+                                                  <LineBreak/>
+                                                   <Run BaselineAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.PowerUnit, StringFormat='(\{0}\)'}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="0" Grid.Column="2" >
+                                        <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap"  FontSize="10">
+                                                  <Run  Text="{ext1:LocalisedText Key=RATED}"/>
+                                                  <LineBreak/>
+                                                   <Run BaselineAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.PowerUnit, StringFormat='(\{0}\)'}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="0" Grid.Column="3">
+                                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap"  FontSize="10">
+                                                  <Run  Text="{ext1:LocalisedText Key=CORRECTED}"/>
+                                                  <LineBreak/>
+                                                   <Run BaselineAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.PowerUnit, StringFormat='(\{0}\)'}"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <fa:ImageAwesome HorizontalAlignment="Left" x:Name="Snowflake"  Foreground="{Binding IsCoolingOnlyMode,Converter={conv:BoolToSolidColorBrushConverter}, ConverterParameter=1}" Height="20" Width="auto" Grid.Column="0" Grid.Row="1" Icon="SnowflakeOutline" />
+                                    <fa:ImageAwesome HorizontalAlignment="Left" x:Name="Snowfla"   Height="20" Width="auto" Grid.Column="0" Grid.Row="2" Icon="SnowflakeOutline" />
+                                    <fa:ImageAwesome HorizontalAlignment="Left" x:Name="Snowfl"  Foreground="{Binding IsHeatingOnlyMode,Converter={conv:BoolToSolidColorBrushConverter}, ConverterParameter=1}" Height="20" Width="auto" Grid.Column="0" Grid.Row="3" Icon="SunOutline" />
+                                    <!--Row 1 Cooling -->
+                                    <TextBlock Text="{Binding SR_TotalCapacity,StringFormat=N1}" Foreground="{Binding IsCoolingOnlyMode,Converter={conv:BoolToSolidColorBrushConverter}, ConverterParameter=1}" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1"></TextBlock>
+                                    <!--Requiered Capacity -->
+                                    <TextBlock Text="{Binding RatedCooling,StringFormat=N1}" Foreground="{Binding IsCoolingOnlyMode,Converter={conv:BoolToSolidColorBrushConverter}, ConverterParameter=1}" Grid.Row="1" Grid.Column="2"></TextBlock>
+                                    <TextBlock Text="{Binding CorrectedCooling,StringFormat=N1}" Foreground="{Binding IsCoolingOnlyMode,Converter={conv:BoolToSolidColorBrushConverter}, ConverterParameter=1}" Grid.Row="1" Grid.Column="3"></TextBlock>
+                                    <!--Row 2 Sensible-->
+                                    <TextBlock Text="{Binding SR_SensibleCapacity,StringFormat=N1}" Grid.Row="2" HorizontalAlignment="Center" Grid.Column="1"></TextBlock>
+                                    <!--Requiered Capacity -->
+                                    <TextBlock Text="{Binding RatedSensible,StringFormat=N1}" Grid.Row="2" Grid.Column="2"></TextBlock>
+                                    <TextBlock Text="{Binding CorrectedSensible,StringFormat=N1}" Grid.Row="2" Grid.Column="3"></TextBlock>
+                                    <!--Row 3 Heating-->
+                                    <TextBlock Text="{Binding SR_HeatingCapacity,StringFormat=N1}" Foreground="{Binding IsHeatingOnlyMode,Converter={conv:BoolToSolidColorBrushConverter}, ConverterParameter=1}" Grid.Row="3" HorizontalAlignment="Center" Grid.Column="1"></TextBlock>
+                                    <!--Requiered Capacity -->
+                                    <TextBlock Text="{Binding RatedHeating,StringFormat=N1}" Foreground="{Binding IsHeatingOnlyMode,Converter={conv:BoolToSolidColorBrushConverter}, ConverterParameter=1}" Grid.Row="3" Grid.Column="2"></TextBlock>
+                                    <TextBlock Text="{Binding CorrectedHeating,StringFormat=N1}" Foreground="{Binding IsHeatingOnlyMode,Converter={conv:BoolToSolidColorBrushConverter}, ConverterParameter=1}" Grid.Row="3" Grid.Column="3"></TextBlock>
+
+
+                                    <TextBlock Margin="0,10,0,0" Text="{ext1:LocalisedText Key=AIR_FLOW}" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"></TextBlock>
+                                    <TextBlock  Margin="0,3,0,0" Text="{Binding SR_AirFlow,Converter={conv:SourceToControlWithUnitConverter}, 
+                                                        ConverterParameter=AIRFLOW}"  Grid.ColumnSpan="2" FontWeight="SemiBold" Grid.Row="5" Grid.Column="0"></TextBlock>
+                                    <TextBlock Margin="0,3,0,0" Text="{ext1:LocalisedText Key=ESP}" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3"></TextBlock>
+                                    <TextBlock Margin="0,3,0,0" Text="{Binding SR_ESP}" FontWeight="SemiBold"  Grid.Row="7" Grid.Column="0"></TextBlock>
+                                    <TextBlock   Margin="8,3,0,0"  Text="{Binding PressureMasureUnit}" FontWeight="SemiBold"  Grid.Row="7" Grid.Column="1"></TextBlock>
+                                </Grid>
+                                <!--<StackPanel Orientation="Vertical" Background="White" Margin="3,5,2,5">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition Width="7*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="auto"/>
+                                            </Grid.RowDefinitions>
+                                            <StackPanel Grid.Column="0">
+
+                                            </StackPanel>
+                                            <StackPanel Grid.Column="1" Orientation="Vertical" Grid.ColumnSpan="2">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="33*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="33*"></ColumnDefinition>
+                                                        <ColumnDefinition Width="33*"></ColumnDefinition>
+                                                    </Grid.ColumnDefinitions>
+                                                    <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="Required Capacity" ></TextBlock>
+                                                    <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Rated" ></TextBlock>
+                                                    <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="Corrected" ></TextBlock>
+                                                </Grid>
+                                                <StackPanel>
+                                                    <ItemsControl ItemsSource="{Binding myValues}">    
+                                                        <ItemsControl.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <Grid>
+                                                                    <Grid.ColumnDefinitions>
+                                                                        <ColumnDefinition Width="33*"></ColumnDefinition>
+                                                                        <ColumnDefinition Width="33*"></ColumnDefinition>
+                                                                        <ColumnDefinition Width="33*"></ColumnDefinition>
+                                                                    </Grid.ColumnDefinitions>
+                                                                    <TextBlock Grid.Column="0" Text="22" ></TextBlock>
+                                                                    -->
+                                <!--Binding-->
+                                <!--
+                                                                    <TextBlock Grid.Column="1" Text="44" ></TextBlock>
+                                                                    -->
+                                <!--Binding-->
+                                <!--
+                                                                    <TextBlock Grid.Column="2" Text="11" ></TextBlock>
+                                                                    -->
+                                <!--Binding-->
+                                <!--
+                                                                </Grid>
+                                                            </DataTemplate>
+                                                        </ItemsControl.ItemTemplate>
+                                                    </ItemsControl>
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </Grid>
+                                        <StackPanel Orientation="Vertical">
+                                            <Label Content="Air Flow"></Label>
+                                            <Label Content="xxxxxx"></Label>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical">
+                                            <Label Content="ESP"></Label>
+                                            <Label Content="58.40pa"></Label>
+                                        </StackPanel>
+                                    </StackPanel>-->
+                            </Expander>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3">
+                            <Expander FlowDirection="LeftToRight" Style="{StaticResource ExpanderStyle}" IsExpanded="True"  ExpandDirection="Down" Height="Auto" Template="{DynamicResource ExpanderUnitLocation}">
+                                <Expander.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Height="20" Text="{ext1:LocalisedText Key=DESIGN_CONDITIONS}"  HorizontalAlignment="Right" />
+                                    </DataTemplate>
+                                </Expander.HeaderTemplate>
+                                <StackPanel Orientation="Vertical" Background="White" Margin="3,5,2,5">
+                                    <StackPanel Orientation="Vertical">
+                                        <Button  Style="{DynamicResource HyperLinkButtonStyle}" VerticalAlignment="Center" HorizontalAlignment="Center" Name="btnChangeTemp"  FontSize="14" >
+                                            <TextBlock >
+                            <Run Text="{ext1:LocalisedText Key=CHANGE_TO}"></Run>
+                            <Run Text=" "></Run>
+                            <Run Text="{Binding DisplayCurrentTempUnit}"></Run>
+                                            </TextBlock>
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="Click">
+                                                    <i:InvokeCommandAction Command="{Binding ChangeTempCommand}"/>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Button>
+                                        <StackPanel Orientation="Horizontal">
+                                            <CheckBox Height="30" IsChecked="{Binding Path=UseRoomTemperature}" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=USE_TEMPERATURE_FROM_ROOM}">
+                                                <i:Interaction.Triggers >
+                                                    <i:EventTrigger EventName="Checked">
+                                                        <i:InvokeCommandAction Command="{Binding UseRoomTemperatueCheckedCommand}"/>
+                                                    </i:EventTrigger>
+                                                    <i:EventTrigger EventName="Unchecked">
+                                                        <i:InvokeCommandAction Command="{Binding UseRoomTemperatueUnCheckedCommand}"/>
+                                                    </i:EventTrigger>
+                                                </i:Interaction.Triggers>
+
+                                            </CheckBox>
+                                        </StackPanel>
+                                    </StackPanel>
+                                    <Expander FlowDirection="LeftToRight" Style="{StaticResource ExpanderStyle}" IsExpanded="True"  ExpandDirection="Down" Height="Auto" Template="{DynamicResource ExpanderUnitLocation}">
+                                        <Expander.HeaderTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Height="20" Text="{ext1:LocalisedText Key=COOLING}"  HorizontalAlignment="Right" />
+                                            </DataTemplate>
+                                        </Expander.HeaderTemplate>
+                                        <Grid  Background="White" Margin="3,5,2,5">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="60"/>
+                                                    <ColumnDefinition Width="20"/>
+                                                    <ColumnDefinition Width="60" />
+                                                    <ColumnDefinition Width="20"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="auto"></RowDefinition>
+                                                    <RowDefinition Height="auto"></RowDefinition>
+                                                    <RowDefinition Height="auto"></RowDefinition>
+                                                    <RowDefinition Height="auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+
+                                                <Label Grid.Column="0" Grid.Row="0" Content="{ext1:LocalisedText Key=DRY_BULB}"></Label>
+                                                <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical">
+                                                    <xc:DecimalUpDown  Increment="0.1" DefaultValue="0"  Margin="0,5,0,0" Value="{Binding Path=CoolingDryBulb, Mode=TwoWay,UpdateSourceTrigger=LostFocus}" AllowSpin="True" AllowTextInput="True" AutoMoveFocus="True" Maximum="5000" Minimum="0" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                                                        <i:Interaction.Triggers>
+                                                            <i:EventTrigger EventName="LostFocus">
+                                                                <i:InvokeCommandAction Command="{Binding LostFocusCoolingDryBulb}"/>
+                                                            </i:EventTrigger>
+                                                        </i:Interaction.Triggers>
+                                                    </xc:DecimalUpDown >
+                                                    <Label  Margin="0,-6,0,0" Content="{Binding CoolingDryBulbError}"   FontSize="8" Foreground="Red"   HorizontalAlignment="Left"/>
+                                                </StackPanel>
+                                                <Label Grid.Column="1" Grid.Row="1" Content="{Binding DesignConditionTempMasureUnit,Mode=TwoWay}"></Label>
+
+                                                <Label Grid.Column="2" Grid.Row="0" Content="{ext1:LocalisedText Key=WET_BULB}"></Label>
+                                                <StackPanel  Grid.Column="2" Grid.Row="1" Orientation="Vertical">
+                                                    <xc:DecimalUpDown  Increment="0.1" DefaultValue="0"  Value="{Binding Path=CoolingWetBulb, Mode=TwoWay,UpdateSourceTrigger=LostFocus}"  Margin="0,5,0,0" AllowSpin="True" AllowTextInput="True" AutoMoveFocus="True" Maximum="5000" Minimum="0" VerticalAlignment="Center" HorizontalAlignment="Stretch" Grid.Column="2" Grid.Row="1">
+                                                        <i:Interaction.Triggers>
+                                                            <i:EventTrigger EventName="LostFocus">
+                                                                <i:InvokeCommandAction Command="{Binding LostFocusCoolingWetBulb}"/>
+                                                            </i:EventTrigger>
+                                                        </i:Interaction.Triggers>
+                                                    </xc:DecimalUpDown>
+                                                    <Label  Margin="0,-5,0,0" Content="{Binding CoolingWetBulbError}"  FontSize="8" Foreground="Red"   HorizontalAlignment="Left"/>
+                                                </StackPanel>
+                                                <Label Grid.Column="3" Grid.Row="1" Content="{Binding DesignConditionTempMasureUnit,Mode=TwoWay}"></Label>
+
+                                                <TextBlock Grid.Column="0" Grid.Row="2" TextWrapping="Wrap" Text="{ext1:LocalisedText Key=RELATIVE_HUMIDITY}"></TextBlock>
+                                                <StackPanel  Grid.Column="0" Grid.Row="3">
+                                                    <xc:DecimalUpDown  Increment="0.1" DefaultValue="0"  Value="{Binding Path=RelativeHumidity, Mode=TwoWay,UpdateSourceTrigger=LostFocus}" Margin="0,0,0,0" AllowSpin="True" AllowTextInput="True" AutoMoveFocus="True" Maximum="5000" Minimum="0" VerticalAlignment="Center" HorizontalAlignment="Stretch" >
+                                                        <i:Interaction.Triggers>
+                                                            <i:EventTrigger EventName="LostFocus">
+                                                                <i:InvokeCommandAction Command="{Binding LostFocusRelativeHumidity}"/>
+                                                            </i:EventTrigger>
+                                                        </i:Interaction.Triggers>
+                                                    </xc:DecimalUpDown >
+                                                    <Label Content="{Binding RelativeHumidityError}"   Margin="0,-6,0,0" FontSize="8" Foreground="Red"   HorizontalAlignment="Left"/>
+                                                </StackPanel>
+                                                <Label Grid.Column="1" Grid.Row="3" Content="%"></Label>
+                                            </Grid>
+                                        </Grid>
+                                    </Expander>
+                                    <Expander FlowDirection="LeftToRight" Style="{StaticResource ExpanderStyle}" IsExpanded="True"  ExpandDirection="Down" Height="Auto" Template="{DynamicResource ExpanderUnitLocation}">
+                                        <Expander.HeaderTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Height="20" Text="{ext1:LocalisedText Key=HEATING}"  HorizontalAlignment="Right" />
+                                            </DataTemplate>
+                                        </Expander.HeaderTemplate>
+                                        <StackPanel Orientation="Vertical" Background="White" Margin="3,5,2,5">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="60"/>
+                                                    <ColumnDefinition Width="20"/>
+                                                    <ColumnDefinition Width="35*"/>
+                                                    <ColumnDefinition Width="15"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="auto"></RowDefinition>
+                                                    <RowDefinition Height="auto"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Label Grid.Column="0" Grid.Row="0" Content="{ext1:LocalisedText Key=DRY_BULB}"></Label>
+                                                <StackPanel Grid.Column="0" Grid.Row="1">
+                                                    <xc:DecimalUpDown  Increment="0.1" DefaultValue="0"   Margin="0,0,0,0" Value="{Binding Path=HeatingDryBulb, Mode=TwoWay,UpdateSourceTrigger=LostFocus}" AllowSpin="True" AllowTextInput="True" AutoMoveFocus="True" Maximum="5000" Minimum="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Grid.Column="0" Grid.Row="1">
+                                                        <i:Interaction.Triggers>
+                                                            <i:EventTrigger EventName="LostFocus">
+                                                                <i:InvokeCommandAction Command="{Binding LostFocusHeatingDryBulb}"/>
+                                                            </i:EventTrigger>
+                                                        </i:Interaction.Triggers>
+                                                    </xc:DecimalUpDown >
+                                                    <Label Content="{Binding HeatingDryBulbError}"  Margin="0,-6,0,0" FontSize="8" Foreground="Red"   HorizontalAlignment="Left"/>
+                                                </StackPanel>
+                                                <Label Grid.Column="1" Grid.Row="1" Content="{Binding DesignConditionTempMasureUnit,Mode=TwoWay}"></Label>
+                                            </Grid>
+                                        </StackPanel>
+                                    </Expander>
+                                </StackPanel>
+
+
+                            </Expander>
+
+                        </StackPanel>
+                        <StackPanel Grid.Row="4">
+
+                        </StackPanel>
+                        <StackPanel Grid.Row="5">
+
+                        </StackPanel>
+
+                    </Grid>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <Grid Height="auto">
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Setter Property="Visibility" Value="Collapsed"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=ActualWidth, Converter={conv:DoubleGreaterThanParameterConverter}, ConverterParameter=300}" Value="True">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+
+            </Grid.Style>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Row="0">
+                    <StackPanel>
+                        <TextBox IsEnabled="{Binding Path=IsEnabledName,Mode=TwoWay}"  FontSize="15" Name="txtIduName"  BorderThickness=".5" Margin="5" Height="25" Width="140" Text="{Binding Path=IndoorUnitName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" >
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="LostFocus">
+                                    <i:InvokeCommandAction Command="{Binding LostFocusIndoorUnitName}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </TextBox>
+                        <Label  Margin="0,-5,0,0" FontSize="8" Foreground="Red" HorizontalAlignment="Left" Content="{Binding IndoorError}" VerticalAlignment="Top"/>
+                    </StackPanel>
+                    <Button Background="Transparent" BorderThickness="0"  Margin="0,0,0,0">
+                        <fa:ImageAwesome Icon="Edit" HorizontalAlignment="Left"   VerticalAlignment="Center"  Height="20" Width="20" />
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding btnEditIndoorUnitNameCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                </StackPanel>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Height="25" Grid.Row="0" Name="GIDUType" Content="{ext1:LocalisedText Key=IDU_TYPE}" HorizontalAlignment="Left"></Label>
+                    <ComboBox Name="GcmbIDUType" Grid.Row="1" ItemsSource="{Binding Path=ListIndoorType}" Margin="5" SelectedValue="{Binding SelectedIndoorType, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"  DisplayMemberPath="DisplayName" SelectedValuePath="DisplayName"  Style="{StaticResource CornerRoundComboBox}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction Command="{Binding SelectionChangedSelectedIndoorType}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </ComboBox>
+                </Grid>
+                <StackPanel Grid.Row="2">
+                    <Label Height="30"  Content="{ext1:LocalisedText Key=UNIT_LOCATION}" HorizontalAlignment="Left"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Name="Gridroom" Grid.Row="3">
+                    <StackPanel>
+                        <Label Height="25" Content="{ext1:LocalisedText Key=ROOM}" HorizontalAlignment="Left"></Label>
+                    </StackPanel>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80*"></ColumnDefinition>
+                                <ColumnDefinition Width="20*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <ComboBox Grid.Column="0" Name="GcmbIDURoom" ItemsSource="{Binding Path=ListRoom, Mode=TwoWay }" SelectedItem="{Binding SelectedRoom, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Name" Margin="5" Height="30">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="SelectionChanged">
+                                        <i:InvokeCommandAction Command="{Binding SelectionChangedSelectedRoom}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </ComboBox>
+                            <Button Grid.Column="1" x:Name="GbtnAddRoom"  Style="{StaticResource styleButtonOnFloor}"  Height="25" Width="30" Margin="2,0,0,0" Background="White">
+                                <TextBlock Text="+"  Height="17"  Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Click">
+                                        <i:InvokeCommandAction Command="{Binding OpenAddRoomWindowCommand}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </Button>
+                            <!--<fa:ImageAwesome Icon="Plus" Height="10" Grid.Column="1" ></fa:ImageAwesome>-->
+                        </Grid>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Name="GridFloor" Grid.Row="4">
+                    <StackPanel>
+                        <Label Height="25" Name="GridIduFloor" Content="{ext1:LocalisedText Key=FLOOR}" HorizontalAlignment="Left"></Label>
+                    </StackPanel>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80*"></ColumnDefinition>
+                                <ColumnDefinition Width="20*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <ComboBox Grid.Column="0" Name="GcmbIDUFloor" ItemsSource="{Binding Path=ListFloor}" Style="{StaticResource CornerRoundComboBox}" SelectedValue="{Binding SelectedFloor, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"  DisplayMemberPath="Name" SelectedValuePath="Id" Margin="5" Height="30">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="SelectionChanged">
+                                        <i:InvokeCommandAction Command="{Binding SelectionChangedSelectedFloor}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </ComboBox>
+                            <Button Grid.Column="1" x:Name="GbtnAddFloor"  Style="{StaticResource styleButtonOnFloor}"  Height="25" Width="30" Margin="2,0,0,0" Background="White">
+                                <TextBlock Text="+"  Height="17"  Margin="2,0,2,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="Click">
+                                        <i:InvokeCommandAction Command="{Binding OpenAddFloorWindowCommand}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </Button>
+                            <!--<fa:ImageAwesome Icon="Plus" Height="10" Grid.Column="1" ></fa:ImageAwesome>-->
+                        </Grid>
+                    </StackPanel>
+                </StackPanel>
+                    <Grid Name="GridIDUPOs" Grid.Row="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition ></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label  Name="GridIduPostion" Grid.Column="0" Grid.Row="0"  Content="{ext1:LocalisedText Key=IDU_POSITION_ODU}" HorizontalAlignment="Left"></Label>
+                        <ComboBox Margin="5,0,5,0" Grid.Column="0" Grid.Row="1" Name="GridcmbIDUPostion" ItemsSource="{Binding IduPosition}" SelectedItem="{Binding SelectedIduPosition, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="SelectionChanged">
+                                    <i:InvokeCommandAction Command="{Binding SelectionChangedSelectedIduPosition}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </ComboBox>
+                        <Label Grid.Row="0" Grid.Column="1" Content="{ext1:LocalisedText Key=HEIGHT_DIFFERENCE}" HorizontalAlignment="Left"></Label>
+                        <xc:DecimalUpDown Margin="5,0,5,0" Grid.Column="1" Grid.Row="1" Increment="0.1" DefaultValue="0"   Value="{Binding Path=HeightDifference, Mode=TwoWay,UpdateSourceTrigger=LostFocus}" AllowSpin="True" AllowTextInput="True" Maximum="5000" Minimum="0">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="LostFocus">
+                                    <i:InvokeCommandAction Command="{Binding LostFocusHeightDifference}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </xc:DecimalUpDown >
+                        <Label Grid.Column="1" Grid.Row="2" Margin="0,2,0,0" FontSize="8" Foreground="Red" HorizontalAlignment="Left" Content="{Binding HeightDifferenceError}" VerticalAlignment="Top"/>
+                    </Grid>
+                <StackPanel Orientation="Vertical" Name="GridModel" Grid.Row="6">
+                    <StackPanel>
+                        <Label Height="30" Content="{ext1:LocalisedText Key=MODEL}" HorizontalAlignment="Left"></Label>
+                    </StackPanel>
+                    <StackPanel>
+                        <ComboBox Name="cmbIDUModelPopOut"  Height="30" IsEnabled="{Binding EnableManualselectionIduModel,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=ListModel}" SelectedValue="{Binding SelectedModel, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}"  DisplayMemberPath="DisplayName" SelectedValuePath="Value" Style="{StaticResource CornerRoundComboBox}" Width="Auto">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="SelectionChanged">
+                                    <i:InvokeCommandAction Command="{Binding SelectionChangedSelectedModel}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </ComboBox>
+                        <!--<ComboBox  Width="Auto" Height="30" ItemsSource="{Binding Path=ListModel}" SelectedValue="{Binding SelectedModel, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="DisplayName" SelectedValuePath="Value" Margin="5">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="SelectionChanged">
+                                    <i:InvokeCommandAction Command="{Binding SelectionChangedSelectedModel}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+
+                        </ComboBox>-->
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Grid Background="{StaticResource OtherColor5}" Margin="8,8,2,5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="25"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"></ColumnDefinition>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition Width="60"></ColumnDefinition>
+                        <ColumnDefinition Width="60"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="{ext1:LocalisedText Key=CAPACITY}" Grid.Row="1" Grid.Column="0" ></TextBlock>
+                    <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,0,0,0">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap"  FontSize="12">
+                                                  <Run  Text="{ext1:LocalisedText Key=REQUIRED_CAPACITY}"/>
+                                                  <LineBreak/>
+                                                  <Run BaselineAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.PowerUnit, StringFormat='(\{0}\)'}"/>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="2" >
+                        <TextBlock HorizontalAlignment="Stretch" TextWrapping="Wrap"  FontSize="12">
+                                                  <Run  Text="{ext1:LocalisedText Key=RATED}"/>
+                                                  <LineBreak/>
+                                                  <Run BaselineAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.PowerUnit, StringFormat='(\{0}\)'}"/>
+                        </TextBlock>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="3">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap"  FontSize="12">
+                                                  <Run  Text="{ext1:LocalisedText Key=CORRECTED}"/>
+                                                  <LineBreak/>
+                                                  <Run BaselineAlignment="Center"  Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.PowerUnit, StringFormat='(\{0}\)'}"/>
+                        </TextBlock>
+                    </StackPanel>
+                    <!--Row 1 Cooling -->
+                    <TextBlock Text="{Binding SR_TotalCapacity,StringFormat=N1}" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1"></TextBlock>
+                    <TextBlock Text="{Binding RatedCooling,StringFormat=N1}" Grid.Row="2" Grid.Column="2"></TextBlock>
+                    <TextBlock Text="{Binding CorrectedCooling,StringFormat=N1}" Grid.Row="2" Grid.Column="3"></TextBlock>
+                    <!--END Row 1 Cooling -->
+                    <!--Row 2 Sensible-->
+                    <TextBlock Text="{Binding SR_SensibleCapacity,StringFormat=N1}" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock Text="{Binding RatedSensible,StringFormat=N1}" Grid.Row="3" Grid.Column="2"></TextBlock>
+                    <TextBlock Text="{Binding CorrectedSensible,StringFormat=N1}" Grid.Row="3" Grid.Column="3"></TextBlock>
+                    <!--End Row 2 Sensible-->
+                    <!--Row 3 Heating-->
+                    <TextBlock Text="{Binding SR_HeatingCapacity,StringFormat=N1}" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center"></TextBlock>
+                    <TextBlock  Text="{Binding RatedHeating,StringFormat=N1}" Grid.Row="4" Grid.Column="2"></TextBlock>
+                    <TextBlock Text="{Binding CorrectedHeating,StringFormat=N1}" Grid.Row="4" Grid.Column="3"></TextBlock>
+                    <!--END Row 3 Heating-->
+                    <TextBlock Margin="5,8,0,0" Text="{ext1:LocalisedText Key=AIR_FLOW}" Grid.Row="5" Grid.Column="0"></TextBlock>
+                    <TextBlock  Margin="0,8,0,0" Height="15" Text="{Binding SR_AirFlow,Converter={conv:SourceToControlWithUnitConverter}, 
+                                                        ConverterParameter=AIRFLOW}"  FontWeight="SemiBold" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"></TextBlock>
+                    <TextBlock Margin="5,3,0,0" Text="ESP" Grid.Row="6" Grid.Column="0"></TextBlock>
+                    <TextBlock Margin="0,3,0,0" Height="13" Text="{Binding SR_ESP,StringFormat='\{0}\ Pa'}" FontWeight="SemiBold"  Grid.Row="7" Grid.Column="1"></TextBlock>
+                    <TextBlock Text="{ext1:LocalisedText Key=COOLING}" Grid.Row="2" Grid.Column="0"></TextBlock>
+                    <TextBlock Text="{ext1:LocalisedText Key=SENSIBLE}" Grid.Row="3" Grid.Column="0"></TextBlock>
+                    <TextBlock Text="{ext1:LocalisedText Key=HEATING}" Grid.Row="4" Grid.Column="0"></TextBlock>
+                    <TextBlock Text="{ext1:LocalisedText Key=MODEL_SPECIFICATIONS}" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" ></TextBlock>
+
+
+                </Grid>
+                <!--<StackPanel Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="7*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Column="0">
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Orientation="Vertical" Grid.ColumnSpan="2">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="33*"></ColumnDefinition>
+                                    <ColumnDefinition Width="33*"></ColumnDefinition>
+                                    <ColumnDefinition Width="33*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" HorizontalAlignment="Center" Text="Required Capacity" ></TextBlock>
+                                <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Rated" ></TextBlock>
+                                <TextBlock Grid.Column="2" HorizontalAlignment="Center" Text="Corrected" ></TextBlock>
+                            </Grid>
+                            <StackPanel>
+                                <ItemsControl ItemsSource="{Binding myValues}">    
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="33*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="33*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="33*"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Column="0" Text="22" ></TextBlock>
+
+
+                                                -->
+                <!--Binding-->
+                <!--<TextBlock Grid.Column="1" Text="44" ></TextBlock>-->
+                <!--Binding-->
+                <!--<TextBlock Grid.Column="2" Text="11" ></TextBlock>-->
+                <!--Binding-->
+                <!--
+
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>-->
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="1" Background="{StaticResource OtherColor5}" Margin="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="{ext1:LocalisedText Key=DESIGN_CONDITIONS}" Grid.Column="0"></Label>
+
+
+                        <Button Grid.Column="1" Style="{DynamicResource HyperLinkButtonStyle}" VerticalAlignment="Center" HorizontalAlignment="Left"   FontSize="14" >
+                            <TextBlock >
+                            <Run Text="{ext1:LocalisedText Key=CHANGE_TO}"></Run>
+                            <Run Text=" "></Run>
+                            <Run Text="{Binding DisplayCurrentTempUnit}"></Run>
+                            </TextBlock>
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding ChangeTempCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Button>
+
+                        <CheckBox Height="30" Grid.Column="2" IsChecked="{Binding Path=UseRoomTemperature}" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=USE_TEMPERATURE_FROM_ROOM}">
+                            <i:Interaction.Triggers >
+                                <i:EventTrigger EventName="Checked">
+                                    <i:InvokeCommandAction Command="{Binding UseRoomTemperatueCheckedCommand}"/>
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="Unchecked">
+                                    <i:InvokeCommandAction Command="{Binding UseRoomTemperatueUnCheckedCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </CheckBox>
+
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="55"></ColumnDefinition>
+                            <ColumnDefinition Width="70"></ColumnDefinition>
+                            <ColumnDefinition Width="23"></ColumnDefinition>
+                            <ColumnDefinition Width="70"></ColumnDefinition>
+                            <ColumnDefinition Width="23"></ColumnDefinition>
+                            <ColumnDefinition Width="70"></ColumnDefinition>
+                            <ColumnDefinition Width="23"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Label Content="{ext1:LocalisedText Key=DRY_BULB}" Grid.Row="0" Grid.Column="1"></Label>
+
+
+                        <Label Content="{ext1:LocalisedText Key=WET_BULB}" Grid.Row="0" Grid.Column="3"></Label>
+
+
+                        <TextBlock Text="{ext1:LocalisedText Key=RELATIVE_HUMIDITY}" TextWrapping="Wrap" Grid.Row="0"  Grid.Column="5"></TextBlock>
+
+
+
+                        <Label Content="{ext1:LocalisedText Key=COOLING}" Grid.Row="1" Grid.Column="0"></Label>
+                        <StackPanel Orientation="Vertical"  Grid.Column="1" Grid.Row="1">
+                            <xc:DecimalUpDown  Increment="0.1" DefaultValue="0"   Value="{Binding Path=CoolingDryBulb, Mode=TwoWay,UpdateSourceTrigger=LostFocus}" AllowSpin="True" AllowTextInput="True" AutoMoveFocus="True" Maximum="5000" Minimum="0" Width="70"  VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="LostFocus">
+                                        <i:InvokeCommandAction Command="{Binding LostFocusCoolingDryBulb}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </xc:DecimalUpDown >
+                            <Label  Margin="0,-6,0,0" Content="{Binding CoolingDryBulbError}"  FontSize="8" Foreground="Red"   HorizontalAlignment="Left"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Grid.Column="3" Grid.Row="1" >
+                            <xc:DecimalUpDown  Increment="0.1" DefaultValue="0"   Value="{Binding Path=CoolingWetBulb, Mode=TwoWay,UpdateSourceTrigger=LostFocus}" AllowSpin="True" AllowTextInput="True" AutoMoveFocus="True" Maximum="5000" Minimum="0" Width="70" Grid.Column="3" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="LostFocus">
+                                        <i:InvokeCommandAction Command="{Binding LostFocusCoolingWetBulb}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </xc:DecimalUpDown >
+                            <Label  Margin="0,-5,0,0" Content="{Binding CoolingWetBulbError}"  FontSize="8" Foreground="Red"   HorizontalAlignment="Left"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical"  Grid.Column="5" Grid.Row="1">
+                            <xc:DecimalUpDown  Increment="0.1" DefaultValue="0"   Value="{Binding Path=RelativeHumidity, Mode=TwoWay,UpdateSourceTrigger=LostFocus}" AllowSpin="True" AllowTextInput="True" AutoMoveFocus="True" Maximum="5000" Minimum="0" Width="70" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="LostFocus">
+                                        <i:InvokeCommandAction Command="{Binding LostFocusRelativeHumidity}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </xc:DecimalUpDown >
+                            <Label Content="{Binding RelativeHumidityError}"   Margin="0,-6,0,0" FontSize="8" Foreground="Red"   HorizontalAlignment="Left"/>
+                        </StackPanel>
+                        <Label Content="{ext1:LocalisedText Key=DRY_BULB}" Grid.Row="2" Grid.Column="1"></Label>
+                        <StackPanel Orientation="Vertical"  Grid.Column="1" Grid.Row="4">
+                            <xc:DecimalUpDown  Increment="0.1" DefaultValue="0"   Value="{Binding Path=HeatingDryBulb, Mode=TwoWay,UpdateSourceTrigger=LostFocus}" AllowSpin="True" AllowTextInput="True" AutoMoveFocus="True" Maximum="5000" Minimum="0" Width="60" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="LostFocus">
+                                        <i:InvokeCommandAction Command="{Binding LostFocusHeatingDryBulb}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>
+                            </xc:DecimalUpDown >
+                            <Label Content="{Binding HeatingDryBulbError}"  Margin="0,-6,0,0" FontSize="8" Foreground="Red"   HorizontalAlignment="Left"/>
+                        </StackPanel>
+                        <Label Content="{ext1:LocalisedText Key=HEATING}" Grid.Row="3" Grid.Column="0"></Label>
+                        <Label Content="{Binding DesignConditionTempMasureUnit,Mode=TwoWay}" Grid.Row="1" Grid.Column="2"></Label>
+                        <Label Content="{Binding DesignConditionTempMasureUnit,Mode=TwoWay}" Grid.Row="3" Grid.Column="2"></Label>
+                        <Label Content="{Binding DesignConditionTempMasureUnit,Mode=TwoWay}" Grid.Row="1" Grid.Column="4"></Label>
+
+
+                        <Label Content="%" Grid.Row="1" Grid.Column="6"></Label>
+
+                    </Grid>
+                </Grid>
+
+
+
+
+                <!--<StackPanel Orientation="Horizontal" Grid.Column="1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="25*"/>
+                            <ColumnDefinition Width="25*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <StackPanel  Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                            <Label Content="Dry Bulb"></Label>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="Heating"></Label>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel  Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBox></TextBox>
+                                <Label Content="C"></Label>
+                            </StackPanel>
+                        </StackPanel>
+
+                    </Grid>
+                </StackPanel>-->
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="0" >
+                <Grid DockPanel.Dock="Top">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"></ColumnDefinition>
+                        <ColumnDefinition Width="50*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50*"></RowDefinition>
+                        <RowDefinition Height="50*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Column="0" Grid.Row="0" Background="WhiteSmoke">
+                        <Image Stretch="Uniform" Width="auto" Height="auto" Source="{Binding Path=IduImagePath, Mode=TwoWay,UpdateSourceTrigger=LostFocus}"></Image>
+
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="0" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Button  Content="{ext1:LocalisedText Key=INSTALLATION_GUIDE}" Grid.Row="0" IsEnabled="False" FontSize="9" Background="LightGray" Width="120" ></Button>
+                        <Button  Content="{ext1:LocalisedText Key=ACCESSORIES}" FontSize="9"  Grid.Row="1" Background="LightGray" Width="120"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Margin="5">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding AddAccessoryCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Button>
+                        <Button Content="{ext1:LocalisedText Key=SALES_DATA}" FontSize="9" Height="34" IsEnabled="False" Grid.Row="3" Background="LightGray" Width="120"></Button>
+                        <Button Content="{ext1:LocalisedText Key=GA_DRAWINGS}" IsEnabled="False" FontSize="9" Height="34" Grid.Row="2" Background="LightGray" Width="120" ></Button>
+
+                    </Grid>
+                </Grid>
+                <Grid DockPanel.Dock="Bottom">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"></ColumnDefinition>
+                        <ColumnDefinition Width="50*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50*"></RowDefinition>
+                        <RowDefinition Height="50*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                        <CheckBox Content="{ext1:LocalisedText Key=MANUAL_SELECTION}" IsChecked="{Binding EnableManualSelection,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Checked">
+                                    <i:InvokeCommandAction Command="{Binding ManualSelectionCheckedCommand}"/>
+                                </i:EventTrigger>
+                                <i:EventTrigger EventName="Unchecked">
+                                    <i:InvokeCommandAction Command="{Binding ManualSelectionUnCheckedCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </CheckBox>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+            <StackPanel Grid.Row="4" Grid.Column="1"  Orientation="Horizontal" HorizontalAlignment="Right" Visibility="Collapsed">
+                <controls:JCHButton Content="{ext1:LocalisedText Key=CANCEL}"
+                    Command="{Binding CancelClickCommand, Mode=OneWay}"
+                    CommandParameter="{Binding ElementName=AddEditRoomWindow}">
+                </controls:JCHButton>
+                <controls:JCHButton Margin="5,0,0,0" Content="{ext1:LocalisedText Key=APPLY}" Type="Primary">
+                    <!--<i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding AddEditRoomCommand}" CommandParameter="{Binding ElementName=AddEditRoomWindow}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>-->
+                    <!--<i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        -->
+                    <!--<i:InvokeCommandAction Command="{Binding ElementName=MainTabControl, Path=SelectedItem.DataContext.NextClickCommand}"/>-->
+                    <!--
+                        <i:InvokeCommandAction Command="{Binding NextClickCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>-->
+                </controls:JCHButton>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

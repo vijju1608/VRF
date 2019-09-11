@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="JCHVRF_New.Common.Controls.JCHTreeComparer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JCHVRF_New.Common.Controls"
+             xmlns:conv="clr-namespace:JCHVRF_New.Common.UI.Converters"
+             xmlns:materialdesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="800">
+    <Grid Background="White">
+        <Grid.Resources>
+            <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+                <Setter Property="materialdesign:HintAssist.Hint" Value="Search..."/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="materialdesign:TextFieldAssist.DecorationVisibility" Value="Collapsed"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="IsEnabled" Value="{Binding RelativeSource={RelativeSource AncestorType=local:JCHTreeComparer}, Path=PropertyToLook, Converter={conv:ObjectToBooleanConverter} }"/>
+                <Setter Property="Height" Value="35"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Border Padding="5" Background="{StaticResource OtherColor4}">
+            <DockPanel>
+                <DockPanel Background="White" LastChildFill="True" Margin="0,15,0,0" Height="35" DockPanel.Dock="Bottom">
+                    <local:JCHIcon BorderBrush="{StaticResource OtherColor1}" BorderThickness="1,1,0,1" AwesomeIcon="Search" Background="White" Foreground="{StaticResource OtherColor4}"/>
+                    <TextBox Tag="Left" TextChanged="OnSearchTextChanged"/>
+                </DockPanel>
+                <TextBlock FontFamily="Arial" FontSize="14" Foreground="{StaticResource OtherColor1}" DockPanel.Dock="Left" VerticalAlignment="Center" Text="{Binding RelativeSource={RelativeSource AncestorType=local:JCHTreeComparer}, Path=LeftHeader, FallbackValue=Left_Tree_Header}"/>
+                <local:JCHIcon Margin="5,0,0,0" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" DockPanel.Dock="Left" AwesomeIcon="InfoCircle" Foreground="{StaticResource OtherColor2}"/>
+                <Button Tag="Left:Collapse" Padding="2" Margin="2" Click="OnToggleTreeItemsState" Background="White" DockPanel.Dock="Right">
+                    <local:JCHIcon Foreground="{StaticResource OtherColor2}" Type="Vector" VectorResource="{StaticResource CollapseAllIcon}"/>
+                </Button>
+                <Button Tag="Left:Expand" HorizontalAlignment="Right" Click="OnToggleTreeItemsState" Padding="2" Margin="2" Background="White" DockPanel.Dock="Right">
+                    <local:JCHIcon Foreground="{StaticResource OtherColor2}" Type="Vector" VectorResource="{StaticResource ExpandAllIcon}"/>
+                </Button>
+            </DockPanel>
+        </Border>
+        <Border Grid.Column="2" Padding="5" Background="{StaticResource OtherColor4}">
+            <DockPanel>
+                <DockPanel Background="White" LastChildFill="True" Margin="0,15,0,0" Height="35" DockPanel.Dock="Bottom">
+                    <local:JCHIcon BorderBrush="{StaticResource OtherColor1}" BorderThickness="1,1,0,1" AwesomeIcon="Search" Background="White" Foreground="{StaticResource OtherColor4}"/>
+                    <TextBox Tag="Right" TextChanged="OnSearchTextChanged"/>
+                </DockPanel>
+                <TextBlock FontFamily="Arial" FontSize="14" Foreground="{StaticResource OtherColor1}" DockPanel.Dock="Left" VerticalAlignment="Center" Text="{Binding RelativeSource={RelativeSource AncestorType=local:JCHTreeComparer}, Path=RightHeader, FallbackValue=Left_Tree_Header}"/>
+                <local:JCHIcon Margin="5,0,0,0" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" DockPanel.Dock="Left" AwesomeIcon="InfoCircle" Foreground="{StaticResource OtherColor2}"/>
+                <Button Tag="Right:Collapse"  Click="OnToggleTreeItemsState" Padding="2" Margin="2" Background="White" DockPanel.Dock="Right">
+                    <local:JCHIcon Foreground="{StaticResource OtherColor2}" Type="Vector" VectorResource="{StaticResource CollapseAllIcon}"/>
+                </Button>
+                <Button Tag="Right:Expand" Click="OnToggleTreeItemsState" HorizontalAlignment="Right" Padding="2" Margin="2" Background="White" DockPanel.Dock="Right">
+                    <local:JCHIcon Foreground="{StaticResource OtherColor2}" Type="Vector" VectorResource="{StaticResource ExpandAllIcon}"/>
+                </Button>
+            </DockPanel>
+        </Border>
+        <ScrollViewer Background="{StaticResource OtherColor6}" Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <TreeView x:Name="LeftTreeView" ItemsSource="{Binding RelativeSource={RelativeSource AncestorType=local:JCHTreeComparer}, Path=LeftItemSource}"/>
+        </ScrollViewer>
+        <ScrollViewer Grid.Column="2" Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <TreeView x:Name="RightTreeView" ItemsSource="{Binding RelativeSource={RelativeSource AncestorType=local:JCHTreeComparer}, Path=RightItemSource}"/>
+        </ScrollViewer>
+        <StackPanel Grid.RowSpan="2" VerticalAlignment="Center" Grid.Column="1">
+            <StackPanel.Resources>
+                <Style TargetType="Button" BasedOn="{StaticResource CapsuleButton}">
+                    <Setter Property="Height" Value="40"/>
+                    <Setter Property="Width" Value="70"/>
+                    <Setter Property="Margin" Value="5"/>
+                    <Setter Property="Background" Value="White"/>
+                    <Setter Property="BorderBrush" Value="{StaticResource PrimaryColor3}"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button Visibility="{Binding ElementName=LeftTreeView, Path=Items.Count, Converter={conv:InvertIntComparerToVisibilityConverter}, ConverterParameter=0}" IsEnabled="{Binding ElementName=LeftTreeView, Path=SelectedItem, Converter={conv:ObjectToBooleanConverter}}" Click="OnMoveToRightClicked">
+                <local:JCHIcon Height="20" AwesomeIcon="AngleDoubleRight" Foreground="{StaticResource OtherColor2}"/>
+            </Button>
+            <Button Visibility="{Binding ElementName=RightTreeView, Path=Items.Count, Converter={conv:InvertIntComparerToVisibilityConverter}, ConverterParameter=0}" IsEnabled="{Binding ElementName=RightTreeView, Path=SelectedItem, Converter={conv:ObjectToBooleanConverter}}" Click="OnMoveToLeftClicked">
+                <local:JCHIcon Height="20" AwesomeIcon="AngleDoubleLeft" Foreground="{StaticResource OtherColor2}"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,4 @@
+Alter Table ProjectInfo ADD COLUMN SubRegion TEXT(10);
+Alter Table odu_std_bgd ADD COLUMN ProductSeries text,ProductCategory text ; 
+Alter Table ODU_Std_SEA_60Hz ADD COLUMN ProductSeries text,ProductCategory text ; 
+ 

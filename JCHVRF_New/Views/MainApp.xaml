@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.MainApp"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:fa="http://schemas.fontawesome.io/icons/"
+                xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+                xmlns:models="clr-namespace:JCHVRF_New.Model"
+                xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+                xmlns:prism="http://prismlibrary.com/"
+                xmlns:Lang="clr-namespace:JCHVRF_New.LanguageData"
+                xmlns:Converters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf"         
+                xmlns:conv="clr-namespace:JCHVRF_New.Common.UI.Converters"   
+                xmlns:const="clr-namespace:JCHVRF_New.Common.Constants"
+             xmlns:controls="clr-namespace:JCHVRF_New.Common.Controls"
+             mc:Ignorable="d"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding MainAppLoadedCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <md:DrawerHost IsLeftDrawerOpen="{Binding IsChecked, ElementName=SideDrawerToggleButton}">
+        <md:DrawerHost.LeftDrawerContent>
+            <StackPanel Orientation="Vertical" MinWidth="212" Background="{StaticResource BackgroundBrush}">
+                <StackPanel Orientation="Horizontal">
+                    <!--<Image Source="..\Image\Jci.ico" Height="20"/>-->
+                    <TextBlock Margin="10,0,0,0" Foreground="{StaticResource ForegroundBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Text="{Lang:LocalisedText Key=VRF_SELECTION_SOFTWARE}" FontWeight="Bold"/>
+                    <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" Margin="16" IsChecked="{Binding IsChecked, ElementName=SideDrawerToggleButton, Mode=TwoWay}" />
+                </StackPanel>
+                <TreeView ItemsSource="{Binding SideBarItems}" Margin="0,20,0,0">
+                    <TreeView.Resources>
+                        <Style TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
+                            <Setter Property="Padding" Value="3"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter Property="IsExpanded" Value="True"/>
+                        </Style>
+                        <HierarchicalDataTemplate DataType="{x:Type models:SideBarItem}" ItemsSource="{Binding Children}">
+                            <StackPanel Orientation="Horizontal">
+                                <controls:JCHIcon x:Name="SidebarParentIcon" Type="Vector" VectorResource="{Binding Icon, Converter={conv:IconKeyToGeometryConverter}}"  Foreground="{StaticResource ForegroundBrush}" Margin="5" Height="20"   />
+                                <TextBlock x:Name="SidebarParentTextBlock" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" Text="{Binding Header}" />
+                            </StackPanel>
+                            <HierarchicalDataTemplate.Triggers>
+                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeViewItem}, Path=IsSelected}" Value="True">
+                                    <Setter TargetName="SidebarParentIcon" Property="Foreground" Value="{StaticResource SelectedBrush}" />
+                                    <Setter TargetName="SidebarParentTextBlock" Property="Foreground" Value="{StaticResource SelectedBrush}" />
+                                </DataTrigger>
+                            </HierarchicalDataTemplate.Triggers>
+                        </HierarchicalDataTemplate>
+                        <HierarchicalDataTemplate DataType="{x:Type models:SideBarChild}" ItemsSource="{Binding Children}">
+                            <TextBlock x:Name="SidebarChildTextBlock" FontSize="12" FontFamily="Arial" Text="{Binding Header}" />
+                            <HierarchicalDataTemplate.Triggers>
+                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeViewItem}, Path=IsSelected}" Value="True">
+                                    <Setter TargetName="SidebarChildTextBlock" Property="Foreground" Value="{StaticResource SelectedBrush}" />
+                                </DataTrigger>
+                            </HierarchicalDataTemplate.Triggers>
+                        </HierarchicalDataTemplate>
+                    </TreeView.Resources>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectedItemChanged">
+                            <prism:InvokeCommandAction TriggerParameterPath="NewValue" Command="{Binding DrawerItemSelectionChangedCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeView>
+            </StackPanel>
+        </md:DrawerHost.LeftDrawerContent>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Background="{StaticResource BackgroundBrush}">
+                <ToggleButton Height="30" x:Name="SideDrawerToggleButton" HorizontalAlignment="Stretch" Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="{Binding IsLeftDrawerOpen, Mode=TwoWay}"/>
+
+                <ListBox Margin="0,0,0,0" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding SideBarItems}" SelectedItem="{Binding SelectedSideBarItem, Mode=TwoWay}" >
+                    <ListBox.Resources>
+                        <Style TargetType="{x:Type ListBoxItem}">
+                            <!--To Remove All Margin-->
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                        <ContentPresenter/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListBox.Resources>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border x:Name="SideBarItemBorder" BorderThickness="6,0,0,0" Height="50">
+                                <controls:JCHIcon HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="SideBarItemImage" Height="20" Type="Vector" VectorResource="{Binding Icon,Converter={conv:IconKeyToGeometryConverter}}" ToolTip="{Binding Name}" Foreground="{StaticResource OtherColor3}"/>
+                            </Border>
+                            <DataTemplate.Triggers>
+                                <DataTrigger  Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}, Mode=FindAncestor}}"
+                        Value="True">
+                                    <Setter TargetName="SideBarItemImage" Property="Foreground" Value="black"/>
+                                    <Setter TargetName="SideBarItemBorder" Property="BorderBrush" Value="{StaticResource BrandPaletteColor1}"/>
+                                    <Setter TargetName="SideBarItemBorder" Property="Background" Value="{StaticResource OtherColor4}"/>
+                                </DataTrigger>
+                            </DataTemplate.Triggers>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="32"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <ContentControl prism:RegionManager.RegionName="{x:Static const:RegionNames.ToolbarRegion}"/>
+                <ScrollViewer Grid.Row="1"
+                                  HorizontalScrollBarVisibility="{Binding HorizontalScrollBarVisibilityRequirement}"
+                                  VerticalScrollBarVisibility="{Binding VerticalScrollBarVisibilityRequirement}" 
+                                  Padding="{Binding MarginRequirement}">
+                    <ContentControl prism:RegionManager.RegionName="{x:Static const:RegionNames.ContentRegion}"/>
+                </ScrollViewer>
+            </Grid>
+        </Grid>
+    </md:DrawerHost>
+</UserControl>

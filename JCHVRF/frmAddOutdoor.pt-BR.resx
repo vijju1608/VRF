@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Seleção da unidade externa</value>
+  </data>
+  <data name="jclblPipingLength.Text" xml:space="preserve">
+    <value>Comprimento da tubulação</value>
+  </data>
+  <data name="jclblPipingPosition.Text" xml:space="preserve">
+    <value>Posição da unidade externa em relação as unidades internas</value>
+  </data>
+  <data name="jcbtnCancel.Text" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="jcbtnOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="jclblActualRatio.Text" xml:space="preserve">
+    <value>Combinação Atual</value>
+  </data>
+  <data name="jclblDiversityFactor.Text" xml:space="preserve">
+    <value>Fator de diversidade</value>
+  </data>
+  <data name="jclblInTotalCapC.Text" xml:space="preserve">
+    <value>Capacidade total de UI estimada</value>
+  </data>
+  <data name="jclblInTotalCapH.Text" xml:space="preserve">
+    <value>Capacidade total de UI estimada</value>
+  </data>
+  <data name="jclblMaxIndNum.Text" xml:space="preserve">
+    <value>Max. N° de unidades internas</value>
+  </data>
+  <data name="jclblMaxRatio.Text" xml:space="preserve">
+    <value>Combinação Max.</value>
+  </data>
+  <data name="jclblModel.Text" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="jclblName.Text" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="jclblOutCapC.Text" xml:space="preserve">
+    <value>Capacidade total de UE estimada</value>
+  </data>
+  <data name="jclblOutCapH.Text" xml:space="preserve">
+    <value>Capacidade total de UE estimada</value>
+  </data>
+  <data name="jclblType.Text" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="tpgPipingSetting.Text" xml:space="preserve">
+    <value>Configuração padrão da tubulação &amp; Informações de Ajuda</value>
+  </data>
+  <data name="tpgSelection.Text" xml:space="preserve">
+    <value>Seleção</value>
+  </data>
+  <data name="jclblEqPipeLength.Text" xml:space="preserve">
+    <value>Comprimento da tubulação equivalente</value>
+  </data>
+  <data name="jclblFirstBranch.Text" xml:space="preserve">
+    <value>Primeiro Multi-Kit para unidades internas</value>
+  </data>
+  <data name="jclblPipingFactor.Text" xml:space="preserve">
+    <value>Fator de correção da tubulação</value>
+  </data>
+  <data name="rbtnHigher.Text" xml:space="preserve">
+    <value>Acima</value>
+  </data>
+  <data name="rbtnLower.Text" xml:space="preserve">
+    <value>Abaixo</value>
+  </data>
+  <data name="rbtnSameLevel.Text" xml:space="preserve">
+    <value>Mesmo Nível</value>
+  </data>
+  <data name="jccbxCompositeMode.Text" xml:space="preserve">
+    <value>Ambos unidade interna e ar fresco</value>
+  </data>
+  <data name="jclblOutRatCapC.Text" xml:space="preserve">
+    <value>Capacidade total de UE nominal</value>
+  </data>
+  <data name="jclblOutRatCapH.Text" xml:space="preserve">
+    <value>Capacidade total de UE nominal</value>
+  </data>
+  <data name="jclblInTotalRatCapC.Text" xml:space="preserve">
+    <value>Capacidade total de UI nominal</value>
+  </data>
+  <data name="jclblInTotalRatCapH.Text" xml:space="preserve">
+    <value>Capacidade total de UI nominal</value>
+  </data>
+  <data name="jclblTitle_AvailableIndoor.Text" xml:space="preserve">
+    <value>Unidades internas disponíveis</value>
+  </data>
+  <data name="jclblTitle_Condition.Text" xml:space="preserve">
+    <value>Condição do sistema</value>
+  </data>
+  <data name="jclblTitle_Cooling.Text" xml:space="preserve">
+    <value>Resfriamento</value>
+  </data>
+  <data name="jclblTitle_Heating.Text" xml:space="preserve">
+    <value>Aquecimento</value>
+  </data>
+  <data name="jclblTitle_OutdoorInfo.Text" xml:space="preserve">
+    <value>Informação da Unidade Externa</value>
+  </data>
+  <data name="jclblTitle_OutdoorSystem.Text" xml:space="preserve">
+    <value>Sistema da unidade externa</value>
+  </data>
+  <data name="jcbtnSetLength.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="jclblCoolIW.Text" xml:space="preserve">
+    <value>Entrada de Agua</value>
+  </data>
+  <data name="jclblHeatIW.Text" xml:space="preserve">
+    <value>Entrada de Agua</value>
+  </data>
+  <data name="jclblTotalActCapC.Text" xml:space="preserve">
+    <value>Capacidade atual total da UI</value>
+  </data>
+  <data name="jclblTotalActCapH.Text" xml:space="preserve">
+    <value>Capacidade atual total da UI</value>
+  </data>
+  <data name="jclblInletWaterFlowRateLevel.Text" xml:space="preserve">
+    <value>Vazão da entrada de agua</value>
+  </data>
+  <data name="jclblCoolInletWaterFlowRate.Text" xml:space="preserve">
+    <value>Vazão da entrada de agua</value>
+  </data>
+  <data name="jclblHeatInletWaterFlowRate.Text" xml:space="preserve">
+    <value>Vazão da entrada de agua</value>
+  </data>
+  <data name="jccmbInletWaterFlowRateLevel.Items" xml:space="preserve">
+    <value>Alto</value>
+  </data>
+  <data name="jccmbInletWaterFlowRateLevel.Items1" xml:space="preserve">
+    <value>Médio</value>
+  </data>
+  <data name="jccmbInletWaterFlowRateLevel.Items2" xml:space="preserve">
+    <value>Baixo</value>
+  </data>
+  <data name="jclblAvailableC1.Text" xml:space="preserve">
+    <value>Capacidade disponível da UI</value>
+  </data>
+  <data name="jclblAvailableC2.Text" xml:space="preserve">
+    <value>Calor sensível disponível da UI</value>
+  </data>
+  <data name="jclblAvailableH1.Text" xml:space="preserve">
+    <value>Capacidade disponível da UI</value>
+  </data>
+  <data name="jclblInDBCool.Text" xml:space="preserve">
+    <value>BS</value>
+  </data>
+  <data name="jclblIndRH.Text" xml:space="preserve">
+    <value>UR</value>
+  </data>
+  <data name="jclblInWBCool.Text" xml:space="preserve">
+    <value>BU</value>
+  </data>
+  <data name="jclblRequiredC1.Text" xml:space="preserve">
+    <value>Capacidade exigida da UI</value>
+  </data>
+  <data name="jclblRequiredC2.Text" xml:space="preserve">
+    <value>Calor sensível exigido da UI</value>
+  </data>
+  <data name="jclblRequiredH1.Text" xml:space="preserve">
+    <value>Capacidade exigida da UI</value>
+  </data>
+  <data name="jclblSystemRatCapC.Text" xml:space="preserve">
+    <value>Capacidade real do sistema</value>
+  </data>
+  <data name="jclblSystemRatCapH.Text" xml:space="preserve">
+    <value>Capacidade real do sistema</value>
+  </data>
+  <data name="jcLabel2.Text" xml:space="preserve">
+    <value>Poder</value>
+  </data>
+  <data name="jclblOutdoor.Text" xml:space="preserve">
+    <value>Unidade Externa</value>
+  </data>
+  <data name="btnControlCancel.Text" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="btnControlOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="groupIndoorUnit.Text" xml:space="preserve">
+    <value>Unidades interiores</value>
+  </data>
+  <data name="groupSetting.Text" xml:space="preserve">
+    <value>Configuração</value>
+  </data>
+  <data name="jcbtnSetting.Text" xml:space="preserve">
+    <value>Configuração</value>
+  </data>
+  <data name="jclabTitle.Text" xml:space="preserve">
+    <value>Definindo a diferença de altura</value>
+  </data>
+  <data name="jctxtHigherDiff.Text" xml:space="preserve">
+    <value>Diferença de altura:</value>
+  </data>
+  <data name="jctxtPosition.Text" xml:space="preserve">
+    <value>Posição:</value>
+  </data>
+  <data name="jclblProductType.Text" xml:space="preserve">
+    <value>Tipo de produto</value>
+  </data>
+  <data name="jclblDefrostFactorMsg.Text" xml:space="preserve">
+    <value>A capacidade real leva em conta todos os fatores de correção, incluindo o descongelamento no modo de aquecimento.</value>
+  </data>
+  <data name="jccbxAuto.Text" xml:space="preserve">
+    <value>Ambos unidade interna e ar fresco</value>
+  </data>
+  <data name="jccbxManual.Text" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="jclblRH.Text" xml:space="preserve">
+    <value>UR</value>
+  </data>
+  <data name="jclblSystemRatCapC1.Text" xml:space="preserve">
+    <value>Capacidade real do sistema</value>
+  </data>
+  <data name="jclblSystemRatCapH1.Text" xml:space="preserve">
+    <value>Capacidade real do sistema</value>
+  </data>
+</root>

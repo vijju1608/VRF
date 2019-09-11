@@ -1,0 +1,205 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.AddAccessoriesTemplate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:xc="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JCHVRF_New.Views"
+             xmlns:vm="clr-namespace:JCHVRF_New.ViewModels"
+             xmlns:prism="http://prismlibrary.com/"
+              xmlns:ext1="clr-namespace:JCHVRF_New.LanguageData"
+              xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:CustomControls="clr-namespace:CustomControls"
+             xmlns:controls="clr-namespace:JCHVRF_New.Common.Controls"
+             mc:Ignorable="d" 
+             x:Name="AddAccessories"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             d:DesignHeight="900" d:DesignWidth="800">
+    
+    <UserControl.Resources>
+        <Style TargetType="xc:ButtonSpinner" BasedOn="{StaticResource {x:Type xc:ButtonSpinner}}">
+            <Setter Property="Padding" Value="0,0,0,0"></Setter>
+        </Style>
+        <Style TargetType="ListView" x:Key="ContentAlign">
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            </Style>
+            <Style TargetType="GridViewColumnHeader" x:Key="GridViewColumnHeaderStyle">
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="FontFamily" Value="Segoe UI"/>
+                <!--<Setter Property="HorizontalAlignment" Value="Left"/>-->
+                <Setter Property="Background" Value="White"/>  
+                
+            </Style>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+    </UserControl.Resources>    
+    <Grid>
+           <Grid.RowDefinitions>
+             <RowDefinition  Height="Auto"></RowDefinition>
+             <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--<TextBlock Text="{ext1:LocalisedText Key=ACCESSORIES}" FontFamily="Bold" FontSize="15" FontWeight="Bold" VerticalAlignment="Center"  
+                              HorizontalAlignment="Left" Grid.Row="0" Margin="10"/>
+        --><!--<Line  X1="0" Y1="0"  
+                       X2="800" Y2="0"  
+                       Stroke="Black"   
+                       StrokeThickness="1"
+                       Grid.Row="0"  Height="1" VerticalAlignment="Bottom"></Line>-->
+        
+        <DataGrid x:Name="lvAccessories" Grid.Row="1" HeadersVisibility="Column" Height="Auto" Width="Auto" VerticalScrollBarVisibility="Auto" 
+          AutoGenerateColumns = "False"   Margin="10" IsReadOnly="True" BorderBrush="LightGray" RowHeight="50" 
+                      CanUserAddRows="False" CanUserResizeColumns="true" GridLinesVisibility="None" 
+                  SelectedItem="{Binding SelectedAccessory}" 
+                  ItemsSource="{Binding Path=ListAccessory, UpdateSourceTrigger=PropertyChanged}"
+                  VirtualizingPanel.IsVirtualizing="False" ScrollViewer.CanContentScroll="False">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="FontSize" Value="12"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="MinHeight" Value="50"/>
+                    <Setter Property="MaxHeight" Value="50"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="0,1,0,1"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Left"></Setter>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <!--<DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="BorderThickness" Value="0"/>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Azure"></SolidColorBrush>
+                <Style x:Key="DataGridRowStyleColoured" TargetType="{x:Type DataGridRow}">
+                    <Setter Property="Background" Value="#FF000000" />
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.RowStyle>
+                <StaticResource ResourceKey="DataGridRowStyleColoured"/>
+            </DataGrid.RowStyle>-->
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="{ext1:LocalisedText Key=SELECT}" Width="50*">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            
+                                    <CheckBox IsChecked="{Binding IsSelect,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" >
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="Checked">
+                                                <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.CheckAllDependentAccessoryCommand}"/>
+                                            </i:EventTrigger>
+                                            <i:EventTrigger EventName="Unchecked">
+                                                <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.UncheckAllDependentAccessoryCommand}"/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </CheckBox>
+                               
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header ="{ext1:LocalisedText Key=APPLY_TO_SIMILAR_UNITS}" Width="60*">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            
+                                    <CheckBox IsChecked="{Binding IsApplyToSimilarUnit,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"/>
+                                
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+
+                <DataGridTemplateColumn Header="{ext1:LocalisedText Key=MODEL_NAME}" Width="80*">
+                    <DataGridTemplateColumn.CellTemplate >
+                        
+                        <!--<DataTemplate>
+                            <StackPanel HorizontalAlignment="Center">
+                                <Border BorderBrush="LightBlue" BorderThickness="1" HorizontalAlignment="Center">
+                                    <ComboBox  ItemsSource="{Binding ModelName}" SelectedItem="{Binding Model,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" Width="100"/>
+                                </Border>
+                            </StackPanel>
+                        </DataTemplate>-->
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Model}" HorizontalAlignment="Left"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+                <DataGridTemplateColumn Header="{ext1:LocalisedText Key=DESCRIPTION}" Width="150*">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Description}"  HorizontalAlignment="Left"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+                <DataGridTemplateColumn Header="{ext1:LocalisedText Key=MAX_COUNT}" Width="50*">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                           
+                                <TextBlock Text="{Binding MaxNumber}" HorizontalAlignment="Left" TextWrapping="Wrap"/>
+                          
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="{ext1:LocalisedText Key=COUNT}" Width="50*">
+                    <DataGridTemplateColumn.CellTemplate >
+                        <DataTemplate>
+                            <!--<xc:DecimalUpDown Name="NumerCount" BorderThickness="1" AllowSpin="True" AllowTextInput="True" AutoMoveFocus="True" Grid.Column="1"    HorizontalAlignment="Left" Width="90" Height="35"  Value="{Binding Path=Count,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                                --><!--<i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="LostFocus">
+                                        <i:InvokeCommandAction Command="{Binding CountCommand}"/>
+                                    </i:EventTrigger>
+                                </i:Interaction.Triggers>--><!--
+                            </xc:DecimalUpDown>-->
+                            <xc:IntegerUpDown x:Name="NumerCount"     
+                                       DefaultValue="0"
+                                              DisplayDefaultValueOnEmptyText="True" AllowSpin="True" AllowTextInput="True" AutoMoveFocus="True"
+                                       Value="{Binding Count,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                       RenderTransformOrigin="0.5,0.5"  Width="50" Height="30" VerticalAlignment="Top"  
+                                              LostFocus="NumerCount_LostFocus" HorizontalAlignment="Left" >
+                                <i:Interaction.Triggers>
+                                    <i:EventTrigger EventName="ValueChanged">
+                                        <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=DataContext.CountIncreaseCommand}"/>
+                                    </i:EventTrigger>
+                                   
+                                </i:Interaction.Triggers>
+                            </xc:IntegerUpDown>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2"  HorizontalAlignment="Right" Height="42" Width="Auto" Margin="0,-30,0,0">
+            <controls:JCHButton Content="{ext1:LocalisedText Key=CANCEL}" x:Name="btnCancel">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding Cancelcommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </controls:JCHButton>
+            <controls:JCHButton Content="{ext1:LocalisedText Key=REMOVE_FROM_ALL}" Margin="10,0,10,0"  x:Name="btnRemoveFromAll">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding RemoveFromAllCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </controls:JCHButton>
+            <controls:JCHButton Content="{ext1:LocalisedText Key=ADD}" Type="Primary" Margin="10,0,10,0"  x:Name="btnAdd" Command="{Binding AddAccessoriesCommand}" >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding AddAccessoriesToIDUCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </controls:JCHButton>
+            </StackPanel>
+       
+    </Grid>
+</UserControl>

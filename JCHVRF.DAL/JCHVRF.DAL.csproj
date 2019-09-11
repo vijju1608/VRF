@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B472C47D-C465-4867-8589-AAF860A26046}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JCHVRF.DAL</RootNamespace>
+    <AssemblyName>JCHVRF.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CDL, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\CDL.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.40\lib\net40\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JCBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\JCBase.dll</HintPath>
+    </Reference>
+    <Reference Include="JCBase.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\JCBase.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessoryDAL.cs" />
+    <Compile Include="CachTableDAL.cs" />
+    <Compile Include="CentralControllerDAL.cs" />
+    <Compile Include="Interface\IAccessoryDAL.cs" />
+    <Compile Include="Interface\IIndoorDAL.cs" />
+    <Compile Include="IndoorDAL.cs" />
+    <Compile Include="Interface\IIVXCombinationDAL.cs" />
+    <Compile Include="Interface\IMyProductTypeDAL.cs" />
+    <Compile Include="Interface\IOutdoorDAL.cs" />
+    <Compile Include="Interface\IPipingDAL.cs" />
+    <Compile Include="Interface\IProjectDAL.cs" />
+    <Compile Include="Interface\IRegionDAL.cs" />
+    <Compile Include="Interface\IRoomLoadIndexDAL.cs" />
+    <Compile Include="Interface\IMyDictionaryDAL.cs" />
+    <Compile Include="IVXCombinationDAL.cs" />
+    <Compile Include="MyDictionaryDAL.cs" />
+    <Compile Include="MyProductTypeDAL.cs" />
+    <Compile Include="New\DalProjectInfo.cs" />
+    <Compile Include="New\DalProjectLocation.cs" />
+    <Compile Include="New\ProjectInfoDAL.cs" />
+    <Compile Include="New\Utility.cs" />
+    <Compile Include="NextGen\EventDAL.cs" />
+    <Compile Include="NextGen\NamePrefixDAL.cs" />
+    <Compile Include="NextGen\OutdoorDAL.cs" />
+    <Compile Include="OutdoorDAL.cs" />
+    <Compile Include="PipingDAL.cs" />
+    <Compile Include="ProjectDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionDAL.cs" />
+    <Compile Include="RoomLoadIndexDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JCHVRF.DALFactory\JCHVRF.DALFactory.csproj">
+      <Project>{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}</Project>
+      <Name>JCHVRF.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Entity\JCHVRF.Entity.csproj">
+      <Project>{798a74b8-f22c-4b72-8cfb-3835306ce2c4}</Project>
+      <Name>JCHVRF.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Model\JCHVRF.Model.csproj">
+      <Project>{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}</Project>
+      <Name>JCHVRF.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.VRFTrans\JCHVRF.VRFTrans.csproj">
+      <Project>{110c64cb-388a-4b74-8f21-6c1c28fded40}</Project>
+      <Name>JCHVRF.VRFTrans</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

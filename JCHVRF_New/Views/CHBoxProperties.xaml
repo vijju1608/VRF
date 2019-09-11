@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.CHBoxProperties"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JCHVRF_New.Views"
+             xmlns:xcad="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:conv="clr-namespace:JCHVRF_New.Common.UI.Converters"
+             xmlns:mod="clr-namespace:JCHVRF.Model;assembly=JCHVRF.Model"
+             xmlns:ext1="clr-namespace:JCHVRF_New.LanguageData"
+             xmlns:ext="clr-namespace:JCHVRF_New.Common.UI.Extensions"  
+             xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             ext:JCHDockerService.Title ="{ext1:LocalisedText Key=PROPERTIES}"   
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" Margin="5">
+                <TextBlock Text="{ext1:LocalisedText Key=CH_BOX}"/>
+
+                <TextBlock Margin="0,5,0,0" Text="{ext1:LocalisedText Key=CH_Box_Type}"/>
+                <ComboBox  Margin="0,2,0,0">
+                    <ComboBoxItem Content="Single" IsSelected="{Binding IsSingle}" />
+                    <ComboBoxItem Content="Multiple" IsSelected="{Binding IsSingle, Converter={conv:InvertBoolConverter}}"/>
+                </ComboBox>
+
+                <TextBlock Margin="0,5,0,0" Text="{ext1:LocalisedText Key=CH_Box_position}"/>
+                <ComboBox x:Name="cmbPosition" Margin="0,2,0,0" SelectedIndex="{Binding SelectedPositionIndex, Mode=TwoWay}">
+                    <ComboBoxItem Content="Upper" />
+                    <ComboBoxItem Content="Same Level" />
+                    <ComboBoxItem Content="Lower"/>
+                </ComboBox>
+
+                <TextBlock Margin="0,5,0,0" Text="{ext1:LocalisedText Key=HEIGHT_DIFFERENCE}"/>
+                <StackPanel Orientation="Horizontal">
+                    <xcad:DecimalUpDown Minimum="0" IsEnabled="{Binding SelectedPositionIndex, Converter={conv:IntComparerToBooleanConverter IsInverted=True}, ConverterParameter=1}" Margin="0,2,0,0"  
+                     Value="{Binding HeightDiff, Converter={StaticResource ValueToControlConverter}, ConverterParameter=LENGTH_M}"  HorizontalAlignment="Left" Width="60" FormatString="N1"/>
+                    <TextBlock VerticalAlignment="Center" Margin="5,0,0,0" Text="{Binding LengthUnit}"/>
+                </StackPanel>
+                
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

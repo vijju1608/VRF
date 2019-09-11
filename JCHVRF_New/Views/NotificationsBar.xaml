@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.NotificationsBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JCHVRF_New.Views"
+             xmlns:ext="clr-namespace:JCHVRF_New.Common.UI.Extensions"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ext1="clr-namespace:JCHVRF_New.LanguageData"
+             xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+             xmlns:conv="clr-namespace:JCHVRF_New.Common.UI.Converters"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             >
+    <UserControl.Resources>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+        <Style TargetType="MenuItem">
+            <Setter Property="Height" Value="32">
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="{StaticResource BrandPaletteColor2}">
+        <Grid.Resources>
+            <Style TargetType="Button" BasedOn="{StaticResource IconButton}"/>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Foreground="White" Text="{Binding ProjectTitle}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Command="{Binding HomeClickCommand}" Visibility="{Binding ElementName=HomeMenuItem, Path=IsChecked, Converter={conv:BoolToVisibilityConverter}}" ToolTip="{ext1:LocalisedText Key=HOME}" ext:JCHUIService.IconHeight="22" ext:JCHUIService.IconWidth="165"  ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Hitachilogo}" ext:JCHUIService.IconColor="White"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,20,0">
+            <StackPanel Orientation="Horizontal">
+                <Button Visibility="{Binding ElementName=OpenMenuItem, Path=IsChecked, Converter={conv:BoolToVisibilityConverter}}" ToolTip="{ext1:LocalisedText Key=OPEN}" ext:JCHUIService.IconWidth="19" ext:JCHUIService.AwesomeIcon="FolderOpen">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding OpenProjectClickCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+                <Button Visibility="{Binding ElementName=SaveMenuItem, Path=IsChecked, Converter={conv:BoolToVisibilityConverter}}" ToolTip="{ext1:LocalisedText Key=SAVE}" ext:JCHUIService.IconWidth="19" ext:JCHUIService.AwesomeIcon="Save">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding SaveProjectClickCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+                <Button Visibility="{Binding ElementName=PreviewReportMenuItem, Path=IsChecked, Converter={conv:BoolToVisibilityConverter}}" ToolTip="{ext1:LocalisedText Key=PREVIEW_REPORT}" ext:JCHUIService.AwesomeIcon="PlayCircleOutline" ext:JCHUIService.IconWidth="19"/>
+                <Button Visibility="{Binding ElementName=ExportReportMenuItem, Path=IsChecked, Converter={conv:BoolToVisibilityConverter}}" ToolTip="{ext1:LocalisedText Key=EXPORT_REPORT_PDF}" ext:JCHUIService.AwesomeIcon="FilePdfOutline" ext:JCHUIService.IconWidth="19"/>
+                <Button Visibility="{Binding ElementName=SystemCheckMenuItem, Path=IsChecked, Converter={conv:BoolToVisibilityConverter}}" ToolTip="{ext1:LocalisedText Key=SYSTEM_CHECK}" ext:JCHUIService.AwesomeIcon="CheckCircle" ext:JCHUIService.IconWidth="19"/>
+                <Border Visibility="{Binding ElementName=OpenMenuItem, Path=IsChecked, Converter={conv:BoolToVisibilityConverter}}" BorderThickness="1" Margin="5" BorderBrush="{StaticResource OtherColor4}"/>
+
+                <Button ext:JCHUIService.IconHeight="20" IsEnabled="False" Visibility="{Binding ElementName=UndoMenuItem, Path=IsChecked, Converter={conv:BoolToVisibilityConverter}}" ToolTip="{ext1:LocalisedText Key=UNDO}" ext:JCHUIService.AwesomeIcon="Undo"/>
+                <Button ext:JCHUIService.IconHeight="20" IsEnabled="False" Visibility="{Binding ElementName=RedoMenuItem, Path=IsChecked, Converter={conv:BoolToVisibilityConverter}}" ToolTip="{ext1:LocalisedText Key=REDO}" ext:JCHUIService.AwesomeIcon="Repeat"/>
+                <!--<Border BorderThickness="0.5" Margin="5" BorderBrush="White"/>-->
+                <Button ToolTip="{ext1:LocalisedText Key=NOTIFICATIONS}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.NotificationCount="4" ext:JCHUIService.VectorResource="{StaticResource BellIcon}" ext:JCHUIService.IconHeight="20" ext:JCHUIService.IconColor="White"/>
+                <Button ToolTip="{ext1:LocalisedText Key=CHAT}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.NotificationCount="7" ext:JCHUIService.AwesomeIcon="CommentOutline" ext:JCHUIService.VectorResource="{StaticResource ChatIcon}" ext:JCHUIService.IconHeight="17" ext:JCHUIService.IconColor="White"/>
+                <Button ToolTip="{ext1:LocalisedText Key=NEW_EMAIL}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.NotificationCount="5" ext:JCHUIService.AwesomeIcon="EnvelopeOutline" ext:JCHUIService.VectorResource="{StaticResource MailIcon}" ext:JCHUIService.IconHeight="17" ext:JCHUIService.IconColor="White"/>
+                <Button ToolTip="{ext1:LocalisedText Key=HOLOMEETING}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.NotificationCount="5" ext:JCHUIService.VectorResource="{StaticResource Hololens}" ext:JCHUIService.IconHeight="17" ext:JCHUIService.IconColor="White"/>
+                <!--<Border BorderThickness="0.5" Margin="5" BorderBrush="White"/>-->
+            </StackPanel>
+            <ToggleButton x:Name="ContextMenuButton" Style="{StaticResource IconToggleButton}" ext:JCHUIService.GlyphVisibility="Visible" ext:JCHUIService.IconColor="White"/>
+            <Popup Placement="Mouse" StaysOpen="False" IsOpen="{Binding ElementName=ContextMenuButton, Path=IsChecked}">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock VerticalAlignment="Center" Height="20" IsHitTestVisible="False" FontSize="12" Text="{ext1:LocalisedText Key=CUSTOMIZE_TOOLBAR}" Background="{StaticResource OtherColor2}"/>
+                    <Menu>
+                        <Menu.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical"/>
+                            </ItemsPanelTemplate>
+                        </Menu.ItemsPanel>
+                        <MenuItem x:Name="HomeMenuItem" Header="{ext1:LocalisedText Key=HOME}" IsCheckable="True" IsChecked="True"/>
+                        <MenuItem x:Name="OpenMenuItem" Header="{ext1:LocalisedText Key=OPEN}" IsCheckable="True"/>
+                        <MenuItem x:Name="SaveMenuItem" Header="{ext1:LocalisedText Key=SAVE}" IsCheckable="True"/>
+                        <MenuItem x:Name="PreviewReportMenuItem" Header="{ext1:LocalisedText Key=PREVIEW_REPORT}" IsCheckable="True"/>
+                        <MenuItem x:Name="ExportReportMenuItem" Header="{ext1:LocalisedText Key=EXPORT_REPORT_PDF}" IsCheckable="True"/>
+                        <MenuItem x:Name="SystemCheckMenuItem" Header="{ext1:LocalisedText Key=SYSTEM_CHECK}" IsCheckable="True"/>
+                        <MenuItem x:Name="UndoMenuItem" Header="{ext1:LocalisedText Key=UNDO}" IsCheckable="True"/>
+                        <MenuItem x:Name="RedoMenuItem" Header="{ext1:LocalisedText Key=REDO}" IsCheckable="True"/>
+                    </Menu>
+                </StackPanel>
+            </Popup>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Horizontal">
+
+            <TextBlock Text="{Binding UserName}" Cursor="Hand" VerticalAlignment="Center" Foreground="White">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseUp">
+                        <i:InvokeCommandAction Command="{Binding UserNameClickedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </TextBlock>
+            <ToggleButton Margin="0,0,10,0" IsChecked="{Binding IsContextMenuOpened, Mode=TwoWay}" ext:JCHUIService.IconHeight="18" x:Name="UserButton" Style="{StaticResource IconToggleButton}" ext:JCHUIService.GlyphVisibility="Visible" ext:JCHUIService.AwesomeIcon="UserCircle" ext:JCHUIService.IconColor="White"/>
+            <Popup PlacementTarget="{Binding ElementName=UserButton}" Placement="Bottom" StaysOpen="False" IsOpen="{Binding ElementName=UserButton, Path=IsChecked, Mode=TwoWay}">
+                <Menu>
+                    <Menu.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Vertical"/>
+                        </ItemsPanelTemplate>
+                    </Menu.ItemsPanel>
+                    <MenuItem ext:JCHUIService.AwesomeIcon="UserOutline" Header="{ext1:LocalisedText Key=EDIT_PROFILE}"/>
+                    <MenuItem ext:JCHUIService.AwesomeIcon="QuestionCircleOutline" Header="{ext1:LocalisedText Key=HELP}"/>
+                    <MenuItem ext:JCHUIService.AwesomeIcon="SignOut" Header="{ext1:LocalisedText Key=LAGOUT}"/>
+                </Menu>
+            </Popup>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,745 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.MasterDesigner"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:af="clr-namespace:Lassalle.WPF.Flow;assembly=Lassalle.WPF.Flow"
+        xmlns:local="clr-namespace:JCHVRF_New.Views"
+        xmlns:view="clr-namespace:JCHVRF_New.Views"
+        xmlns:viewmodels="clr-namespace:JCHVRF_New.ViewModels"   
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:dock="http://schemas.xceed.com/wpf/xaml/avalondock"
+        xmlns:dockctrl="clr-namespace:Xceed.Wpf.AvalonDock.Controls;assembly=Xceed.Wpf.AvalonDock"
+        xmlns:const="clr-namespace:JCHVRF_New.Common.Constants"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:ext="clr-namespace:JCHVRF_New.Common.UI.Extensions"
+        xmlns:Lang="clr-namespace:JCHVRF_New.LanguageData"
+        xmlns:conv="clr-namespace:JCHVRF_New.Common.UI.Converters"
+        xmlns:jchctrl="clr-namespace:JCHVRF_New.Common.Controls"
+        mc:Ignorable="d">
+    <UserControl.Resources>
+        <FrameworkElement x:Key="ProxyElementForAnchorables" DataContext="{Binding}"/>
+    </UserControl.Resources>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Unloaded">
+            <i:InvokeCommandAction Command="{Binding UnloadedCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Ribbon Grid.ColumnSpan="3"  SelectedIndex="{Binding SelectedRibbonTabIndex}" x:Name="RibbonMenu">
+            <!-- Application Menu, located at the left-hand side (collapsed as not required) -->
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu Visibility="Collapsed"/>
+            </Ribbon.ApplicationMenu>
+            <RibbonTab Header="{Lang:LocalisedText Key=FILE}" IsSelected="{Binding IsFileMenuSelected}">
+                <RibbonGroup DockPanel.Dock="Right">
+                    <RibbonButton Label="{Lang:LocalisedText Key=PREVIEW}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Preview}" />
+                    <RibbonButton Label="{Lang:LocalisedText Key=SHARE_REPORT}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Share}"/>
+                    <RibbonMenuButton Label="{Lang:LocalisedText Key=EXPORT}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Export}">
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=PREVIEW}"/>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=EDIT_REPORT_CONTENTS}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding EditReportContent}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=REPORT_EXCEL}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding excelClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=REPORT_PDF}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding OnpdfClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=REPORT_WORD}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding wordClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=WIRING_IMAGE}" Visibility="{Binding WiringExport}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding Wiring}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem  Header="{Lang:LocalisedText Key=PIPING_IMAGE}" Visibility="{Binding PipingExport}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding Piping}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                    </RibbonMenuButton>
+                </RibbonGroup>
+                <RibbonGroup >
+                    <RibbonButton Label="{Lang:LocalisedText Key=NEW}" ext:JCHUIService.IconType="Vector"   ext:JCHUIService.VectorResource="{StaticResource FileNew}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding NewClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                    <RibbonMenuButton Label="{Lang:LocalisedText Key=OPEN}" ext:JCHUIService.VectorResource="{StaticResource FileOpen}" ext:JCHUIService.IconType="Vector">
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=OPEN_PROJECT}" Width="200" Background="White" ext:JCHUIService.AwesomeIcon="FolderOutlinepenOutline">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding OpenProjectClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=OPEN_RECENT}" Width="200" Background="White" ToolTip="Recent Files From System Documents Folder Only Appear Here" ItemsSource="{Binding RecentProjectFilesData}">
+                            <RibbonMenuItem.Resources>
+                                <Style TargetType="RibbonMenuItem" BasedOn="{StaticResource {x:Type RibbonMenuItem}}">
+                                    <Setter Property="Header" Value="{Binding}"/>
+                                    <Setter Property="ext:JCHUIService.AwesomeIcon" Value="File"></Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="Header" Value="Clear Recent Files">
+                                            <Setter Property="Background" Value="WhiteSmoke"></Setter>
+                                            <Setter Property="BorderBrush" Value="LightGreen"/>
+                                            <Setter Property="BorderThickness" Value="0 1 0 0" />
+                                            <Setter Property="ext:JCHUIService.AwesomeIcon" Value="None"></Setter>
+                                        </Trigger>
+                                        <Trigger Property="Header" Value="Open Recent">
+                                            <Setter Property="ext:JCHUIService.AwesomeIcon" Value="FolderOutlinepenOutline"></Setter>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+
+                            </RibbonMenuItem.Resources>
+
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <prism:InvokeCommandAction TriggerParameterPath="OriginalSource.Header" Command="{Binding OpenRecentClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                    </RibbonMenuButton>
+                    <RibbonMenuButton  Label="{Lang:LocalisedText Key=SAVE}" ext:JCHUIService.VectorResource="{StaticResource FileSave}" ext:JCHUIService.IconType="Vector">
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=SAVE}" ext:JCHUIService.AwesomeIcon="Save" Width="200" Background="White">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding SaveClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=SAVE_AS}" Width="200" Background="White">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding SaveAsClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                    </RibbonMenuButton>
+                    <RibbonButton Label="{Lang:LocalisedText Key=CLOSE}" ext:JCHUIService.VectorResource="{StaticResource FileClose}" ext:JCHUIService.IconType="Vector">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding CloseClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                    <RibbonButton Label="{Lang:LocalisedText Key=REDO}" ext:JCHUIService.IconType="Vector" IsEnabled="False" ext:JCHUIService.VectorResource="{StaticResource RedoIcon}" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding RedoClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                    <RibbonButton Label="{Lang:LocalisedText Key=UNDO}" ext:JCHUIService.IconType="Vector" IsEnabled="False" ext:JCHUIService.VectorResource="{StaticResource UndoIcon}" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding UndoClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                    <RibbonButton Label="{Lang:LocalisedText Key=TEXTBOX}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource TextboxIcon}"/>
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="{Lang:LocalisedText Key=VIEW}"  Height="Auto" >
+                <RibbonGroup>
+                    <RibbonButton Label="{Lang:LocalisedText Key=NORMAL}" Command="{Binding NormalViewCommand}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource NormalIcon}"/>
+                    <RibbonButton Label="{Lang:LocalisedText Key=FULLSCREEN}" Command="{Binding FullScreenCommand}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource FullScreenIcon}"/>
+                    <RibbonButton Label="{Lang:LocalisedText Key=ANNOTATIONS}" ext:JCHUIService.AwesomeIcon="PencilSquare"/>
+                    <RibbonMenuButton Label="{Lang:LocalisedText Key=TOOLBARS}" ext:JCHUIService.AwesomeIcon="WindowMaximize">
+                        <RibbonCheckBox Label="{Lang:LocalisedText Key=PROJECT_EXPLORER}" IsChecked="{Binding Path=ProjectDetailsHandle.IsPaneVisible}" IsEnabled="{Binding Path=ProjectDetailsHandle.CanTogglePaneVisibility}"/>
+                        <RibbonCheckBox  Label="{Lang:LocalisedText Key=SystemPro}" IsChecked="{Binding Path=SystemDetailsHandle.IsPaneVisible}" IsEnabled="{Binding Path=SystemDetailsHandle.CanTogglePaneVisibility}"/>
+                        <RibbonCheckBox  Label="{Lang:LocalisedText Key=PIPING_INFORMATION}" IsChecked="{Binding Path=PipingInfoHandle.IsPaneVisible}" IsEnabled="{Binding Path=PipingInfoHandle.CanTogglePaneVisibility}"/>
+                        <RibbonCheckBox  Label="{Lang:LocalisedText Key=PROPERTIES}" IsChecked="{Binding Path=PropertiesHandle.IsPaneVisible}" IsEnabled="{Binding Path=PropertiesHandle.CanTogglePaneVisibility}"/>
+                        <RibbonCheckBox Label="{Lang:LocalisedText Key=ERROR_LIST}" IsChecked="{Binding Path=ErrorLogHandle.IsPaneVisible}" IsEnabled="{Binding Path=ErrorLogHandle.CanTogglePaneVisibility}"/>
+                        <RibbonCheckBox Label="{Lang:LocalisedText Key=NAVIGATOR}" IsChecked="{Binding Path=NavigatorHandle.IsPaneVisible}" IsEnabled="{Binding Path=NavigatorHandle.CanTogglePaneVisibility}"/>
+                    </RibbonMenuButton>
+                    <RibbonButton Label="{Lang:LocalisedText Key=RULER}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource RulerIcon}"/>
+                    <RibbonToggleButton IsChecked="True" Label="{Lang:LocalisedText Key=GRIDLINES}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource GridLinesIcon}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding ToolBarGridLineClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonToggleButton>
+                    <RibbonButton Label="{Lang:LocalisedText Key=GUIDES}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource GuideLinesIcon}"/>
+                    <RibbonButton Label="{Lang:LocalisedText Key=ZOOM_IN}" ext:JCHUIService.AwesomeIcon="Plus" ToolTip="Zoom In">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding ZoomInCanvasClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                    <RibbonButton Label="{Lang:LocalisedText Key=ZOOM_OUT}" ext:JCHUIService.AwesomeIcon="Minus" ext:JCHUIService.IconWidth="20" ToolTip="Zoom Out">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding ZoomOutCanvasClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                    <RibbonButton Label="{Lang:LocalisedText Key=CENTRE_STAGE}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource CenterStage}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding CenterStageCanvasClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="{Lang:LocalisedText Key=PROJECT}"  Height="Auto">
+                <RibbonGroup>
+                    <RibbonButton  Label="{Lang:LocalisedText Key=SETTINGS}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Settings}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding SettingsClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                    <RibbonButton Label="{Lang:LocalisedText Key=LOAD_SUMMARY}" ext:JCHUIService.AwesomeIcon="SnowflakeOutline"/>
+                </RibbonGroup>
+                <RibbonGroup Header="{Lang:LocalisedText Key=SIMULATION}">
+                    <RibbonButton  ext:JCHUIService.IconPadding="-2" Label="{Lang:LocalisedText Key=ENERGY}"  ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource EnergySimulation}" />
+                    <RibbonButton ext:JCHUIService.IconPadding="-2"   Label="{Lang:LocalisedText Key=NOISE}"  ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource NoiseIcon}"/>
+                </RibbonGroup>
+                <RibbonGroup>
+                <RibbonButton Label="{Lang:LocalisedText Key=PROJECT_SUMMARY}" ext:JCHUIService.AwesomeIcon="BarChart" />
+                <RibbonButton Label="{Lang:LocalisedText Key=MILESTONES}" ext:JCHUIService.AwesomeIcon="FlagCheckered"/>
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="{Lang:LocalisedText Key=SYSTEM}"  Height="Auto">
+                <RibbonGroup>
+                    <RibbonButton Label="{Lang:LocalisedText Key=NEW}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource NewSystemIcon}" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding NewSystemCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                    <RibbonButton Label="{Lang:LocalisedText Key=DUPLICATE}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Duplicate}" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding DuplicateClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+
+                    <RibbonButton Label="{Lang:LocalisedText Key=CLIPBOARD}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource CutIcon}" />
+                    <RibbonButton Label="{Lang:LocalisedText Key=DELETE}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Delete}" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding DeleteSystemCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                    <RibbonButton Visibility="Collapsed" Label="{Lang:LocalisedText Key=COOLING}" ext:JCHUIService.AwesomeIcon="Times">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding CoolingSystemCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                    <RibbonButton  Visibility="Collapsed" Label="{Lang:LocalisedText Key=CANCEL_COOLING}" ext:JCHUIService.AwesomeIcon="Times">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding CancelCoolingSystemCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                </RibbonGroup>
+                <RibbonGroup>
+                    <RibbonButton Label="{Lang:LocalisedText Key=PROPERTIES}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Properties}" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding PropertyCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                </RibbonGroup>
+                <RibbonGroup>
+                    <RibbonButton Label="{Lang:LocalisedText Key=UNIT_PRICE}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource UnitPrice}"  />
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="{Lang:LocalisedText Key=VRF}"  Height="Auto" Visibility="{Binding VRFMenuVisibility}" IsSelected="{Binding VRFMenuTabSelected}">
+                <RibbonGroup DockPanel.Dock="Right">
+                    <RibbonButton Label="{Lang:LocalisedText Key=VALIDATE}" ext:JCHUIService.VectorResource="{StaticResource Validate}" ext:JCHUIService.IconType="Vector" Click="lnkBtnValidate_Click" />
+                    <RibbonButton Label="{Lang:LocalisedText Key=PREVIEW}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Preview}" />
+                    <RibbonButton Label="{Lang:LocalisedText Key=SHARE_REPORT}" ext:JCHUIService.VectorResource="{StaticResource Share}" ext:JCHUIService.IconType="Vector" />
+                    <RibbonMenuButton Label="{Lang:LocalisedText Key=EXPORT}" ext:JCHUIService.VectorResource="{StaticResource Export}" ext:JCHUIService.IconType="Vector">
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=PREVIEW}"/>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=EDIT_REPORT_CONTENTS}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding EditReportContent}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=REPORT_EXCEL}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding excelClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=REPORT_PDF}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding OnpdfClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=REPORT_WORD}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding wordClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=WIRING_IMAGE}" Visibility="{Binding WiringExport}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding Wiring}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem  Header="{Lang:LocalisedText Key=PIPING_IMAGE}" Visibility="{Binding PipingExport}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding Piping}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                    </RibbonMenuButton>
+
+                </RibbonGroup>
+                <RibbonGroup>
+                    <RibbonMenuButton Label="{Lang:LocalisedText Key=LAYOUT_VIEW}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource LayoutView}">
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=NORMAL}" Command="{Binding LayoutViewChangedCommand}" CommandParameter="Normal"/>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=BINARY_TREE}" Command="{Binding LayoutViewChangedCommand}" CommandParameter="BinaryTree"/>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=DOUBLE_BRANCH_BINARY_TREE}" Command="{Binding LayoutViewChangedCommand}" CommandParameter="SchemaA"/>
+                    </RibbonMenuButton>
+                </RibbonGroup>
+                <RibbonGroup Header="{Lang:LocalisedText Key=PIPING_ALLIGNMENT}">
+                    <RibbonButton ext:JCHUIService.IconPadding="0" Label="{Lang:LocalisedText Key=HORIZONTAL}"  ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource HorizontalPiping}" Click="lnkhorizontalPiping_Click">
+                        <!--<i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding horizontalClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>-->
+                    </RibbonButton>
+                    <RibbonButton ext:JCHUIService.IconPadding="0" Label="{Lang:LocalisedText Key=VERTICAL}"  ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource VerticalPiping}" Click="lnkverticalPiping_Click" >
+                        <!--<i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding verticalClickCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>-->
+                    </RibbonButton>
+                </RibbonGroup>
+                <RibbonGroup>
+                    <RibbonButton Label="{Lang:LocalisedText Key=FIND_0_LENGTH}" Click="FindZero_Click" IsEnabled="True" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Find0LengthIcon}" >
+                        <!--<i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding lnkBtnFind0Length}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>-->
+                    </RibbonButton>
+                    <RibbonButton Label="{Lang:LocalisedText Key=PIPING_LENGTH}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource PipingLengthIcon}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <i:InvokeCommandAction Command="{Binding PipingLengthClick}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </RibbonButton>
+                    <RibbonButton Label="{Lang:LocalisedText Key=AUTO_PIPING}" ext:JCHUIService.AwesomeIcon="Sitemap" Click="lnkBtnAutoPipingIcon_Click"/>
+                    <RibbonButton Label="{Lang:LocalisedText Key=CONVERT_TO_CAD_MODE}" ext:JCHUIService.AwesomeIcon="ThLarge"/>
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="{Lang:LocalisedText Key=CONTROLLER}" Visibility="{Binding ConrollerMenuVisibility}" IsSelected="{Binding ControllerMenuTabSelected}">
+
+                <RibbonGroup DockPanel.Dock="Right">
+                    <RibbonButton Label="{Lang:LocalisedText Key=PREVIEW}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Preview}" />
+                    <RibbonButton Label="{Lang:LocalisedText Key=SHARE_REPORT}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Share}"/>
+                    <RibbonMenuButton Label="{Lang:LocalisedText Key=EXPORT}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Export}">
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=PREVIEW}"/>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=EDIT_REPORT_CONTENTS}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding EditReportContent}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=REPORT_EXCEL}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding excelClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=REPORT_PDF}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding OnpdfClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=REPORT_WORD}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding wordClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=WIRING_IMAGE}" Visibility="{Binding WiringExport}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding Wiring}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem  Header="{Lang:LocalisedText Key=PIPING_IMAGE}" Visibility="{Binding PipingExport}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding Piping}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                    </RibbonMenuButton>
+                </RibbonGroup>
+                <RibbonGroup DockPanel.Dock="Right">
+                    <RibbonButton Label="{Lang:LocalisedText Key=VALIDATE}" ext:JCHUIService.AwesomeIcon="CheckCircle" Click="lnkBtnValidate_Click" />
+                </RibbonGroup>
+                <RibbonGroup>
+                    <RibbonButton Label="{Lang:LocalisedText Key=GROUPING}" ext:JCHUIService.VectorResource="{StaticResource groupingicon}" ext:JCHUIService.IconType="Vector" Margin="15,0"/>
+                    <RibbonButton Label="{Lang:LocalisedText Key=AUTO_ADDRESSING}" ext:JCHUIService.VectorResource="{StaticResource autoaddressingicon}" ext:JCHUIService.IconType="Vector" Margin="15,0"/>
+                    <RibbonButton Label="{Lang:LocalisedText Key=AUTO_CONTROL_WIRING}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource autowiringicon}" Margin="15,0" Click="lnkBtnAutoWiringIcon_Click"/>
+                    <RibbonButton Label="{Lang:LocalisedText Key=MANUAL_WIRING}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource manualwiringicon}" Margin="15,0"/>
+                </RibbonGroup>
+            </RibbonTab>
+            <RibbonTab Header="{Lang:LocalisedText Key=HEAT_EXCHANGER}" Visibility="{Binding HeatExhangerMenuVisibility}" IsSelected="{Binding HeatExchangerMenuTabSelected}">
+
+                <RibbonGroup DockPanel.Dock="Right">
+                    <RibbonButton Label="{Lang:LocalisedText Key=PREVIEW}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Preview}" />
+                    <RibbonButton Label="{Lang:LocalisedText Key=SHARE_REPORT}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Share}"/>
+                    <RibbonMenuButton Label="{Lang:LocalisedText Key=EXPORT}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource Export}">
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=PREVIEW}"/>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=EDIT_REPORT_CONTENTS}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding EditReportContent}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=REPORT_EXCEL}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding excelClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=REPORT_PDF}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding OnpdfClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=REPORT_WORD}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding wordClickCommand}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem Header="{Lang:LocalisedText Key=WIRING_IMAGE}" Visibility="{Binding WiringExport}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding Wiring}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                        <RibbonMenuItem  Header="{Lang:LocalisedText Key=PIPING_IMAGE}" Visibility="{Binding PipingExport}">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="Click">
+                                    <i:InvokeCommandAction Command="{Binding Piping}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </RibbonMenuItem>
+                    </RibbonMenuButton>
+                </RibbonGroup>
+                <RibbonGroup> 
+                    <RibbonButton Label="{Lang:LocalisedText Key=FAN_DESIGN}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource FanIcon}" Margin="15,0"/>
+                    <RibbonButton Label="{Lang:LocalisedText Key=CALCULATE_EFFICIENCY}" ext:JCHUIService.IconType="Vector" ext:JCHUIService.VectorResource="{StaticResource calcualteefficiencyicon}" Margin="15,0"/>
+                </RibbonGroup>
+            </RibbonTab>
+        </Ribbon>
+        <!--Very Important, Don't Remove Below ContentControl-->
+        <ContentControl Visibility="Collapsed" Content="{StaticResource ProxyElementForAnchorables}"/>
+        <dock:DockingManager Grid.Row="1" Width="210">
+            <dock:DockingManager.Visibility>
+                <MultiBinding Converter="{conv:BoolCombineToVisibiltyConverter}">
+                    <Binding Path="ProjectDetailsHandle.IsPaneVisibleAndDocked"/>
+                    <Binding Path="SystemDetailsHandle.IsPaneVisibleAndDocked"/>
+                </MultiBinding>
+            </dock:DockingManager.Visibility>
+            <dock:LayoutRoot>
+                <dock:LayoutPanel>
+                    <dock:LayoutAnchorablePane CanRepositionItems="False">
+                        <jchctrl:JCHAnchorable
+                            IsPaneSelected="{Binding DataContext.ProjectDetailsHandle.IsPaneSelected, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneVisible="{Binding DataContext.ProjectDetailsHandle.IsPaneVisible, Source={StaticResource ProxyElementForAnchorables}}" 
+                            Title="{Binding DataContext.ProjectDetailsHandle.Title, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterLeft="{Binding DataContext.ProjectDetailsHandle.FloaterLeft, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterTop="{Binding DataContext.ProjectDetailsHandle.FloaterTop, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterHeight="{Binding DataContext.ProjectDetailsHandle.FloaterHeight, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterWidth="{Binding DataContext.ProjectDetailsHandle.FloaterWidth, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneFloating="{Binding DataContext.ProjectDetailsHandle.IsPaneFloating, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneFloatingMinimized="{Binding DataContext.ProjectDetailsHandle.IsPaneFloatingMinimized, Source={StaticResource ProxyElementForAnchorables}}"
+                            >
+                            <local:ProjectDetails />
+                        </jchctrl:JCHAnchorable>
+                        <jchctrl:JCHAnchorable 
+                            IsPaneSelected="{Binding DataContext.SystemDetailsHandle.IsPaneSelected, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneVisible="{Binding DataContext.SystemDetailsHandle.IsPaneVisible, Source={StaticResource ProxyElementForAnchorables}}" 
+                            Title="{Binding DataContext.SystemDetailsHandle.Title, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterLeft="{Binding DataContext.SystemDetailsHandle.FloaterLeft, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterTop="{Binding DataContext.SystemDetailsHandle.FloaterTop, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterHeight="{Binding DataContext.SystemDetailsHandle.FloaterHeight, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterWidth="{Binding DataContext.SystemDetailsHandle.FloaterWidth, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneFloating="{Binding DataContext.SystemDetailsHandle.IsPaneFloating, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneFloatingMinimized="{Binding DataContext.SystemDetailsHandle.IsPaneFloatingMinimized, Source={StaticResource ProxyElementForAnchorables}}"
+                            >
+                            <local:SystemDetails/>
+                        </jchctrl:JCHAnchorable>
+                    </dock:LayoutAnchorablePane>
+                </dock:LayoutPanel>
+            </dock:LayoutRoot>
+        </dock:DockingManager>
+        <Grid Grid.Row="1" Grid.Column="2" Width="210">
+            <Grid.Visibility>
+                <MultiBinding Converter="{conv:BoolCombineToVisibiltyConverter}">
+                    <Binding Path="PipingInfoHandle.IsPaneVisibleAndDocked"/>
+                    <Binding Path="PropertiesHandle.IsPaneVisibleAndDocked"/>
+                    <Binding Path="ErrorLogHandle.IsPaneVisibleAndDocked"/>
+                    <Binding Path="NavigatorHandle.IsPaneVisibleAndDocked"/>
+                </MultiBinding>
+            </Grid.Visibility>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <dock:DockingManager >
+                <dock:LayoutRoot>
+                    <dock:LayoutPanel>
+                        <dock:LayoutAnchorablePane  CanRepositionItems="False">
+                            <jchctrl:JCHAnchorable
+                            IsPaneSelected="{Binding DataContext.PipingInfoHandle.IsPaneSelected, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneVisible="{Binding DataContext.PipingInfoHandle.IsPaneVisible, Source={StaticResource ProxyElementForAnchorables}}" 
+                            Title="{Binding DataContext.PipingInfoHandle.Title, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterLeft="{Binding DataContext.PipingInfoHandle.FloaterLeft, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterTop="{Binding DataContext.PipingInfoHandle.FloaterTop, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterHeight="{Binding DataContext.PipingInfoHandle.FloaterHeight, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterWidth="{Binding DataContext.PipingInfoHandle.FloaterWidth, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneFloating="{Binding DataContext.PipingInfoHandle.IsPaneFloating, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneFloatingMinimized="{Binding DataContext.PipingInfoHandle.IsPaneFloatingMinimized, Source={StaticResource ProxyElementForAnchorables}}"
+                            >
+                                <local:PipingInfoProperties />
+                            </jchctrl:JCHAnchorable>
+                            <jchctrl:JCHAnchorable 
+                            IsPaneSelected="{Binding DataContext.PropertiesHandle.IsPaneSelected, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneVisible="{Binding DataContext.PropertiesHandle.IsPaneVisible, Source={StaticResource ProxyElementForAnchorables}}" 
+                            Title="{Binding DataContext.PropertiesHandle.Title, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterLeft="{Binding DataContext.PropertiesHandle.FloaterLeft, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterTop="{Binding DataContext.PropertiesHandle.FloaterTop, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterHeight="{Binding DataContext.PropertiesHandle.FloaterHeight, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterWidth="{Binding DataContext.PropertiesHandle.FloaterWidth, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneFloating="{Binding DataContext.PropertiesHandle.IsPaneFloating, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneFloatingMinimized="{Binding DataContext.PropertiesHandle.IsPaneFloatingMinimized, Source={StaticResource ProxyElementForAnchorables}}"
+                            >
+                                <local:Properties/>
+                            </jchctrl:JCHAnchorable>
+                        </dock:LayoutAnchorablePane>
+                    </dock:LayoutPanel>
+                </dock:LayoutRoot>
+            </dock:DockingManager>
+            <dock:DockingManager Grid.Row="1">
+            <dock:LayoutRoot>
+                <dock:LayoutPanel>
+                    <dock:LayoutAnchorablePane  CanRepositionItems="False">
+                            <jchctrl:JCHAnchorable
+                            IsPaneSelected="{Binding DataContext.ErrorLogHandle.IsPaneSelected, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneVisible="{Binding DataContext.ErrorLogHandle.IsPaneVisible, Source={StaticResource ProxyElementForAnchorables}}" 
+                            Title="{Binding DataContext.ErrorLogHandle.Title, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterLeft="{Binding DataContext.ErrorLogHandle.FloaterLeft, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterTop="{Binding DataContext.ErrorLogHandle.FloaterTop, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterHeight="{Binding DataContext.ErrorLogHandle.FloaterHeight, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterWidth="{Binding DataContext.ErrorLogHandle.FloaterWidth, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneFloating="{Binding DataContext.ErrorLogHandle.IsPaneFloating, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneFloatingMinimized="{Binding DataContext.ErrorLogHandle.IsPaneFloatingMinimized, Source={StaticResource ProxyElementForAnchorables}}"
+                            >
+                            <local:ErrorLog />
+                        </jchctrl:JCHAnchorable>
+                            <jchctrl:JCHAnchorable 
+                            IsPaneSelected="{Binding DataContext.NavigatorHandle.IsPaneSelected, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneVisible="{Binding DataContext.NavigatorHandle.IsPaneVisible, Source={StaticResource ProxyElementForAnchorables}}" 
+                            Title="{Binding DataContext.NavigatorHandle.Title, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterLeft="{Binding DataContext.NavigatorHandle.FloaterLeft, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterTop="{Binding DataContext.NavigatorHandle.FloaterTop, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterHeight="{Binding DataContext.NavigatorHandle.FloaterHeight, Source={StaticResource ProxyElementForAnchorables}}"
+                            FloaterWidth="{Binding DataContext.NavigatorHandle.FloaterWidth, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneFloating="{Binding DataContext.NavigatorHandle.IsPaneFloating, Source={StaticResource ProxyElementForAnchorables}}"
+                            IsPaneFloatingMinimized="{Binding DataContext.NavigatorHandle.IsPaneFloatingMinimized, Source={StaticResource ProxyElementForAnchorables}}"
+                            >
+                            <local:Navigator/>
+                        </jchctrl:JCHAnchorable>
+                    </dock:LayoutAnchorablePane>
+                </dock:LayoutPanel>
+            </dock:LayoutRoot>
+        </dock:DockingManager>
+
+        </Grid>
+        <Border Grid.Row="1" Grid.Column="1"  BorderThickness="0" BorderBrush="LightGray">
+            <TabControl x:Name="MainTabControl" BorderThickness="0" Background="White" Grid.Row="1"
+                        ItemsSource="{Binding Systems}" SelectedIndex="{Binding SelectedTabIndex, Mode=TwoWay}" >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <i:InvokeCommandAction Command="{Binding SystemTabSelectionChangedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+                <TabControl.Resources>
+                    <Style TargetType="TabItem">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TabItem">
+                                    <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="Gainsboro" >
+                                        <ContentPresenter x:Name="ContentSite"
+                                                          VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center"
+                                                          ContentSource="Header"
+                                                        />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="White" />
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="False">
+                                            <Setter TargetName="Border" Property="Background" Value="LightGray" />
+                                            <Setter TargetName="Border" Property="CornerRadius" Value="0"></Setter>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TabControl.Resources>
+                <TabControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Width="115"  BorderThickness="1" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding StatusIcon}" Height="15" Grid.Column="0"></Image>
+                                <TextBlock Text="{Binding Name}" Margin="5,0,0,0" TextWrapping="NoWrap" VerticalAlignment="Center" Grid.Column="1"/>
+                                <Button Grid.Column="2" Command="{Binding RelativeSource={RelativeSource AncestorType=UserControl},Path=DataContext.CloseTabCommand}" CommandParameter="{Binding}" HorizontalAlignment="Right" VerticalAlignment="Center">
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Path Data="M0,0 L8,8 M8,0 L0,8" StrokeThickness="3" VerticalAlignment="Center" Margin="5,4,0,2" HorizontalAlignment="Right">
+                                                <Path.Style>
+                                                    <Style TargetType="{x:Type Path}">
+                                                        <Style.Triggers>
+                                                            <Trigger Property="IsMouseOver" Value="False">
+                                                                <Setter Property="Stroke" Value="DarkGray" />
+                                                            </Trigger>
+                                                            <Trigger Property="IsMouseOver" Value="True">
+                                                                <Setter Property="Stroke" Value="DarkGray" />
+                                                            </Trigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </Path.Style>
+                                            </Path>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </TabControl.ItemTemplate>
+                <TabControl.ItemContainerStyle>
+                    <Style TargetType="TabItem">
+                        <Setter Property="Background" Value="White" />
+                        <Setter Property="Content" Value="{Binding TabContentControl}" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TabItem">
+                                    <Border Name="Border" BorderThickness="1,1,1,1" BorderBrush="DarkGray"  Height="32"  Margin="0.1">
+                                        <ContentPresenter x:Name="ContentSite"
+                                                          VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center"
+                                                          ContentSource="Header"
+                                                          Margin="10,2"/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="White" />
+                                            <Setter TargetName="Border" Property="BorderThickness" Value="1,1,1,0"/>
+                                        </Trigger>
+                                        <Trigger Property="IsSelected" Value="False">
+                                            <Setter TargetName="Border" Property="Background" Value="Gainsboro" />
+                                            <Setter TargetName="Border" Property="Margin" Value="0,0,0,0" />
+                                            <Setter TargetName="Border" Property="BorderThickness" Value="1"/>
+                                            <!--<Setter TargetName="Border" Property="CornerRadius" Value="15,15,5,5" />-->
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </TabControl.ItemContainerStyle>
+                <TabControl.ContentTemplate>
+                    <DataTemplate >
+                        <view:SystemTab HvacSystem="{Binding ElementName=MainTabControl, Path=SelectedItem}"/>
+                    </DataTemplate>
+                </TabControl.ContentTemplate>
+
+            </TabControl>
+        </Border>
+    </Grid>
+</UserControl>

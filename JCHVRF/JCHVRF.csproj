@@ -1,0 +1,1440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{388321CF-B647-40F0-9FDF-DB495BC005A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JCHVRF</RootNamespace>
+    <AssemblyName>JCHVRF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>%24/VRF NextGen/Dev/VRFDesktopApplication/JCHVRF/JCHVRF</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://johnsoncontrols-be.visualstudio.com</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Jci.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CADImport">
+      <HintPath>..\dll\CADImport.dll</HintPath>
+    </Reference>
+    <Reference Include="CDF, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\CDF.dll</HintPath>
+    </Reference>
+    <Reference Include="CDL">
+      <HintPath>..\dll\CDL.dll</HintPath>
+    </Reference>
+    <Reference Include="JCBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\JCBase.dll</HintPath>
+    </Reference>
+    <Reference Include="JCBase.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\JCBase.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="JCBase.Utility">
+      <HintPath>..\dll\JCBase.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Lassalle.Flow">
+      <HintPath>..\dll\Lassalle.Flow.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Office\Office16\DCF\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAddIndoorUniversal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddIndoorUniversal.designer.cs" />
+    <Compile Include="frmAddOutdoorUniversal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddOutdoorUniversal.designer.cs">
+      <DependentUpon>frmAddOutdoorUniversal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddIndoorSimpleUniversal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddIndoorSimpleUniversal.designer.cs">
+      <DependentUpon>frmAddIndoorSimpleUniversal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddAccessory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddAccessory.Designer.cs">
+      <DependentUpon>frmAddAccessory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddIndoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddIndoor.designer.cs">
+      <DependentUpon>frmAddIndoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddIndoorSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddIndoorSimple.designer.cs">
+      <DependentUpon>frmAddIndoorSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddOutdoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddOutdoor.designer.cs">
+      <DependentUpon>frmAddOutdoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExchanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExchanger.Designer.cs">
+      <DependentUpon>frmExchanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExchangerByRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExchangerByRoom.Designer.cs">
+      <DependentUpon>frmExchangerByRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelpInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelpInfo.designer.cs">
+      <DependentUpon>frmHelpInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputPipeLength.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputPipeLength.designer.cs">
+      <DependentUpon>frmInputPipeLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoadIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoadIndex.designer.cs">
+      <DependentUpon>frmLoadIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoadIndexAddCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoadIndexAddCity.designer.cs">
+      <DependentUpon>frmLoadIndexAddCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoadIndexAddIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoadIndexAddIndex.designer.cs">
+      <DependentUpon>frmLoadIndexAddIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManualPiping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManualPiping.Designer.cs">
+      <DependentUpon>frmManualPiping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMatchIndoorResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMatchIndoorResult.Designer.cs">
+      <DependentUpon>frmMatchIndoorResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMsgInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMsgInfo.Designer.cs">
+      <DependentUpon>frmMsgInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewAccessory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewAccessory.designer.cs">
+      <DependentUpon>frmNewAccessory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPipingLengthSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPipingLengthSetting.Designer.cs">
+      <DependentUpon>frmPipingLengthSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPipingRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPipingRules.Designer.cs">
+      <DependentUpon>frmPipingRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegionBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegionBrand.Designer.cs">
+      <DependentUpon>frmRegionBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoomManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoomManage.designer.cs">
+      <DependentUpon>frmRoomManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmSetting.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="frmStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStart.designer.cs">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSystemUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSystemUnit.Designer.cs">
+      <DependentUpon>frmSystemUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global\AECworksHelp.cs" />
+    <Compile Include="Global\Global.cs" />
+    <Compile Include="Global\MatchIndoor.cs" />
+    <Compile Include="Global\UtilTrace.cs" />
+    <Compile Include="Global\WebservicesHelper.cs" />
+    <Compile Include="Global\UtilControl.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmInputOutdoorPipeLength.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputOutdoorPipeLength.designer.cs">
+      <DependentUpon>frmInputOutdoorPipeLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForm.designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\IDropController.cs" />
+    <Compile Include="UserControls\ucDropControlGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDropControlGroup.designer.cs">
+      <DependentUpon>ucDropControlGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDropController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDropController.designer.cs">
+      <DependentUpon>ucDropController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDropControlSystem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDropControlSystem.designer.cs">
+      <DependentUpon>ucDropControlSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ucDropOutdoor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucDropOutdoor.designer.cs">
+      <DependentUpon>ucDropOutdoor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAddAccessory.de.resx">
+      <DependentUpon>frmAddAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAccessory.it.resx">
+      <DependentUpon>frmAddAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAccessory.pt-BR.resx">
+      <DependentUpon>frmAddAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAccessory.zh-Hant.resx">
+      <DependentUpon>frmAddAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoor.de.resx">
+      <DependentUpon>frmAddIndoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoor.it.resx">
+      <DependentUpon>frmAddIndoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoor.pt-BR.resx">
+      <DependentUpon>frmAddIndoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoor.zh-Hant.resx">
+      <DependentUpon>frmAddIndoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimple.de.resx">
+      <DependentUpon>frmAddIndoorSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimple.it.resx">
+      <DependentUpon>frmAddIndoorSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimple.pt-BR.resx">
+      <DependentUpon>frmAddIndoorSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimple.zh-Hant.resx">
+      <DependentUpon>frmAddIndoorSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimpleUniversal.de.resx">
+      <DependentUpon>frmAddIndoorSimpleUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimpleUniversal.it.resx">
+      <DependentUpon>frmAddIndoorSimpleUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimpleUniversal.pt-BR.resx">
+      <DependentUpon>frmAddIndoorSimpleUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimpleUniversal.zh-Hant.resx">
+      <DependentUpon>frmAddIndoorSimpleUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorUniversal.de.resx" />
+    <EmbeddedResource Include="frmAddIndoorUniversal.en-US.resx" />
+    <EmbeddedResource Include="frmAddIndoorUniversal.es.resx" />
+    <EmbeddedResource Include="frmAddIndoorUniversal.fr.resx" />
+    <EmbeddedResource Include="frmAddIndoorUniversal.it.resx" />
+    <EmbeddedResource Include="frmAddIndoorUniversal.pt-BR.resx" />
+    <EmbeddedResource Include="frmAddIndoorUniversal.resx" />
+    <EmbeddedResource Include="frmAddIndoorUniversal.tr.resx" />
+    <EmbeddedResource Include="frmAddIndoorUniversal.zh-CN.resx" />
+    <EmbeddedResource Include="frmAddOutdoor.de.resx">
+      <DependentUpon>frmAddOutdoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoor.it.resx">
+      <DependentUpon>frmAddOutdoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoor.pt-BR.resx">
+      <DependentUpon>frmAddOutdoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoor.zh-Hant.resx">
+      <DependentUpon>frmAddOutdoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoorUniversal.de.resx">
+      <DependentUpon>frmAddOutdoorUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoorUniversal.en-US.resx">
+      <DependentUpon>frmAddOutdoorUniversal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoorUniversal.es.resx">
+      <DependentUpon>frmAddOutdoorUniversal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoorUniversal.fr.resx">
+      <DependentUpon>frmAddOutdoorUniversal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoorUniversal.it.resx">
+      <DependentUpon>frmAddOutdoorUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoorUniversal.pt-BR.resx">
+      <DependentUpon>frmAddOutdoorUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoorUniversal.resx">
+      <DependentUpon>frmAddOutdoorUniversal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoorUniversal.tr.resx">
+      <DependentUpon>frmAddOutdoorUniversal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoorUniversal.zh-CN.resx">
+      <DependentUpon>frmAddOutdoorUniversal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimpleUniversal.en-US.resx">
+      <DependentUpon>frmAddIndoorSimpleUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimpleUniversal.es.resx">
+      <DependentUpon>frmAddIndoorSimpleUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimpleUniversal.fr.resx">
+      <DependentUpon>frmAddIndoorSimpleUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimpleUniversal.resx">
+      <DependentUpon>frmAddIndoorSimpleUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimpleUniversal.tr.resx">
+      <DependentUpon>frmAddIndoorSimpleUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimpleUniversal.zh-CN.resx">
+      <DependentUpon>frmAddIndoorSimpleUniversal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAccessory.es.resx">
+      <DependentUpon>frmAddAccessory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAccessory.fr.resx">
+      <DependentUpon>frmAddAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAccessory.resx">
+      <DependentUpon>frmAddAccessory.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAccessory.tr.resx">
+      <DependentUpon>frmAddAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddAccessory.zh-CN.resx">
+      <DependentUpon>frmAddAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoor.en-US.resx">
+      <DependentUpon>frmAddIndoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoor.es.resx">
+      <DependentUpon>frmAddIndoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoor.fr.resx">
+      <DependentUpon>frmAddIndoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoor.resx">
+      <DependentUpon>frmAddIndoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoor.tr.resx">
+      <DependentUpon>frmAddIndoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoor.zh-CN.resx">
+      <DependentUpon>frmAddIndoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimple.en-US.resx">
+      <DependentUpon>frmAddIndoorSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimple.es.resx">
+      <DependentUpon>frmAddIndoorSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimple.fr.resx">
+      <DependentUpon>frmAddIndoorSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimple.resx">
+      <DependentUpon>frmAddIndoorSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimple.tr.resx">
+      <DependentUpon>frmAddIndoorSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddIndoorSimple.zh-CN.resx">
+      <DependentUpon>frmAddIndoorSimple.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoor.en-US.resx">
+      <DependentUpon>frmAddOutdoor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoor.es.resx">
+      <DependentUpon>frmAddOutdoor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoor.fr.resx">
+      <DependentUpon>frmAddOutdoor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoor.resx">
+      <DependentUpon>frmAddOutdoor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoor.tr.resx">
+      <DependentUpon>frmAddOutdoor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoor.zh-CN.resx">
+      <DependentUpon>frmAddOutdoor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOutdoorUniversal.zh-Hant.resx">
+      <DependentUpon>frmAddOutdoorUniversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchanger.de.resx">
+      <DependentUpon>frmExchanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchanger.en-US.resx">
+      <DependentUpon>frmExchanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchanger.es.resx">
+      <DependentUpon>frmExchanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchanger.fr.resx">
+      <DependentUpon>frmExchanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchanger.it.resx">
+      <DependentUpon>frmExchanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchanger.pt-BR.resx">
+      <DependentUpon>frmExchanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchanger.resx">
+      <DependentUpon>frmExchanger.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchanger.tr.resx">
+      <DependentUpon>frmExchanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchanger.zh-CN.resx">
+      <DependentUpon>frmExchanger.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchanger.zh-Hant.resx">
+      <DependentUpon>frmExchanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchangerByRoom.de.resx">
+      <DependentUpon>frmExchangerByRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchangerByRoom.en-US.resx">
+      <DependentUpon>frmExchangerByRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchangerByRoom.es.resx">
+      <DependentUpon>frmExchangerByRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchangerByRoom.fr.resx">
+      <DependentUpon>frmExchangerByRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchangerByRoom.it.resx">
+      <DependentUpon>frmExchangerByRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchangerByRoom.pt-BR.resx">
+      <DependentUpon>frmExchangerByRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchangerByRoom.resx">
+      <DependentUpon>frmExchangerByRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchangerByRoom.tr.resx">
+      <DependentUpon>frmExchangerByRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchangerByRoom.zh-CN.resx">
+      <DependentUpon>frmExchangerByRoom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExchangerByRoom.zh-Hant.resx">
+      <DependentUpon>frmExchangerByRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelpInfo.resx">
+      <DependentUpon>frmHelpInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputOutdoorPipeLength.de.resx">
+      <DependentUpon>frmInputOutdoorPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputOutdoorPipeLength.it.resx">
+      <DependentUpon>frmInputOutdoorPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputOutdoorPipeLength.pt-BR.resx">
+      <DependentUpon>frmInputOutdoorPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputOutdoorPipeLength.zh-Hant.resx">
+      <DependentUpon>frmInputOutdoorPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputPipeLength.de.resx">
+      <DependentUpon>frmInputPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputPipeLength.en-US.resx">
+      <DependentUpon>frmInputPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputPipeLength.es.resx">
+      <DependentUpon>frmInputPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputPipeLength.fr.resx">
+      <DependentUpon>frmInputPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputPipeLength.it.resx">
+      <DependentUpon>frmInputPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputPipeLength.pt-BR.resx">
+      <DependentUpon>frmInputPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputPipeLength.resx">
+      <DependentUpon>frmInputPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputPipeLength.tr.resx">
+      <DependentUpon>frmInputPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputPipeLength.zh-CN.resx">
+      <DependentUpon>frmInputPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputPipeLength.zh-Hant.resx">
+      <DependentUpon>frmInputPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndex.de.resx">
+      <DependentUpon>frmLoadIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndex.en-US.resx">
+      <DependentUpon>frmLoadIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndex.es.resx">
+      <DependentUpon>frmLoadIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndex.fr.resx">
+      <DependentUpon>frmLoadIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndex.it.resx">
+      <DependentUpon>frmLoadIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndex.pt-BR.resx">
+      <DependentUpon>frmLoadIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndex.resx">
+      <DependentUpon>frmLoadIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndex.tr.resx">
+      <DependentUpon>frmLoadIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndex.zh-CN.resx">
+      <DependentUpon>frmLoadIndex.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndex.zh-Hant.resx">
+      <DependentUpon>frmLoadIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddCity.de.resx">
+      <DependentUpon>frmLoadIndexAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddCity.en-US.resx">
+      <DependentUpon>frmLoadIndexAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddCity.es.resx">
+      <DependentUpon>frmLoadIndexAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddCity.fr.resx">
+      <DependentUpon>frmLoadIndexAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddCity.it.resx">
+      <DependentUpon>frmLoadIndexAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddCity.pt-BR.resx">
+      <DependentUpon>frmLoadIndexAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddCity.resx">
+      <DependentUpon>frmLoadIndexAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddCity.tr.resx">
+      <DependentUpon>frmLoadIndexAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddCity.zh-CN.resx">
+      <DependentUpon>frmLoadIndexAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddCity.zh-Hant.resx">
+      <DependentUpon>frmLoadIndexAddCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddIndex.de.resx">
+      <DependentUpon>frmLoadIndexAddIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddIndex.en-US.resx">
+      <DependentUpon>frmLoadIndexAddIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddIndex.es.resx">
+      <DependentUpon>frmLoadIndexAddIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddIndex.fr.resx">
+      <DependentUpon>frmLoadIndexAddIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddIndex.it.resx">
+      <DependentUpon>frmLoadIndexAddIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddIndex.pt-BR.resx">
+      <DependentUpon>frmLoadIndexAddIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddIndex.resx">
+      <DependentUpon>frmLoadIndexAddIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddIndex.tr.resx">
+      <DependentUpon>frmLoadIndexAddIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddIndex.zh-CN.resx">
+      <DependentUpon>frmLoadIndexAddIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadIndexAddIndex.zh-Hant.resx">
+      <DependentUpon>frmLoadIndexAddIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.de.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.en-US.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.es.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.fr.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.it.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.pt-BR.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.tr.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.zh-CN.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.zh-Hant.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualPiping.de.resx">
+      <DependentUpon>frmManualPiping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualPiping.en-US.resx">
+      <DependentUpon>frmManualPiping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualPiping.es.resx">
+      <DependentUpon>frmManualPiping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualPiping.fr.resx">
+      <DependentUpon>frmManualPiping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualPiping.it.resx">
+      <DependentUpon>frmManualPiping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualPiping.pt-BR.resx">
+      <DependentUpon>frmManualPiping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualPiping.resx">
+      <DependentUpon>frmManualPiping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualPiping.tr.resx">
+      <DependentUpon>frmManualPiping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualPiping.zh-CN.resx">
+      <DependentUpon>frmManualPiping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualPiping.zh-Hant.resx">
+      <DependentUpon>frmManualPiping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatchIndoorResult.de.resx">
+      <DependentUpon>frmMatchIndoorResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatchIndoorResult.en-US.resx">
+      <DependentUpon>frmMatchIndoorResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatchIndoorResult.es.resx">
+      <DependentUpon>frmMatchIndoorResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatchIndoorResult.fr.resx">
+      <DependentUpon>frmMatchIndoorResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatchIndoorResult.it.resx">
+      <DependentUpon>frmMatchIndoorResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatchIndoorResult.pt-BR.resx">
+      <DependentUpon>frmMatchIndoorResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatchIndoorResult.resx">
+      <DependentUpon>frmMatchIndoorResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatchIndoorResult.tr.resx">
+      <DependentUpon>frmMatchIndoorResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatchIndoorResult.zh-CN.resx">
+      <DependentUpon>frmMatchIndoorResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMatchIndoorResult.zh-Hant.resx">
+      <DependentUpon>frmMatchIndoorResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsgInfo.de.resx">
+      <DependentUpon>frmMsgInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsgInfo.en-US.resx">
+      <DependentUpon>frmMsgInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsgInfo.es.resx">
+      <DependentUpon>frmMsgInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsgInfo.fr.resx">
+      <DependentUpon>frmMsgInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsgInfo.it.resx">
+      <DependentUpon>frmMsgInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsgInfo.pt-BR.resx">
+      <DependentUpon>frmMsgInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsgInfo.resx">
+      <DependentUpon>frmMsgInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsgInfo.tr.resx">
+      <DependentUpon>frmMsgInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsgInfo.zh-CN.resx">
+      <DependentUpon>frmMsgInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsgInfo.zh-Hant.resx">
+      <DependentUpon>frmMsgInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewAccessory.de.resx">
+      <DependentUpon>frmNewAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewAccessory.en-US.resx">
+      <DependentUpon>frmNewAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewAccessory.es.resx">
+      <DependentUpon>frmNewAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewAccessory.fr.resx">
+      <DependentUpon>frmNewAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewAccessory.it.resx">
+      <DependentUpon>frmNewAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewAccessory.pt-BR.resx">
+      <DependentUpon>frmNewAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewAccessory.resx">
+      <DependentUpon>frmNewAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewAccessory.tr.resx">
+      <DependentUpon>frmNewAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewAccessory.zh-CN.resx">
+      <DependentUpon>frmNewAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewAccessory.zh-Hant.resx">
+      <DependentUpon>frmNewAccessory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPipingLengthSetting.de.resx">
+      <DependentUpon>frmPipingLengthSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPipingLengthSetting.en-US.resx">
+      <DependentUpon>frmPipingLengthSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPipingLengthSetting.es.resx">
+      <DependentUpon>frmPipingLengthSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPipingLengthSetting.fr.resx">
+      <DependentUpon>frmPipingLengthSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPipingLengthSetting.it.resx">
+      <DependentUpon>frmPipingLengthSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPipingLengthSetting.pt-BR.resx">
+      <DependentUpon>frmPipingLengthSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPipingLengthSetting.resx">
+      <DependentUpon>frmPipingLengthSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPipingLengthSetting.tr.resx">
+      <DependentUpon>frmPipingLengthSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPipingLengthSetting.zh-CN.resx">
+      <DependentUpon>frmPipingLengthSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPipingLengthSetting.zh-Hant.resx">
+      <DependentUpon>frmPipingLengthSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPipingRules.fr.resx">
+      <DependentUpon>frmPipingRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPipingRules.resx">
+      <DependentUpon>frmPipingRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegionBrand.resx">
+      <DependentUpon>frmRegionBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomManage.de.resx">
+      <DependentUpon>frmRoomManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomManage.en-US.resx">
+      <DependentUpon>frmRoomManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomManage.es.resx">
+      <DependentUpon>frmRoomManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomManage.fr.resx">
+      <DependentUpon>frmRoomManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomManage.it.resx">
+      <DependentUpon>frmRoomManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomManage.pt-BR.resx">
+      <DependentUpon>frmRoomManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomManage.resx">
+      <DependentUpon>frmRoomManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomManage.tr.resx">
+      <DependentUpon>frmRoomManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomManage.zh-CN.resx">
+      <DependentUpon>frmRoomManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomManage.zh-Hant.resx">
+      <DependentUpon>frmRoomManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.de.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.en-US.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmSetting.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.es.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.fr.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.it.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.pt-BR.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.tr.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.zh-CN.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.zh-Hant.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.en-US.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.es.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.fr.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.tr.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStart.zh-CN.resx">
+      <DependentUpon>frmStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSystemUnit.resx">
+      <DependentUpon>frmSystemUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputOutdoorPipeLength.en-US.resx">
+      <DependentUpon>frmInputOutdoorPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputOutdoorPipeLength.es.resx">
+      <DependentUpon>frmInputOutdoorPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputOutdoorPipeLength.fr.resx">
+      <DependentUpon>frmInputOutdoorPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputOutdoorPipeLength.resx">
+      <DependentUpon>frmInputOutdoorPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputOutdoorPipeLength.tr.resx">
+      <DependentUpon>frmInputOutdoorPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputOutdoorPipeLength.zh-CN.resx">
+      <DependentUpon>frmInputOutdoorPipeLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForm.es.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForm.fr.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForm.tr.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForm.zh-CN.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForm.zh-Hant.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDropControlGroup.resx">
+      <DependentUpon>ucDropControlGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDropController.resx">
+      <DependentUpon>ucDropController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDropControlSystem.resx">
+      <DependentUpon>ucDropControlSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucDropOutdoor.resx">
+      <DependentUpon>ucDropOutdoor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JCHVRF.BLL\JCHVRF.BLL.csproj">
+      <Project>{c7829fb6-7909-4467-a603-fe8f78df33bf}</Project>
+      <Name>JCHVRF.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Const\JCHVRF.Const.csproj">
+      <Project>{acd40089-8738-4d59-a97f-f8ef8cb0bf91}</Project>
+      <Name>JCHVRF.Const</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.DALFactory\JCHVRF.DALFactory.csproj">
+      <Project>{69a59513-d8c7-41e2-9df3-95c0a7ea787c}</Project>
+      <Name>JCHVRF.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.DAL\JCHVRF.DAL.csproj">
+      <Project>{b472c47d-c465-4867-8589-aaf860a26046}</Project>
+      <Name>JCHVRF.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Entity\JCHVRF.Entity.csproj">
+      <Project>{798a74b8-f22c-4b72-8cfb-3835306ce2c4}</Project>
+      <Name>JCHVRF.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Model\JCHVRF.Model.csproj">
+      <Project>{53f606c7-5ccf-48c4-8420-c2ee4f7fc29a}</Project>
+      <Name>JCHVRF.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.MyPipingBLL\JCHVRF.MyPipingBLL.csproj">
+      <Project>{62dae7e0-fc30-470e-905c-a39e985427f2}</Project>
+      <Name>JCHVRF.MyPipingBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Report\JCHVRF.Report.csproj">
+      <Project>{75856cc4-f1c7-42f8-834e-f7fa42e158cd}</Project>
+      <Name>JCHVRF.Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.VRFMessage\JCHVRF.VRFMessage.csproj">
+      <Project>{b11207c8-c702-43fa-ae96-f1bb2aa4ba38}</Project>
+      <Name>JCHVRF.VRFMessage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.VRFTrans\JCHVRF.VRFTrans.csproj">
+      <Project>{110c64cb-388a-4b74-8f21-6c1c28fded40}</Project>
+      <Name>JCHVRF.VRFTrans</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Register\Register.csproj">
+      <Project>{C3C491B1-8C66-4923-8C7F-8697869A0FC9}</Project>
+      <Name>Register</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_region_18x18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_region_hi_18x18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_place_hi_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy_place_nr_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_place_hi_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_place_nr_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_area_hi_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_area_nr_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_area_hi_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_area_nr_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_area_hi_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_area_nr_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_area_nr_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default_option_hi_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Default_option_nr_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_place_hi_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_place_nr_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-file-icon24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_option_hi_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_option_nr_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_place_hi_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_place_nr_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_area_hi_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_area_nr_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_place_hi_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_place_nr_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\140103_04_piping arrow_left to right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_info_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Open_Nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_New_Nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Setting_Nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Save as_Nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Save_Nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Import_Nor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu exit_hi_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu exit_nr_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu info_hi_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu info_nr_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language_pull_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JCI_color_logo_58x28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project_info_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple_unit_delete_nr_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple_unit_edit_hi_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple_unit_edit_nr_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple_unit_Info_hi_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple_unit_Info_nr_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple_unit_add_hi_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple_unit_add_nr_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple_unit_copy_hi_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple_unit_copy_nr_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Simple_unit_delete_hi_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Open_CN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Save as_CN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Save_CN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Setting_CN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_New_Pro_CH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Import_Pro_CH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Save_Pro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Setting_Pro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Import_Pro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_New_Pro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Open_Pro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Save_as_Pro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Import_High.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_New_High.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Open_High.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Save as_High.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Save_High.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_Setting_High.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CC_controller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\On_Off_controller.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_indoor_grey_40x28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_indoor_white_40x28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\140103_04_piping_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\140103_07_System_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\140103_07_System_arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hitachi_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YORK_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Jci.ico" />
+    <None Include="Resources\remove_nor.png" />
+    <None Include="Resources\remove_tab.png" />
+    <None Include="Resources\setting_white.png" />
+    <None Include="Resources\setting_nor.png" />
+    <None Include="Resources\trash_can_nor.png" />
+    <None Include="Resources\trash_can_white.png" />
+    <None Include="Resources\02-2__active.png" />
+    <Content Include="Resources\add-icon.png" />
+    <Content Include="Resources\delete-icon.png" />
+    <None Include="Resources\piping_Transparent.png" />
+    <None Include="Resources\piping_ok.png" />
+    <None Include="Resources\piping_error.png" />
+    <None Include="Resources\Menu_Export_Pro_CH.png" />
+    <None Include="Resources\Menu_Export_High.png" />
+    <None Include="Resources\Menu_Export_Nor.png" />
+    <None Include="Resources\Menu_Export_Pro.png" />
+    <None Include="Resources\York_VRF_color_2.png" />
+    <None Include="Resources\Logo_Hitachi_2.png" />
+    <None Include="Resources\PlottingScale_V.png" />
+    <None Include="Resources\PlottingScale.png" />
+    <None Include="Resources\140103_05_piping_arrow.png" />
+    <None Include="Resources\LineStyle_Polyline1.png" />
+    <None Include="Resources\LineStyle_VHV.png" />
+    <None Include="Resources\LineStyle_VH.png" />
+    <None Include="Resources\LineStyle_Polyline.png" />
+    <None Include="Resources\LineStyle_HVH.png" />
+    <None Include="Resources\LineStyle_HV.png" />
+    <None Include="Resources\undohov.png" />
+    <None Include="Resources\redohov.png" />
+    <None Include="Resources\redo.png" />
+    <None Include="Resources\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if "$ConfigurationName"=="Release" (
+xcopy /r /y /e "$(SolutionDir)runtime\*.*" "$(TargetDir)"
+) else (
+xcopy /r /d /y /e "$(SolutionDir)runtime\*.*" "$(TargetDir)"
+)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

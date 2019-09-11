@@ -1,0 +1,6 @@
+﻿Create Table JCHVRF_Language(
+ Id  counter PRIMARY KEY ,
+Language VARCHAR,
+LanguageDisplayName VARCHAR,
+IsActive bit,
+ )

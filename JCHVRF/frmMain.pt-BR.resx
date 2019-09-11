@@ -1,0 +1,806 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="tvOutdoor.Nodes" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAAB1TeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQ0AAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tl
+        ZApJbWFnZUluZGV4CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNo
+        aWxkQ291bnQJY2hpbGRyZW4wCWNoaWxkcmVuMQljaGlsZHJlbjIJY2hpbGRyZW4zAQEBAAABAAEABAQE
+        BAEICAgdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUCAAAAHVN5c3RlbS5XaW5kb3dzLkZvcm1z
+        LlRyZWVOb2RlAgAAAB1TeXN0ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQIAAAAdU3lzdGVtLldpbmRv
+        d3MuRm9ybXMuVHJlZU5vZGUCAAAAAgAAAAYDAAAAFE91dDEgW1lET0g0MjBFVk0tMEJdBgQAAAAABgUA
+        AAAFTm9kZTAA/////wkEAAAA/////wkEAAAABAAAAAkHAAAACQgAAAAJCQAAAAkKAAAABQcAAAAdU3lz
+        dGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUJAAAABFRleHQLVG9vbFRpcFRleHQETmFtZQlJc0NoZWNr
+        ZWQKSW1hZ2VJbmRleAhJbWFnZUtleRJTZWxlY3RlZEltYWdlSW5kZXgQU2VsZWN0ZWRJbWFnZUtleQpD
+        aGlsZENvdW50AQEBAAABAAEAAQgICAIAAAAGCwAAABhJbmQxIFtZRENLMDI4SDBOTkVBLTJDM10JBAAA
+        AAYNAAAABU5vZGUzAP////8JBAAAAP////8JBAAAAAAAAAAFCAAAAB1TeXN0ZW0uV2luZG93cy5Gb3Jt
+        cy5UcmVlTm9kZQkAAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tlZApJbWFnZUluZGV4CElt
+        YWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNoaWxkQ291bnQBAQEAAAEA
+        AQABCAgIAgAAAAYPAAAAGEluZDIgW1lEQ0swMjhIME5ORUEtMkMzXQkEAAAABhEAAAAFTm9kZTQA////
+        /wkEAAAA/////wkEAAAAAAAAAAUJAAAAHVN5c3RlbS5XaW5kb3dzLkZvcm1zLlRyZWVOb2RlCQAAAARU
+        ZXh0C1Rvb2xUaXBUZXh0BE5hbWUJSXNDaGVja2VkCkltYWdlSW5kZXgISW1hZ2VLZXkSU2VsZWN0ZWRJ
+        bWFnZUluZGV4EFNlbGVjdGVkSW1hZ2VLZXkKQ2hpbGRDb3VudAEBAQAAAQABAAEICAgCAAAABhMAAAAY
+        SW5kMyBbWURDSzAyOEgwTk5FQS0yQzNdCQQAAAAGFQAAAAVOb2RlNQD/////CQQAAAD/////CQQAAAAA
+        AAAABQoAAAAdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUJAAAABFRleHQLVG9vbFRpcFRleHQE
+        TmFtZQlJc0NoZWNrZWQKSW1hZ2VJbmRleAhJbWFnZUtleRJTZWxlY3RlZEltYWdlSW5kZXgQU2VsZWN0
+        ZWRJbWFnZUtleQpDaGlsZENvdW50AQEBAAABAAEAAQgICAIAAAAGFwAAABhJbmQ0IFtZRENLMDI4SDBO
+        TkVBLTJDM10JBAAAAAYZAAAABU5vZGU2AP////8JBAAAAP////8JBAAAAAAAAAAL
+</value>
+  </data>
+  <data name="tvOutdoor.Nodes1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAAB1TeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQ0AAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tl
+        ZApJbWFnZUluZGV4CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNo
+        aWxkQ291bnQJY2hpbGRyZW4wCWNoaWxkcmVuMQljaGlsZHJlbjIJY2hpbGRyZW4zAQEBAAABAAEABAQE
+        BAEICAgdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUCAAAAHVN5c3RlbS5XaW5kb3dzLkZvcm1z
+        LlRyZWVOb2RlAgAAAB1TeXN0ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQIAAAAdU3lzdGVtLldpbmRv
+        d3MuRm9ybXMuVHJlZU5vZGUCAAAAAgAAAAYDAAAAFE91dDIgW1lET0g0NDBFVk0tMEJdBgQAAAAABgUA
+        AAAFTm9kZTEA/////wkEAAAA/////wkEAAAABAAAAAkHAAAACQgAAAAJCQAAAAkKAAAABQcAAAAdU3lz
+        dGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUJAAAABFRleHQLVG9vbFRpcFRleHQETmFtZQlJc0NoZWNr
+        ZWQKSW1hZ2VJbmRleAhJbWFnZUtleRJTZWxlY3RlZEltYWdlSW5kZXgQU2VsZWN0ZWRJbWFnZUtleQpD
+        aGlsZENvdW50AQEBAAABAAEAAQgICAIAAAAGCwAAABhJbmQ1IFtZRENLMDI4SDBOTkVBLTJDM10JBAAA
+        AAYNAAAABU5vZGU3AP////8JBAAAAP////8JBAAAAAAAAAAFCAAAAB1TeXN0ZW0uV2luZG93cy5Gb3Jt
+        cy5UcmVlTm9kZQkAAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tlZApJbWFnZUluZGV4CElt
+        YWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNoaWxkQ291bnQBAQEAAAEA
+        AQABCAgIAgAAAAYPAAAAGEluZDYgW1lEQ0swMjhIME5ORUEtMkMzXQkEAAAABhEAAAAFTm9kZTgA////
+        /wkEAAAA/////wkEAAAAAAAAAAUJAAAAHVN5c3RlbS5XaW5kb3dzLkZvcm1zLlRyZWVOb2RlCQAAAARU
+        ZXh0C1Rvb2xUaXBUZXh0BE5hbWUJSXNDaGVja2VkCkltYWdlSW5kZXgISW1hZ2VLZXkSU2VsZWN0ZWRJ
+        bWFnZUluZGV4EFNlbGVjdGVkSW1hZ2VLZXkKQ2hpbGRDb3VudAEBAQAAAQABAAEICAgCAAAABhMAAAAY
+        SW5kNyBbWURDSzAyOEgwTk5FQS0yQzNdCQQAAAAGFQAAAAVOb2RlOQD/////CQQAAAD/////CQQAAAAA
+        AAAABQoAAAAdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUJAAAABFRleHQLVG9vbFRpcFRleHQE
+        TmFtZQlJc0NoZWNrZWQKSW1hZ2VJbmRleAhJbWFnZUtleRJTZWxlY3RlZEltYWdlSW5kZXgQU2VsZWN0
+        ZWRJbWFnZUtleQpDaGlsZENvdW50AQEBAAABAAEAAQgICAIAAAAGFwAAABhJbmQ4IFtZRENLMDI4SDBO
+        TkVBLTJDM10JBAAAAAYZAAAABk5vZGUxMAD/////CQQAAAD/////CQQAAAAAAAAACw==
+</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Novos Produtos VRF</value>
+  </data>
+  <data name="cancelCoolingOnlyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Cancelar Uso da Operação de Resfriamento</value>
+  </data>
+  <data name="convertToCHBoxToolStripMenuItem.Text" xml:space="preserve">
+    <value>Converter para CH Box</value>
+  </data>
+  <data name="deleteMultiCHBoxToolStripMenuItem.Text" xml:space="preserve">
+    <value>Excluir caixa múltipla CH</value>
+  </data>
+  <data name="gbRptContents.Text" xml:space="preserve">
+    <value>Conteúdo do Relatório</value>
+  </data>
+  <data name="gbRptDXFFilePath.Text" xml:space="preserve">
+    <value>Arquivo de saída "dxf"</value>
+  </data>
+  <data name="gbRptFilePath.Text" xml:space="preserve">
+    <value>Arquivo de saída do relatório</value>
+  </data>
+  <data name="gbRptSystem.Text" xml:space="preserve">
+    <value>Conteúdo do Relatório</value>
+  </data>
+  <data name="jcbtnAddCP.Text" xml:space="preserve">
+    <value>Adicionar CP</value>
+  </data>
+  <data name="jcbtnAddMultipleCHBox.Text" xml:space="preserve">
+    <value>Adicionar Múltipla Caixa CH</value>
+  </data>
+  <data name="jcbtnCCVarification.Text" xml:space="preserve">
+    <value>Verificação</value>
+  </data>
+  <data name="jcbtnControllerWiringFitWindow.Text" xml:space="preserve">
+    <value>Ajuste da Janela</value>
+  </data>
+  <data name="jcbtnFitWindow.Text" xml:space="preserve">
+    <value>Ajuste da Janela</value>
+  </data>
+  <data name="jcbtnFitWindow1.Text" xml:space="preserve">
+    <value>Ajuste da Janela</value>
+  </data>
+  <data name="jcbtnManageRoom.Text" xml:space="preserve">
+    <value>Administrar Ambientes</value>
+  </data>
+  <data name="jcbtnManualPiping.Text" xml:space="preserve">
+    <value>Tubulação manual</value>
+  </data>
+  <data name="jcbtnOutputPdf.Text" xml:space="preserve">
+    <value>Arquivo de saída "pdf"</value>
+  </data>
+  <data name="jcbtnOutputReport.Text" xml:space="preserve">
+    <value>Relatório de saída "doc"</value>
+  </data>
+  <data name="jcbtnOutputSpreadsheet.Text" xml:space="preserve">
+    <value>Saída planilha eletrônica</value>
+  </data>
+  <data name="jcbtnPipingLengths.Text" xml:space="preserve">
+    <value>Comprimento de tubulação</value>
+  </data>
+  <data name="jcbtnPipingRules.Text" xml:space="preserve">
+    <value>Regras de tubulação</value>
+  </data>
+  <data name="jcbtnReset.Text" xml:space="preserve">
+    <value>Reiniciar</value>
+  </data>
+  <data name="jcbtnRptBrowse.Text" xml:space="preserve">
+    <value>Procurar...</value>
+  </data>
+  <data name="jcbtnRptDXFBrowse.Text" xml:space="preserve">
+    <value>Procurar...</value>
+  </data>
+  <data name="jcbtnRptDXFOutput.Text" xml:space="preserve">
+    <value>Arquivo de saída "dxf"</value>
+  </data>
+  <data name="jcbtnRptDXFPathClear.Text" xml:space="preserve">
+    <value>Limpar</value>
+  </data>
+  <data name="jcbtnRptPathClear.Text" xml:space="preserve">
+    <value>Limpar</value>
+  </data>
+  <data name="jcbtnRptPipingOutput.Text" xml:space="preserve">
+    <value>Imagem tubulação "jpeg"</value>
+  </data>
+  <data name="jcbtnRptWiringOutput.Text" xml:space="preserve">
+    <value>Imagem fiação "jpeg"</value>
+  </data>
+  <data name="jcbtnVarification.Text" xml:space="preserve">
+    <value>Verificação</value>
+  </data>
+  <data name="jcLabel3.Text" xml:space="preserve">
+    <value>Grupos de controle</value>
+  </data>
+  <data name="jcLabel4.Text" xml:space="preserve">
+    <value>Controlador</value>
+  </data>
+  <data name="jclbl1.Text" xml:space="preserve">
+    <value>Informações do Ambiente</value>
+  </data>
+  <data name="jclbl2.Text" xml:space="preserve">
+    <value>Detalhes da Unidade Interna</value>
+  </data>
+  <data name="jclbl3.Text" xml:space="preserve">
+    <value>Detalhes da Unidade Externa</value>
+  </data>
+  <data name="jclbl4.Text" xml:space="preserve">
+    <value>Diagramas de Tubulação</value>
+  </data>
+  <data name="jclbl5.Text" xml:space="preserve">
+    <value>Diagramas de Fiação</value>
+  </data>
+  <data name="jclbl6.Text" xml:space="preserve">
+    <value>Diagramas de Controlador</value>
+  </data>
+  <data name="jclblActualRatio.Text" xml:space="preserve">
+    <value>Actual</value>
+  </data>
+  <data name="jclblAddress.Text" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="jclblAddress1.Text" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="jclblAvailableC.Text" xml:space="preserve">
+    <value>Disponível</value>
+  </data>
+  <data name="jclblAvailableC1.Text" xml:space="preserve">
+    <value>Disponível</value>
+  </data>
+  <data name="jclblAvailableC2.Text" xml:space="preserve">
+    <value>Disponível</value>
+  </data>
+  <data name="jclblAvailableH.Text" xml:space="preserve">
+    <value>Disponível</value>
+  </data>
+  <data name="jclblAvailableH1.Text" xml:space="preserve">
+    <value>Disponível</value>
+  </data>
+  <data name="jclblCapacityC1.Text" xml:space="preserve">
+    <value>Capacidade</value>
+  </data>
+  <data name="jclblClientName.Text" xml:space="preserve">
+    <value>Nome do Cliente</value>
+  </data>
+  <data name="jclblClientName1.Text" xml:space="preserve">
+    <value>Nome do Cliente</value>
+  </data>
+  <data name="jclblCompany.Text" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="jclblConnectionRadio.Text" xml:space="preserve">
+    <value>Combinação</value>
+  </data>
+  <data name="jclblControllerWiringGroups.Text" xml:space="preserve">
+    <value>Grupos de controle</value>
+  </data>
+  <data name="jclblControllerWiringScale.Text" xml:space="preserve">
+    <value>Escala %</value>
+  </data>
+  <data name="jclblController_help1.Text" xml:space="preserve">
+    <value>1.Um sistema de controle de protocolo BACNet pode conectar até 16 controladores mestres que incluem controladores BAS, controladores ON/OFF ou no máximo 4 controladores centrais.</value>
+  </data>
+  <data name="jclblController_help2.Text" xml:space="preserve">
+    <value>2.Um sistema de controle de protocolo Modbus só pode conectar-se a 1 controlador mestre que inclui BAS, controlador ON/OFF ou controlador central.</value>
+  </data>
+  <data name="jclblController_LeftTitle1.Text" xml:space="preserve">
+    <value>Controladores</value>
+  </data>
+  <data name="jclblController_LeftTitle2.Text" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="jclblController_ProductType.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_Step1.Text" xml:space="preserve">
+    <value>Passo 1</value>
+  </data>
+  <data name="jclblController_Step2.Text" xml:space="preserve">
+    <value>Passo 2</value>
+  </data>
+  <data name="jclblCooling1.Text" xml:space="preserve">
+    <value>Resfriamento</value>
+  </data>
+  <data name="jclblDeliveryDate.Text" xml:space="preserve">
+    <value>Data de entrega</value>
+  </data>
+  <data name="jclblDeliveryDate1.Text" xml:space="preserve">
+    <value>Data de entrega solicitada</value>
+  </data>
+  <data name="jclblHeating1.Text" xml:space="preserve">
+    <value>Aquecimento</value>
+  </data>
+  <data name="jclblHelp_Exchanger_1.Text" xml:space="preserve">
+    <value>1. Se escolher "Com base no ambiente", selecione o recuperador de calor de acordo com o ambiente.</value>
+  </data>
+  <data name="jclblHelp_Exchanger_2.Text" xml:space="preserve">
+    <value>2. Se não escolher "Com base no ambiente", selecione o recuperador de calor diretamente.</value>
+  </data>
+  <data name="jclblHelp_Indoor_1.Text" xml:space="preserve">
+    <value>1. Se escolher "Com base no ambiente", selecione a unidade interna de acordo com o ambiente.</value>
+  </data>
+  <data name="jclblHelp_Indoor_2.Text" xml:space="preserve">
+    <value>2. Se não escolher "Com base no ambiente", selecione a unidade interna diretamente.</value>
+  </data>
+  <data name="jclblHelp_Outdoor_1.Text" xml:space="preserve">
+    <value>1. Por favor clique no ícone "Novo" e em seguida arraste a unidade interna relevante para esta unidade externa.</value>
+  </data>
+  <data name="jclblHelp_Outdoor_2.Text" xml:space="preserve">
+    <value>2. Por favor clique no ícone "Editar" ou clique duas vezes no ícone da unidade externa para editar a unidade externa atual.</value>
+  </data>
+  <data name="jclblHelp_Project_1.Text" xml:space="preserve">
+    <value>1. O programa salvará todas as informações alteradas ao sair do software.</value>
+  </data>
+  <data name="jclblHelp_Project_2.Text" xml:space="preserve">
+    <value>2. Existem três modos de seleção: Resfriamento, Aquecimento e Resfriamento e Aquecimento.</value>
+  </data>
+  <data name="jclblHelp_Report_1.Text" xml:space="preserve">
+    <value>1. Pode escolher conteúdos, incluir ou remover sistemas e formatos de arquivos para saída do relatório de selecionamento.</value>
+  </data>
+  <data name="jclblHelp_Report_2.Text" xml:space="preserve">
+    <value>2. O formato de arquivo "DXF" é utilizado principalmente para o software AutoCAD.</value>
+  </data>
+  <data name="jclblIncluded.Text" xml:space="preserve">
+    <value>Incluído</value>
+  </data>
+  <data name="jclblInDBCool.Text" xml:space="preserve">
+    <value>BS</value>
+  </data>
+  <data name="jclblIndModel.Text" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="jclblIndoorList.Text" xml:space="preserve">
+    <value>Unidades Internas não atribuídas</value>
+  </data>
+  <data name="jclblIndoorType.Text" xml:space="preserve">
+    <value>Tipo de unidade interna</value>
+  </data>
+  <data name="jclblIndRH.Text" xml:space="preserve">
+    <value>UR%</value>
+  </data>
+  <data name="jclblInfoAddRefrigeration.Text" xml:space="preserve">
+    <value>Por favor clique duas vezes na linha que representa a tubulação frigorigena para inserir dados de comprimento manualmente para calculo de carga de fluido refrigerante adicional.</value>
+  </data>
+  <data name="jclblInWBCool.Text" xml:space="preserve">
+    <value>BU</value>
+  </data>
+  <data name="jclblLastUpdateDate1.Text" xml:space="preserve">
+    <value>Data da última Atualização</value>
+  </data>
+  <data name="jclblLayoutType.Text" xml:space="preserve">
+    <value>Tipo de Arranjo</value>
+  </data>
+  <data name="jclblMail.Text" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="jclblMail1.Text" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="jclblMaterialList.Text" xml:space="preserve">
+    <value>Lista de material</value>
+  </data>
+  <data name="jclblMaxRatio.Text" xml:space="preserve">
+    <value>Max.</value>
+  </data>
+  <data name="jclblOrderDate.Text" xml:space="preserve">
+    <value>Data do pedido</value>
+  </data>
+  <data name="jclblOrderDate1.Text" xml:space="preserve">
+    <value>Data da Ordem</value>
+  </data>
+  <data name="jclblOutdoor.Text" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="jclblOutdoor1.Text" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="jclblOutdoorType.Text" xml:space="preserve">
+    <value>Tipo de produto</value>
+  </data>
+  <data name="jclblOutIWCool.Text" xml:space="preserve">
+    <value>Entrada de Agua</value>
+  </data>
+  <data name="jclblOutIWHeat.Text" xml:space="preserve">
+    <value>Entrada de Agua</value>
+  </data>
+  <data name="jclblOutModel.Text" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="jclblPhoneNo.Text" xml:space="preserve">
+    <value>Telefone não</value>
+  </data>
+  <data name="jclblPhoneNo1.Text" xml:space="preserve">
+    <value>Telefone não</value>
+  </data>
+  <data name="jclblPostCode.Text" xml:space="preserve">
+    <value>Codigo Postal</value>
+  </data>
+  <data name="jclblPostCode1.Text" xml:space="preserve">
+    <value>Codigo Postal</value>
+  </data>
+  <data name="jclblProductType.Text" xml:space="preserve">
+    <value>Tipo de produto</value>
+  </data>
+  <data name="jclblProjectLocation1.Text" xml:space="preserve">
+    <value>Localização do projeto</value>
+  </data>
+  <data name="jclblProjectRevision.Text" xml:space="preserve">
+    <value>Revisão de Projeto</value>
+  </data>
+  <data name="jclblProjectRevision1.Text" xml:space="preserve">
+    <value>Revisão de Projeto</value>
+  </data>
+  <data name="jclblPurchaseOrderNo1.Text" xml:space="preserve">
+    <value>N° Pedido de Compra</value>
+  </data>
+  <data name="jclblRemarks.Text" xml:space="preserve">
+    <value>Observações</value>
+  </data>
+  <data name="jclblRemarks1.Text" xml:space="preserve">
+    <value>Observações</value>
+  </data>
+  <data name="jclblRequiredC1.Text" xml:space="preserve">
+    <value>Requerido</value>
+  </data>
+  <data name="jclblRequiredC2.Text" xml:space="preserve">
+    <value>Requerido</value>
+  </data>
+  <data name="jclblRequiredH1.Text" xml:space="preserve">
+    <value>Requerido</value>
+  </data>
+  <data name="jclblSalesEngineer1.Text" xml:space="preserve">
+    <value>Engenheiro de Vendas</value>
+  </data>
+  <data name="jclblSalesOffice.Text" xml:space="preserve">
+    <value>Escritório de Vendas</value>
+  </data>
+  <data name="jclblSalesYINo.Text" xml:space="preserve">
+    <value>N° Engenheiro de Vendas</value>
+  </data>
+  <data name="jclblScale.Text" xml:space="preserve">
+    <value>Escala %</value>
+  </data>
+  <data name="jclblScale1.Text" xml:space="preserve">
+    <value>Escala %</value>
+  </data>
+  <data name="jclblSelectionMode.Text" xml:space="preserve">
+    <value>Modo de Seleção</value>
+  </data>
+  <data name="jclblSensibleHeatC.Text" xml:space="preserve">
+    <value>Calor Sensível</value>
+  </data>
+  <data name="jclblShipTo.Text" xml:space="preserve">
+    <value>Enviar Para</value>
+  </data>
+  <data name="jclblSoldTo.Text" xml:space="preserve">
+    <value>Vendido A</value>
+  </data>
+  <data name="jclblTel.Text" xml:space="preserve">
+    <value>Tel</value>
+  </data>
+  <data name="jclblTel1.Text" xml:space="preserve">
+    <value>Tel</value>
+  </data>
+  <data name="jclblTemperatureC.Text" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="jclblTemperatureC1.Text" xml:space="preserve">
+    <value>Temperatura</value>
+  </data>
+  <data name="jclbProjectUpdateDate.Text" xml:space="preserve">
+    <value>Data da última Atualização</value>
+  </data>
+  <data name="jclbProjectUpdateDate1.Text" xml:space="preserve">
+    <value>Last Update Date</value>
+  </data>
+  <data name="lblProjAltitude.Text" xml:space="preserve">
+    <value>Altitude *</value>
+  </data>
+  <data name="lblProjContractNo.Text" xml:space="preserve">
+    <value>N° Contrato</value>
+  </data>
+  <data name="lblProjLocation.Text" xml:space="preserve">
+    <value>Localização do Projeto</value>
+  </data>
+  <data name="lblProjName.Text" xml:space="preserve">
+    <value>Nome do Projeto</value>
+  </data>
+  <data name="lblProjProductType.Text" xml:space="preserve">
+    <value>Tipo de produto</value>
+  </data>
+  <data name="lblProjRegion.Text" xml:space="preserve">
+    <value>Região</value>
+  </data>
+  <data name="lblProjSalesName.Text" xml:space="preserve">
+    <value>Engenheiro de Vendas</value>
+  </data>
+  <data name="lbl_HelpInfo.Text" xml:space="preserve">
+    <value>Informação de Ajuda</value>
+  </data>
+  <data name="lbl_ProjectInfo.Text" xml:space="preserve">
+    <value>Informação de Projeto</value>
+  </data>
+  <data name="pbAddIndoor.Tooltips" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="pbAddIndoorOption.Tooltips" xml:space="preserve">
+    <value>Opção de ajuste</value>
+  </data>
+  <data name="pbAddOutdoor.Tooltips" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="pbClearIndoorOption.Tooltips" xml:space="preserve">
+    <value>Opção de limpeza</value>
+  </data>
+  <data name="pbCopyIndoor.Tooltips" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="pbCopyOutdoor.Tooltips" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="pbDeleteIndoor.Tooltips" xml:space="preserve">
+    <value>Deletar</value>
+  </data>
+  <data name="pbDeleteOutdoor.Tooltips" xml:space="preserve">
+    <value>Deletar</value>
+  </data>
+  <data name="pbEditIndoor.Tooltips" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="pbEditOutdoor.Tooltips" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="pbHelpIndoor.Tooltips" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="pbPipingRule.Tooltips" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="setCoolingOnlyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Utilizar operação de resfriamento</value>
+  </data>
+  <data name="String10" xml:space="preserve">
+    <value>jclblController_LeftTitle1.Text</value>
+  </data>
+  <data name="String11" xml:space="preserve">
+    <value>jclblController_Step2.Text</value>
+  </data>
+  <data name="String12" xml:space="preserve">
+    <value>jclblController_LeftTitle2.Text</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>jcLabel3.Text</value>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>jcLabel4.Text</value>
+  </data>
+  <data name="tbtnAbout.Text" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="tbtnExit.Text" xml:space="preserve">
+    <value>Saída</value>
+  </data>
+  <data name="tbtnImport.Text" xml:space="preserve">
+    <value>Importar</value>
+  </data>
+  <data name="tbtnLanguage.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="tbtnNew.Text" xml:space="preserve">
+    <value>Novo</value>
+  </data>
+  <data name="tbtnOpen.Text" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="tbtnSave.Text" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="tbtnSaveAs.Text" xml:space="preserve">
+    <value>Salvar como</value>
+  </data>
+  <data name="tbtnSetting.Text" xml:space="preserve">
+    <value>Configuração</value>
+  </data>
+  <data name="tpgController.Text" xml:space="preserve">
+    <value>Controlador</value>
+  </data>
+  <data name="tpgControllerGrouping.Text" xml:space="preserve">
+    <value>Grupos de controle</value>
+  </data>
+  <data name="tpgControllerWiring.Text" xml:space="preserve">
+    <value>Instalação elétrica dos controladores</value>
+  </data>
+  <data name="tpgExchanger.Text" xml:space="preserve">
+    <value>Recuperador de calor</value>
+  </data>
+  <data name="tpgIndoor.Text" xml:space="preserve">
+    <value>Unidade Interna</value>
+  </data>
+  <data name="tpgOutdoor.Text" xml:space="preserve">
+    <value>Unidade Externa</value>
+  </data>
+  <data name="tpgPiping.Text" xml:space="preserve">
+    <value>Tubulação</value>
+  </data>
+  <data name="tpgProject.Text" xml:space="preserve">
+    <value>Projeto</value>
+  </data>
+  <data name="tpgReport.Text" xml:space="preserve">
+    <value>Relatório</value>
+  </data>
+  <data name="tpgWiring.Text" xml:space="preserve">
+    <value>Fiação</value>
+  </data>
+  <data name="uc_CheckBox_Actual.TextString" xml:space="preserve">
+    <value>Mostrar capacidade real</value>
+  </data>
+  <data name="uc_CheckBox_Cooling.TextString" xml:space="preserve">
+    <value>Resfriamento</value>
+  </data>
+  <data name="uc_CheckBox_Heating.TextString" xml:space="preserve">
+    <value>Aquecimento</value>
+  </data>
+  <data name="uc_CheckBox_IsRoomBase.TextString" xml:space="preserve">
+    <value>Com base no ambiente</value>
+  </data>
+  <data name="uc_CheckBox_IsRoomBase1.TextString" xml:space="preserve">
+    <value>Com base no ambiente</value>
+  </data>
+  <data name="uc_CheckBox_Nominal.TextString" xml:space="preserve">
+    <value>Mostrar capacidade nominal</value>
+  </data>
+  <data name="uc_CheckBox_PipingBinaryTree.TextString" xml:space="preserve">
+    <value>Árvore binária</value>
+  </data>
+  <data name="uc_CheckBox_PipingHorizontal.TextString" xml:space="preserve">
+    <value>Horizontal</value>
+  </data>
+  <data name="uc_CheckBox_PipingLength.TextString" xml:space="preserve">
+    <value>Digite comprimento da tubulação manualmente</value>
+  </data>
+  <data name="uc_CheckBox_PipingVertical.TextString" xml:space="preserve">
+    <value>Vertical</value>
+  </data>
+  <data name="uc_CheckBox_RptAllSystem.TextString" xml:space="preserve">
+    <value>Todos Sistemas</value>
+  </data>
+  <data name="uc_CheckBox_RptController.TextString" xml:space="preserve">
+    <value>Controlador</value>
+  </data>
+  <data name="uc_CheckBox_RptExchanger.TextString" xml:space="preserve">
+    <value>Trocador de calor total</value>
+  </data>
+  <data name="uc_CheckBox_RptIndoorDetail.TextString" xml:space="preserve">
+    <value>Detalhes da Unidade Interna</value>
+  </data>
+  <data name="uc_CheckBox_RptOptionPrice.TextString" xml:space="preserve">
+    <value>Mostrar Opções de Preços</value>
+  </data>
+  <data name="uc_CheckBox_RptOutdoorDetail.TextString" xml:space="preserve">
+    <value>Detalhes da Unidade Externa</value>
+  </data>
+  <data name="uc_CheckBox_RptPiping.TextString" xml:space="preserve">
+    <value>Informação da tubulação</value>
+  </data>
+  <data name="uc_CheckBox_RptRoomInfo.TextString" xml:space="preserve">
+    <value>Informações do Ambiente</value>
+  </data>
+  <data name="uc_CheckBox_RptSelectAllModule.TextString" xml:space="preserve">
+    <value>Selecione Tudo</value>
+  </data>
+  <data name="uc_CheckBox_RptWiring.TextString" xml:space="preserve">
+    <value>Fiação</value>
+  </data>
+  <data name="jclabExchangertxt.Text" xml:space="preserve">
+    <value>Recuperador de calor</value>
+  </data>
+  <data name="jclabExc_Accessorytxt.Text" xml:space="preserve">
+    <value>Acessórios</value>
+  </data>
+  <data name="jclabIDU_Accessorytxt.Text" xml:space="preserve">
+    <value>Acessórios</value>
+  </data>
+  <data name="jclabIndoortxt.Text" xml:space="preserve">
+    <value>Unidade Interna</value>
+  </data>
+  <data name="jclabODU_Accessorytxt.Text" xml:space="preserve">
+    <value>Acessórios</value>
+  </data>
+  <data name="jclabOuddoortxt.Text" xml:space="preserve">
+    <value>Unidade Externa</value>
+  </data>
+  <data name="jclblHelp_Indoor_3.Text" xml:space="preserve">
+    <value>3.Clique em Definir opções para selecionar controles remotos e acessórios.</value>
+  </data>
+  <data name="jclblHelp_Indoor_1_EU.Text" xml:space="preserve">
+    <value>1.Se escolher "Selecionar interior sem espaço", permita selecionar diretamente a unidade interna necessária.</value>
+  </data>
+  <data name="jclblHelp_Indoor_2_EU.Text" xml:space="preserve">
+    <value>2.Se escolher "Selecione interior com sala", permitir a correspondência da unidade interna com a situação da sala.</value>
+  </data>
+  <data name="jclblController_help3.Text" xml:space="preserve">
+    <value>Controles e gateways centrais podem ser selecionados livremente, o usuário deve verificar a configuração com a documentação técnica.</value>
+  </data>
+  <data name="tbtnExport.Text" xml:space="preserve">
+    <value>Exportação</value>
+  </data>
+  <data name="pbCopyOutdoorOfPiping.Tooltips" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="pbCopyOutdoorOfWiring.Tooltips" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="pbDeleteOutdoorOfPiping.Tooltips" xml:space="preserve">
+    <value>Deletar</value>
+  </data>
+  <data name="pbDeleteOutdoorOfWiring.Tooltips" xml:space="preserve">
+    <value>Deletar</value>
+  </data>
+  <data name="uc_CheckBox_IduCapacityW.TextString" xml:space="preserve">
+    <value>Capacidade do IDU em (W)</value>
+  </data>
+  <data name="jclblAssignedindoor.Text" xml:space="preserve">
+    <value>Unidades interiores designadas</value>
+  </data>
+  <data name="jclblIndoorNumbers.Text" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="jclbltotalNominalCapacity.Text" xml:space="preserve">
+    <value>Capacidade nominal total</value>
+  </data>
+</root>

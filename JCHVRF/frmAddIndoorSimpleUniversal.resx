@@ -1,0 +1,2980 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="toolStripStatusLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="toolStripStatusLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>991, 22</value>
+  </data>
+  <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>18, 16</value>
+  </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="statusStrip1.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="statusStrip1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 576</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="statusStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 0, 16, 0</value>
+  </data>
+  <data name="statusStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1008, 27</value>
+  </data>
+  <data name="statusStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="statusStrip1.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Name" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnl_bottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="pnl_bottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 574</value>
+  </data>
+  <data name="pnl_bottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1008, 2</value>
+  </data>
+  <data name="pnl_bottom.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;pnl_bottom.Name" xml:space="preserve">
+    <value>pnl_bottom</value>
+  </data>
+  <data name="&gt;&gt;pnl_bottom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnl_bottom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnl_bottom.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="jcbtnCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="jcbtnCancel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="jcbtnCancel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="jcbtnCancel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="jcbtnCancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jcbtnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jcbtnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>126, 0</value>
+  </data>
+  <data name="jcbtnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 26</value>
+  </data>
+  <data name="jcbtnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="jcbtnCancel.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="&gt;&gt;jcbtnCancel.Name" xml:space="preserve">
+    <value>jcbtnCancel</value>
+  </data>
+  <data name="&gt;&gt;jcbtnCancel.Type" xml:space="preserve">
+    <value>JCBase.UI.VRFButton, JCBase.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jcbtnCancel.Parent" xml:space="preserve">
+    <value>pnlOK</value>
+  </data>
+  <data name="&gt;&gt;jcbtnCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jcbtnOK.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="jcbtnOK.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="jcbtnOK.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="jcbtnOK.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="jcbtnOK.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jcbtnOK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jcbtnOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="jcbtnOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 26</value>
+  </data>
+  <data name="jcbtnOK.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="jcbtnOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;jcbtnOK.Name" xml:space="preserve">
+    <value>jcbtnOK</value>
+  </data>
+  <data name="&gt;&gt;jcbtnOK.Type" xml:space="preserve">
+    <value>JCBase.UI.VRFButton, JCBase.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jcbtnOK.Parent" xml:space="preserve">
+    <value>pnlOK</value>
+  </data>
+  <data name="&gt;&gt;jcbtnOK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlOK.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="pnlOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>436, 509</value>
+  </data>
+  <data name="pnlOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 26</value>
+  </data>
+  <data name="pnlOK.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="&gt;&gt;pnlOK.Name" xml:space="preserve">
+    <value>pnlOK</value>
+  </data>
+  <data name="&gt;&gt;pnlOK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlOK.Parent" xml:space="preserve">
+    <value>tpgSelection</value>
+  </data>
+  <data name="&gt;&gt;pnlOK.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="dgvStdIndoor.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <metadata name="model.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="model.HeaderText" xml:space="preserve">
+    <value>ModelFull</value>
+  </data>
+  <metadata name="Model_York.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Model_York.HeaderText" xml:space="preserve">
+    <value>Model_York</value>
+  </data>
+  <data name="Model_York.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="Model_Hitachi.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Model_Hitachi.HeaderText" xml:space="preserve">
+    <value>Model_Hitachi</value>
+  </data>
+  <data name="Model_Hitachi.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column1.HeaderText" xml:space="preserve">
+    <value>CoolCapacity</value>
+  </data>
+  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column5.HeaderText" xml:space="preserve">
+    <value>SensibleHeat</value>
+  </data>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column3.HeaderText" xml:space="preserve">
+    <value>AirFlow</value>
+  </data>
+  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column6.HeaderText" xml:space="preserve">
+    <value>StaticPressure</value>
+  </data>
+  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column4.HeaderText" xml:space="preserve">
+    <value>HeatCapacity</value>
+  </data>
+  <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column7.HeaderText" xml:space="preserve">
+    <value>FreshAir</value>
+  </data>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column2.HeaderText" xml:space="preserve">
+    <value>TypeImage</value>
+  </data>
+  <data name="Column2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dgvStdIndoor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="dgvStdIndoor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="dgvStdIndoor.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="dgvStdIndoor.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="dgvStdIndoor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>561, 453</value>
+  </data>
+  <data name="dgvStdIndoor.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;dgvStdIndoor.Name" xml:space="preserve">
+    <value>dgvStdIndoor</value>
+  </data>
+  <data name="&gt;&gt;dgvStdIndoor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvStdIndoor.Parent" xml:space="preserve">
+    <value>pnlIndoor_2</value>
+  </data>
+  <data name="&gt;&gt;dgvStdIndoor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jcbtnIndoorDetails.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="jcbtnIndoorDetails.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="jcbtnIndoorDetails.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="jcbtnIndoorDetails.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jcbtnIndoorDetails.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jcbtnIndoorDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 389</value>
+  </data>
+  <data name="jcbtnIndoorDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 26</value>
+  </data>
+  <data name="jcbtnIndoorDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="jcbtnIndoorDetails.Text" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="jcbtnIndoorDetails.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jcbtnIndoorDetails.Name" xml:space="preserve">
+    <value>jcbtnIndoorDetails</value>
+  </data>
+  <data name="&gt;&gt;jcbtnIndoorDetails.Type" xml:space="preserve">
+    <value>JCBase.UI.VRFButton, JCBase.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jcbtnIndoorDetails.Parent" xml:space="preserve">
+    <value>pnlIndoor_2</value>
+  </data>
+  <data name="&gt;&gt;jcbtnIndoorDetails.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlIndoor_2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pnlIndoor_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 31</value>
+  </data>
+  <data name="pnlIndoor_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>561, 465</value>
+  </data>
+  <data name="pnlIndoor_2.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="&gt;&gt;pnlIndoor_2.Name" xml:space="preserve">
+    <value>pnlIndoor_2</value>
+  </data>
+  <data name="&gt;&gt;pnlIndoor_2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlIndoor_2.Parent" xml:space="preserve">
+    <value>pnlIndoor</value>
+  </data>
+  <data name="&gt;&gt;pnlIndoor_2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="line_2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="line_2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="line_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 30</value>
+  </data>
+  <data name="line_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>561, 1</value>
+  </data>
+  <data name="line_2.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="line_2.Text" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;line_2.Name" xml:space="preserve">
+    <value>line_2</value>
+  </data>
+  <data name="&gt;&gt;line_2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;line_2.Parent" xml:space="preserve">
+    <value>pnlIndoor</value>
+  </data>
+  <data name="&gt;&gt;line_2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="line_1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="line_1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="line_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 0</value>
+  </data>
+  <data name="line_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1, 466</value>
+  </data>
+  <data name="line_1.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="line_1.Text" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;line_1.Name" xml:space="preserve">
+    <value>line_1</value>
+  </data>
+  <data name="&gt;&gt;line_1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;line_1.Parent" xml:space="preserve">
+    <value>pnlIndoor_1</value>
+  </data>
+  <data name="&gt;&gt;line_1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cboTreeRoom.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cboTreeRoom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 12</value>
+  </data>
+  <data name="cboTreeRoom.MaxDropDownItems" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="cboTreeRoom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 23</value>
+  </data>
+  <data name="cboTreeRoom.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
+  <data name="cboTreeRoom.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cboTreeRoom.Name" xml:space="preserve">
+    <value>cboTreeRoom</value>
+  </data>
+  <data name="&gt;&gt;cboTreeRoom.Type" xml:space="preserve">
+    <value>JCBase.UI.ComboBoxTreeView, JCBase.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cboTreeRoom.Parent" xml:space="preserve">
+    <value>pnlIndoor_1</value>
+  </data>
+  <data name="&gt;&gt;cboTreeRoom.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="shfComboBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="shfComboBox.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="shfComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>127, 436</value>
+  </data>
+  <data name="shfComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="shfComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 23</value>
+  </data>
+  <data name="shfComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="&gt;&gt;shfComboBox.Name" xml:space="preserve">
+    <value>shfComboBox</value>
+  </data>
+  <data name="&gt;&gt;shfComboBox.Type" xml:space="preserve">
+    <value>JCBase.UI.JCComboBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;shfComboBox.Parent" xml:space="preserve">
+    <value>pnlIndoor_1</value>
+  </data>
+  <data name="&gt;&gt;shfComboBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="jclblSensible.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblSensible.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblSensible.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 438</value>
+  </data>
+  <data name="jclblSensible.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 16</value>
+  </data>
+  <data name="jclblSensible.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="jclblSensible.Text" xml:space="preserve">
+    <value>Fan Speed</value>
+  </data>
+  <data name="jclblSensible.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblSensible.Name" xml:space="preserve">
+    <value>jclblSensible</value>
+  </data>
+  <data name="&gt;&gt;jclblSensible.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblSensible.Parent" xml:space="preserve">
+    <value>pnlIndoor_1</value>
+  </data>
+  <data name="&gt;&gt;jclblSensible.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="jclblSelectIndoor.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px, style=Bold</value>
+  </data>
+  <data name="jclblSelectIndoor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblSelectIndoor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 164</value>
+  </data>
+  <data name="jclblSelectIndoor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 29</value>
+  </data>
+  <data name="jclblSelectIndoor.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="jclblSelectIndoor.Text" xml:space="preserve">
+    <value>Selected Model</value>
+  </data>
+  <data name="jclblSelectIndoor.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblSelectIndoor.Name" xml:space="preserve">
+    <value>jclblSelectIndoor</value>
+  </data>
+  <data name="&gt;&gt;jclblSelectIndoor.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblSelectIndoor.Parent" xml:space="preserve">
+    <value>pnlIndoor_1</value>
+  </data>
+  <data name="&gt;&gt;jclblSelectIndoor.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="jctxtName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 20.25px, style=Bold</value>
+  </data>
+  <data name="jctxtName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 35</value>
+  </data>
+  <data name="jctxtName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="jctxtName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 31</value>
+  </data>
+  <data name="jctxtName.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="jctxtName.Text" xml:space="preserve">
+    <value>Ind 01</value>
+  </data>
+  <data name="jctxtName.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;jctxtName.Name" xml:space="preserve">
+    <value>jctxtName</value>
+  </data>
+  <data name="&gt;&gt;jctxtName.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtName.Parent" xml:space="preserve">
+    <value>pnlIndoor_1</value>
+  </data>
+  <data name="&gt;&gt;jctxtName.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="uc_CheckBox_Manual.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="uc_CheckBox_Manual.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="uc_CheckBox_Manual.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 0</value>
+  </data>
+  <data name="uc_CheckBox_Manual.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="uc_CheckBox_Manual.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 26</value>
+  </data>
+  <data name="uc_CheckBox_Manual.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="uc_CheckBox_Manual.TextString" xml:space="preserve">
+    <value>Manual</value>
+  </data>
+  <data name="&gt;&gt;uc_CheckBox_Manual.Name" xml:space="preserve">
+    <value>uc_CheckBox_Manual</value>
+  </data>
+  <data name="&gt;&gt;uc_CheckBox_Manual.Type" xml:space="preserve">
+    <value>JCBase.UI.uc_CheckBox, JCBase.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;uc_CheckBox_Manual.Parent" xml:space="preserve">
+    <value>pnlAuto</value>
+  </data>
+  <data name="&gt;&gt;uc_CheckBox_Manual.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="uc_CheckBox_Auto.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="uc_CheckBox_Auto.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="uc_CheckBox_Auto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="uc_CheckBox_Auto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="uc_CheckBox_Auto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 26</value>
+  </data>
+  <data name="uc_CheckBox_Auto.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="uc_CheckBox_Auto.TextString" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="&gt;&gt;uc_CheckBox_Auto.Name" xml:space="preserve">
+    <value>uc_CheckBox_Auto</value>
+  </data>
+  <data name="&gt;&gt;uc_CheckBox_Auto.Type" xml:space="preserve">
+    <value>JCBase.UI.uc_CheckBox, JCBase.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;uc_CheckBox_Auto.Parent" xml:space="preserve">
+    <value>pnlAuto</value>
+  </data>
+  <data name="&gt;&gt;uc_CheckBox_Auto.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlAuto.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="pnlAuto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 400</value>
+  </data>
+  <data name="pnlAuto.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="pnlAuto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 26</value>
+  </data>
+  <data name="pnlAuto.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;pnlAuto.Name" xml:space="preserve">
+    <value>pnlAuto</value>
+  </data>
+  <data name="&gt;&gt;pnlAuto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlAuto.Parent" xml:space="preserve">
+    <value>pnlIndoor_1</value>
+  </data>
+  <data name="&gt;&gt;pnlAuto.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="jclblType.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblType.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 111</value>
+  </data>
+  <data name="jclblType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 15</value>
+  </data>
+  <data name="jclblType.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="jclblType.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="&gt;&gt;jclblType.Name" xml:space="preserve">
+    <value>jclblType</value>
+  </data>
+  <data name="&gt;&gt;jclblType.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblType.Parent" xml:space="preserve">
+    <value>pnlIndoor_1</value>
+  </data>
+  <data name="&gt;&gt;jclblType.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pbIndoor.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="pbIndoor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbIndoor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 193</value>
+  </data>
+  <data name="pbIndoor.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="pbIndoor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 190</value>
+  </data>
+  <data name="pbIndoor.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;pbIndoor.Name" xml:space="preserve">
+    <value>pbIndoor</value>
+  </data>
+  <data name="&gt;&gt;pbIndoor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbIndoor.Parent" xml:space="preserve">
+    <value>pnlIndoor_1</value>
+  </data>
+  <data name="&gt;&gt;pbIndoor.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="jccmbType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jccmbType.IntegralHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="jccmbType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 138</value>
+  </data>
+  <data name="jccmbType.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="jccmbType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 23</value>
+  </data>
+  <data name="jccmbType.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;jccmbType.Name" xml:space="preserve">
+    <value>jccmbType</value>
+  </data>
+  <data name="&gt;&gt;jccmbType.Type" xml:space="preserve">
+    <value>JCBase.UI.JCComboBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jccmbType.Parent" xml:space="preserve">
+    <value>pnlIndoor_1</value>
+  </data>
+  <data name="&gt;&gt;jccmbType.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="pnlIndoor_1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlIndoor_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="pnlIndoor_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 466</value>
+  </data>
+  <data name="pnlIndoor_1.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="&gt;&gt;pnlIndoor_1.Name" xml:space="preserve">
+    <value>pnlIndoor_1</value>
+  </data>
+  <data name="&gt;&gt;pnlIndoor_1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlIndoor_1.Parent" xml:space="preserve">
+    <value>pnlIndoor</value>
+  </data>
+  <data name="&gt;&gt;pnlIndoor_1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="jclblTitle_IndoorSel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="jclblTitle_IndoorSel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px, style=Bold</value>
+  </data>
+  <data name="jclblTitle_IndoorSel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblTitle_IndoorSel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="jclblTitle_IndoorSel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>776, 30</value>
+  </data>
+  <data name="jclblTitle_IndoorSel.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="jclblTitle_IndoorSel.Text" xml:space="preserve">
+    <value>Indoor unit selection</value>
+  </data>
+  <data name="jclblTitle_IndoorSel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_IndoorSel.Name" xml:space="preserve">
+    <value>jclblTitle_IndoorSel</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_IndoorSel.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_IndoorSel.Parent" xml:space="preserve">
+    <value>pnlIndoor</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_IndoorSel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pnlIndoor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlIndoor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>220, 4</value>
+  </data>
+  <data name="pnlIndoor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>778, 498</value>
+  </data>
+  <data name="pnlIndoor.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnlIndoor.Name" xml:space="preserve">
+    <value>pnlIndoor</value>
+  </data>
+  <data name="&gt;&gt;pnlIndoor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlIndoor.Parent" xml:space="preserve">
+    <value>tpgSelection</value>
+  </data>
+  <data name="&gt;&gt;pnlIndoor.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlSpan_3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="pnlSpan_3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>998, 4</value>
+  </data>
+  <data name="pnlSpan_3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>4, 534</value>
+  </data>
+  <data name="pnlSpan_3.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;pnlSpan_3.Name" xml:space="preserve">
+    <value>pnlSpan_3</value>
+  </data>
+  <data name="&gt;&gt;pnlSpan_3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlSpan_3.Parent" xml:space="preserve">
+    <value>tpgSelection</value>
+  </data>
+  <data name="&gt;&gt;pnlSpan_3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlSpan_1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlSpan_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>216, 4</value>
+  </data>
+  <data name="pnlSpan_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>4, 534</value>
+  </data>
+  <data name="pnlSpan_1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlSpan_1.Name" xml:space="preserve">
+    <value>pnlSpan_1</value>
+  </data>
+  <data name="&gt;&gt;pnlSpan_1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlSpan_1.Parent" xml:space="preserve">
+    <value>tpgSelection</value>
+  </data>
+  <data name="&gt;&gt;pnlSpan_1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="jclblUnitFA1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitFA1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitFA1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblUnitFA1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 20</value>
+  </data>
+  <data name="jclblUnitFA1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 15</value>
+  </data>
+  <data name="jclblUnitFA1.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="jclblUnitFA1.Text" xml:space="preserve">
+    <value>cfm</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitFA1.Name" xml:space="preserve">
+    <value>jclblUnitFA1</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitFA1.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitFA1.Parent" xml:space="preserve">
+    <value>pnlRoomFA</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitFA1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jctxtRoomFA.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtRoomFA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="jctxtRoomFA.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="jctxtRoomFA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="jctxtRoomFA.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="jctxtRoomFA.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jctxtRoomFA.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomFA.Name" xml:space="preserve">
+    <value>jctxtRoomFA</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomFA.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomFA.Parent" xml:space="preserve">
+    <value>pnlRoomFA</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomFA.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="jclblRoomFA.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblRoomFA.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblRoomFA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 20</value>
+  </data>
+  <data name="jclblRoomFA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="jclblRoomFA.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="jclblRoomFA.Text" xml:space="preserve">
+    <value>Fresh Air</value>
+  </data>
+  <data name="jclblRoomFA.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomFA.Name" xml:space="preserve">
+    <value>jclblRoomFA</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomFA.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomFA.Parent" xml:space="preserve">
+    <value>pnlRoomFA</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomFA.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlRoomFA.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pnlRoomFA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 457</value>
+  </data>
+  <data name="pnlRoomFA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 75</value>
+  </data>
+  <data name="pnlRoomFA.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomFA.Name" xml:space="preserve">
+    <value>pnlRoomFA</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomFA.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomFA.Parent" xml:space="preserve">
+    <value>pnlRoomRq</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomFA.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jclblTitle_FA.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="jclblTitle_FA.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px, style=Bold</value>
+  </data>
+  <data name="jclblTitle_FA.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblTitle_FA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 427</value>
+  </data>
+  <data name="jclblTitle_FA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 30</value>
+  </data>
+  <data name="jclblTitle_FA.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="jclblTitle_FA.Text" xml:space="preserve">
+    <value>Fresh Air</value>
+  </data>
+  <data name="jclblTitle_FA.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_FA.Name" xml:space="preserve">
+    <value>jclblTitle_FA</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_FA.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_FA.Parent" xml:space="preserve">
+    <value>pnlRoomRq</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_FA.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="jclblUnitTemperature3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitTemperature3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitTemperature3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblUnitTemperature3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 52</value>
+  </data>
+  <data name="jclblUnitTemperature3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 15</value>
+  </data>
+  <data name="jclblUnitTemperature3.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="jclblUnitTemperature3.Text" xml:space="preserve">
+    <value>℃</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitTemperature3.Name" xml:space="preserve">
+    <value>jclblUnitTemperature3</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitTemperature3.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitTemperature3.Parent" xml:space="preserve">
+    <value>pnlRoomHeating</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitTemperature3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jctxtDBHeat.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtDBHeat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 48</value>
+  </data>
+  <data name="jctxtDBHeat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="jctxtDBHeat.MaxLength" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="jctxtDBHeat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="jctxtDBHeat.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="jctxtDBHeat.Text" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="jctxtDBHeat.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;jctxtDBHeat.Name" xml:space="preserve">
+    <value>jctxtDBHeat</value>
+  </data>
+  <data name="&gt;&gt;jctxtDBHeat.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtDBHeat.Parent" xml:space="preserve">
+    <value>pnlRoomHeating</value>
+  </data>
+  <data name="&gt;&gt;jctxtDBHeat.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="jclblUnitkW3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitkW3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitkW3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblUnitkW3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 20</value>
+  </data>
+  <data name="jclblUnitkW3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 15</value>
+  </data>
+  <data name="jclblUnitkW3.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="jclblUnitkW3.Text" xml:space="preserve">
+    <value>kW</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitkW3.Name" xml:space="preserve">
+    <value>jclblUnitkW3</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitkW3.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitkW3.Parent" xml:space="preserve">
+    <value>pnlRoomHeating</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitkW3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="jclblRoomCapH.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblRoomCapH.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblRoomCapH.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 20</value>
+  </data>
+  <data name="jclblRoomCapH.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="jclblRoomCapH.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="jclblRoomCapH.Text" xml:space="preserve">
+    <value>Capacity</value>
+  </data>
+  <data name="jclblRoomCapH.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomCapH.Name" xml:space="preserve">
+    <value>jclblRoomCapH</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomCapH.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomCapH.Parent" xml:space="preserve">
+    <value>pnlRoomHeating</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomCapH.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="jclblDBHeat.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblDBHeat.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblDBHeat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 52</value>
+  </data>
+  <data name="jclblDBHeat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="jclblDBHeat.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="jclblDBHeat.Text" xml:space="preserve">
+    <value>DB</value>
+  </data>
+  <data name="jclblDBHeat.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblDBHeat.Name" xml:space="preserve">
+    <value>jclblDBHeat</value>
+  </data>
+  <data name="&gt;&gt;jclblDBHeat.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblDBHeat.Parent" xml:space="preserve">
+    <value>pnlRoomHeating</value>
+  </data>
+  <data name="&gt;&gt;jclblDBHeat.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="jctxtRoomCapH.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtRoomCapH.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="jctxtRoomCapH.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="jctxtRoomCapH.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="jctxtRoomCapH.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="jctxtRoomCapH.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jctxtRoomCapH.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomCapH.Name" xml:space="preserve">
+    <value>jctxtRoomCapH</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomCapH.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomCapH.Parent" xml:space="preserve">
+    <value>pnlRoomHeating</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomCapH.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pnlRoomHeating.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlRoomHeating.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 337</value>
+  </data>
+  <data name="pnlRoomHeating.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="pnlRoomHeating.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 90</value>
+  </data>
+  <data name="pnlRoomHeating.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomHeating.Name" xml:space="preserve">
+    <value>pnlRoomHeating</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomHeating.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomHeating.Parent" xml:space="preserve">
+    <value>pnlRoomRq</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomHeating.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="jclblTitle_Heating.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="jclblTitle_Heating.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px, style=Bold</value>
+  </data>
+  <data name="jclblTitle_Heating.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblTitle_Heating.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 307</value>
+  </data>
+  <data name="jclblTitle_Heating.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 30</value>
+  </data>
+  <data name="jclblTitle_Heating.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="jclblTitle_Heating.Text" xml:space="preserve">
+    <value>Heating</value>
+  </data>
+  <data name="jclblTitle_Heating.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_Heating.Name" xml:space="preserve">
+    <value>jclblTitle_Heating</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_Heating.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_Heating.Parent" xml:space="preserve">
+    <value>pnlRoomRq</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_Heating.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="jctxtRH.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="jctxtRH.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtRH.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 209</value>
+  </data>
+  <data name="jctxtRH.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="jctxtRH.MaxLength" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="jctxtRH.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="jctxtRH.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="jctxtRH.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jctxtRH.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;jctxtRH.Name" xml:space="preserve">
+    <value>jctxtRH</value>
+  </data>
+  <data name="&gt;&gt;jctxtRH.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtRH.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jctxtRH.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jclblUnitStaticPressure.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitStaticPressure.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitStaticPressure.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblUnitStaticPressure.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 116</value>
+  </data>
+  <data name="jclblUnitStaticPressure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 15</value>
+  </data>
+  <data name="jclblUnitStaticPressure.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="jclblUnitStaticPressure.Text" xml:space="preserve">
+    <value>Pa</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitStaticPressure.Name" xml:space="preserve">
+    <value>jclblUnitStaticPressure</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitStaticPressure.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitStaticPressure.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitStaticPressure.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="jctxtRoomStaticPressure.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtRoomStaticPressure.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 113</value>
+  </data>
+  <data name="jctxtRoomStaticPressure.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="jctxtRoomStaticPressure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="jctxtRoomStaticPressure.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="jctxtRoomStaticPressure.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jctxtRoomStaticPressure.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomStaticPressure.Name" xml:space="preserve">
+    <value>jctxtRoomStaticPressure</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomStaticPressure.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomStaticPressure.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomStaticPressure.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="jclblRoomStaticPressure.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblRoomStaticPressure.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblRoomStaticPressure.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 116</value>
+  </data>
+  <data name="jclblRoomStaticPressure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="jclblRoomStaticPressure.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="jclblRoomStaticPressure.Text" xml:space="preserve">
+    <value>ESP</value>
+  </data>
+  <data name="jclblRoomStaticPressure.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomStaticPressure.Name" xml:space="preserve">
+    <value>jclblRoomStaticPressure</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomStaticPressure.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomStaticPressure.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomStaticPressure.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="jclblUnitAirflow.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitAirflow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitAirflow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblUnitAirflow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 84</value>
+  </data>
+  <data name="jclblUnitAirflow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 15</value>
+  </data>
+  <data name="jclblUnitAirflow.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="jclblUnitAirflow.Text" xml:space="preserve">
+    <value>cfm</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitAirflow.Name" xml:space="preserve">
+    <value>jclblUnitAirflow</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitAirflow.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitAirflow.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitAirflow.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="jctxtRoomAirflow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtRoomAirflow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 81</value>
+  </data>
+  <data name="jctxtRoomAirflow.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="jctxtRoomAirflow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="jctxtRoomAirflow.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="jctxtRoomAirflow.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jctxtRoomAirflow.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomAirflow.Name" xml:space="preserve">
+    <value>jctxtRoomAirflow</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomAirflow.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomAirflow.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomAirflow.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="jcLabel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jcLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jcLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jcLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 212</value>
+  </data>
+  <data name="jcLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 15</value>
+  </data>
+  <data name="jcLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="jcLabel1.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="&gt;&gt;jcLabel1.Name" xml:space="preserve">
+    <value>jcLabel1</value>
+  </data>
+  <data name="&gt;&gt;jcLabel1.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jcLabel1.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jcLabel1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="jclblUnitTemperature2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitTemperature2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitTemperature2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblUnitTemperature2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 180</value>
+  </data>
+  <data name="jclblUnitTemperature2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 15</value>
+  </data>
+  <data name="jclblUnitTemperature2.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="jclblUnitTemperature2.Text" xml:space="preserve">
+    <value>℃</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitTemperature2.Name" xml:space="preserve">
+    <value>jclblUnitTemperature2</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitTemperature2.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitTemperature2.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitTemperature2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="jclblRoomCapC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblRoomCapC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblRoomCapC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 20</value>
+  </data>
+  <data name="jclblRoomCapC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="jclblRoomCapC.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="jclblRoomCapC.Text" xml:space="preserve">
+    <value>Capacity</value>
+  </data>
+  <data name="jclblRoomCapC.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomCapC.Name" xml:space="preserve">
+    <value>jclblRoomCapC</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomCapC.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomCapC.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomCapC.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="jclblUnitkW2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitkW2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitkW2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblUnitkW2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 52</value>
+  </data>
+  <data name="jclblUnitkW2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 15</value>
+  </data>
+  <data name="jclblUnitkW2.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="jclblUnitkW2.Text" xml:space="preserve">
+    <value>kW</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitkW2.Name" xml:space="preserve">
+    <value>jclblUnitkW2</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitkW2.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitkW2.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitkW2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="jclblDBCool.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblDBCool.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblDBCool.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 148</value>
+  </data>
+  <data name="jclblDBCool.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="jclblDBCool.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="jclblDBCool.Text" xml:space="preserve">
+    <value>DB</value>
+  </data>
+  <data name="jclblDBCool.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblDBCool.Name" xml:space="preserve">
+    <value>jclblDBCool</value>
+  </data>
+  <data name="&gt;&gt;jclblDBCool.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblDBCool.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblDBCool.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="jclblUnitkW1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitkW1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitkW1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblUnitkW1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 20</value>
+  </data>
+  <data name="jclblUnitkW1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 15</value>
+  </data>
+  <data name="jclblUnitkW1.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="jclblUnitkW1.Text" xml:space="preserve">
+    <value>kW</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitkW1.Name" xml:space="preserve">
+    <value>jclblUnitkW1</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitkW1.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitkW1.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitkW1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="jclblUnitTemperature1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitTemperature1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitTemperature1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblUnitTemperature1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 148</value>
+  </data>
+  <data name="jclblUnitTemperature1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 15</value>
+  </data>
+  <data name="jclblUnitTemperature1.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="jclblUnitTemperature1.Text" xml:space="preserve">
+    <value>℃</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitTemperature1.Name" xml:space="preserve">
+    <value>jclblUnitTemperature1</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitTemperature1.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitTemperature1.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitTemperature1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="jclblRHValue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblRHValue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblRHValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 212</value>
+  </data>
+  <data name="jclblRHValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 16</value>
+  </data>
+  <data name="jclblRHValue.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="jclblRHValue.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="jclblRHValue.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;jclblRHValue.Name" xml:space="preserve">
+    <value>jclblRHValue</value>
+  </data>
+  <data name="&gt;&gt;jclblRHValue.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblRHValue.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblRHValue.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="jclblWBCool.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblWBCool.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblWBCool.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 180</value>
+  </data>
+  <data name="jclblWBCool.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="jclblWBCool.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="jclblWBCool.Text" xml:space="preserve">
+    <value>WB</value>
+  </data>
+  <data name="jclblWBCool.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblWBCool.Name" xml:space="preserve">
+    <value>jclblWBCool</value>
+  </data>
+  <data name="&gt;&gt;jclblWBCool.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblWBCool.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblWBCool.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="jctxtWBCool.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtWBCool.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 177</value>
+  </data>
+  <data name="jctxtWBCool.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="jctxtWBCool.MaxLength" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="jctxtWBCool.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="jctxtWBCool.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="jctxtWBCool.Text" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="jctxtWBCool.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;jctxtWBCool.Name" xml:space="preserve">
+    <value>jctxtWBCool</value>
+  </data>
+  <data name="&gt;&gt;jctxtWBCool.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtWBCool.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jctxtWBCool.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="jclblRoomAirflow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblRoomAirflow.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblRoomAirflow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 84</value>
+  </data>
+  <data name="jclblRoomAirflow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="jclblRoomAirflow.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="jclblRoomAirflow.Text" xml:space="preserve">
+    <value>Air Flow</value>
+  </data>
+  <data name="jclblRoomAirflow.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomAirflow.Name" xml:space="preserve">
+    <value>jclblRoomAirflow</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomAirflow.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomAirflow.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomAirflow.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="jctxtRoomCapC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtRoomCapC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="jctxtRoomCapC.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="jctxtRoomCapC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="jctxtRoomCapC.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="jctxtRoomCapC.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jctxtRoomCapC.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomCapC.Name" xml:space="preserve">
+    <value>jctxtRoomCapC</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomCapC.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomCapC.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomCapC.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="jctxtRoomSensiCapC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtRoomSensiCapC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 49</value>
+  </data>
+  <data name="jctxtRoomSensiCapC.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="jctxtRoomSensiCapC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="jctxtRoomSensiCapC.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="jctxtRoomSensiCapC.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jctxtRoomSensiCapC.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomSensiCapC.Name" xml:space="preserve">
+    <value>jctxtRoomSensiCapC</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomSensiCapC.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomSensiCapC.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jctxtRoomSensiCapC.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="jclblRH.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblRH.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblRH.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 212</value>
+  </data>
+  <data name="jclblRH.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="jclblRH.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="jclblRH.Text" xml:space="preserve">
+    <value>RH</value>
+  </data>
+  <data name="jclblRH.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblRH.Name" xml:space="preserve">
+    <value>jclblRH</value>
+  </data>
+  <data name="&gt;&gt;jclblRH.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblRH.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblRH.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="jctxtDBCool.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtDBCool.Location" type="System.Drawing.Point, System.Drawing">
+    <value>93, 145</value>
+  </data>
+  <data name="jctxtDBCool.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="jctxtDBCool.MaxLength" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="jctxtDBCool.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 21</value>
+  </data>
+  <data name="jctxtDBCool.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="jctxtDBCool.Text" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="jctxtDBCool.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;jctxtDBCool.Name" xml:space="preserve">
+    <value>jctxtDBCool</value>
+  </data>
+  <data name="&gt;&gt;jctxtDBCool.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtDBCool.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jctxtDBCool.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="jclblRoomSensiCapC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblRoomSensiCapC.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblRoomSensiCapC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 52</value>
+  </data>
+  <data name="jclblRoomSensiCapC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 16</value>
+  </data>
+  <data name="jclblRoomSensiCapC.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="jclblRoomSensiCapC.Text" xml:space="preserve">
+    <value>Sensible Heat</value>
+  </data>
+  <data name="jclblRoomSensiCapC.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomSensiCapC.Name" xml:space="preserve">
+    <value>jclblRoomSensiCapC</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomSensiCapC.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomSensiCapC.Parent" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;jclblRoomSensiCapC.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="pnlRoomCooling.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlRoomCooling.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="pnlRoomCooling.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 60</value>
+  </data>
+  <data name="pnlRoomCooling.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="pnlRoomCooling.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 247</value>
+  </data>
+  <data name="pnlRoomCooling.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomCooling.Name" xml:space="preserve">
+    <value>pnlRoomCooling</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomCooling.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomCooling.Parent" xml:space="preserve">
+    <value>pnlRoomRq</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomCooling.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="jclblTitle_Cooling.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="jclblTitle_Cooling.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px, style=Bold</value>
+  </data>
+  <data name="jclblTitle_Cooling.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblTitle_Cooling.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="jclblTitle_Cooling.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 30</value>
+  </data>
+  <data name="jclblTitle_Cooling.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="jclblTitle_Cooling.Text" xml:space="preserve">
+    <value>Cooling</value>
+  </data>
+  <data name="jclblTitle_Cooling.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_Cooling.Name" xml:space="preserve">
+    <value>jclblTitle_Cooling</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_Cooling.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_Cooling.Parent" xml:space="preserve">
+    <value>pnlRoomRq</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_Cooling.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="jclblTitle_Rq.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="jclblTitle_Rq.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px, style=Bold</value>
+  </data>
+  <data name="jclblTitle_Rq.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblTitle_Rq.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="jclblTitle_Rq.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 30</value>
+  </data>
+  <data name="jclblTitle_Rq.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="jclblTitle_Rq.Text" xml:space="preserve">
+    <value>Required Info.</value>
+  </data>
+  <data name="jclblTitle_Rq.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_Rq.Name" xml:space="preserve">
+    <value>jclblTitle_Rq</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_Rq.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_Rq.Parent" xml:space="preserve">
+    <value>pnlRoomRq</value>
+  </data>
+  <data name="&gt;&gt;jclblTitle_Rq.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="pnlRoomRq.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlRoomRq.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="pnlRoomRq.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="pnlRoomRq.Size" type="System.Drawing.Size, System.Drawing">
+    <value>212, 534</value>
+  </data>
+  <data name="pnlRoomRq.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomRq.Name" xml:space="preserve">
+    <value>pnlRoomRq</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomRq.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomRq.Parent" xml:space="preserve">
+    <value>tpgSelection</value>
+  </data>
+  <data name="&gt;&gt;pnlRoomRq.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tpgSelection.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 32</value>
+  </data>
+  <data name="tpgSelection.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="tpgSelection.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tpgSelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1006, 542</value>
+  </data>
+  <data name="tpgSelection.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tpgSelection.Text" xml:space="preserve">
+    <value>Selection</value>
+  </data>
+  <data name="&gt;&gt;tpgSelection.Name" xml:space="preserve">
+    <value>tpgSelection</value>
+  </data>
+  <data name="&gt;&gt;tpgSelection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpgSelection.Parent" xml:space="preserve">
+    <value>tapPageTrans1</value>
+  </data>
+  <data name="&gt;&gt;tpgSelection.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jclblHelp_2_3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblHelp_2_3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblHelp_2_3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblHelp_2_3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 105</value>
+  </data>
+  <data name="jclblHelp_2_3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>197, 15</value>
+  </data>
+  <data name="jclblHelp_2_3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="jclblHelp_2_3.Text" xml:space="preserve">
+    <value>3. Select the indoor units manually.</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2_3.Name" xml:space="preserve">
+    <value>jclblHelp_2_3</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2_3.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2_3.Parent" xml:space="preserve">
+    <value>pnlHelp_2</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2_3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jclblHelp_2_2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblHelp_2_2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblHelp_2_2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblHelp_2_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 75</value>
+  </data>
+  <data name="jclblHelp_2_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 15</value>
+  </data>
+  <data name="jclblHelp_2_2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="jclblHelp_2_2.Text" xml:space="preserve">
+    <value>2. Check the 'Manual' button is selected.</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2_2.Name" xml:space="preserve">
+    <value>jclblHelp_2_2</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2_2.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2_2.Parent" xml:space="preserve">
+    <value>pnlHelp_2</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2_2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="jclblHelp_2_1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblHelp_2_1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblHelp_2_1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblHelp_2_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 45</value>
+  </data>
+  <data name="jclblHelp_2_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 15</value>
+  </data>
+  <data name="jclblHelp_2_1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="jclblHelp_2_1.Text" xml:space="preserve">
+    <value>1. Do not validate room requirement.</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2_1.Name" xml:space="preserve">
+    <value>jclblHelp_2_1</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2_1.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2_1.Parent" xml:space="preserve">
+    <value>pnlHelp_2</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2_1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="jclblHelp_2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="jclblHelp_2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px, style=Bold</value>
+  </data>
+  <data name="jclblHelp_2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblHelp_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="jclblHelp_2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>246, 0, 0, 0</value>
+  </data>
+  <data name="jclblHelp_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>996, 30</value>
+  </data>
+  <data name="jclblHelp_2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="jclblHelp_2.Text" xml:space="preserve">
+    <value>2. Manual &amp;&amp; Without room</value>
+  </data>
+  <data name="jclblHelp_2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2.Name" xml:space="preserve">
+    <value>jclblHelp_2</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2.Parent" xml:space="preserve">
+    <value>pnlHelp_2</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pnlHelp_2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlHelp_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 113</value>
+  </data>
+  <data name="pnlHelp_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>998, 135</value>
+  </data>
+  <data name="pnlHelp_2.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;pnlHelp_2.Name" xml:space="preserve">
+    <value>pnlHelp_2</value>
+  </data>
+  <data name="&gt;&gt;pnlHelp_2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlHelp_2.Parent" xml:space="preserve">
+    <value>tpgHelp</value>
+  </data>
+  <data name="&gt;&gt;pnlHelp_2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlSpan_2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlSpan_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 109</value>
+  </data>
+  <data name="pnlSpan_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>998, 4</value>
+  </data>
+  <data name="pnlSpan_2.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;pnlSpan_2.Name" xml:space="preserve">
+    <value>pnlSpan_2</value>
+  </data>
+  <data name="&gt;&gt;pnlSpan_2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlSpan_2.Parent" xml:space="preserve">
+    <value>tpgHelp</value>
+  </data>
+  <data name="&gt;&gt;pnlSpan_2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="jclblHelp_1_2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblHelp_1_2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblHelp_1_2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblHelp_1_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 75</value>
+  </data>
+  <data name="jclblHelp_1_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 15</value>
+  </data>
+  <data name="jclblHelp_1_2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="jclblHelp_1_2.Text" xml:space="preserve">
+    <value>2. Check the 'Auto' button is selected.</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_1_2.Name" xml:space="preserve">
+    <value>jclblHelp_1_2</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_1_2.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_1_2.Parent" xml:space="preserve">
+    <value>pnlHelp_1</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_1_2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jclblHelp_1_1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblHelp_1_1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblHelp_1_1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblHelp_1_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 45</value>
+  </data>
+  <data name="jclblHelp_1_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 15</value>
+  </data>
+  <data name="jclblHelp_1_1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="jclblHelp_1_1.Text" xml:space="preserve">
+    <value>1. Input requirement information.</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_1_1.Name" xml:space="preserve">
+    <value>jclblHelp_1_1</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_1_1.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_1_1.Parent" xml:space="preserve">
+    <value>pnlHelp_1</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_1_1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="jclblHelp_1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="jclblHelp_1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px, style=Bold</value>
+  </data>
+  <data name="jclblHelp_1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblHelp_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="jclblHelp_1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>246, 0, 0, 0</value>
+  </data>
+  <data name="jclblHelp_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>996, 30</value>
+  </data>
+  <data name="jclblHelp_1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="jclblHelp_1.Text" xml:space="preserve">
+    <value>1. Auto &amp;&amp; Without room</value>
+  </data>
+  <data name="jclblHelp_1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_1.Name" xml:space="preserve">
+    <value>jclblHelp_1</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_1.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_1.Parent" xml:space="preserve">
+    <value>pnlHelp_1</value>
+  </data>
+  <data name="&gt;&gt;jclblHelp_1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnlHelp_1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pnlHelp_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="pnlHelp_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>998, 105</value>
+  </data>
+  <data name="pnlHelp_1.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;pnlHelp_1.Name" xml:space="preserve">
+    <value>pnlHelp_1</value>
+  </data>
+  <data name="&gt;&gt;pnlHelp_1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlHelp_1.Parent" xml:space="preserve">
+    <value>tpgHelp</value>
+  </data>
+  <data name="&gt;&gt;pnlHelp_1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tpgHelp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 32</value>
+  </data>
+  <data name="tpgHelp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="tpgHelp.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="tpgHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1006, 542</value>
+  </data>
+  <data name="tpgHelp.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tpgHelp.Text" xml:space="preserve">
+    <value>Help Info.</value>
+  </data>
+  <data name="&gt;&gt;tpgHelp.Name" xml:space="preserve">
+    <value>tpgHelp</value>
+  </data>
+  <data name="&gt;&gt;tpgHelp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpgHelp.Parent" xml:space="preserve">
+    <value>tapPageTrans1</value>
+  </data>
+  <data name="&gt;&gt;tpgHelp.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tapPageTrans1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tapPageTrans1.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>73, 32</value>
+  </data>
+  <data name="tapPageTrans1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tapPageTrans1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="tapPageTrans1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1008, 574</value>
+  </data>
+  <data name="tapPageTrans1.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;tapPageTrans1.Name" xml:space="preserve">
+    <value>tapPageTrans1</value>
+  </data>
+  <data name="&gt;&gt;tapPageTrans1.Type" xml:space="preserve">
+    <value>JCBase.UI.TapPageTrans, JCBase.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tapPageTrans1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tapPageTrans1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>43</value>
+  </metadata>
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1008, 603</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAFBQAAAEACAAIBgAAFgAAACgAAAAUAAAAKAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AABHFgAASxQAAE0dAABBJhIAay4GAGUtCwBlOAUAZTEJAGwzFAB2PhUAeT0TAHk1GABNMyIATzgiAGY4
+        IAB0PiMAfD0hAG5AEABiQBwAbEcbAHFMGQBWSzcAaE4mAGtAKwB2RygAblUtAGlLMAB2TjEAd1s4AHxb
+        SwB6Z0EAhmAfAItkGgCSZh8AlU0vAJFRKACaWzUAmGsiAI5sPgCXYzsAlnU2AJd+OACpfTYAh2tCAIZ5
+        RQCffk0AmXNQAJx8VACVcl4AmX1eAK5nRgCgeUUApXFJALd3TgCSfHAAWY9UAE2ZXwBSnFQAfI5TAGCd
+        WQBonFwAQ4t3AFa3dQBzs3gArI49AI+JTgCdhlgAr4JPAK6CUwC8ilUAs51VALieUgCXmmkAsY9rAKmW
+        YwCxl2kAqY50AKmVfACEr3AArqNpALigZgCvpnQAuKp1ALyqewC+sXkAyKhVAMyiXwDKhmMAzIhlANia
+        cgDSqGcA26ZtAM+wawDZsmMA2Lp6AOfFeQBSl4IAWZqKAGzMjAB6zoAAedSVAJeLgQCjno8ArZyTAIes
+        jACPuoEAq6eOALaqhgC8rooAubyPAKG7nQC0vpAAhrqwAOefgQDOuYYA0bCDAOy9hQDksIsA9q2RAOe0
+        lADzt5MA+rqXAMu0pADDsKgAy7+tAMS+twD/vaMAhdKVAIPXnACuwo0AqM2PAK3AmQCLxK8Ancm8AIfb
+        uQCK3rsAvc2lAL3htwC9/7wAz8GXAMvDmADM0JwA1tKXANvQlwDnzo4A5NCJAP7WgwD/2ogA6s2UAODR
+        mQD51JoA/9mdAP/mnQD/7Z4AyMmiANDHpgDZwakA1s2oANzVtADS078A3N69APvGqADx0aAA/96oAPXM
+        tgD/zrMA/8+4AP7UtADG5aIAzeasANTjqgDU660Az/GrAN/ptADe4LwA2POzAPflpADz4qoA/+WrAO7t
+        uwD64bkA//i9AKzQwgCs3MQAsN7SAKHtzQC47ssArO/SAKn51AC6/9oA1dvCANzZ0QDh1c8A9dTDAPra
+        wwD2388A6N7UANfxwwDZ/MQAweXfANPi1ADQ6NwAxPLcANXx3gDh48YA6eXIAPbnxwD54sIA8+PMAP3u
+        zQDp8cwA8ffCAP/2xAD09swA/fzNAOfr3gDx49cA9uvVAP/v1wD/590A/uvZAOf12QD28tYA//fTAPT/
+        1gD9/tIA9fbcAP/62wDM7ucA2u/tAPPt5QDi9eYA7PLhAO/x6wD/9OcA9P/kAPz85QDy9O0A+fPsAPT8
+        7QD+/usA5e3+AO7z8gDn8/8A7PT8AOL/+wDs/PwA9fXyAPj08wD0+/MA/f3zAPH0+AD99vsA9Pv8APz9
+        /AAAAAAA+/73/v7y/u7q2vDj7Oj+/v7+/v77/f7++u36ZwxMz2uu8Oj5/v7+/v3y+PrAe9vBDgImcrNv
+        iPrt/v7+/f36+noDMNp3BwaUjjrGief9/v7+6fCc7EkSLt80ATNBqIo4t/b+/P360Bxz1C0TdXUEEU+s
+        Yz67x/v++fDRSxSWoxQnpyQAUq85Yrlw5f76zIvhKB+1Qwl5VwJKqzlkhmHk9vCuLJCYIFp0ClhxBUKq
+        O4CHPbj18OFUKZldIbIjMnYFL608f7xghfXw1bVGVZIllzUifggr004/vYS29vCaj5FAkypbWQulDxbW
+        gje6ysn28OxRsEdfVkV4EKEYGY3gaWjL/vn67IyVXlxeRKEPphseSKngbsj35v75zYuxUKIvphekGmxt
+        gcXd7/7+/f7sntZTtDHCHcENm9KIg/r5+v7x/vri453OTcM23BVqoNLd7+33/PH9+fri3tl82GXEZp++
+        6/r+/v7+8/30/ujw7Obmfb/X+ujv7/r+/v708/3+6Pr6+v7+9/n61/r6/v7+/gAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA
+</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1024, 641</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>WindowsDefaultLocation</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Indoor selection</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
+    <value>toolStripStatusLabel1</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;model.Name" xml:space="preserve">
+    <value>model</value>
+  </data>
+  <data name="&gt;&gt;model.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Model_York.Name" xml:space="preserve">
+    <value>Model_York</value>
+  </data>
+  <data name="&gt;&gt;Model_York.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Model_Hitachi.Name" xml:space="preserve">
+    <value>Model_Hitachi</value>
+  </data>
+  <data name="&gt;&gt;Model_Hitachi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column1.Name" xml:space="preserve">
+    <value>Column1</value>
+  </data>
+  <data name="&gt;&gt;Column1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column5.Name" xml:space="preserve">
+    <value>Column5</value>
+  </data>
+  <data name="&gt;&gt;Column5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column3.Name" xml:space="preserve">
+    <value>Column3</value>
+  </data>
+  <data name="&gt;&gt;Column3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column6.Name" xml:space="preserve">
+    <value>Column6</value>
+  </data>
+  <data name="&gt;&gt;Column6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column4.Name" xml:space="preserve">
+    <value>Column4</value>
+  </data>
+  <data name="&gt;&gt;Column4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column7.Name" xml:space="preserve">
+    <value>Column7</value>
+  </data>
+  <data name="&gt;&gt;Column7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Column2.Name" xml:space="preserve">
+    <value>Column2</value>
+  </data>
+  <data name="&gt;&gt;Column2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmAddIndoorSimpleUniversal</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>JCBase.UI.JCForm, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

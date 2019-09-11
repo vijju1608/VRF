@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ReleaseVersion Condition=" '$(Version)' == '' ">5.3.0.0></ReleaseVersion>    
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>5743c2fd-7a8d-423d-84a8-1dbb0c7f2ca9</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>VRFSelectionSoftware_$(ReleaseVersion)</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">   
+    <OutputPath>bin\$(Configuration)\</OutputPath>  
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug;ProductVersion=$(ReleaseVersion)</DefineConstants>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <DefineConstants>HarvestPath1=..\JCHVRF_New\Image;HarvestPath2=..\JCHVRF_New\DB;HarvestPath3=..\JCHVRF_New\Report;HarvestPath4=..\JCHVRF_New\LanguageData;HarvestPath5=..\JCHVRF_New\TotalHeatExchangerPDFFiles;ProductVersion=$(ReleaseVersion)</DefineConstants>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+      
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Product.wxs" />
+    <Compile Include="ImageFolder.wxs" />
+    <Compile Include="DBFolder.wxs" />
+    <Compile Include="ReportFolder.wxs" />
+    <Compile Include="LanguageDataFolder.wxs" />
+    <Compile Include="TotalHeatExchangerPDFFilesFolder.wxs" />
+    
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="wix_File\Jci_BackgroundBanner.bmp" />
+    <Content Include="wix_File\Jci_TopBanner.bmp" />
+    <Content Include="wix_File\Jci.ico" />
+    <Content Include="wix_File\licence.rtf" />
+    <Content Include="VRFSetup.wax" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JCHVRF.BLL\JCHVRF.BLL.csproj">
+      <Name>JCHVRF.BLL</Name>
+      <Project>{c7829fb6-7909-4467-a603-fe8f78df33bf}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Const\JCHVRF.Const.csproj">
+      <Name>JCHVRF.Const</Name>
+      <Project>{acd40089-8738-4d59-a97f-f8ef8cb0bf91}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.DALFactory\JCHVRF.DALFactory.csproj">
+      <Name>JCHVRF.DALFactory</Name>
+      <Project>{69a59513-d8c7-41e2-9df3-95c0a7ea787c}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.DAL\JCHVRF.DAL.csproj">
+      <Name>JCHVRF.DAL</Name>
+      <Project>{b472c47d-c465-4867-8589-aaf860a26046}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Entity\JCHVRF.Entity.csproj">
+      <Name>JCHVRF.Entity</Name>
+      <Project>{798a74b8-f22c-4b72-8cfb-3835306ce2c4}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Model\JCHVRF.Model.csproj">
+      <Name>JCHVRF.Model</Name>
+      <Project>{53f606c7-5ccf-48c4-8420-c2ee4f7fc29a}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.MyPipingBLL\JCHVRF.MyPipingBLL.csproj">
+      <Name>JCHVRF.MyPipingBLL</Name>
+      <Project>{62dae7e0-fc30-470e-905c-a39e985427f2}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Report\JCHVRF.Report.csproj">
+      <Name>JCHVRF.Report</Name>
+      <Project>{75856cc4-f1c7-42f8-834e-f7fa42e158cd}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.VRFMessage\JCHVRF.VRFMessage.csproj">
+      <Name>JCHVRF.VRFMessage</Name>
+      <Project>{b11207c8-c702-43fa-ae96-f1bb2aa4ba38}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.VRFTrans\JCHVRF.VRFTrans.csproj">
+      <Name>JCHVRF.VRFTrans</Name>
+      <Project>{110c64cb-388a-4b74-8f21-6c1c28fded40}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF_New\JCHVRF_New.csproj">
+      <Name>JCHVRF_New</Name>
+      <Project>{078fea38-6601-43d6-9595-d0b010064db9}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\Register\Register.csproj">
+      <Name>Register</Name>
+      <Project>{c3c491b1-8c66-4923-8c7f-8697869a0fc9}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+    <ProjectReference Include="..\SyncAgent\SyncAgent.csproj">
+      <Name>SyncAgent</Name>
+      <Project>{bae277c6-d0c1-4776-ba5d-269f7278c97d}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>$(WixExtDir)\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  
+  <PropertyGroup>
+  <WixToolPath>.\wix\3.10\</WixToolPath>
+  <WixTargetsPath>$(WixToolPath)wix.targets</WixTargetsPath>
+  <WixTasksPath>Wixtasks.dll</WixTasksPath>
+  </PropertyGroup>
+  
+  
+  <Import Project="$(WixTargetsPath)" />
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.-->
+	<Target Name="BeforeBuild">
+    <HeatDirectory Directory="..\JCHVRF_New\Image"
+    PreprocessorVariable="var.HarvestPath1"
+    OutputFile="ImageFolder.wxs"
+    ComponentGroupName="Image_HeatGenerated"
+    DirectoryRefId="Image"
+    AutogenerateGuids="true"
+    ToolPath=".\wix\3.10\"
+    SuppressFragments="true"
+    SuppressRegistry="true"
+    SuppressRootDirectory="true" />
+
+    <HeatDirectory Directory="..\JCHVRF_New\DB"
+    PreprocessorVariable="var.HarvestPath2"
+    OutputFile="DBFolder.wxs"
+    ComponentGroupName="DB_HeatGenerated"
+    DirectoryRefId="DB"
+    AutogenerateGuids="true"
+    ToolPath=".\wix\3.10\"
+    SuppressFragments="true"
+    SuppressRegistry="true"
+    SuppressRootDirectory="true" />
+
+    <HeatDirectory Directory="..\JCHVRF_New\Report"
+   PreprocessorVariable="var.HarvestPath3"
+   OutputFile="ReportFolder.wxs"
+   ComponentGroupName="Report_HeatGenerated"
+   DirectoryRefId="Report"
+   AutogenerateGuids="true"
+   ToolPath=".\wix\3.10\"
+   SuppressFragments="true"
+   SuppressRegistry="true"
+   SuppressRootDirectory="true" />
+
+    <HeatDirectory Directory="..\JCHVRF_New\LanguageData"
+   PreprocessorVariable="var.HarvestPath4"
+   OutputFile="LanguageDataFolder.wxs"
+   ComponentGroupName="LanguageData_HeatGenerated"
+   DirectoryRefId="LanguageData"
+   AutogenerateGuids="true"
+   ToolPath=".\wix\3.10\"
+   SuppressFragments="true"
+   SuppressRegistry="true"
+   SuppressRootDirectory="true" />
+
+    <HeatDirectory Directory="..\JCHVRF_New\TotalHeatExchangerPDFFiles"
+   PreprocessorVariable="var.HarvestPath5"
+   OutputFile="TotalHeatExchangerPDFFilesFolder.wxs"
+   ComponentGroupName="TotalHeatExchangerPDFFiles_HeatGenerated"
+   DirectoryRefId="TotalHeatExchangerPDFFiles"
+   AutogenerateGuids="true"
+   ToolPath=".\wix\3.10\"
+   SuppressFragments="true"
+   SuppressRegistry="true"
+   SuppressRootDirectory="true" />
+    
+	</Target>
+  <!--<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

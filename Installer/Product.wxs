@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define JCHVRF.BLL_TargetDir=$(var.JCHVRF.BLL.TargetDir)?>
+  <?define JCHVRF.DAL_TargetDir=$(var.JCHVRF.DAL.TargetDir)?>
+  <?define JCHVRF.Model_TargetDir=$(var.JCHVRF.Model.TargetDir)?>
+  <?define JCHVRF.Entity_TargetDir=$(var.JCHVRF.Entity.TargetDir)?>
+  <?define JCHVRF.VRFTrans_TargetDir=$(var.JCHVRF.VRFTrans.TargetDir)?>
+  <?define JCHVRF.Const_TargetDir=$(var.JCHVRF.Const.TargetDir)?>
+  <?define JCHVRF.DALFactory_TargetDir=$(var.JCHVRF.DALFactory.TargetDir)?>
+  <?define JCHVRF.VRFMessage_TargetDir=$(var.JCHVRF.VRFMessage.TargetDir)?>
+  <?define JCHVRF.MyPipingBLL_TargetDir=$(var.JCHVRF.MyPipingBLL.TargetDir)?>
+  <?define JCHVRF.Report_TargetDir=$(var.JCHVRF.Report.TargetDir)?>
+  <?define JCHVRF_New_TargetDir=$(var.JCHVRF_New.TargetDir)?>
+  <?define Register_TargetDir=$(var.Register.TargetDir)?>
+  <?define SyncAgent_TargetDir=$(var.SyncAgent.TargetDir)?>
+  
+	<!--<Product Id="*" Name="Setup-JCHVRFDESKTOP" Language="1033" Version="1.0.0.0" Manufacturer="JCHVRF_Inc" UpgradeCode="28787531-3aca-4689-a8a0-8b6f3f3cacf8">-->
+        <Product Id="e346dd6a-aa37-4f40-ad75-1325547ef673" Name="Setup-JCHVRFDESKTOP" Language="1033" Version="$(var.ProductVersion)" Manufacturer="JCHVRF_Inc" UpgradeCode="28787531-3aca-4689-a8a0-8b6f3f3cacf8">
+		
+		<!--<Product Id="e346dd6a-aa37-4f40-ad75-1325547ef672" Name="Setup-JCHVRFDESKTOP" Language="1033" Version="2.0.0.0" Manufacturer="JCHVRF_Inc" UpgradeCode="28787531-3aca-4689-a8a0-8b6f3f3cacf8">-->
+
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." AllowSameVersionUpgrades="yes" />
+		<MediaTemplate EmbedCab="yes" CompressionLevel="high"/>
+
+    <!--Create Customized Installation-->
+      <Icon Id="Jci.ico" SourceFile="wix_File\Jci.ico" />
+      <Property Id="ARPPRODUCTICON" Value="Jci.ico" />
+
+      <WixVariable Id="WixUIBannerBmp" Value="wix_File\Jci_TopBanner.bmp" />
+      <WixVariable Id="WixUIDialogBmp" Value="wix_File\Jci_BackgroundBanner.bmp" />
+	 <WixVariable Id="WixUILicenseRtf" Value="wix_File\licence.rtf" />
+	
+    <Property Id="WIXUI_INSTALLDIR" Value="TESTFILEPRODUCTDIR" />
+          <UIRef Id="WixUI_InstallDir"></UIRef>
+
+		<Feature Id="ProductFeature" Title="VRFSetup" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+			
+      <ComponentGroupRef Id="Image_HeatGenerated" />
+      <ComponentGroupRef Id="DB_HeatGenerated" />
+      <ComponentGroupRef Id="Report_HeatGenerated" />
+      <ComponentGroupRef Id="LanguageData_HeatGenerated" />
+      <ComponentGroupRef Id="TotalHeatExchangerPDFFiles_HeatGenerated" />
+     
+      <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+    
+		</Feature>
+	</Product>
+
+	<Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">      
+      <Directory Id="ProgramFilesFolder" >
+        <Directory Id="TESTFILEPRODUCTDIR" Name="VRFSelection">
+          <Directory Id="Report" Name="Report" />
+          <Directory Id="DB" Name="DB" />
+          <Directory Id="Image" Name="Image" />
+          <Directory Id="LanguageData" Name="LanguageData" />
+          <Directory Id="TotalHeatExchangerPDFFiles" Name="TotalHeatExchangerPDFFiles" />
+          <Directory Id="Setup" Name="Setup">
+            <Directory Id="VRFSetup" Name="VRFSetup" />
+          </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="VRFSetup" />
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+    
+
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="f35ffa2a-396b-4770-b18e-5fdc380fc79f">
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="JCHVRF Desktop Application" Description="VRF" Target="[#JCHVRF_New.exe]" WorkingDirectory="VRFSetup" />
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\JCI\JCHVRF_New" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="ApplicationShortcutDesktop" Guid="9c02fca6-e295-4926-8ebe-8eda88e238e3">
+        <Shortcut Id="ApplicationDesktopShortcut" Name="JCHVRF Desktop Application" Description="VRF" Target="[#JCHVRF_New.exe]" WorkingDirectory="VRFSetup" />
+        <RemoveFolder Id="DesktopFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\JCI\JCHVRF_New" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+	</Fragment>
+
+	<Fragment>
+		<ComponentGroup Id="ProductComponents" Directory="VRFSetup">
+			<!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+			<!-- <Component Id="ProductComponent"> -->
+				<!-- TODO: Insert files, registry keys, and other resources here. -->
+			<!-- </Component> -->
+      <Component Id="JCHVRF.BLL.dll" Guid="a4407911-3fcc-4a53-a5f2-9c3347a8bbaa">
+        <File Id="JCHVRF.BLL.dll" Name="JCHVRF.BLL.dll" Source="$(var.JCHVRF.BLL_TargetDir)JCHVRF.BLL.dll" />
+      </Component>
+      <Component Id="JCHVRF.DAL.dll" Guid="3c2dca52-e15c-4b36-ba26-02222e17cd5e">
+        <File Id="JCHVRF.DAL.dll" Name="JCHVRF.DAL.dll" Source="$(var.JCHVRF.DAL_TargetDir)JCHVRF.DAL.dll" />
+      </Component>
+      <Component Id="JCHVRF.Model.dll" Guid="c6def8d0-3039-4fe0-9a2d-f0becb33b460">
+        <File Id="JCHVRF.Model.dll" Name="JCHVRF.Model.dll" Source="$(var.JCHVRF.Model_TargetDir)JCHVRF.Model.dll" />
+      </Component>
+      <Component Id="CDF.dll" Guid="9a8c66b5-aa45-4c0d-97fd-f667c60d1957">
+        <File Id="CDF.dll" Name="CDF.dll" Source="$(var.JCHVRF.BLL_TargetDir)CDF.dll" />
+      </Component>
+      <Component Id="JCHVRF.Entity.dll" Guid="616513be-a14b-4412-af2a-63c575aae364">
+        <File Id="JCHVRF.Entity.dll" Name="JCHVRF.Entity.dll" Source="$(var.JCHVRF.Entity_TargetDir)JCHVRF.Entity.dll" />
+      </Component>
+      <Component Id="JCHVRF.VRFTrans.dll" Guid="065dd2bc-21c2-4042-bb24-b859cdc69bd8">
+        <File Id="JCHVRF.VRFTrans.dll" Name="JCHVRF.VRFTrans.dll" Source="$(var.JCHVRF.VRFTrans_TargetDir)JCHVRF.VRFTrans.dll" />
+      </Component>
+      <Component Id="CDL.dll" Guid="29b8d6b0-2cd7-4aa1-a715-abf9a3316566">
+        <File Id="CDL.dll" Name="CDL.dll" Source="$(var.JCHVRF.BLL_TargetDir)CDL.dll" />
+      </Component>
+      <Component Id="JCBase.dll" Guid="fcd76874-da68-48d8-aaeb-552a13322789">
+        <File Id="JCBase.dll" Name="JCBase.dll" Source="$(var.JCHVRF.BLL_TargetDir)JCBase.dll" />
+      </Component>
+      <Component Id="YAMIntegration.dll" Guid="8637090c-fd1c-4791-bac6-592d5cabb3d0">
+        <File Id="YAMIntegration.dll" Name="YAMIntegration.dll" Source="$(var.JCHVRF.BLL_TargetDir)YAMIntegration.dll" />
+      </Component>
+      <Component Id="JCHVRF.Const.dll" Guid="8b4f44f4-1cd6-4311-a423-d995681c2cb6">
+        <File Id="JCHVRF.Const.dll" Name="JCHVRF.Const.dll" Source="$(var.JCHVRF.Const_TargetDir)JCHVRF.Const.dll" />
+      </Component>
+      <Component Id="JCBase.Utility.dll" Guid="a7a75052-6b48-47c4-ab27-95a821513cd3">
+        <File Id="JCBase.Utility.dll" Name="JCBase.Utility.dll" Source="$(var.JCHVRF.BLL_TargetDir)JCBase.Utility.dll" />
+      </Component>
+      <Component Id="JCHVRF.DALFactory.dll" Guid="c66deb28-75da-4480-9d7c-dc28f073164e">
+        <File Id="JCHVRF.DALFactory.dll" Name="JCHVRF.DALFactory.dll" Source="$(var.JCHVRF.DALFactory_TargetDir)JCHVRF.DALFactory.dll" />
+      </Component>
+      <Component Id="Dapper.dll" Guid="7c905eef-0ec6-4cdb-b817-f2d28afe967b">
+        <File Id="Dapper.dll" Name="Dapper.dll" Source="$(var.JCHVRF.BLL_TargetDir)Dapper.dll" />
+      </Component>
+      <Component Id="Lassalle.WPF.Flow.dll" Guid="f89b496c-e715-42f2-b24a-f28e7f7e078c">
+        <File Id="Lassalle.WPF.Flow.dll" Name="Lassalle.WPF.Flow.dll" Source="$(var.JCHVRF.BLL_TargetDir)Lassalle.WPF.Flow.dll" />
+      </Component>
+      <Component Id="Lassalle.Flow.dll" Guid="2b4f86f6-db1c-4c50-80e8-9ed1d70cd39a">
+        <File Id="Lassalle.Flow.dll" Name="Lassalle.Flow.dll" Source="$(var.JCHVRF.BLL_TargetDir)Lassalle.Flow.dll" />
+      </Component>
+      <Component Id="JCHVRF.VRFMessage.dll" Guid="422b0736-488b-407a-ad04-92de49d3b81d">
+        <File Id="JCHVRF.VRFMessage.dll" Name="JCHVRF.VRFMessage.dll" Source="$(var.JCHVRF.VRFMessage_TargetDir)JCHVRF.VRFMessage.dll" />
+      </Component>
+      <Component Id="Aspose.Cells.dll" Guid="fe8b4cec-dbc8-4db6-8d90-56b79943d1e8">
+        <File Id="Aspose.Cells.dll" Name="Aspose.Cells.dll" Source="$(var.JCHVRF.BLL_TargetDir)Aspose.Cells.dll" />
+      </Component>
+      <Component Id="Aspose.Words.dll" Guid="2cf049f9-090e-43a9-a172-7358b411b16c">
+        <File Id="Aspose.Words.dll" Name="Aspose.Words.dll" Source="$(var.JCHVRF.BLL_TargetDir)Aspose.Words.dll" />
+      </Component>
+      <Component Id="JCHVRF.MyPipingBLL.dll" Guid="dbe465f1-2819-4ea6-970f-c11e7331d6ec">
+        <File Id="JCHVRF.MyPipingBLL.dll" Name="JCHVRF.MyPipingBLL.dll" Source="$(var.JCHVRF.MyPipingBLL_TargetDir)JCHVRF.MyPipingBLL.dll" />
+      </Component>
+      <Component Id="JCHVRF.Report.dll" Guid="faa66d7e-e48d-4fb4-8af0-688fae6c358a">
+        <File Id="JCHVRF.Report.dll" Name="JCHVRF.Report.dll" Source="$(var.JCHVRF.Report_TargetDir)JCHVRF.Report.dll" />
+      </Component>
+      <Component Id="Project.mdb" Guid="bed65814-7a85-4ca5-ad3a-1794026523b2">
+        <File Id="Project.mdb" Name="Project.mdb" Source="$(var.JCHVRF_New_TargetDir)Project.mdb" />
+      </Component>
+      <Component Id="JCHVRF_New.exe" Guid="cd6a2c43-5bfa-4e02-87d5-92228a33f21f">
+        <File Id="JCHVRF_New.exe" Name="JCHVRF_New.exe" Source="$(var.JCHVRF_New_TargetDir)JCHVRF_New.exe" />
+      </Component>
+      <Component Id="JCHVRF_New.exe.config" Guid="942483ab-2f15-46dd-b25d-a3b1502b9b67">
+        <File Id="JCHVRF_New.exe.config" Name="JCHVRF_New.exe.config" Source="$(var.JCHVRF_New_TargetDir)JCHVRF_New.exe.config" />
+      </Component>
+      <Component Id="FontAwesome.WPF.dll" Guid="cd23808a-902a-4a8e-8ff8-649565842bad">
+        <File Id="FontAwesome.WPF.dll" Name="FontAwesome.WPF.dll" Source="$(var.JCHVRF_New_TargetDir)FontAwesome.WPF.dll" />
+      </Component>
+      <Component Id="System.Windows.Interactivity.dll" Guid="8068e1e2-98f3-4c90-85bb-88a6b2b8adc2">
+        <File Id="System.Windows.Interactivity.dll" Name="System.Windows.Interactivity.dll" Source="$(var.JCHVRF_New_TargetDir)System.Windows.Interactivity.dll" />
+      </Component>
+      <Component Id="Xceed.Wpf.Toolkit.dll" Guid="493c1c9c-9a7d-4f00-b80b-204f25f826df">
+        <File Id="Xceed.Wpf.Toolkit.dll" Name="Xceed.Wpf.Toolkit.dll" Source="$(var.JCHVRF_New_TargetDir)Xceed.Wpf.Toolkit.dll" />
+      </Component>
+      <Component Id="Prism.Unity.Wpf.dll" Guid="d47d934e-58a7-4d47-9962-4bf5d98dc3a4">
+        <File Id="Prism.Unity.Wpf.dll" Name="Prism.Unity.Wpf.dll" Source="$(var.JCHVRF_New_TargetDir)Prism.Unity.Wpf.dll" />
+      </Component>
+      <Component Id="Prism.Wpf.dll" Guid="1b297d1d-dde8-45a0-93c6-e65fe6787411">
+        <File Id="Prism.Wpf.dll" Name="Prism.Wpf.dll" Source="$(var.JCHVRF_New_TargetDir)Prism.Wpf.dll" />
+      </Component>
+      <Component Id="MaterialDesignThemes.Wpf.dll" Guid="faac125d-2102-4bc0-bb9a-0b7c74cd3983">
+        <File Id="MaterialDesignThemes.Wpf.dll" Name="MaterialDesignThemes.Wpf.dll" Source="$(var.JCHVRF_New_TargetDir)MaterialDesignThemes.Wpf.dll" />
+      </Component>
+      <Component Id="Microsoft.Expression.Interactions.dll" Guid="e0c39b9b-d936-445a-957d-8c9dac02305f">
+        <File Id="Microsoft.Expression.Interactions.dll" Name="Microsoft.Expression.Interactions.dll" Source="$(var.JCHVRF_New_TargetDir)Microsoft.Expression.Interactions.dll" />
+      </Component>
+      <Component Id="Xceed.Wpf.AvalonDock.dll" Guid="4499acef-dd79-4f14-ba55-9dc52b3f78ba">
+        <File Id="Xceed.Wpf.AvalonDock.dll" Name="Xceed.Wpf.AvalonDock.dll" Source="$(var.JCHVRF_New_TargetDir)Xceed.Wpf.AvalonDock.dll" />
+      </Component>
+      <Component Id="Xceed.Wpf.AvalonDock.Themes.VS2010.dll" Guid="fd821eb6-7cfe-4cff-a7e6-4645d64dfbb9">
+        <File Id="Xceed.Wpf.AvalonDock.Themes.VS2010.dll" Name="Xceed.Wpf.AvalonDock.Themes.VS2010.dll" Source="$(var.JCHVRF_New_TargetDir)Xceed.Wpf.AvalonDock.Themes.VS2010.dll" />
+      </Component>
+      <Component Id="Xceed.Wpf.AvalonDock.Themes.Aero.dll" Guid="db87f789-667b-4c95-af51-765b3640d79d">
+        <File Id="Xceed.Wpf.AvalonDock.Themes.Aero.dll" Name="Xceed.Wpf.AvalonDock.Themes.Aero.dll" Source="$(var.JCHVRF_New_TargetDir)Xceed.Wpf.AvalonDock.Themes.Aero.dll" />
+      </Component>
+      <Component Id="Xceed.Wpf.AvalonDock.Themes.Metro.dll" Guid="40a163af-4e39-4bb7-9682-e40cc08ed41e">
+        <File Id="Xceed.Wpf.AvalonDock.Themes.Metro.dll" Name="Xceed.Wpf.AvalonDock.Themes.Metro.dll" Source="$(var.JCHVRF_New_TargetDir)Xceed.Wpf.AvalonDock.Themes.Metro.dll" />
+      </Component>
+      <Component Id="log4net.dll" Guid="ac45967c-c54a-40bc-8a53-01168b279591">
+        <File Id="log4net.dll" Name="log4net.dll" Source="$(var.JCHVRF_New_TargetDir)log4net.dll" />
+      </Component>
+      <Component Id="Prism.dll" Guid="6c6f65ac-dbb0-4c13-897b-af4fd977a154">
+        <File Id="Prism.dll" Name="Prism.dll" Source="$(var.JCHVRF_New_TargetDir)Prism.dll" />
+      </Component>
+      <Component Id="Unity.Abstractions.dll" Guid="99c522db-cc93-42e7-995e-724f92625ce4">
+        <File Id="Unity.Abstractions.dll" Name="Unity.Abstractions.dll" Source="$(var.JCHVRF_New_TargetDir)Unity.Abstractions.dll" />
+      </Component>
+      <Component Id="JCBase.UI.dll" Guid="b8f7e202-4753-4c7f-b499-d5ce68618c12">
+        <File Id="JCBase.UI.dll" Name="JCBase.UI.dll" Source="$(var.JCHVRF_New_TargetDir)JCBase.UI.dll" />
+      </Component>
+      <Component Id="Register.dll" Guid="a0ecf600-7dd2-4ade-be9e-68acb78c0477">
+        <File Id="Register.dll" Name="Register.dll" Source="$(var.Register_TargetDir)Register.dll" />
+      </Component>
+      <Component Id="itextsharp.dll" Guid="c825ec2b-8ce3-4cde-b270-0cf136b6f28e">
+        <File Id="itextsharp.dll" Name="itextsharp.dll" Source="$(var.JCHVRF_New_TargetDir)itextsharp.dll" />
+      </Component>
+      <Component Id="CommonServiceLocator.dll" Guid="deb6733a-8d33-4dc3-8855-3a643b551f3c">
+        <File Id="CommonServiceLocator.dll" Name="CommonServiceLocator.dll" Source="$(var.JCHVRF_New_TargetDir)CommonServiceLocator.dll" />
+      </Component>
+      <Component Id="Unity.Container.dll" Guid="9edba863-b516-498e-a2db-d76a4b5a69e0">
+        <File Id="Unity.Container.dll" Name="Unity.Container.dll" Source="$(var.JCHVRF_New_TargetDir)Unity.Container.dll" />
+      </Component>
+      <Component Id="MaterialDesignColors.dll" Guid="48054025-0043-490a-aa82-b4e53d369ffb">
+        <File Id="MaterialDesignColors.dll" Name="MaterialDesignColors.dll" Source="$(var.JCHVRF_New_TargetDir)MaterialDesignColors.dll" />
+      </Component>
+      <Component Id="SyncAgent.exe" Guid="3eebade3-bda3-4077-9d8f-e8df0bfa6cdb">
+        <File Id="SyncAgent.exe" Name="SyncAgent.exe" Source="$(var.SyncAgent_TargetDir)SyncAgent.exe" />
+      </Component>
+      <Component Id="SyncAgent.exe.config" Guid="d71f3d1c-4fad-476c-a3b4-01bb6bde94bf">
+        <File Id="SyncAgent.exe.config" Name="SyncAgent.exe.config" Source="$(var.SyncAgent_TargetDir)SyncAgent.exe.config" />
+        </Component>
+      <Component Id="AutoMapper.dll" Guid="68b577db-e9ab-48c8-9626-2dfe201f33f8">
+        <File Id="AutoMapper.dll" Name="AutoMapper.dll" Source="$(var.JCHVRF.BLL_TargetDir)AutoMapper.dll" />
+      </Component>
+      <Component Id="System.ValueTuple.dll" Guid="baedc055-c23f-4a41-bc5e-02f6dc24366f">
+        <File Id="System.ValueTuple.dll" Name="System.ValueTuple.dll" Source="$(var.JCHVRF_New_TargetDir)System.ValueTuple.dll" />
+      </Component>
+      <Component Id="Svg.dll" Guid="1aa9becb-eae9-452d-ac3f-e57798b1fec1">
+        <File Id="Svg.dll" Name="Svg.dll" Source="$(var.JCHVRF_New_TargetDir)Svg.dll" />
+      </Component>
+      
+  </ComponentGroup>
+	</Fragment>
+    
+</Wix>

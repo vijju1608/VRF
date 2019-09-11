@@ -1,0 +1,195 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.AddNewClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        x:Name="NewClientInfoWindow"
+         xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:ext1="clr-namespace:JCHVRF_New.LanguageData"
+          xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+        xmlns:jchctrl="clr-namespace:JCHVRF_New.Common.Controls"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d"
+        Loaded="NewClientInfoWindow_Loaded"
+        TextBlock.Foreground="#333333"
+        Width="700" >
+
+    <UserControl.Resources>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+        <ControlTemplate x:Key="eTemplate">
+            <DockPanel LastChildFill="True">
+
+                <TextBlock DockPanel.Dock="Right" Foreground="Blue" FontSize="13" Text="{Binding ElementName=adorned,Path=AdornedElement.(Validation.Errors)[0].ErrorContent}" >
+
+                </TextBlock>
+
+                <Border BorderBrush="Red" BorderThickness="2">
+
+                    <AdornedElementPlaceholder x:Name="adorned"/>
+
+                </Border>
+
+            </DockPanel>
+        </ControlTemplate>
+        <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="Height" Value="40"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <DockPanel>
+       
+        <md:Snackbar HorizontalAlignment="Stretch" DockPanel.Dock="Top" IsActive="{Binding IsError}"  Grid.Row="1" Background="LightPink" BorderBrush="DeepPink" >
+            <md:SnackbarMessage  Foreground="Gray" >
+                <md:SnackbarMessage.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <jchctrl:JCHIcon AwesomeIcon="ExclamationCircle" Width="20" Height="20"/>
+                        <TextBlock  Margin="20,0,0,0"  Text="{Binding ANCErrorMessage}"></TextBlock>
+                    </StackPanel>
+                </md:SnackbarMessage.Content>
+            </md:SnackbarMessage>
+        </md:Snackbar>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="0,20,0,0">
+            <Grid.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontSize" Value="14"></Setter>
+                    <Setter Property="FontStyle" Value="Normal"></Setter>
+                </Style>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="7"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="16"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="7"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="16"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="7"/>
+                <RowDefinition Height="auto"/><!--10-->
+                <RowDefinition Height="16"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="7"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="16"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="7"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="16"/>
+                <RowDefinition Height="auto"/><!--20-->
+                <RowDefinition Height="7"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition Width="30"></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="txtBlockCompanyName" Grid.Row="0" Grid.Column="0"  Text="{ext1:LocalisedText Key=COMPANY_NAME}"></TextBlock>
+
+            <TextBox Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Left" md:HintAssist.Hint="{ext1:LocalisedText Key=COMPANY_NAME}" VerticalContentAlignment="Center" FocusManager.FocusedElement="{Binding ElementName=txtCompanyName}"  TabIndex="0"  x:Name="txtCompanyName"
+                                   Text="{Binding Path=TxtCompanyName}">
+            </TextBox>
+            <TextBlock Name="txtBlockStreetAddress" Grid.Row="4" Grid.Column="0" Text="{ext1:LocalisedText Key=STREETADDRESS}"></TextBlock>
+
+            <TextBox  Grid.Row="6" Grid.Column="0"  HorizontalContentAlignment="Left" VerticalContentAlignment="Center"
+                                   Text="{Binding Path=TxtStreetAddress}" md:HintAssist.Hint="{ext1:LocalisedText Key=STREETADDRESS}" >
+            </TextBox>
+
+            <TextBlock Name="textBlockSubUrb"  Grid.Row="8" Grid.Column="0" Text="{ext1:LocalisedText Key=SUBURB}"></TextBlock>
+            <TextBox Grid.Row="10" Grid.Column="0" Text="{Binding Path=TxtSuburb}"
+                           HorizontalContentAlignment="Left" VerticalContentAlignment="Center" md:HintAssist.Hint="{ext1:LocalisedText Key=SUBURB}">
+            </TextBox>
+            <TextBlock Name="textBlockTownCity"  Grid.Row="12" Grid.Column="0" Text="{ext1:LocalisedText Key=TOWN_CITY}"></TextBlock>
+            <TextBox Grid.Row="14" Grid.Column="0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"
+                                 Text="{Binding Path=TxtTownCity}" md:HintAssist.Hint="{ext1:LocalisedText Key=TOWN_CITY}">
+
+            </TextBox>
+            <TextBlock Name="textBlockCountry"  Grid.Row="16"   Grid.Column="0" Text="{ext1:LocalisedText Key=COUNTRY}"></TextBlock>
+            <TextBox Grid.Row="18" Grid.Column="0"  Text="{Binding Path=TxtCountry}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" md:HintAssist.Hint="{ext1:LocalisedText Key=COUNTRY}" >
+            </TextBox>
+
+            <TextBlock Name="textBlockGpsPosition"  Grid.Row="20"  Grid.Column="0" Text="{ext1:LocalisedText Key=GPS_POSITION}"></TextBlock>
+
+            <StackPanel Grid.Row="22" Grid.Column="0" Orientation="Horizontal" >
+                <TextBox   Width="250" Text="{Binding Path=TxtGpsPosition}" md:HintAssist.Hint="{ext1:LocalisedText Key=GPS_POSITION}" VerticalContentAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Left" />
+
+                <Image Source="/Image/u621.png" Margin="35,0,0,0" />
+
+            </StackPanel>
+            <TextBlock  Name="textBlockContactName" Grid.Row="0" Grid.Column="2"   
+                                    FontSize="14" FontStyle="Normal" >
+                <Run Text="{ext1:LocalisedText Key=CONTACT_NAME}" Foreground="Black"/><Run Text=" "/><Run Text="*" Foreground="Red"/>
+            </TextBlock>
+
+            <TextBox Grid.Row="2" Grid.Column="2" MinWidth="70"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left"
+                                  Text="{Binding Path=TxtContactName,Mode=TwoWay,ValidatesOnNotifyDataErrors=False, ValidatesOnDataErrors=False,UpdateSourceTrigger=PropertyChanged}" md:HintAssist.Hint="{ext1:LocalisedText Key=CONTACT_NAME}">
+
+
+            </TextBox>
+
+            <TextBlock Name="txtBlockPhone" Grid.Row="4" Grid.Column="2"  Text="{ext1:LocalisedText Key=PHONE}"></TextBlock>
+            <TextBox x:Name="txtPhone"  MaxLength="13"  Grid.Row="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Text="{Binding Path=TxtPhone,Mode=TwoWay}" Grid.Column="2" 
+                              md:HintAssist.Hint="{ext1:LocalisedText Key=PHONE}" >
+
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="PreviewTextInput">
+                        <prism:InvokeCommandAction Command="{Binding PhoneValidationDBCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+
+            </TextBox>
+
+            <!--<Label Name="lblPhone" Width="126"  Grid.Column="2"  HorizontalAlignment="Left" FontSize="10" Height="15" Padding="1" Foreground="Red" VerticalAlignment="Bottom" Content="{Binding lblPhoneNumber }" />-->
+            <TextBlock Name="textBlockContactEmail" Grid.Row="8" Grid.Column="2" Text="{ext1:LocalisedText Key=CONTACT_EMAIL}"></TextBlock>
+
+            <TextBox Grid.Row="10" Grid.Column="2" MinWidth="70" 
+                                  Text="{Binding Path=TxtContactEmail}" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  md:HintAssist.Hint="{ext1:LocalisedText Key=CONTACT_EMAIL}">
+
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="LostFocus">
+                        <i:InvokeCommandAction Command="{Binding EmailValidationDBCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+
+            </TextBox>
+
+            <TextBlock Name="textBlockIdNumber"  Grid.Row="12" Grid.Column="2" Text="{ext1:LocalisedText Key=ID_NUMBER}"></TextBlock>
+            <TextBox Grid.Row="14" Grid.Column="2" Text="{Binding Path =TxtIdNumber}"  md:HintAssist.Hint="{ext1:LocalisedText Key=ID_NUMBER}" HorizontalContentAlignment="Left" VerticalContentAlignment="Center">
+
+            </TextBox>
+
+            <Image Source="../Image/map.png"  Grid.Row="16" Grid.Column="2" Grid.RowSpan="8"/>
+            <Label  Grid.Row="23">
+                <TextBlock FontSize="14" FontStyle="Italic" TextWrapping="Wrap" Text="{ext1:LocalisedText Key=DRAG_THE_MARKER_MSG}"></TextBlock>
+            </Label>
+
+            <StackPanel x:Name="stkProjectInfoButton" HorizontalAlignment="Right" Orientation="Horizontal" Grid.Row="24" Margin="0,0,0,0"  Grid.Column="3">
+                <jchctrl:JCHButton Content="{ext1:LocalisedText Key=CANCEL}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding CancelNewClientClickedCommand}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </jchctrl:JCHButton>
+
+                <jchctrl:JCHButton Type="Primary" Content="{ext1:LocalisedText Key=ADD}" Margin="10,0,0,0">
+
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding AddNewClientClickedCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+
+                </jchctrl:JCHButton>
+            </StackPanel>
+
+        </Grid>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>
+

@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.ucDesignerCanvas"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:JCHVRF_New"
+             xmlns:control="clr-namespace:JCHVRF_New.Views"
+             xmlns:af="clr-namespace:Lassalle.WPF.Flow;assembly=Lassalle.WPF.Flow"
+             xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:prism="http://prismlibrary.com/"
+             mc:Ignorable="d"
+             prism:ViewModelLocator.AutoWireViewModel="True" Loaded="UserControl_Loaded"
+              xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:jchctrl="clr-namespace:JCHVRF_New.Common.Controls"
+             Unloaded="UserControl_Unloaded">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <TextBlock x:Key="CursorGrab" Cursor="/../Common/UI/Resources/Cursors/grab (1).cur" />
+            <TextBlock x:Key="CursorGrabbing" Cursor="/../Common/UI/Resources/Cursors/Hand Move Grab.cur" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <ScrollViewer x:Name="ScrollViewer"
+                          CanContentScroll="True"
+                          PanningMode="Both"
+                          IsTabStop="False" 
+                          KeyDown="ScrollViewer_KeyDown"
+                          >
+            <af:AddFlow Name="addflow" GridDraw="True" GridSnap="True" LinkDeleted="Addflow_LinkDeleted" MouseEnter="Addflow_MouseEnter" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" GridColor="DarkGray" Drop="addflow_Drop" AllowDrop="True" MouseDown="Addflow_MouseDown" MouseUp="Addflow_MouseUp" MouseMove="addflow_MouseMove" MouseRightButtonUp="addflow_rightClick" SelectedItemsLayouting="Addflow_SelectedItemsLayouting">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <prism:InvokeCommandAction Command="{Binding CanvasItemSelectedCommand}"  TriggerParameterPath="Item"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </af:AddFlow>
+        </ScrollViewer>
+        <Label Name="lblCanvasError" Height="30" Width="420" VerticalAlignment="Bottom" HorizontalAlignment="Center"
+               Margin="26,0,26,30" />
+        <DockPanel LastChildFill="True" Width="750" Margin="0,0,20,330">
+
+            <md:Snackbar DockPanel.Dock="Top" Name="Snake" HorizontalAlignment="Stretch"  Margin="0,0,20,0" IsActive="False" Height="Auto"  Background="SkyBlue" BorderBrush="Blue" >
+                <md:SnackbarMessage Foreground="Gray" >
+                    <md:SnackbarMessage.Content>
+                        <StackPanel Orientation="Horizontal">
+                            <jchctrl:JCHIcon AwesomeIcon="ExclamationCircle" Foreground="Blue" Width="20" Height="20" HorizontalAlignment="Left"/>
+                            <TextBlock Name="tbError" Foreground="Black" Margin="10,0,0,0" Text =""></TextBlock>
+                        </StackPanel>
+                    </md:SnackbarMessage.Content>
+                </md:SnackbarMessage>
+            </md:Snackbar>
+
+        </DockPanel>
+
+        <local:WiringUserControl x:Name="Wiring" Visibility="Hidden" />
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Margin="0,0,15,0">
+            <StackPanel>
+                <Image Grid.Row="0" Source="/Image/TypeImages/auto wiring icon.png" Name="ToggleImage" VerticalAlignment="Top"
+                       Height="50" Width="50" Margin="6,5,5,0" MouseLeftButtonDown="UcDesignerCanvasPipingWiringToggle" />
+
+                <Border Name="brdToggleimg" BorderBrush="WhiteSmoke" Visibility="Visible"
+                        MouseLeftButtonDown="UcDesignerCanvasPipingWiringToggle">
+                    <Canvas MouseLeftButtonDown="UcDesignerCanvasPipingWiringToggle">
+                        <Path Fill="White" Stroke="LightGray" StrokeThickness="3" MouseLeftButtonDown="UcDesignerCanvasPipingWiringToggle">
+                            <Path.Data>
+                                <EllipseGeometry RadiusX="21.028" RadiusY="21.028" Center="22.028,23.028" />
+                            </Path.Data>
+                        </Path>
+                        <TextBlock Grid.Row="0" Width="34" LineStackingStrategy="BlockLineHeight"
+                                           LineHeight="7" TextAlignment="Right" FontSize="8" FontWeight="Bold" Foreground="Black"
+                                           MouseLeftButtonDown="UcDesignerCanvasPipingWiringToggle" Canvas.Top="22" Height="9">
+                                   Canvas
+                        </TextBlock>
+                    </Canvas>
+                </Border>
+
+            </StackPanel>
+
+            <Button Margin="0,100,0,0" Width="35" Height="35" Padding="8" BorderBrush="{StaticResource OtherColor5}" Background="White" Style="{StaticResource CapsuleButton}">
+                <Image Source="/Image/TypeImages/Pan tool.png" Name="btnPanning"
+                   MouseLeftButtonDown="UcDesignerCanvasPanning" />
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.25"/>
+                </Button.Effect>
+            </Button>
+
+            <Image Margin="0,15,0,0" Width="35" Source="/Image/TypeImages/ZoomIn.png" Name="btnZoomIn"
+                     MouseLeftButtonDown="UcDesignerCanvasZoomIn">
+                <Image.Effect>
+                    <DropShadowEffect Opacity="0.25"/>
+                </Image.Effect>
+            </Image>
+            
+            <Image Width="35" Source="/Image/TypeImages/ZoomOut.png" Name="btnZoomOut"
+                   MouseLeftButtonDown="UcDesignerCanvasZoomOut" >
+                <Image.Effect>
+                    <DropShadowEffect Opacity="0.25"/>
+                </Image.Effect>
+            </Image>
+
+            <Button Margin="0,15,0,0" Width="35" Height="35" Padding="8" BorderBrush="{StaticResource OtherColor5}" Background="White" Style="{StaticResource CapsuleButton}">
+                <Image  Source="/Image/TypeImages/Locate.png" Name="btnReAlign"
+                   MouseLeftButtonDown="UcDesignerCanvasReAlign" />
+                <Button.Effect>
+                    <DropShadowEffect Opacity="0.25"/>
+                </Button.Effect>
+            </Button>
+        </StackPanel>
+        <ScrollViewer x:Name="HEScrollViewer"
+                      CanContentScroll="True"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Visible"
+                      Padding="1"
+                      Background="White"
+                      BorderBrush="Transparent"
+                      BorderThickness="0"
+                      Margin="1"
+                      PanningMode="Both"
+                      IsTabStop="False">
+            <Grid Height="Auto" Width="Auto">
+                <control:HeatExchangerCanvasEquipment x:Name="heatExchangerCanvas" MouseDown="OnHeatExchangerClick" Margin="10,0,-10,0" />
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

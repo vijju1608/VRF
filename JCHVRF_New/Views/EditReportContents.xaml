@@ -1,0 +1,336 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.EditReportContents"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JCHVRF_New.Views"
+        xmlns:cls="clr-namespace:JCHVRF.Model.New"
+        xmlns:CustomControls="clr-namespace:CustomControls"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d" 
+        xmlns:conv="clr-namespace:JCHVRF_New.Common.UI.Converters"
+        xmlns:rad="clr-namespace:JCHVRF_New"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"                       
+        MinWidth="950" Height="625"
+        xmlns:models="clr-namespace:JCHVRF_New.Model"
+        xmlns:controls="clr-namespace:JCHVRF_New.Common.Controls"
+         xmlns:ext1="clr-namespace:JCHVRF_New.LanguageData"
+          xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        d:DesignHeight="600" d:DesignWidth="300">
+    <UserControl.Resources>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+    </UserControl.Resources>
+    <StackPanel Margin="31,10,0,0">
+        <!--<TextBlock DockPanel.Dock="Top" Text="{ext1:LocalisedText Key=SELECT_REPORT_CONTENT}" FontSize="16" FontWeight="Bold"/>-->
+        <!--<Separator></Separator>-->
+        <Grid Height="171">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblGeneral" Content="{ext1:LocalisedText Key=GENERAL}" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" FontWeight="ExtraBlack" FontSize="12" />
+            <Label x:Name="lblSysyem" Content="{ext1:LocalisedText Key=System}" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left"  FontWeight="ExtraBlack" FontSize="12"/>
+            <CheckBox x:Name="uc_CheckBox_RptSelectAllModule" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=SELECT_ALL}" TabIndex="0"  Grid.RowSpan="2" IsChecked="{Binding uc_CheckBox_RptSelectAllModuleChecked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"  >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Checked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptSelectAllModuleCheckedCommand}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Unchecked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptSelectAllModuleUnCheckedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </CheckBox>
+            <CheckBox x:Name="uc_CheckBox_RptRoomInfo" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=ROOM_INFO}" TabIndex="1"  Grid.RowSpan="2"  IsChecked="{Binding IsRoomInfoChecked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Checked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptRoomInfoCheckedCommand}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Unchecked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptRoomInfoUnCheckedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </CheckBox>
+            <CheckBox x:Name="uc_CheckBox_RptOutdoorDetail" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=OUTDOOR_DETAIL}" TabIndex="2"  Grid.RowSpan="2"  IsChecked="{Binding IsOutdoorListChecked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Checked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptOutdoorDetailCheckedCommand}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Unchecked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptOutdoorDetailUnCheckedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </CheckBox>
+            <CheckBox  x:Name="uc_CheckBox_RptWiring" HorizontalAlignment="Left" Grid.Row="2" Grid.Column="2" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=WIRING}" TabIndex="3"  Grid.RowSpan="2"  IsChecked="{Binding IsWiringDiagramChecked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Checked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptWiringCheckedCommand}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Unchecked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptWiringUnCheckedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </CheckBox>
+            <CheckBox x:Name="uc_CheckBox_RptIndoorDetail" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="0" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=INDOOR_DETAIL}" TabIndex="4"  Grid.RowSpan="2"  IsChecked="{Binding IsIndoorListChecked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Checked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptIndoorDetailCheckedCommand}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Unchecked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptIndoorDetailUnCheckedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </CheckBox>
+            <CheckBox x:Name="uc_CheckBox_RptPiping" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=PIPING_INFORMATION}" TabIndex="5"  Grid.RowSpan="2"  IsChecked="{Binding IsPipingDiagramChecked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Checked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptPipingCheckedCommand}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Unchecked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptPipingUnCheckedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </CheckBox>
+            <CheckBox x:Name="uc_CheckBox_RptController" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="2" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=CONTROLLER}" TabIndex="6"  Grid.RowSpan="2"  IsChecked="{Binding IsControllerChecked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Checked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptControllerCheckedCommand}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Unchecked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptControllerUnCheckedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </CheckBox>
+            <CheckBox x:Name="uc_CheckBox_RptExchanger"  HorizontalAlignment="Left" Grid.Row="3" Grid.Column="3" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=TOTAL_HEAT_EXCHANGER}" TabIndex="7"  Grid.RowSpan="2"  IsChecked="{Binding IsExchangerChecked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Checked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptExchangerCheckedCommand}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Unchecked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_RptExchangerUnCheckedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </CheckBox>
+            <CheckBox x:Name="uc_CheckBox_Actual" HorizontalAlignment="Left" Grid.Row="5" Grid.Column="0" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=SHOW_ACTUAL_CAPACITY}" TabIndex="8"   IsChecked="{Binding IsActualCapacityChecked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Checked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_ActualCheckedCommand}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Unchecked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_ActualUnCheckedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </CheckBox>
+            <CheckBox x:Name="uc_CheckBox_Nominal" HorizontalAlignment="Left" Grid.Row="5" Grid.Column="1" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=SHOW_NOMINAL_CAPACITY}" TabIndex="9"   IsChecked="{Binding IsNormalCapacityChecked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Checked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_NominalCheckedCommand}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Unchecked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_NominalUnCheckedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </CheckBox>
+            <CheckBox x:Name="uc_CheckBox_IduCapacityW" HorizontalAlignment="Left" Visibility="{Binding Path=VisisbleIduCapacityW,Mode=TwoWay}" Grid.Row="5" Grid.Column="2" HorizontalContentAlignment="Right" Content="{ext1:LocalisedText Key=SHOW_IduCapacityW}" TabIndex="9"   IsChecked="{Binding IsIduCapacityW,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Checked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_IduCapacityWCheckedCommand}"/>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="Unchecked">
+                        <i:InvokeCommandAction Command="{Binding uc_CheckBox_IduCapacityWUnCheckedCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </CheckBox>
+        </Grid>
+        <Grid Height="325">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250" />
+                <ColumnDefinition Width="16" />
+                <ColumnDefinition Width="82"/>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="41"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="250"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label BorderBrush="LightGray"  Content="{ext1:LocalisedText Key=SELECTED_ITEMS}" Grid.Row="0" HorizontalAlignment="Left" FontSize="15" Width="250"  Background="LightGray"/>
+                <StackPanel  Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="1" Grid.Column="1">
+                    <Border BorderBrush="LightGray" BorderThickness="2,0,0,0" VerticalAlignment="Center"  Margin="0,0,0,0">
+                        <Button Name="BtnSearchSelectedItem" Background="Transparent" BorderThickness="0" VerticalAlignment="Center"  Margin="0,0,0,0" RenderTransformOrigin="-0.642,1.466" Height="34" Width="51" >
+                            <fa:ImageAwesome Icon="Search" HorizontalAlignment="Left"   VerticalAlignment="Top"  Height="16" Width="17" RenderTransformOrigin="6.2,2.333" >
+                                <fa:ImageAwesome.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-0.909"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </fa:ImageAwesome.RenderTransform>
+                            </fa:ImageAwesome>
+                        </Button>
+                    </Border>
+                    <TextBox x:Name ="txtSearchSelectedItem" BorderThickness="0,0,1,0"  FontSize="15" GotFocus="txtSearchSelectedItem_GotFocus" Opacity="0.6" LostFocus="txtSearchSelectedItem_LostFocus"  Height="38" Text="{ext1:LocalisedText Key=SEARCH}" VerticalAlignment="Bottom" TabIndex="10" Width="197" />
+                </StackPanel>
+                <ListBox BorderBrush="LightGray"  Background="Gainsboro" BorderThickness="1" Grid.Row="1" x:Name="lbRptOutdoorIncluded" Margin="0,30,0,0" Grid.RowSpan="2">
+                    <TreeView x:Name="treeView1"  TreeViewItem.Selected="treeView1_Selected" ItemsSource="{Binding LeftSideBarItems}" SelectedItemChanged="treeView1_OnSelectedItemChanged" >
+                        <TreeView.Resources>
+                            <Style TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
+                                <Setter Property="Padding" Value="3"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Setter Property="IsExpanded" Value="True"/>
+                            </Style>
+                            <HierarchicalDataTemplate DataType="{x:Type models:LeftSideBarItem}" ItemsSource="{Binding Children}">
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:ImageAwesome x:Name="SidebarParentIcon" Icon="{Binding Icon}"  Foreground="{StaticResource ForegroundBrush}"  Height="18"   />
+                                    <TextBlock x:Name="SidebarParentTextBlock" FontFamily="Arial" FontSize="10" VerticalAlignment="Center" Text="{Binding Header}" />
+                                </StackPanel>
+                                <HierarchicalDataTemplate.Triggers>
+                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeViewItem}, Path=IsSelected}" Value="True">
+                                        <Setter TargetName="SidebarParentIcon" Property="Foreground" Value="{StaticResource SelectedBrush}" />
+                                        <Setter TargetName="SidebarParentTextBlock" Property="Foreground" Value="{StaticResource SelectedBrush}" />
+                                    </DataTrigger>
+                                </HierarchicalDataTemplate.Triggers>
+                            </HierarchicalDataTemplate>
+                            <HierarchicalDataTemplate DataType="{x:Type models:LeftSideBarChild}" ItemsSource="{Binding Children}">
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:ImageAwesome x:Name="SidebarParentIcon" Icon="{Binding Icon}"  Height="12"   />
+                                    <Image Source="{Binding Icon}" Height="15"></Image>
+                                    <TextBlock x:Name="SidebarChildTextBlock" FontSize="10" FontFamily="Arial" Margin="5,0,0,0" Text="{Binding Header}" />
+                                </StackPanel>
+                                <HierarchicalDataTemplate.Triggers>
+                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeViewItem}, Path=IsSelected}" Value="True">
+                                        <Setter TargetName="SidebarChildTextBlock" Property="Foreground" Value="{StaticResource SelectedBrush}" />
+                                    </DataTrigger>
+                                </HierarchicalDataTemplate.Triggers>
+                            </HierarchicalDataTemplate>
+                        </TreeView.Resources>
+                    </TreeView>
+                </ListBox>
+            </Grid>
+            <Grid  Grid.Column="4" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="41"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="250"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label BorderBrush="LightGray"  Content="{ext1:LocalisedText Key=EXCLUDED_ITEMS}" Grid.Row="0" FontSize="15"  Background="LightGray" Margin="0,0,1,0"/>
+                <StackPanel  Orientation="Horizontal"  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="1" Grid.Column="2">
+                    <Border BorderBrush="LightGray" BorderThickness="2,0,0,0" VerticalAlignment="Center"  Margin="0,0,0,0">
+                        <Button Name="BtnSearchExcludedItem" Background="Transparent" BorderThickness="0" VerticalAlignment="Center"  Margin="0,0,0,0" RenderTransformOrigin="-0.642,1.466" Height="34" Width="51"  >
+                            <fa:ImageAwesome Icon="Search" HorizontalAlignment="Left"   VerticalAlignment="Top"  Height="16" Width="17" RenderTransformOrigin="6.2,2.333" >
+                                <fa:ImageAwesome.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="-0.909"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </fa:ImageAwesome.RenderTransform>
+                            </fa:ImageAwesome>
+                        </Button>
+                    </Border>
+                    <TextBox  x:Name ="txtSearchExcludedItem" BorderThickness="0,0,1,0"  FontSize="15" GotFocus="txtSearchSelectedItem_GotFocus" Opacity="0.6" LostFocus="txtSearchSelectedItem_LostFocus"  Height="34" Text="{ext1:LocalisedText Key=SEARCH}" VerticalAlignment="Bottom" TabIndex="10" Width="197" />
+                </StackPanel>
+                <ListBox BorderBrush="LightGray"  Background="Gainsboro" BorderThickness="1" Grid.Row="1" Margin="0,30,0,0" Grid.RowSpan="2" >
+                    <TreeView   TreeViewItem.Selected="treeView2_Selected"  x:Name="treeView2" ItemsSource="{Binding treeView2.Items}">
+                        <TreeView.Resources>
+                            <Style TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
+                                <Setter Property="Padding" Value="3"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Setter Property="IsExpanded" Value="True"/>
+                            </Style>
+                            <HierarchicalDataTemplate DataType="{x:Type models:LeftSideBarItem}" ItemsSource="{Binding Children}">
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:ImageAwesome x:Name="SidebarParentIcon" Icon="{Binding Icon}"  Foreground="{StaticResource ForegroundBrush}"  Height="18"   />
+                                    <TextBlock x:Name="SidebarParentTextBlock" FontFamily="Arial" FontSize="10" VerticalAlignment="Center" Text="{Binding Header}" />
+                                </StackPanel>
+                                <HierarchicalDataTemplate.Triggers>
+                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeViewItem}, Path=IsSelected}" Value="True">
+                                        <Setter TargetName="SidebarParentIcon" Property="Foreground" Value="{StaticResource SelectedBrush}" />
+                                        <Setter TargetName="SidebarParentTextBlock" Property="Foreground" Value="{StaticResource SelectedBrush}" />
+                                    </DataTrigger>
+                                </HierarchicalDataTemplate.Triggers>
+                            </HierarchicalDataTemplate>
+                            <HierarchicalDataTemplate DataType="{x:Type models:LeftSideBarChild}" ItemsSource="{Binding Children}">
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:ImageAwesome x:Name="SidebarParentIcon" Icon="{Binding Icon}"  Height="12"   />
+                                    <Image Source="{Binding Icon}" Height="15"></Image>
+                                    <TextBlock x:Name="SidebarChildTextBlock" FontSize="10" FontFamily="Arial" Margin="5,0,0,0" Text="{Binding Header}" />
+                                </StackPanel>
+                                <HierarchicalDataTemplate.Triggers>
+                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=TreeViewItem}, Path=IsSelected}" Value="True">
+                                        <Setter TargetName="SidebarChildTextBlock" Property="Foreground" Value="{StaticResource SelectedBrush}" />
+                                    </DataTrigger>
+                                </HierarchicalDataTemplate.Triggers>
+                            </HierarchicalDataTemplate>
+                        </TreeView.Resources>
+                    </TreeView>
+                </ListBox>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="38*"/>
+                    <ColumnDefinition Width="45*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="22"/>
+                    <RowDefinition Height="22"/>
+                    <RowDefinition Height="22"/>
+                    <RowDefinition Height="22"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button Name="AddButton"  Grid.Row="4" VerticalAlignment="Bottom"  Click="AddButton_Click" TabIndex="13" Background="Transparent" BorderBrush="{StaticResource BrandPaletteColor1}" Width="80" Grid.ColumnSpan="2" >
+                    <fa:ImageAwesome Icon="AngleDoubleRight" HorizontalAlignment="Center"   VerticalAlignment="Center"  Height="15" Width="24"  >
+                    </fa:ImageAwesome>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding jcbtnRptSystemEx_Click}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+                <Button x:Name="RemoveButton" Background="Transparent" Grid.Row="6" VerticalAlignment="Center"  Click="RemoveButton_Click" HorizontalAlignment="Left" TabIndex="15"  BorderBrush="{StaticResource BrandPaletteColor1}" Margin="2,0,0,5" Width="80" Grid.ColumnSpan="2" >
+                    <fa:ImageAwesome Icon="AngleDoubleLeft" HorizontalAlignment="Center"   VerticalAlignment="Center"  Height="15" Width="24"  />
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <i:InvokeCommandAction Command="{Binding jcbtnRptSystemIn_Click}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Margin="384,5,0,0"  Height="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" ></ColumnDefinition>
+                <ColumnDefinition Width="5" ></ColumnDefinition>
+                <ColumnDefinition Width="Auto" ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <controls:JCHButton Content="{ext1:LocalisedText Key=CANCEL}" VerticalAlignment="Top" Grid.Column="0" TabIndex="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="left" 
+                    Command="{Binding CancelClickCommand, Mode=OneWay}">
+            </controls:JCHButton>
+            <controls:JCHButton Type="Primary" Content="{ext1:LocalisedText Key=APPLY}"  VerticalAlignment="Top" Grid.Column="2" TabIndex="17" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="15"  HorizontalAlignment="Right"   Command="{Binding Apply_Click, Mode=OneWay}"
+                    />
+
+        </Grid>
+
+    </StackPanel>
+</UserControl>
+
+

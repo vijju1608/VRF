@@ -1,0 +1,110 @@
+﻿<Window x:Class="JCHVRF_New.Views.CreateSystemWizard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JCHVRF_New.Views"
+        xmlns:cls="clr-namespace:JCHVRF.Model.New"
+        xmlns:CustomControls="clr-namespace:CustomControls"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        mc:Ignorable="d"
+        xmlns:conv="clr-namespace:JCHVRF_New.Common.UI.Converters"
+        xmlns:rad="clr-namespace:JCHVRF_New"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+          xmlns:ext1="clr-namespace:JCHVRF_New.LanguageData"
+          xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        prism:ViewModelLocator.AutoWireViewModel="True" 
+        xmlns:jchctrl="clr-namespace:JCHVRF_New.Common.Controls"
+        MinWidth="950" Height="600"
+        x:Name="SystemWizard">
+    <Window.Resources>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+        <Style TargetType="TabItem" BasedOn="{StaticResource ProgressBarTab}">
+            <Setter Property="MinWidth" Value="140"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{ext1:LocalisedText Key=NEWPSYSTEM_CREATE}" FontSize="16" FontWeight="Bold" Margin="50,0,0,0" Grid.Row="0" VerticalAlignment="Center"/>
+        <TabControl SelectedIndex="{Binding SelectedTabIndex}" IsTabStop="False" IsManipulationEnabled="False" Margin="20,25,0,25"  x:Name="MainTabControl" BorderThickness="0" Background="White" Grid.Row="1">
+            <TabItem Header="{ext1:LocalisedText Key=TYPE}" Name="tabType" HorizontalContentAlignment="Left" HorizontalAlignment="Left" IsEnabled="True" FontSize="14">
+                <local:TypeInfo IsSelected="{Binding Path=IsSelected, ElementName=tabType}"/>
+            </TabItem>
+            <TabItem Header="{ext1:LocalisedText Key=FLOOR}" Visibility="{Binding Path=FloorVisibility}" HorizontalContentAlignment="Left" Name="tbFloor">
+                <local:FloorTab Visibility="{Binding Path=FloorVisibility}"/>
+            </TabItem>
+            <TabItem Header="{ext1:LocalisedText Key=ODU_INFO}" Visibility="{Binding Path=IduVisibility}" Name="tbOutdoor">
+                <local:OutDoorUnitInfoView Visibility="{Binding Path=IduVisibility}"/>
+            </TabItem>
+            <TabItem Header="{ext1:LocalisedText Key=INDOOR_UNIT_INFO}" Name="IndoorUnit" Visibility="{Binding Path=IduVisibility}">
+                <ScrollViewer  Height="Auto">
+                    <local:IndoorUnitInfoView/>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- ACC - RAG -->
+            <!-- Heat Exchanger Unit Info tab -->
+            <TabItem  Header="{ext1:LocalisedText Key=TOTAL_HEAT_EXCHANGER}" Name="HeatExchInfo"  Visibility="{Binding Path=TheuInfoVisibility}"  IsEnabled="True" HorizontalContentAlignment="Left" HorizontalAlignment="Left" FontSize="14">
+                <ScrollViewer  Height="Auto" >
+                    <local:TotalHeatExUnitInfo IsSelected="{Binding Path=IsSelected, ElementName=HeatExchInfo}" Visibility="{Binding Path=TheuInfoVisibility}"/>
+                </ScrollViewer>
+            </TabItem>
+
+        </TabControl>
+
+        <!--Wizard Buttons-[START]-->
+        <StackPanel Grid.Row="2" x:Name="stkWizardButtons" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <jchctrl:JCHButton Width="140" Content="{ext1:LocalisedText Key=CANCEL}" 
+                                    FontSize="14" 
+                    Command="{Binding CancelClickCommand, Mode=OneWay}"
+                    CommandParameter="{Binding ElementName=SystemWizard}"/>
+
+            <jchctrl:JCHButton Margin="5,0,0,0" Width="140" 
+                               Type="Secondary"
+                    Content="{ext1:LocalisedText Key=PREVIOUS}" 
+                    FontSize="14"                     
+                    Command="{Binding PreviousClickCommand}"
+                    Visibility="{Binding ElementName=MainTabControl, Path=SelectedIndex, Converter={conv:InvertIntComparerToVisibilityConverter}, ConverterParameter=0}"
+                                    />
+
+            <jchctrl:JCHButton Margin="5,0,0,0" Width="140" Content="{ext1:LocalisedText Key=NEXT}" Type="Primary"
+                                    FontSize="14">
+                <jchctrl:JCHButton.Visibility>
+                    <!-- ACC - RAG -->
+                    <Binding Path="NextButtonVisibility"/>
+                </jchctrl:JCHButton.Visibility>
+
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding ElementName=MainTabControl, Path=SelectedItem.Content.DataContext.NextClickCommand}"/>
+                        <i:InvokeCommandAction Command="{Binding NextClickCommand}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+
+            </jchctrl:JCHButton>
+
+            <jchctrl:JCHButton Margin="5,0,0,0" Width="140" x:Name="CreateButton" Content="{ext1:LocalisedText Key=CREATE}"
+                    Command="{Binding CreateClickCommand, Mode=OneWay}"
+                    CommandParameter="{Binding ElementName=SystemWizard}"
+Type="Primary"
+                    FontSize="14">
+                <jchctrl:JCHButton.Visibility>
+                    <!-- ACC - RAG -->
+                    <Binding Path="CreateButtonVisibility"/>
+                </jchctrl:JCHButton.Visibility>
+                <jchctrl:JCHButton.IsEnabled>
+                    <Binding Path="CreateButtonEnable"/>
+                </jchctrl:JCHButton.IsEnabled>
+            </jchctrl:JCHButton>
+                            </StackPanel>
+        <!--Wizard Buttons-[END]-->
+
+    </Grid>
+
+</Window>

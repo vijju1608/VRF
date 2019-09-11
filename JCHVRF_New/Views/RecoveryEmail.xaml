@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.RecoveryEmail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+               xmlns:jchctrl="clr-namespace:JCHVRF_New.Common.Controls"
+                 xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+             xmlns:local="clr-namespace:JCHVRF_New.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="800">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="0,10" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBlock Text="Did you forget username or password?" FontSize="25" HorizontalAlignment="Left" TextWrapping="Wrap" Width="350" FontFamily="Arial"></TextBlock>
+            <TextBlock Text="Select recovery method below" FontSize="15" FontWeight="SemiBold"></TextBlock>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <RadioButton IsChecked="True"></RadioButton>
+                <TextBlock Text="Enter your recovery email adress" Margin="5,0"></TextBlock>
+            </StackPanel>
+            <TextBlock Text="Email Address"></TextBlock>
+            <TextBox md:HintAssist.Hint="name@example.com" Height="40" Width="380" Margin="0,5" HorizontalAlignment="Left" Text="{Binding RocoveryEmail}"></TextBox>
+            <jchctrl:JCHButton Content="Submit" Height="50" Type="Primary" Margin="5">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Click">
+                        <i:InvokeCommandAction Command="{Binding RecoveryEmailSubmitClick}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </jchctrl:JCHButton>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.Activation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JCHVRF_New.Views"
+        mc:Ignorable="d"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ext1="clr-namespace:JCHVRF_New.LanguageData"
+        xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+        Height="450" Width="800">
+    <UserControl.Resources>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+    </UserControl.Resources>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <UserControl.Background>
+        <ImageBrush ImageSource="/Image/VRF.jpg" ></ImageBrush> 
+    </UserControl.Background>
+    <Grid Margin="0, 120,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <TextBlock Name="tbActivationText" Text="{Binding StatusText}" Foreground="White" Grid.Row="0" Margin="10,2,2,2"></TextBlock>
+        <TextBox Name="txtActivation" Width="130" Grid.Row="1" HorizontalAlignment="Left" Background="White" Margin="8,2,2,2" Text="{Binding Password}" />
+        <Button Name="btnActivation" Width="130"  Content="{ext1:LocalisedText Key=OK}" Grid.Row="2" HorizontalAlignment="Left" Margin="10,2,2,2" Command="{Binding OkClickCommand}" />
+        <Button Name="btnCancel" Width="130" Content="{ext1:LocalisedText Key=CANCEL}" Grid.Row="3" HorizontalAlignment="Left" Margin="10,2,2,2" Command="{Binding CancelClickCommand}" />
+    </Grid>
+</UserControl>

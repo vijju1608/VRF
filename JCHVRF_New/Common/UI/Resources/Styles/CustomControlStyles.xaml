@@ -1,0 +1,297 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ext="clr-namespace:JCHVRF_New.Common.UI.Extensions"
+                    xmlns:fa="http://schemas.fontawesome.io/icons/"
+                    xmlns:jchctrl="clr-namespace:JCHVRF_New.Common.Controls"
+                    xmlns:conv="clr-namespace:JCHVRF_New.Common.UI.Converters"
+                    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+                    xmlns:prism="http://prismlibrary.com/"
+                     xmlns:ext1="clr-namespace:JCHVRF_New.LanguageData"
+                                 xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+                    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity">
+    <Style TargetType="{x:Type jchctrl:JCHButton}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="FontFamily" Value="Meiryo UI"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="FontWeight" Value="Bold"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type jchctrl:JCHButton}">
+                    <Border x:Name="border" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                        <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="PaddingMode" Value="Large">
+                            <Setter Property="Padding" Value="60,26"/>
+                        </Trigger>
+                        <Trigger Property="PaddingMode" Value="Medium">
+                            <Setter Property="Padding" Value="40,20"/>
+                        </Trigger>
+                        <Trigger Property="PaddingMode" Value="Small">
+                            <Setter Property="Padding" Value="34,14"/>
+                        </Trigger>
+                        <Trigger Property="PaddingMode" Value="XS">
+                            <Setter Property="Padding" Value="64,14"/>
+                        </Trigger>
+                        <!--Primary Type Start-->
+                        <Trigger Property="Type" Value="Primary">
+                            <Setter Property="Background" Value="{StaticResource BrandPaletteColor2}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource BrandPaletteColor2}"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Type" Value="Primary"/>
+                                <Condition Property="IsEnabled" Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" Value="{StaticResource BrandPaletteColor5}"/>
+                                <Setter Property="BorderBrush" Value="{StaticResource BrandPaletteColor5}"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="Cursor" Value="None"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Type" Value="Primary"/>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" Value="{StaticResource BrandPaletteColor1}"/>
+                                <Setter Property="BorderBrush" Value="{StaticResource BrandPaletteColor1}"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <!--Primary Type End-->
+                        <!--Secondary Type Start-->
+                        <Trigger Property="Type" Value="Secondary">
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource BrandPaletteColor2}"/>
+                            <Setter Property="Foreground" Value="{StaticResource OtherColor1}"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Type" Value="Secondary"/>
+                                <Condition Property="IsEnabled" Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="BorderBrush" Value="{StaticResource BrandPaletteColor5}"/>
+                                <Setter Property="Foreground" Value="{StaticResource OtherColor3}"/>
+                                <Setter Property="Cursor" Value="None"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Type" Value="Secondary"/>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" Value="{StaticResource BrandPaletteColor2}"/>
+                                <Setter Property="BorderBrush" Value="{StaticResource BrandPaletteColor2}"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <!--Secondary Type End-->
+
+                        <!--Primary On Color Type Start-->
+                        <Trigger Property="Type" Value="PrimaryOnColor">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="BorderBrush" Value="White"/>
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Type" Value="PrimaryOnColor"/>
+                                <Condition Property="IsEnabled" Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="{StaticResource BrandPaletteColor4}"/>
+                                <Setter Property="Foreground" Value="{StaticResource BrandPaletteColor4}"/>
+                                <Setter Property="Cursor" Value="None"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Type" Value="PrimaryOnColor"/>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="BorderBrush" Value="White"/>
+                                <Setter Property="Foreground" Value="{StaticResource BrandPaletteColor2}"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <!--Other Type End-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type jchctrl:JCHIcon}">
+        <Setter Property="Foreground" Value="{StaticResource PrimaryColor1}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type jchctrl:JCHIcon}">
+                    <Border Padding="2" Height="{Binding Height, RelativeSource={RelativeSource TemplatedParent}}" Width="{Binding Width, RelativeSource={RelativeSource TemplatedParent}}" Background="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}">
+                        <Grid>
+                            <fa:ImageAwesome Visibility="{Binding Type, ConverterParameter=FontAwesome, Converter={conv:EnumToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}" Icon="{Binding AwesomeIcon, RelativeSource={RelativeSource TemplatedParent}}" />
+                            <Image Visibility="{Binding Type, ConverterParameter=Vector, Converter={conv:EnumToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Uniform">
+                                <Image.Source>
+                                    <DrawingImage>
+                                        <DrawingImage.Drawing>
+                                            <DrawingGroup>
+                                                <GeometryDrawing Brush="{Binding Foreground, RelativeSource={RelativeSource TemplatedParent}}" Geometry="{Binding VectorResource, RelativeSource={RelativeSource TemplatedParent}}"/>
+                                            </DrawingGroup>
+                                        </DrawingImage.Drawing>
+                                    </DrawingImage>
+                                </Image.Source>
+                            </Image>
+                            <Image Visibility="{Binding Type, ConverterParameter=Image, Converter={conv:EnumToVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}" Source="{Binding ImagePath, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="Uniform"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type jchctrl:JCHPanel}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type jchctrl:JCHPanel}">
+                    <md:DialogHost IsOpen="{Binding IsBusy}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <md:DialogHost.DialogContent>
+                            <ProgressBar Style="{DynamicResource MaterialDesignCircularProgressBar}" HorizontalAlignment="Center" IsIndeterminate="True" Value="0"/>
+                        </md:DialogHost.DialogContent>
+                        <ContentPresenter Margin="{TemplateBinding Padding}"/>
+                    </md:DialogHost>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type jchctrl:JCHAlertDialog}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="MinHeight" Value="236"/>
+       <Setter Property="MinWidth" Value="350"/>
+        <Setter Property="MaxWidth" Value="550"/>
+        <Setter Property="Padding" Value="46"/>
+        <Setter Property="SizeToContent" Value="WidthAndHeight"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type jchctrl:JCHAlertDialog}">
+                    <Border CornerRadius="10" BorderThickness="1.5" Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" x:Name="OuterBorder" BorderBrush="{StaticResource InfoColor}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Orientation="Vertical">
+                                <jchctrl:JCHIcon x:Name="icon" Height="36" AwesomeIcon="InfoCircle" Foreground="{StaticResource InfoColor}"/>
+                                <TextBlock Margin="5" x:Name="txtCaption" FontFamily="Meiryo UI" FontWeight="Regular" FontSize="24" TextAlignment="Center" Text="{ext1:LocalisedText Key=INFORMATION}"/>
+                            </StackPanel>
+                            <Border Grid.Row="1" MinWidth="86">
+                                <TextBlock FontFamily="Meiryo UI" FontWeight="Regular" FontSize="14" Text="{TemplateBinding Message}" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                            <StackPanel Margin="0,10,0,0" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                                <jchctrl:JCHButton Type="Secondary" Content="{ext1:LocalisedText Key=CANCEL}" Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsCancelVisible, Converter={conv:BoolToVisibilityConverter}}">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="Click">
+                                            <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectionCommand}" CommandParameter="Cancel"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </jchctrl:JCHButton>
+                                <jchctrl:JCHButton PaddingMode="XS" Content="{ext1:LocalisedText Key=OK}" Type="Primary"  Margin="10,0,0,0" Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsOkVisible, Converter={conv:BoolToVisibilityConverter}}">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="Click">
+                                            <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectionCommand}" CommandParameter="Ok"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </jchctrl:JCHButton>
+                                <jchctrl:JCHButton PaddingMode="XS" Type="Secondary" Content="{ext1:LocalisedText Key=NO}"  Margin="10,0,0,0" Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=AreYesNoVisible, Converter={conv:BoolToVisibilityConverter}}">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="Click">
+                                            <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectionCommand}" CommandParameter="No"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </jchctrl:JCHButton>
+                                <jchctrl:JCHButton PaddingMode="XS" Type="Primary"  Margin="10,0,0,0" Content="{ext1:LocalisedText Key=YES}" Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=AreYesNoVisible, Converter={conv:BoolToVisibilityConverter}}">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="Click">
+                                            <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectionCommand}" CommandParameter="Yes"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </jchctrl:JCHButton>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Type" Value="Success">
+                            <Setter TargetName="icon" Property="AwesomeIcon" Value="CheckCircle"/>
+                            <Setter TargetName="icon" Property="Foreground" Value="{StaticResource SuccessColor}"/>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource SuccessColor}"/>
+                            <Setter TargetName="txtCaption" Property="Text" Value="{ext1:LocalisedText Key=Success}"/>
+                        </Trigger>
+                        <Trigger Property="Type" Value="Error">
+                            <Setter TargetName="icon" Property="AwesomeIcon" Value="ExclamationCircle"/>
+                            <Setter TargetName="icon" Property="Foreground" Value="{StaticResource DangerColor}"/>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource DangerColor}"/>
+                            <Setter TargetName="txtCaption" Property="Text" Value="{ext1:LocalisedText Key=ERROR}"/>
+                        </Trigger>
+                        <Trigger Property="Type" Value="Warning">
+                            <Setter TargetName="icon" Property="AwesomeIcon" Value="ExclamationTriangle"/>
+                            <Setter TargetName="icon" Property="Foreground" Value="{StaticResource WarningColor}"/>
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource WarningColor}"/>
+                            <Setter TargetName="txtCaption" Property="Text" Value="{ext1:LocalisedText Key=WARNING}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type jchctrl:JCHModalWindow}">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="MinHeight" Value="236"/>
+        <Setter Property="MinWidth" Value="350"/>
+        <Setter Property="Padding" Value="46"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type jchctrl:JCHModalWindow}">
+                    <Border  Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" CornerRadius="12">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseDown">
+                                <prism:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HeaderAreaMouseDownCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <DockPanel Grid.Row="0" LastChildFill="True">
+                                <TextBlock Text="X" DockPanel.Dock="Right" VerticalAlignment="Top" Margin="0,-10,0,0" FontSize="24" FontWeight="Bold" Cursor="Hand">                                    
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="MouseDown">
+                                            <ei:CallMethodAction TargetObject="{Binding RelativeSource={RelativeSource TemplatedParent}}" MethodName="Close"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </TextBlock>
+                                <TextBlock Text="{TemplateBinding Title}" Margin="0,-10,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+                            </DockPanel>
+                            <ContentPresenter Grid.Row="1"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

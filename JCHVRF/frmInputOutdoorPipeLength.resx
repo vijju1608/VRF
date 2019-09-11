@@ -1,0 +1,1205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="jclblUnitLengthF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="jclblUnitLengthF.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitLengthF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 139</value>
+  </data>
+  <data name="jclblUnitLengthF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 16</value>
+  </data>
+  <data name="jclblUnitLengthF.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="jclblUnitLengthF.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="jclblUnitLengthF.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthF.Name" xml:space="preserve">
+    <value>jclblUnitLengthF</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthF.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthF.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthF.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="jctxtLengthF.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtLengthF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 136</value>
+  </data>
+  <data name="jctxtLengthF.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="jctxtLengthF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="jctxtLengthF.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="jctxtLengthF.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="jctxtLengthF.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthF.Name" xml:space="preserve">
+    <value>jctxtLengthF</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthF.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthF.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthF.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="jcbtnOK.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnOK.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="jcbtnOK.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="jcbtnOK.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="jcbtnOK.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jcbtnOK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jcbtnOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="jcbtnOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 26</value>
+  </data>
+  <data name="jcbtnOK.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="jcbtnOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;jcbtnOK.Name" xml:space="preserve">
+    <value>jcbtnOK</value>
+  </data>
+  <data name="&gt;&gt;jcbtnOK.Type" xml:space="preserve">
+    <value>JCBase.UI.VRFButton, JCBase.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jcbtnOK.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;jcbtnOK.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jcbtnCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnCancel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="jcbtnCancel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="jcbtnCancel.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="jcbtnCancel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jcbtnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 0</value>
+  </data>
+  <data name="jcbtnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 26</value>
+  </data>
+  <data name="jcbtnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="jcbtnCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;jcbtnCancel.Name" xml:space="preserve">
+    <value>jcbtnCancel</value>
+  </data>
+  <data name="&gt;&gt;jcbtnCancel.Type" xml:space="preserve">
+    <value>JCBase.UI.VRFButton, JCBase.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jcbtnCancel.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;jcbtnCancel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>124, 204</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>253, 26</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="jclblLengthF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblLengthF.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblLengthF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 138</value>
+  </data>
+  <data name="jclblLengthF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 19</value>
+  </data>
+  <data name="jclblLengthF.TabIndex" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="jclblLengthF.Text" xml:space="preserve">
+    <value>f</value>
+  </data>
+  <data name="jclblLengthF.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthF.Name" xml:space="preserve">
+    <value>jclblLengthF</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthF.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthF.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthF.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="jclblLengthB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblLengthB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblLengthB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 30</value>
+  </data>
+  <data name="jclblLengthB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="jclblLengthB.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="jclblLengthB.Text" xml:space="preserve">
+    <value>b</value>
+  </data>
+  <data name="jclblLengthB.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthB.Name" xml:space="preserve">
+    <value>jclblLengthB</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthB.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthB.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthB.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="jctxtLengthB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtLengthB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 28</value>
+  </data>
+  <data name="jctxtLengthB.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="jctxtLengthB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="jctxtLengthB.TabIndex" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="jctxtLengthB.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="jctxtLengthB.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthB.Name" xml:space="preserve">
+    <value>jctxtLengthB</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthB.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthB.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthB.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="jclblUnitLengthB.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitLengthB.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitLengthB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 31</value>
+  </data>
+  <data name="jclblUnitLengthB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 16</value>
+  </data>
+  <data name="jclblUnitLengthB.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="jclblUnitLengthB.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="jclblUnitLengthB.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthB.Name" xml:space="preserve">
+    <value>jclblUnitLengthB</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthB.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthB.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthB.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="jclblLengthC.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblLengthC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblLengthC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 57</value>
+  </data>
+  <data name="jclblLengthC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="jclblLengthC.TabIndex" type="System.Int32, mscorlib">
+    <value>113</value>
+  </data>
+  <data name="jclblLengthC.Text" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="jclblLengthC.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthC.Name" xml:space="preserve">
+    <value>jclblLengthC</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthC.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthC.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthC.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="jctxtLengthC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtLengthC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 55</value>
+  </data>
+  <data name="jctxtLengthC.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="jctxtLengthC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="jctxtLengthC.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="jctxtLengthC.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="jctxtLengthC.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthC.Name" xml:space="preserve">
+    <value>jctxtLengthC</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthC.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthC.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthC.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="jclblUnitLengthC.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitLengthC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitLengthC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 58</value>
+  </data>
+  <data name="jclblUnitLengthC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 16</value>
+  </data>
+  <data name="jclblUnitLengthC.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="jclblUnitLengthC.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="jclblUnitLengthC.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthC.Name" xml:space="preserve">
+    <value>jclblUnitLengthC</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthC.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthC.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthC.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="jclblLengthD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblLengthD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblLengthD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 84</value>
+  </data>
+  <data name="jclblLengthD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="jclblLengthD.TabIndex" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="jclblLengthD.Text" xml:space="preserve">
+    <value>d</value>
+  </data>
+  <data name="jclblLengthD.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthD.Name" xml:space="preserve">
+    <value>jclblLengthD</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthD.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthD.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthD.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="jctxtLengthD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtLengthD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 82</value>
+  </data>
+  <data name="jctxtLengthD.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="jctxtLengthD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="jctxtLengthD.TabIndex" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="jctxtLengthD.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="jctxtLengthD.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthD.Name" xml:space="preserve">
+    <value>jctxtLengthD</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthD.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthD.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthD.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="jclblUnitLengthD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitLengthD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitLengthD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 85</value>
+  </data>
+  <data name="jclblUnitLengthD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 16</value>
+  </data>
+  <data name="jclblUnitLengthD.TabIndex" type="System.Int32, mscorlib">
+    <value>114</value>
+  </data>
+  <data name="jclblUnitLengthD.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="jclblUnitLengthD.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthD.Name" xml:space="preserve">
+    <value>jclblUnitLengthD</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthD.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthD.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthD.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="jclblLengthE.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblLengthE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblLengthE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 111</value>
+  </data>
+  <data name="jclblLengthE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="jclblLengthE.TabIndex" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
+  <data name="jclblLengthE.Text" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="jclblLengthE.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthE.Name" xml:space="preserve">
+    <value>jclblLengthE</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthE.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthE.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthE.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="jctxtLengthE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtLengthE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 109</value>
+  </data>
+  <data name="jctxtLengthE.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="jctxtLengthE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="jctxtLengthE.TabIndex" type="System.Int32, mscorlib">
+    <value>118</value>
+  </data>
+  <data name="jctxtLengthE.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="jctxtLengthE.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthE.Name" xml:space="preserve">
+    <value>jctxtLengthE</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthE.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthE.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthE.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="jclblUnitLengthE.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitLengthE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitLengthE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 112</value>
+  </data>
+  <data name="jclblUnitLengthE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 16</value>
+  </data>
+  <data name="jclblUnitLengthE.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="jclblUnitLengthE.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="jclblUnitLengthE.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthE.Name" xml:space="preserve">
+    <value>jclblUnitLengthE</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthE.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthE.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthE.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 12</value>
+  </data>
+  <data name="pictureBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 160</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="jclblMarkerG.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblMarkerG.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblMarkerG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>265, 60</value>
+  </data>
+  <data name="jclblMarkerG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="jclblMarkerG.TabIndex" type="System.Int32, mscorlib">
+    <value>126</value>
+  </data>
+  <data name="jclblMarkerG.Text" xml:space="preserve">
+    <value>g</value>
+  </data>
+  <data name="jclblMarkerG.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerG.Name" xml:space="preserve">
+    <value>jclblMarkerG</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerG.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerG.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerG.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="jclblMarkerE.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblMarkerE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblMarkerE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 137</value>
+  </data>
+  <data name="jclblMarkerE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="jclblMarkerE.TabIndex" type="System.Int32, mscorlib">
+    <value>131</value>
+  </data>
+  <data name="jclblMarkerE.Text" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="jclblMarkerE.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerE.Name" xml:space="preserve">
+    <value>jclblMarkerE</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerE.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerE.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerE.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="jclblMarkerD.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblMarkerD.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblMarkerD.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 114</value>
+  </data>
+  <data name="jclblMarkerD.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="jclblMarkerD.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="jclblMarkerD.Text" xml:space="preserve">
+    <value>d</value>
+  </data>
+  <data name="jclblMarkerD.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerD.Name" xml:space="preserve">
+    <value>jclblMarkerD</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerD.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerD.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerD.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="jclblMarkerC.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblMarkerC.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblMarkerC.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 87</value>
+  </data>
+  <data name="jclblMarkerC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="jclblMarkerC.TabIndex" type="System.Int32, mscorlib">
+    <value>129</value>
+  </data>
+  <data name="jclblMarkerC.Text" xml:space="preserve">
+    <value>c</value>
+  </data>
+  <data name="jclblMarkerC.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerC.Name" xml:space="preserve">
+    <value>jclblMarkerC</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerC.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerC.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerC.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="jclblMarkerB1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblMarkerB1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblMarkerB1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 60</value>
+  </data>
+  <data name="jclblMarkerB1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="jclblMarkerB1.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
+  </data>
+  <data name="jclblMarkerB1.Text" xml:space="preserve">
+    <value>b</value>
+  </data>
+  <data name="jclblMarkerB1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerB1.Name" xml:space="preserve">
+    <value>jclblMarkerB1</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerB1.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerB1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerB1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="jclblMarkerA.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblMarkerA.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblMarkerA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 33</value>
+  </data>
+  <data name="jclblMarkerA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="jclblMarkerA.TabIndex" type="System.Int32, mscorlib">
+    <value>127</value>
+  </data>
+  <data name="jclblMarkerA.Text" xml:space="preserve">
+    <value>a</value>
+  </data>
+  <data name="jclblMarkerA.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerA.Name" xml:space="preserve">
+    <value>jclblMarkerA</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerA.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerA.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerA.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="jclblMarkerF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblMarkerF.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblMarkerF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>262, 136</value>
+  </data>
+  <data name="jclblMarkerF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>14, 19</value>
+  </data>
+  <data name="jclblMarkerF.TabIndex" type="System.Int32, mscorlib">
+    <value>132</value>
+  </data>
+  <data name="jclblMarkerF.Text" xml:space="preserve">
+    <value>f</value>
+  </data>
+  <data name="jclblMarkerF.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerF.Name" xml:space="preserve">
+    <value>jclblMarkerF</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerF.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerF.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblMarkerF.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="jclblLengthG.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblLengthG.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 9.75pt</value>
+  </data>
+  <data name="jclblLengthG.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblLengthG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 165</value>
+  </data>
+  <data name="jclblLengthG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 19</value>
+  </data>
+  <data name="jclblLengthG.TabIndex" type="System.Int32, mscorlib">
+    <value>135</value>
+  </data>
+  <data name="jclblLengthG.Text" xml:space="preserve">
+    <value>g</value>
+  </data>
+  <data name="jclblLengthG.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthG.Name" xml:space="preserve">
+    <value>jclblLengthG</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthG.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthG.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblLengthG.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="jctxtLengthG.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jctxtLengthG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 163</value>
+  </data>
+  <data name="jctxtLengthG.MaxLength" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="jctxtLengthG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 21</value>
+  </data>
+  <data name="jctxtLengthG.TabIndex" type="System.Int32, mscorlib">
+    <value>134</value>
+  </data>
+  <data name="jctxtLengthG.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="jctxtLengthG.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthG.Name" xml:space="preserve">
+    <value>jctxtLengthG</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthG.Type" xml:space="preserve">
+    <value>JCBase.UI.JCTextBox, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthG.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jctxtLengthG.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="jclblUnitLengthG.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="jclblUnitLengthG.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12px</value>
+  </data>
+  <data name="jclblUnitLengthG.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="jclblUnitLengthG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>456, 166</value>
+  </data>
+  <data name="jclblUnitLengthG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 16</value>
+  </data>
+  <data name="jclblUnitLengthG.TabIndex" type="System.Int32, mscorlib">
+    <value>133</value>
+  </data>
+  <data name="jclblUnitLengthG.Text" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="jclblUnitLengthG.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthG.Name" xml:space="preserve">
+    <value>jclblUnitLengthG</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthG.Type" xml:space="preserve">
+    <value>JCBase.UI.JCLabel, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthG.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;jclblUnitLengthG.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 242</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Input pipe length</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>frmInputOutdoorPipeLength</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>JCBase.UI.JCForm, JCBase, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+</root>

@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.ProjectDetails"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:models="clr-namespace:JCHVRF_New.Model"
+             xmlns:ext1="clr-namespace:JCHVRF_New.LanguageData"
+             xmlns:conv1="clr-namespace:JCHVRF_New.Model"
+             xmlns:local="clr-namespace:JCHVRF_New.Views"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+              xmlns:fa="http://schemas.fontawesome.io/icons/"
+             mc:Ignorable="d" 
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:ext="clr-namespace:JCHVRF_New.Common.UI.Extensions"  
+             xmlns:helpers="clr-namespace:JCHVRF_New.Helpers"  
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:conv="clr-namespace:JCHVRF_New.Common.UI.Converters"
+             d:DesignHeight="600" Width="Auto"
+             xmlns:mat="http://materialdesigninxaml.net/winfx/xaml/themes">
+    <UserControl.Resources>
+        <conv1:LanguageNameConverter x:Key="LangNameConverter" />
+    </UserControl.Resources>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction CommandParameter="Loaded" Command="{Binding LoadedUnloadedCommand}"/>
+        </i:EventTrigger>
+        <i:EventTrigger EventName="Unloaded">
+            <i:InvokeCommandAction CommandParameter="" Command="{Binding LoadedUnloadedCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <WrapPanel Margin="0,5,0,6" Grid.Row="0"  Background="LightGray" Height="30" Opacity="0.8">
+            <TextBox x:Name ="txtSearch" FontSize="12" Opacity="0.6" Width="100" Height="25"  
+                         VerticalContentAlignment="Center" VerticalAlignment="Center"  >
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="TextChanged">
+                        <i:InvokeCommandAction  Command="{Binding TextChangedCommand}" CommandParameter="{Binding SearchText}"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+
+                <TextBox.Template>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <TextBox Grid.Column="0" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" mat:HintAssist.Hint="{ext1:LocalisedText Key=DASHBOARD_SEARCH}" RenderTransformOrigin="0.82,0.56"/>
+
+                            <Button Margin="0,0,5,0" Grid.Column="1" HorizontalAlignment="Right">
+                                <Button.Template>
+                                    <ControlTemplate>
+                                        <fa:ImageAwesome Foreground="Gray" Icon="Search"  Height="15" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,-5,0,0"/>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+                    </ControlTemplate>
+                </TextBox.Template>
+
+            </TextBox>
+            <Button Margin="10,0,0,0" Height="15">
+                <Button.Template>
+                    <ControlTemplate>
+                        <fa:ImageAwesome Foreground="Gray" Icon="PlusSquare" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Margin="10,0,0,0" Command="{Binding ReorderUpClickCommand}" CommandParameter="{Binding SelectedItem,ElementName=ProjectsView}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <fa:ImageAwesome Foreground="Gray" Icon="LongArrowUp" Margin="0,-5,0,0" Height="15"   />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button  Margin="10,0,0,0" Command="{Binding ReorderDownClickCommand}" CommandParameter="{Binding SelectedItem,ElementName=ProjectsView}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <fa:ImageAwesome Foreground="Gray" Icon="LongArrowDown" Margin="0,-5,0,0" Height="15"     />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </WrapPanel>
+
+        <TreeView Name="ProjectsView" ScrollViewer.HorizontalScrollBarVisibility="Hidden" MouseDoubleClick="ProjectsView_MouseDoubleClick"  ItemsSource="{Binding AllSystems, Mode=TwoWay}" Grid.Row="1">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseLeftButtonUp">
+                    <i:InvokeCommandAction Command="{Binding SelectedTreeViewItemCommand}" CommandParameter="{Binding ElementName=ProjectsView, Path=SelectedItem}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TreeView.Resources>
+            <Style TargetType="TreeViewItem" BasedOn="{StaticResource {x:Type TreeViewItem}}">
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="Cursor" Value="Hand"/>
+                <Setter Property="IsExpanded" Value="True"/>
+                    <Setter Property="IsSelected" Value="{Binding IsSelected}"/>
+                </Style>
+                <HierarchicalDataTemplate DataType="{x:Type models:LeftSideBarItem}" ItemsSource="{Binding Children}">
+                    <StackPanel Visibility="{Binding Children.Count, Converter={conv:InvertIntComparerToVisibilityConverter}, ConverterParameter=0}" Orientation="Horizontal">
+                        <TextBlock x:Name="SidebarParentTextBlock" FontFamily="Arial" FontSize="10" VerticalAlignment="Center" Text="{Binding Header}" />
+                      
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+                <HierarchicalDataTemplate DataType="{x:Type models:LeftSideBarChild}" ItemsSource="{Binding Children}">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Source.StatusIcon}" Height="15"></Image>
+                        <TextBlock x:Name="SidebarChildTextBlock" IsHitTestVisible="True"     Visibility="{Binding Path=IsSideBarVisible,Converter={conv:BoolToVisibilityConverter}}"  FontSize="10" FontFamily="Arial" Text="{Binding Header}" Margin="2,0,0,0"/>
+                        <TextBox IsHitTestVisible="True" LostFocus="TextBox_LostFocus"  Visibility="{Binding Path=IsEditable, Converter={conv:BoolToVisibilityConverter}}" Text="{Binding Path=Header}"/>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.Resources>
+    </TreeView>
+    </Grid>
+</UserControl>

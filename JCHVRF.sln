@@ -1,0 +1,590 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCHVRF.Model", "JCHVRF.Model\JCHVRF.Model.csproj", "{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C} = {69A59513-D8C7-41E2-9DF3-95C0A7EA787C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCHVRF.BLL", "JCHVRF.BLL\JCHVRF.BLL.csproj", "{C7829FB6-7909-4467-A603-FE8F78DF33BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCHVRF.DALFactory", "JCHVRF.DALFactory\JCHVRF.DALFactory.csproj", "{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Model", "02 Model", "{FD2ABEA4-BDB8-476E-BB6F-29C3C3C217F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 DAL", "03 DAL", "{7B3D78C2-EF00-481E-9329-44F10B2E6DAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 BLL", "04 BLL", "{5EA1BAE4-3783-4E01-A3FA-EB37A3C8EAEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 Utility", "05 Utility", "{A279FFF6-EBC4-41E1-9BC3-3FC0A82BEF11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06 UI", "06 UI", "{9F61A6DE-94E8-4BB5-99F8-B95B665E38C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCHVRF.DAL", "JCHVRF.DAL\JCHVRF.DAL.csproj", "{B472C47D-C465-4867-8589-AAF860A26046}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Register", "Register\Register.csproj", "{C3C491B1-8C66-4923-8C7F-8697869A0FC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCHVRF.MyPipingBLL", "JCHVRF.MyPipingBLL\JCHVRF.MyPipingBLL.csproj", "{62DAE7E0-FC30-470E-905C-A39E985427F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCHVRF.Report", "JCHVRF.Report\JCHVRF.Report.csproj", "{75856CC4-F1C7-42F8-834E-F7FA42E158CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCHVRF.VRFMessage", "JCHVRF.VRFMessage\JCHVRF.VRFMessage.csproj", "{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCHVRF.Const", "JCHVRF.Const\JCHVRF.Const.csproj", "{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCHVRF.VRFTrans", "JCHVRF.VRFTrans\JCHVRF.VRFTrans.csproj", "{110C64CB-388A-4B74-8F21-6C1C28FDED40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07 UI", "07 UI", "{39706016-772C-495B-9A67-97C2ADEC9988}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCHVRF_New", "JCHVRF_New\JCHVRF_New.csproj", "{078FEA38-6601-43D6-9595-D0B010064DB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08 SyncAgent", "08 SyncAgent", "{66E5DC45-8F7D-4140-B3F9-742FBD09E79A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncAgent", "SyncAgent\SyncAgent.csproj", "{BAE277C6-D0C1-4776-BA5D-269F7278C97D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Entity", "01 Entity", "{50AA6975-C5D0-4370-9196-65F440496C89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCHVRF.Entity", "JCHVRF.Entity\JCHVRF.Entity.csproj", "{798A74B8-F22C-4B72-8CFB-3835306CE2C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CC5C5575-DFE3-429D-8945-53DE3685AC47}"
+	ProjectSection(SolutionItems) = preProject
+		JCHVRF_New\DB\VRF.dat = JCHVRF_New\DB\VRF.dat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Installer", "Installer", "{219B49FF-53DA-412A-B1D7-C0F0FE96F08D}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\Installer.wixproj = Installer\Installer.wixproj
+		Installer\Product.wxs = Installer\Product.wxs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wix", "wix", "{0DF6B563-7032-4FE8-996E-AF853F7D7478}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wix_File", "wix_File", "{85243818-FFB6-4D80-87BD-6DDE444E2920}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix_File\Jci.ico = Installer\wix_File\Jci.ico
+		Installer\wix_File\Jci_BackgroundBanner.bmp = Installer\wix_File\Jci_BackgroundBanner.bmp
+		Installer\wix_File\Jci_TopBanner.bmp = Installer\wix_File\Jci_TopBanner.bmp
+		Installer\wix_File\licence.rtf = Installer\wix_File\licence.rtf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.10", "3.10", "{0BE4226E-3FB8-4504-9B91-838631EA104A}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\candle.exe = Installer\wix\3.10\candle.exe
+		Installer\wix\3.10\candle.exe.config = Installer\wix\3.10\candle.exe.config
+		Installer\wix\3.10\darice.cub = Installer\wix\3.10\darice.cub
+		Installer\wix\3.10\dark.exe = Installer\wix\3.10\dark.exe
+		Installer\wix\3.10\dark.exe.config = Installer\wix\3.10\dark.exe.config
+		Installer\wix\3.10\difxapp_x64.wixlib = Installer\wix\3.10\difxapp_x64.wixlib
+		Installer\wix\3.10\difxapp_x86.wixlib = Installer\wix\3.10\difxapp_x86.wixlib
+		Installer\wix\3.10\heat.exe = Installer\wix\3.10\heat.exe
+		Installer\wix\3.10\heat.exe.config = Installer\wix\3.10\heat.exe.config
+		Installer\wix\3.10\insignia.exe = Installer\wix\3.10\insignia.exe
+		Installer\wix\3.10\insignia.exe.config = Installer\wix\3.10\insignia.exe.config
+		Installer\wix\3.10\light.exe = Installer\wix\3.10\light.exe
+		Installer\wix\3.10\light.exe.config = Installer\wix\3.10\light.exe.config
+		Installer\wix\3.10\lit.exe = Installer\wix\3.10\lit.exe
+		Installer\wix\3.10\lit.exe.config = Installer\wix\3.10\lit.exe.config
+		Installer\wix\3.10\lux.exe = Installer\wix\3.10\lux.exe
+		Installer\wix\3.10\lux.exe.config = Installer\wix\3.10\lux.exe.config
+		Installer\wix\3.10\lux.targets = Installer\wix\3.10\lux.targets
+		Installer\wix\3.10\LuxTasks.dll = Installer\wix\3.10\LuxTasks.dll
+		Installer\wix\3.10\melt.exe = Installer\wix\3.10\melt.exe
+		Installer\wix\3.10\melt.exe.config = Installer\wix\3.10\melt.exe.config
+		Installer\wix\3.10\mergemod.cub = Installer\wix\3.10\mergemod.cub
+		Installer\wix\3.10\mergemod.dll = Installer\wix\3.10\mergemod.dll
+		Installer\wix\3.10\Microsoft.Deployment.Compression.Cab.dll = Installer\wix\3.10\Microsoft.Deployment.Compression.Cab.dll
+		Installer\wix\3.10\Microsoft.Deployment.Compression.dll = Installer\wix\3.10\Microsoft.Deployment.Compression.dll
+		Installer\wix\3.10\Microsoft.Deployment.Resources.dll = Installer\wix\3.10\Microsoft.Deployment.Resources.dll
+		Installer\wix\3.10\Microsoft.Deployment.WindowsInstaller.dll = Installer\wix\3.10\Microsoft.Deployment.WindowsInstaller.dll
+		Installer\wix\3.10\Microsoft.Deployment.WindowsInstaller.Package.dll = Installer\wix\3.10\Microsoft.Deployment.WindowsInstaller.Package.dll
+		Installer\wix\3.10\mspatchc.dll = Installer\wix\3.10\mspatchc.dll
+		Installer\wix\3.10\nit.exe = Installer\wix\3.10\nit.exe
+		Installer\wix\3.10\nit.exe.config = Installer\wix\3.10\nit.exe.config
+		Installer\wix\3.10\pyro.exe = Installer\wix\3.10\pyro.exe
+		Installer\wix\3.10\pyro.exe.config = Installer\wix\3.10\pyro.exe.config
+		Installer\wix\3.10\retina.exe = Installer\wix\3.10\retina.exe
+		Installer\wix\3.10\retina.exe.config = Installer\wix\3.10\retina.exe.config
+		Installer\wix\3.10\shine.exe = Installer\wix\3.10\shine.exe
+		Installer\wix\3.10\shine.exe.config = Installer\wix\3.10\shine.exe.config
+		Installer\wix\3.10\smoke.exe = Installer\wix\3.10\smoke.exe
+		Installer\wix\3.10\smoke.exe.config = Installer\wix\3.10\smoke.exe.config
+		Installer\wix\3.10\ThmViewer.exe = Installer\wix\3.10\ThmViewer.exe
+		Installer\wix\3.10\torch.exe = Installer\wix\3.10\torch.exe
+		Installer\wix\3.10\torch.exe.config = Installer\wix\3.10\torch.exe.config
+		Installer\wix\3.10\wconsole.dll = Installer\wix\3.10\wconsole.dll
+		Installer\wix\3.10\winterop.dll = Installer\wix\3.10\winterop.dll
+		Installer\wix\3.10\wix.dll = Installer\wix\3.10\wix.dll
+		Installer\wix\3.10\wix.targets = Installer\wix\3.10\wix.targets
+		Installer\wix\3.10\wix200x.targets = Installer\wix\3.10\wix200x.targets
+		Installer\wix\3.10\wix2010.targets = Installer\wix\3.10\wix2010.targets
+		Installer\wix\3.10\WixBalExtension.dll = Installer\wix\3.10\WixBalExtension.dll
+		Installer\wix\3.10\WixComPlusExtension.dll = Installer\wix\3.10\WixComPlusExtension.dll
+		Installer\wix\3.10\WixCop.exe = Installer\wix\3.10\WixCop.exe
+		Installer\wix\3.10\WixDependencyExtension.dll = Installer\wix\3.10\WixDependencyExtension.dll
+		Installer\wix\3.10\WixDifxAppExtension.dll = Installer\wix\3.10\WixDifxAppExtension.dll
+		Installer\wix\3.10\WixDirectXExtension.dll = Installer\wix\3.10\WixDirectXExtension.dll
+		Installer\wix\3.10\WixFirewallExtension.dll = Installer\wix\3.10\WixFirewallExtension.dll
+		Installer\wix\3.10\WixGamingExtension.dll = Installer\wix\3.10\WixGamingExtension.dll
+		Installer\wix\3.10\WixHttpExtension.dll = Installer\wix\3.10\WixHttpExtension.dll
+		Installer\wix\3.10\WixIIsExtension.dll = Installer\wix\3.10\WixIIsExtension.dll
+		Installer\wix\3.10\WixLuxExtension.dll = Installer\wix\3.10\WixLuxExtension.dll
+		Installer\wix\3.10\WixMsmqExtension.dll = Installer\wix\3.10\WixMsmqExtension.dll
+		Installer\wix\3.10\WixNetFxExtension.dll = Installer\wix\3.10\WixNetFxExtension.dll
+		Installer\wix\3.10\WixPSExtension.dll = Installer\wix\3.10\WixPSExtension.dll
+		Installer\wix\3.10\WixSqlExtension.dll = Installer\wix\3.10\WixSqlExtension.dll
+		Installer\wix\3.10\WixTagExtension.dll = Installer\wix\3.10\WixTagExtension.dll
+		Installer\wix\3.10\WixTasks.dll = Installer\wix\3.10\WixTasks.dll
+		Installer\wix\3.10\WixUIExtension.dll = Installer\wix\3.10\WixUIExtension.dll
+		Installer\wix\3.10\WixUtilExtension.dll = Installer\wix\3.10\WixUtilExtension.dll
+		Installer\wix\3.10\WixVSExtension.dll = Installer\wix\3.10\WixVSExtension.dll
+		Installer\wix\3.10\WixVSExtension.MSBuild12.dll = Installer\wix\3.10\WixVSExtension.MSBuild12.dll
+		Installer\wix\3.10\WixVSExtension.MSBuild14.dll = Installer\wix\3.10\WixVSExtension.MSBuild14.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{A0631B4F-30F5-4A85-8942-61404F779FE1}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\doc\bal.xsd = Installer\wix\3.10\doc\bal.xsd
+		Installer\wix\3.10\doc\complus.xsd = Installer\wix\3.10\doc\complus.xsd
+		Installer\wix\3.10\doc\Dependency.xsd = Installer\wix\3.10\doc\Dependency.xsd
+		Installer\wix\3.10\doc\difxapp.xsd = Installer\wix\3.10\doc\difxapp.xsd
+		Installer\wix\3.10\doc\DTF.chm = Installer\wix\3.10\doc\DTF.chm
+		Installer\wix\3.10\doc\DTFAPI.chm = Installer\wix\3.10\doc\DTFAPI.chm
+		Installer\wix\3.10\doc\firewall.xsd = Installer\wix\3.10\doc\firewall.xsd
+		Installer\wix\3.10\doc\gaming.xsd = Installer\wix\3.10\doc\gaming.xsd
+		Installer\wix\3.10\doc\http.xsd = Installer\wix\3.10\doc\http.xsd
+		Installer\wix\3.10\doc\iis.xsd = Installer\wix\3.10\doc\iis.xsd
+		Installer\wix\3.10\doc\lux.xsd = Installer\wix\3.10\doc\lux.xsd
+		Installer\wix\3.10\doc\msmq.xsd = Installer\wix\3.10\doc\msmq.xsd
+		Installer\wix\3.10\doc\netfx.xsd = Installer\wix\3.10\doc\netfx.xsd
+		Installer\wix\3.10\doc\ps.xsd = Installer\wix\3.10\doc\ps.xsd
+		Installer\wix\3.10\doc\sql.xsd = Installer\wix\3.10\doc\sql.xsd
+		Installer\wix\3.10\doc\tag.xsd = Installer\wix\3.10\doc\tag.xsd
+		Installer\wix\3.10\doc\thmutil.xsd = Installer\wix\3.10\doc\thmutil.xsd
+		Installer\wix\3.10\doc\util.xsd = Installer\wix\3.10\doc\util.xsd
+		Installer\wix\3.10\doc\vs.xsd = Installer\wix\3.10\doc\vs.xsd
+		Installer\wix\3.10\doc\WiX.chm = Installer\wix\3.10\doc\WiX.chm
+		Installer\wix\3.10\doc\wix.xsd = Installer\wix\3.10\doc\wix.xsd
+		Installer\wix\3.10\doc\wixloc.xsd = Installer\wix\3.10\doc\wixloc.xsd
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sdk", "sdk", "{0B29F592-603F-44FA-A0C3-E28BEEAE9C5C}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\sdk\BootstrapperCore.config = Installer\wix\3.10\sdk\BootstrapperCore.config
+		Installer\wix\3.10\sdk\BootstrapperCore.dll = Installer\wix\3.10\sdk\BootstrapperCore.dll
+		Installer\wix\3.10\sdk\BootstrapperCore.xml = Installer\wix\3.10\sdk\BootstrapperCore.xml
+		Installer\wix\3.10\sdk\DocCompiler.exe = Installer\wix\3.10\sdk\DocCompiler.exe
+		Installer\wix\3.10\sdk\MakeSfxCA.exe = Installer\wix\3.10\sdk\MakeSfxCA.exe
+		Installer\wix\3.10\sdk\MakeSfxCA.exe.config = Installer\wix\3.10\sdk\MakeSfxCA.exe.config
+		Installer\wix\3.10\sdk\Microsoft.Deployment.Compression.Cab.dll = Installer\wix\3.10\sdk\Microsoft.Deployment.Compression.Cab.dll
+		Installer\wix\3.10\sdk\Microsoft.Deployment.Compression.Cab.xml = Installer\wix\3.10\sdk\Microsoft.Deployment.Compression.Cab.xml
+		Installer\wix\3.10\sdk\Microsoft.Deployment.Compression.dll = Installer\wix\3.10\sdk\Microsoft.Deployment.Compression.dll
+		Installer\wix\3.10\sdk\Microsoft.Deployment.Compression.xml = Installer\wix\3.10\sdk\Microsoft.Deployment.Compression.xml
+		Installer\wix\3.10\sdk\Microsoft.Deployment.Compression.Zip.dll = Installer\wix\3.10\sdk\Microsoft.Deployment.Compression.Zip.dll
+		Installer\wix\3.10\sdk\Microsoft.Deployment.Compression.Zip.xml = Installer\wix\3.10\sdk\Microsoft.Deployment.Compression.Zip.xml
+		Installer\wix\3.10\sdk\Microsoft.Deployment.Resources.dll = Installer\wix\3.10\sdk\Microsoft.Deployment.Resources.dll
+		Installer\wix\3.10\sdk\Microsoft.Deployment.Resources.xml = Installer\wix\3.10\sdk\Microsoft.Deployment.Resources.xml
+		Installer\wix\3.10\sdk\Microsoft.Deployment.WindowsInstaller.dll = Installer\wix\3.10\sdk\Microsoft.Deployment.WindowsInstaller.dll
+		Installer\wix\3.10\sdk\Microsoft.Deployment.WindowsInstaller.Linq.dll = Installer\wix\3.10\sdk\Microsoft.Deployment.WindowsInstaller.Linq.dll
+		Installer\wix\3.10\sdk\Microsoft.Deployment.WindowsInstaller.Linq.xml = Installer\wix\3.10\sdk\Microsoft.Deployment.WindowsInstaller.Linq.xml
+		Installer\wix\3.10\sdk\Microsoft.Deployment.WindowsInstaller.Package.dll = Installer\wix\3.10\sdk\Microsoft.Deployment.WindowsInstaller.Package.dll
+		Installer\wix\3.10\sdk\Microsoft.Deployment.WindowsInstaller.Package.xml = Installer\wix\3.10\sdk\Microsoft.Deployment.WindowsInstaller.Package.xml
+		Installer\wix\3.10\sdk\Microsoft.Deployment.WindowsInstaller.xml = Installer\wix\3.10\sdk\Microsoft.Deployment.WindowsInstaller.xml
+		Installer\wix\3.10\sdk\MsgGen.exe = Installer\wix\3.10\sdk\MsgGen.exe
+		Installer\wix\3.10\sdk\wix.ca.targets = Installer\wix\3.10\sdk\wix.ca.targets
+		Installer\wix\3.10\sdk\XsdGen.exe = Installer\wix\3.10\sdk\XsdGen.exe
+		Installer\wix\3.10\sdk\XsdStitch.exe = Installer\wix\3.10\sdk\XsdStitch.exe
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{C507210D-E821-4120-98C3-DCEB5DC365B1}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\x86\burn.exe = Installer\wix\3.10\x86\burn.exe
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "inc", "inc", "{B442EA38-A8D4-4124-8C4E-14E8093CC26C}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\sdk\inc\aclutil.h = Installer\wix\3.10\sdk\inc\aclutil.h
+		Installer\wix\3.10\sdk\inc\apputil.h = Installer\wix\3.10\sdk\inc\apputil.h
+		Installer\wix\3.10\sdk\inc\apuputil.h = Installer\wix\3.10\sdk\inc\apuputil.h
+		Installer\wix\3.10\sdk\inc\atomutil.h = Installer\wix\3.10\sdk\inc\atomutil.h
+		Installer\wix\3.10\sdk\inc\BalBaseBootstrapperApplication.h = Installer\wix\3.10\sdk\inc\BalBaseBootstrapperApplication.h
+		Installer\wix\3.10\sdk\inc\balcondition.h = Installer\wix\3.10\sdk\inc\balcondition.h
+		Installer\wix\3.10\sdk\inc\balinfo.h = Installer\wix\3.10\sdk\inc\balinfo.h
+		Installer\wix\3.10\sdk\inc\balretry.h = Installer\wix\3.10\sdk\inc\balretry.h
+		Installer\wix\3.10\sdk\inc\balutil.h = Installer\wix\3.10\sdk\inc\balutil.h
+		Installer\wix\3.10\sdk\inc\buffutil.h = Installer\wix\3.10\sdk\inc\buffutil.h
+		Installer\wix\3.10\sdk\inc\butil.h = Installer\wix\3.10\sdk\inc\butil.h
+		Installer\wix\3.10\sdk\inc\cabcutil.h = Installer\wix\3.10\sdk\inc\cabcutil.h
+		Installer\wix\3.10\sdk\inc\cabutil.h = Installer\wix\3.10\sdk\inc\cabutil.h
+		Installer\wix\3.10\sdk\inc\certutil.h = Installer\wix\3.10\sdk\inc\certutil.h
+		Installer\wix\3.10\sdk\inc\conutil.h = Installer\wix\3.10\sdk\inc\conutil.h
+		Installer\wix\3.10\sdk\inc\cryputil.h = Installer\wix\3.10\sdk\inc\cryputil.h
+		Installer\wix\3.10\sdk\inc\custommsierrors.h = Installer\wix\3.10\sdk\inc\custommsierrors.h
+		Installer\wix\3.10\sdk\inc\deputil.h = Installer\wix\3.10\sdk\inc\deputil.h
+		Installer\wix\3.10\sdk\inc\dictutil.h = Installer\wix\3.10\sdk\inc\dictutil.h
+		Installer\wix\3.10\sdk\inc\dirutil.h = Installer\wix\3.10\sdk\inc\dirutil.h
+		Installer\wix\3.10\sdk\inc\dlutil.h = Installer\wix\3.10\sdk\inc\dlutil.h
+		Installer\wix\3.10\sdk\inc\dutil.h = Installer\wix\3.10\sdk\inc\dutil.h
+		Installer\wix\3.10\sdk\inc\eseutil.h = Installer\wix\3.10\sdk\inc\eseutil.h
+		Installer\wix\3.10\sdk\inc\fileutil.h = Installer\wix\3.10\sdk\inc\fileutil.h
+		Installer\wix\3.10\sdk\inc\gdiputil.h = Installer\wix\3.10\sdk\inc\gdiputil.h
+		Installer\wix\3.10\sdk\inc\IBootstrapperApplication.h = Installer\wix\3.10\sdk\inc\IBootstrapperApplication.h
+		Installer\wix\3.10\sdk\inc\IBootstrapperBAFunction.h = Installer\wix\3.10\sdk\inc\IBootstrapperBAFunction.h
+		Installer\wix\3.10\sdk\inc\IBootstrapperEngine.h = Installer\wix\3.10\sdk\inc\IBootstrapperEngine.h
+		Installer\wix\3.10\sdk\inc\iis7util.h = Installer\wix\3.10\sdk\inc\iis7util.h
+		Installer\wix\3.10\sdk\inc\inetutil.h = Installer\wix\3.10\sdk\inc\inetutil.h
+		Installer\wix\3.10\sdk\inc\iniutil.h = Installer\wix\3.10\sdk\inc\iniutil.h
+		Installer\wix\3.10\sdk\inc\jsonutil.h = Installer\wix\3.10\sdk\inc\jsonutil.h
+		Installer\wix\3.10\sdk\inc\locutil.h = Installer\wix\3.10\sdk\inc\locutil.h
+		Installer\wix\3.10\sdk\inc\logutil.h = Installer\wix\3.10\sdk\inc\logutil.h
+		Installer\wix\3.10\sdk\inc\memutil.h = Installer\wix\3.10\sdk\inc\memutil.h
+		Installer\wix\3.10\sdk\inc\metautil.h = Installer\wix\3.10\sdk\inc\metautil.h
+		Installer\wix\3.10\sdk\inc\osutil.h = Installer\wix\3.10\sdk\inc\osutil.h
+		Installer\wix\3.10\sdk\inc\pathutil.h = Installer\wix\3.10\sdk\inc\pathutil.h
+		Installer\wix\3.10\sdk\inc\perfutil.h = Installer\wix\3.10\sdk\inc\perfutil.h
+		Installer\wix\3.10\sdk\inc\polcutil.h = Installer\wix\3.10\sdk\inc\polcutil.h
+		Installer\wix\3.10\sdk\inc\procutil.h = Installer\wix\3.10\sdk\inc\procutil.h
+		Installer\wix\3.10\sdk\inc\regutil.h = Installer\wix\3.10\sdk\inc\regutil.h
+		Installer\wix\3.10\sdk\inc\resrutil.h = Installer\wix\3.10\sdk\inc\resrutil.h
+		Installer\wix\3.10\sdk\inc\reswutil.h = Installer\wix\3.10\sdk\inc\reswutil.h
+		Installer\wix\3.10\sdk\inc\rexutil.h = Installer\wix\3.10\sdk\inc\rexutil.h
+		Installer\wix\3.10\sdk\inc\rmutil.h = Installer\wix\3.10\sdk\inc\rmutil.h
+		Installer\wix\3.10\sdk\inc\rssutil.h = Installer\wix\3.10\sdk\inc\rssutil.h
+		Installer\wix\3.10\sdk\inc\sceutil.h = Installer\wix\3.10\sdk\inc\sceutil.h
+		Installer\wix\3.10\sdk\inc\shelutil.h = Installer\wix\3.10\sdk\inc\shelutil.h
+		Installer\wix\3.10\sdk\inc\sqlutil.h = Installer\wix\3.10\sdk\inc\sqlutil.h
+		Installer\wix\3.10\sdk\inc\srputil.h = Installer\wix\3.10\sdk\inc\srputil.h
+		Installer\wix\3.10\sdk\inc\strutil.h = Installer\wix\3.10\sdk\inc\strutil.h
+		Installer\wix\3.10\sdk\inc\svcutil.h = Installer\wix\3.10\sdk\inc\svcutil.h
+		Installer\wix\3.10\sdk\inc\thmutil.h = Installer\wix\3.10\sdk\inc\thmutil.h
+		Installer\wix\3.10\sdk\inc\timeutil.h = Installer\wix\3.10\sdk\inc\timeutil.h
+		Installer\wix\3.10\sdk\inc\uriutil.h = Installer\wix\3.10\sdk\inc\uriutil.h
+		Installer\wix\3.10\sdk\inc\userutil.h = Installer\wix\3.10\sdk\inc\userutil.h
+		Installer\wix\3.10\sdk\inc\wcalog.h = Installer\wix\3.10\sdk\inc\wcalog.h
+		Installer\wix\3.10\sdk\inc\wcautil.h = Installer\wix\3.10\sdk\inc\wcautil.h
+		Installer\wix\3.10\sdk\inc\wcawow64.h = Installer\wix\3.10\sdk\inc\wcawow64.h
+		Installer\wix\3.10\sdk\inc\wcawrapquery.h = Installer\wix\3.10\sdk\inc\wcawrapquery.h
+		Installer\wix\3.10\sdk\inc\wiutil.h = Installer\wix\3.10\sdk\inc\wiutil.h
+		Installer\wix\3.10\sdk\inc\wuautil.h = Installer\wix\3.10\sdk\inc\wuautil.h
+		Installer\wix\3.10\sdk\inc\xmlutil.h = Installer\wix\3.10\sdk\inc\xmlutil.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vs2010", "vs2010", "{63C683C1-A540-4936-9291-A601268F70A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vs2012", "vs2012", "{D59D0B0A-1947-422E-931A-9910CA06FA03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vs2013", "vs2013", "{8647C0F7-0D76-4003-9E6B-84520B91A641}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vs2015", "vs2015", "{4039E87D-BE3D-4418-8C2A-DB8F46502AA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{D86148AF-B609-4C57-BE89-E6967A2973AC}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\sdk\x64\sfxca.dll = Installer\wix\3.10\sdk\x64\sfxca.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{C4E82EFD-4513-4064-B0D8-307EDE2B939F}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\sdk\x64\sfxca.dll = Installer\wix\3.10\sdk\x64\sfxca.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{52DF66D6-75A3-44CB-8960-AA91CE8DDB39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{B06203BD-2091-491E-9DBD-D554077607A4}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\sdk\vs2010\lib\x64\deputil.lib = Installer\wix\3.10\sdk\vs2010\lib\x64\deputil.lib
+		Installer\wix\3.10\sdk\vs2010\lib\x64\dutil.lib = Installer\wix\3.10\sdk\vs2010\lib\x64\dutil.lib
+		Installer\wix\3.10\sdk\vs2010\lib\x64\wcautil.lib = Installer\wix\3.10\sdk\vs2010\lib\x64\wcautil.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{3D783E64-765F-44FB-817C-8D1993A1A5FC}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\sdk\vs2010\lib\x86\balutil.lib = Installer\wix\3.10\sdk\vs2010\lib\x86\balutil.lib
+		Installer\wix\3.10\sdk\vs2010\lib\x86\deputil.lib = Installer\wix\3.10\sdk\vs2010\lib\x86\deputil.lib
+		Installer\wix\3.10\sdk\vs2010\lib\x86\dutil.lib = Installer\wix\3.10\sdk\vs2010\lib\x86\dutil.lib
+		Installer\wix\3.10\sdk\vs2010\lib\x86\wcautil.lib = Installer\wix\3.10\sdk\vs2010\lib\x86\wcautil.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{C3F68F76-13F9-4F63-8DF1-E6C41AA5378D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{BDB78119-A12C-41EA-96D1-B7A42106FB14}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\sdk\vs2012\lib\x64\deputil.lib = Installer\wix\3.10\sdk\vs2012\lib\x64\deputil.lib
+		Installer\wix\3.10\sdk\vs2012\lib\x64\dutil.lib = Installer\wix\3.10\sdk\vs2012\lib\x64\dutil.lib
+		Installer\wix\3.10\sdk\vs2012\lib\x64\wcautil.lib = Installer\wix\3.10\sdk\vs2012\lib\x64\wcautil.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{F48D39AA-0F05-4CD0-BC5D-91D6A8E5F8D6}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\sdk\vs2012\lib\x86\balutil.lib = Installer\wix\3.10\sdk\vs2012\lib\x86\balutil.lib
+		Installer\wix\3.10\sdk\vs2012\lib\x86\deputil.lib = Installer\wix\3.10\sdk\vs2012\lib\x86\deputil.lib
+		Installer\wix\3.10\sdk\vs2012\lib\x86\dutil.lib = Installer\wix\3.10\sdk\vs2012\lib\x86\dutil.lib
+		Installer\wix\3.10\sdk\vs2012\lib\x86\wcautil.lib = Installer\wix\3.10\sdk\vs2012\lib\x86\wcautil.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{7352D285-DBC5-4803-AA42-C98F10BB94B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{0FC99812-F13E-4AC4-9C1C-8D1FBBBA490E}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\sdk\vs2013\lib\x64\deputil.lib = Installer\wix\3.10\sdk\vs2013\lib\x64\deputil.lib
+		Installer\wix\3.10\sdk\vs2013\lib\x64\dutil.lib = Installer\wix\3.10\sdk\vs2013\lib\x64\dutil.lib
+		Installer\wix\3.10\sdk\vs2013\lib\x64\wcautil.lib = Installer\wix\3.10\sdk\vs2013\lib\x64\wcautil.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{AA29A055-8372-4EB5-AE5E-3DDD22307821}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\sdk\vs2013\lib\x86\balutil.lib = Installer\wix\3.10\sdk\vs2013\lib\x86\balutil.lib
+		Installer\wix\3.10\sdk\vs2013\lib\x86\deputil.lib = Installer\wix\3.10\sdk\vs2013\lib\x86\deputil.lib
+		Installer\wix\3.10\sdk\vs2013\lib\x86\dutil.lib = Installer\wix\3.10\sdk\vs2013\lib\x86\dutil.lib
+		Installer\wix\3.10\sdk\vs2013\lib\x86\wcautil.lib = Installer\wix\3.10\sdk\vs2013\lib\x86\wcautil.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{F931694D-CAEF-4591-8470-75B49CFC6128}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{7632373F-B5F1-4614-93A3-4861682A44B6}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\sdk\vs2015\lib\x64\deputil.lib = Installer\wix\3.10\sdk\vs2015\lib\x64\deputil.lib
+		Installer\wix\3.10\sdk\vs2015\lib\x64\dutil.lib = Installer\wix\3.10\sdk\vs2015\lib\x64\dutil.lib
+		Installer\wix\3.10\sdk\vs2015\lib\x64\wcautil.lib = Installer\wix\3.10\sdk\vs2015\lib\x64\wcautil.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{BA65553F-71F9-4945-AA37-2E295E2BFEA8}"
+	ProjectSection(SolutionItems) = preProject
+		Installer\wix\3.10\sdk\vs2015\lib\x86\balutil.lib = Installer\wix\3.10\sdk\vs2015\lib\x86\balutil.lib
+		Installer\wix\3.10\sdk\vs2015\lib\x86\deputil.lib = Installer\wix\3.10\sdk\vs2015\lib\x86\deputil.lib
+		Installer\wix\3.10\sdk\vs2015\lib\x86\dutil.lib = Installer\wix\3.10\sdk\vs2015\lib\x86\dutil.lib
+		Installer\wix\3.10\sdk\vs2015\lib\x86\wcautil.lib = Installer\wix\3.10\sdk\vs2015\lib\x86\wcautil.lib
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCHVRF", "JCHVRF\JCHVRF.csproj", "{388321CF-B647-40F0-9FDF-DB495BC005A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{740D5E16-B84A-43E7-98A0-3BEC9363B2F9}"
+	ProjectSection(SolutionItems) = preProject
+		packages\itextsharp.pdfa.5.5.13\.signature.p7s = packages\itextsharp.pdfa.5.5.13\.signature.p7s
+		packages\itextsharp.pdfa.5.5.13\AGPL.txt = packages\itextsharp.pdfa.5.5.13\AGPL.txt
+		packages\itextsharp.pdfa.5.5.13\itextsharp.pdfa.5.5.13.nupkg = packages\itextsharp.pdfa.5.5.13\itextsharp.pdfa.5.5.13.nupkg
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}.Debug|x86.ActiveCfg = Debug|x86
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}.Debug|x86.Build.0 = Debug|x86
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}.Release|x86.ActiveCfg = Release|x86
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}.Release|x86.Build.0 = Release|x86
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF}.Debug|x86.ActiveCfg = Debug|x86
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF}.Debug|x86.Build.0 = Debug|x86
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF}.Release|x86.ActiveCfg = Release|x86
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF}.Release|x86.Build.0 = Release|x86
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}.Debug|x86.ActiveCfg = Debug|x86
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}.Debug|x86.Build.0 = Debug|x86
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}.Release|x86.ActiveCfg = Release|x86
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C}.Release|x86.Build.0 = Release|x86
+		{B472C47D-C465-4867-8589-AAF860A26046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B472C47D-C465-4867-8589-AAF860A26046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B472C47D-C465-4867-8589-AAF860A26046}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{B472C47D-C465-4867-8589-AAF860A26046}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{B472C47D-C465-4867-8589-AAF860A26046}.Debug|x86.ActiveCfg = Debug|x86
+		{B472C47D-C465-4867-8589-AAF860A26046}.Debug|x86.Build.0 = Debug|x86
+		{B472C47D-C465-4867-8589-AAF860A26046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B472C47D-C465-4867-8589-AAF860A26046}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B472C47D-C465-4867-8589-AAF860A26046}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B472C47D-C465-4867-8589-AAF860A26046}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B472C47D-C465-4867-8589-AAF860A26046}.Release|x86.ActiveCfg = Release|x86
+		{B472C47D-C465-4867-8589-AAF860A26046}.Release|x86.Build.0 = Release|x86
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9}.Debug|x86.ActiveCfg = Debug|x86
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9}.Debug|x86.Build.0 = Debug|x86
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9}.Release|x86.ActiveCfg = Release|x86
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9}.Release|x86.Build.0 = Release|x86
+		{62DAE7E0-FC30-470E-905C-A39E985427F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62DAE7E0-FC30-470E-905C-A39E985427F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62DAE7E0-FC30-470E-905C-A39E985427F2}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{62DAE7E0-FC30-470E-905C-A39E985427F2}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{62DAE7E0-FC30-470E-905C-A39E985427F2}.Debug|x86.ActiveCfg = Debug|x86
+		{62DAE7E0-FC30-470E-905C-A39E985427F2}.Debug|x86.Build.0 = Debug|x86
+		{62DAE7E0-FC30-470E-905C-A39E985427F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62DAE7E0-FC30-470E-905C-A39E985427F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62DAE7E0-FC30-470E-905C-A39E985427F2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{62DAE7E0-FC30-470E-905C-A39E985427F2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{62DAE7E0-FC30-470E-905C-A39E985427F2}.Release|x86.ActiveCfg = Release|x86
+		{62DAE7E0-FC30-470E-905C-A39E985427F2}.Release|x86.Build.0 = Release|x86
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD}.Debug|x86.ActiveCfg = Debug|x86
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD}.Debug|x86.Build.0 = Debug|x86
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD}.Release|x86.ActiveCfg = Release|x86
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD}.Release|x86.Build.0 = Release|x86
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}.Debug|x86.ActiveCfg = Debug|x86
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}.Debug|x86.Build.0 = Debug|x86
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}.Release|x86.ActiveCfg = Release|x86
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38}.Release|x86.Build.0 = Release|x86
+		{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}.Debug|x86.ActiveCfg = Debug|x86
+		{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}.Debug|x86.Build.0 = Debug|x86
+		{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}.Release|x86.ActiveCfg = Release|Any CPU
+		{110C64CB-388A-4B74-8F21-6C1C28FDED40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110C64CB-388A-4B74-8F21-6C1C28FDED40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110C64CB-388A-4B74-8F21-6C1C28FDED40}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{110C64CB-388A-4B74-8F21-6C1C28FDED40}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{110C64CB-388A-4B74-8F21-6C1C28FDED40}.Debug|x86.ActiveCfg = Debug|x86
+		{110C64CB-388A-4B74-8F21-6C1C28FDED40}.Debug|x86.Build.0 = Debug|x86
+		{110C64CB-388A-4B74-8F21-6C1C28FDED40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110C64CB-388A-4B74-8F21-6C1C28FDED40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{110C64CB-388A-4B74-8F21-6C1C28FDED40}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{110C64CB-388A-4B74-8F21-6C1C28FDED40}.Release|Mixed Platforms.Build.0 = Release|x86
+		{110C64CB-388A-4B74-8F21-6C1C28FDED40}.Release|x86.ActiveCfg = Release|x86
+		{110C64CB-388A-4B74-8F21-6C1C28FDED40}.Release|x86.Build.0 = Release|x86
+		{078FEA38-6601-43D6-9595-D0B010064DB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{078FEA38-6601-43D6-9595-D0B010064DB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{078FEA38-6601-43D6-9595-D0B010064DB9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{078FEA38-6601-43D6-9595-D0B010064DB9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{078FEA38-6601-43D6-9595-D0B010064DB9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{078FEA38-6601-43D6-9595-D0B010064DB9}.Debug|x86.Build.0 = Debug|Any CPU
+		{078FEA38-6601-43D6-9595-D0B010064DB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{078FEA38-6601-43D6-9595-D0B010064DB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{078FEA38-6601-43D6-9595-D0B010064DB9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{078FEA38-6601-43D6-9595-D0B010064DB9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{078FEA38-6601-43D6-9595-D0B010064DB9}.Release|x86.ActiveCfg = Release|Any CPU
+		{078FEA38-6601-43D6-9595-D0B010064DB9}.Release|x86.Build.0 = Release|Any CPU
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D}.Debug|x86.Build.0 = Debug|Any CPU
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D}.Release|x86.ActiveCfg = Release|Any CPU
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D}.Release|x86.Build.0 = Release|Any CPU
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4}.Debug|x86.Build.0 = Debug|Any CPU
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4}.Release|x86.ActiveCfg = Release|Any CPU
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4}.Release|x86.Build.0 = Release|Any CPU
+		{388321CF-B647-40F0-9FDF-DB495BC005A4}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{388321CF-B647-40F0-9FDF-DB495BC005A4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{388321CF-B647-40F0-9FDF-DB495BC005A4}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{388321CF-B647-40F0-9FDF-DB495BC005A4}.Debug|x86.ActiveCfg = Debug|x86
+		{388321CF-B647-40F0-9FDF-DB495BC005A4}.Debug|x86.Build.0 = Debug|x86
+		{388321CF-B647-40F0-9FDF-DB495BC005A4}.Release|Any CPU.ActiveCfg = Release|x86
+		{388321CF-B647-40F0-9FDF-DB495BC005A4}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{388321CF-B647-40F0-9FDF-DB495BC005A4}.Release|Mixed Platforms.Build.0 = Release|x86
+		{388321CF-B647-40F0-9FDF-DB495BC005A4}.Release|x86.ActiveCfg = Release|x86
+		{388321CF-B647-40F0-9FDF-DB495BC005A4}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A} = {FD2ABEA4-BDB8-476E-BB6F-29C3C3C217F4}
+		{C7829FB6-7909-4467-A603-FE8F78DF33BF} = {5EA1BAE4-3783-4E01-A3FA-EB37A3C8EAEB}
+		{69A59513-D8C7-41E2-9DF3-95C0A7EA787C} = {7B3D78C2-EF00-481E-9329-44F10B2E6DAA}
+		{B472C47D-C465-4867-8589-AAF860A26046} = {7B3D78C2-EF00-481E-9329-44F10B2E6DAA}
+		{C3C491B1-8C66-4923-8C7F-8697869A0FC9} = {A279FFF6-EBC4-41E1-9BC3-3FC0A82BEF11}
+		{62DAE7E0-FC30-470E-905C-A39E985427F2} = {5EA1BAE4-3783-4E01-A3FA-EB37A3C8EAEB}
+		{75856CC4-F1C7-42F8-834E-F7FA42E158CD} = {5EA1BAE4-3783-4E01-A3FA-EB37A3C8EAEB}
+		{B11207C8-C702-43FA-AE96-F1BB2AA4BA38} = {FD2ABEA4-BDB8-476E-BB6F-29C3C3C217F4}
+		{ACD40089-8738-4D59-A97F-F8EF8CB0BF91} = {FD2ABEA4-BDB8-476E-BB6F-29C3C3C217F4}
+		{078FEA38-6601-43D6-9595-D0B010064DB9} = {39706016-772C-495B-9A67-97C2ADEC9988}
+		{BAE277C6-D0C1-4776-BA5D-269F7278C97D} = {66E5DC45-8F7D-4140-B3F9-742FBD09E79A}
+		{798A74B8-F22C-4B72-8CFB-3835306CE2C4} = {50AA6975-C5D0-4370-9196-65F440496C89}
+		{0DF6B563-7032-4FE8-996E-AF853F7D7478} = {219B49FF-53DA-412A-B1D7-C0F0FE96F08D}
+		{85243818-FFB6-4D80-87BD-6DDE444E2920} = {219B49FF-53DA-412A-B1D7-C0F0FE96F08D}
+		{0BE4226E-3FB8-4504-9B91-838631EA104A} = {0DF6B563-7032-4FE8-996E-AF853F7D7478}
+		{A0631B4F-30F5-4A85-8942-61404F779FE1} = {0BE4226E-3FB8-4504-9B91-838631EA104A}
+		{0B29F592-603F-44FA-A0C3-E28BEEAE9C5C} = {0BE4226E-3FB8-4504-9B91-838631EA104A}
+		{C507210D-E821-4120-98C3-DCEB5DC365B1} = {0BE4226E-3FB8-4504-9B91-838631EA104A}
+		{B442EA38-A8D4-4124-8C4E-14E8093CC26C} = {0B29F592-603F-44FA-A0C3-E28BEEAE9C5C}
+		{63C683C1-A540-4936-9291-A601268F70A3} = {0B29F592-603F-44FA-A0C3-E28BEEAE9C5C}
+		{D59D0B0A-1947-422E-931A-9910CA06FA03} = {0B29F592-603F-44FA-A0C3-E28BEEAE9C5C}
+		{8647C0F7-0D76-4003-9E6B-84520B91A641} = {0B29F592-603F-44FA-A0C3-E28BEEAE9C5C}
+		{4039E87D-BE3D-4418-8C2A-DB8F46502AA3} = {0B29F592-603F-44FA-A0C3-E28BEEAE9C5C}
+		{D86148AF-B609-4C57-BE89-E6967A2973AC} = {0B29F592-603F-44FA-A0C3-E28BEEAE9C5C}
+		{C4E82EFD-4513-4064-B0D8-307EDE2B939F} = {0B29F592-603F-44FA-A0C3-E28BEEAE9C5C}
+		{52DF66D6-75A3-44CB-8960-AA91CE8DDB39} = {63C683C1-A540-4936-9291-A601268F70A3}
+		{B06203BD-2091-491E-9DBD-D554077607A4} = {52DF66D6-75A3-44CB-8960-AA91CE8DDB39}
+		{3D783E64-765F-44FB-817C-8D1993A1A5FC} = {52DF66D6-75A3-44CB-8960-AA91CE8DDB39}
+		{C3F68F76-13F9-4F63-8DF1-E6C41AA5378D} = {D59D0B0A-1947-422E-931A-9910CA06FA03}
+		{BDB78119-A12C-41EA-96D1-B7A42106FB14} = {C3F68F76-13F9-4F63-8DF1-E6C41AA5378D}
+		{F48D39AA-0F05-4CD0-BC5D-91D6A8E5F8D6} = {C3F68F76-13F9-4F63-8DF1-E6C41AA5378D}
+		{7352D285-DBC5-4803-AA42-C98F10BB94B8} = {8647C0F7-0D76-4003-9E6B-84520B91A641}
+		{0FC99812-F13E-4AC4-9C1C-8D1FBBBA490E} = {7352D285-DBC5-4803-AA42-C98F10BB94B8}
+		{AA29A055-8372-4EB5-AE5E-3DDD22307821} = {7352D285-DBC5-4803-AA42-C98F10BB94B8}
+		{F931694D-CAEF-4591-8470-75B49CFC6128} = {4039E87D-BE3D-4418-8C2A-DB8F46502AA3}
+		{7632373F-B5F1-4614-93A3-4861682A44B6} = {F931694D-CAEF-4591-8470-75B49CFC6128}
+		{BA65553F-71F9-4945-AA37-2E295E2BFEA8} = {F931694D-CAEF-4591-8470-75B49CFC6128}
+		{388321CF-B647-40F0-9FDF-DB495BC005A4} = {9F61A6DE-94E8-4BB5-99F8-B95B665E38C5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65DBFEB8-F3E2-4B56-9CA3-457F4A8FB496}
+	EndGlobalSection
+EndGlobal

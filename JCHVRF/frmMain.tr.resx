@@ -1,0 +1,3947 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="pnlContent_Piping_Tree.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Piping_Tree.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbDeleteOutdoorOfPiping.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbDeleteOutdoorOfPiping.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbCopyOutdoorOfPiping.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbCopyOutdoorOfPiping.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Piping_Tree_Toolbar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Piping_Tree_Toolbar.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Piping_Tree_Toolbar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Piping_Tree_Toolbar.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_PipingLeft.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_PipingLeft.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitPiping.Panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitPiping.Panel1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStripPiping.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="contextMenuStripPiping.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="addFlowPiping.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="addFlowPiping.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Piping_4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Piping_4.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_PipingBinaryTree.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_PipingBinaryTree.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="jcbtnPipingLengths.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnPipingLengths.Text" xml:space="preserve">
+    <value>Boru uzunluğu</value>
+  </data>
+  <data name="jcbtnPipingLengths.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnPipingLengths.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbPipingRule.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbPipingRule.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnVarification.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnVarification.Text" xml:space="preserve">
+    <value>Doğrulama</value>
+  </data>
+  <data name="jcbtnVarification.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnVarification.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnReset.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAAAaCAIAAADOqG6yAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAACH
+        DwAAjA8AAP1SAACBQAAAfXkAAOmLAAA85QAAGcxzPIV3AAAKOWlDQ1BQaG90b3Nob3AgSUNDIHByb2Zp
+        bGUAAEjHnZZ3VFTXFofPvXd6oc0wAlKG3rvAANJ7k15FYZgZYCgDDjM0sSGiAhFFRJoiSFDEgNFQJFZE
+        sRAUVLAHJAgoMRhFVCxvRtaLrqy89/Ly++Osb+2z97n77L3PWhcAkqcvl5cGSwGQyhPwgzyc6RGRUXTs
+        AIABHmCAKQBMVka6X7B7CBDJy82FniFyAl8EAfB6WLwCcNPQM4BOB/+fpFnpfIHomAARm7M5GSwRF4g4
+        JUuQLrbPipgalyxmGCVmvihBEcuJOWGRDT77LLKjmNmpPLaIxTmns1PZYu4V8bZMIUfEiK+ICzO5nCwR
+        3xKxRoowlSviN+LYVA4zAwAUSWwXcFiJIjYRMYkfEuQi4uUA4EgJX3HcVyzgZAvEl3JJS8/hcxMSBXQd
+        li7d1NqaQffkZKVwBALDACYrmcln013SUtOZvBwAFu/8WTLi2tJFRbY0tba0NDQzMv2qUP91829K3NtF
+        ehn4uWcQrf+L7a/80hoAYMyJarPziy2uCoDOLQDI3fti0zgAgKSobx3Xv7oPTTwviQJBuo2xcVZWlhGX
+        wzISF/QP/U+Hv6GvvmckPu6P8tBdOfFMYYqALq4bKy0lTcinZ6QzWRy64Z+H+B8H/nUeBkGceA6fwxNF
+        hImmjMtLELWbx+YKuGk8Opf3n5r4D8P+pMW5FonS+BFQY4yA1HUqQH7tBygKESDR+8Vd/6NvvvgwIH55
+        4SqTi3P/7zf9Z8Gl4iWDm/A5ziUohM4S8jMX98TPEqABAUgCKpAHykAd6ABDYAasgC1wBG7AG/iDEBAJ
+        VgMWSASpgA+yQB7YBApBMdgJ9oBqUAcaQTNoBcdBJzgFzoNL4Bq4AW6D+2AUTIBnYBa8BgsQBGEhMkSB
+        5CEVSBPSh8wgBmQPuUG+UBAUCcVCCRAPEkJ50GaoGCqDqqF6qBn6HjoJnYeuQIPQXWgMmoZ+h97BCEyC
+        qbASrAUbwwzYCfaBQ+BVcAK8Bs6FC+AdcCXcAB+FO+Dz8DX4NjwKP4PnEIAQERqiihgiDMQF8UeikHiE
+        j6xHipAKpAFpRbqRPuQmMorMIG9RGBQFRUcZomxRnqhQFAu1BrUeVYKqRh1GdaB6UTdRY6hZ1Ec0Ga2I
+        1kfboL3QEegEdBa6EF2BbkK3oy+ib6Mn0K8xGAwNo42xwnhiIjFJmLWYEsw+TBvmHGYQM46Zw2Kx8lh9
+        rB3WH8vECrCF2CrsUexZ7BB2AvsGR8Sp4Mxw7rgoHA+Xj6vAHcGdwQ3hJnELeCm8Jt4G749n43PwpfhG
+        fDf+On4Cv0CQJmgT7AghhCTCJkIloZVwkfCA8JJIJKoRrYmBRC5xI7GSeIx4mThGfEuSIemRXEjRJCFp
+        B+kQ6RzpLuklmUzWIjuSo8gC8g5yM/kC+RH5jQRFwkjCS4ItsUGiRqJDYkjiuSReUlPSSXK1ZK5kheQJ
+        yeuSM1J4KS0pFymm1HqpGqmTUiNSc9IUaVNpf+lU6RLpI9JXpKdksDJaMm4ybJkCmYMyF2TGKQhFneJC
+        YVE2UxopFykTVAxVm+pFTaIWU7+jDlBnZWVkl8mGyWbL1sielh2lITQtmhcthVZKO04bpr1borTEaQln
+        yfYlrUuGlszLLZVzlOPIFcm1yd2WeydPl3eTT5bfJd8p/1ABpaCnEKiQpbBf4aLCzFLqUtulrKVFS48v
+        vacIK+opBimuVTyo2K84p6Ss5KGUrlSldEFpRpmm7KicpFyufEZ5WoWiYq/CVSlXOavylC5Ld6Kn0Cvp
+        vfRZVUVVT1Whar3qgOqCmrZaqFq+WpvaQ3WCOkM9Xr1cvUd9VkNFw08jT6NF454mXpOhmai5V7NPc15L
+        Wytca6tWp9aUtpy2l3audov2Ax2yjoPOGp0GnVu6GF2GbrLuPt0berCehV6iXo3edX1Y31Kfq79Pf9AA
+        bWBtwDNoMBgxJBk6GWYathiOGdGMfI3yjTqNnhtrGEcZ7zLuM/5oYmGSYtJoct9UxtTbNN+02/R3Mz0z
+        llmN2S1zsrm7+QbzLvMXy/SXcZbtX3bHgmLhZ7HVosfig6WVJd+y1XLaSsMq1qrWaoRBZQQwShiXrdHW
+        ztYbrE9Zv7WxtBHYHLf5zdbQNtn2iO3Ucu3lnOWNy8ft1OyYdvV2o/Z0+1j7A/ajDqoOTIcGh8eO6o5s
+        xybHSSddpySno07PnU2c+c7tzvMuNi7rXM65Iq4erkWuA24ybqFu1W6P3NXcE9xb3Gc9LDzWepzzRHv6
+        eO7yHPFS8mJ5NXvNelt5r/Pu9SH5BPtU+zz21fPl+3b7wX7efrv9HqzQXMFb0ekP/L38d/s/DNAOWBPw
+        YyAmMCCwJvBJkGlQXlBfMCU4JvhI8OsQ55DSkPuhOqHC0J4wybDosOaw+XDX8LLw0QjjiHUR1yIVIrmR
+        XVHYqLCopqi5lW4r96yciLaILoweXqW9KnvVldUKq1NWn46RjGHGnIhFx4bHHol9z/RnNjDn4rziauNm
+        WS6svaxnbEd2OXuaY8cp40zG28WXxU8l2CXsTphOdEisSJzhunCruS+SPJPqkuaT/ZMPJX9KCU9pS8Wl
+        xqae5Mnwknm9acpp2WmD6frphemja2zW7Fkzy/fhN2VAGasyugRU0c9Uv1BHuEU4lmmfWZP5Jiss60S2
+        dDYvuz9HL2d7zmSue+63a1FrWWt78lTzNuWNrXNaV78eWh+3vmeD+oaCDRMbPTYe3kTYlLzpp3yT/LL8
+        V5vDN3cXKBVsLBjf4rGlpVCikF84stV2a9021DbutoHt5turtn8sYhddLTYprih+X8IqufqN6TeV33za
+        Eb9joNSydP9OzE7ezuFdDrsOl0mX5ZaN7/bb3VFOLy8qf7UnZs+VimUVdXsJe4V7Ryt9K7uqNKp2Vr2v
+        Tqy+XeNc01arWLu9dn4fe9/Qfsf9rXVKdcV17w5wD9yp96jvaNBqqDiIOZh58EljWGPft4xvm5sUmoqb
+        PhziHRo9HHS4t9mqufmI4pHSFrhF2DJ9NProje9cv+tqNWytb6O1FR8Dx4THnn4f+/3wcZ/jPScYJ1p/
+        0Pyhtp3SXtQBdeR0zHYmdo52RXYNnvQ+2dNt293+o9GPh06pnqo5LXu69AzhTMGZT2dzz86dSz83cz7h
+        /HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3/2TxU/uA5UDHdavr
+        XTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriXeW/h/sYH6AdFD6UeVjxS
+        fNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2dmnafvvF05dOJZ+nPFmYKf5X+
+        tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/MF72Rf3P4LeNt37vwd5MLWe+x7ys/
+        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAAOvAAADrwBlbxySQAAAPFJREFUWEft2bFqwgAA
+        hOG+/+rkbAd9DTVGY2glpYoBpYFItDFNorZzTzgQSrna/X7uCb71Hrr9Qaf36P05QF2x2tPpy8lAZKx7
+        M9Y/umE1bfvpZCAy1r3dsOqmuTgZiIj1UddnJwMRsY5V1ToZiIj1Xpa1k4GIWPvDoXIyEBGrKIrSyUBE
+        rDzf7Z0MRMR6y7LcyUBErM12mzkZiIi1TtONk4GIWMvVKnUyEBErSV5enQxExHpeLBInAxGx5nH85GQg
+        ItYsimInAxGxwuk0cjIQEWsShjMnAxGxxkEQOhmIiDUcjQInAxGxfryJ3q/r9gffFbIh/WAKfCMAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnReset.Text" xml:space="preserve">
+    <value>Sıfırla</value>
+  </data>
+  <data name="jcbtnReset.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnReset.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnFitWindow.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnFitWindow.Text" xml:space="preserve">
+    <value>Pencereye Sığdır</value>
+  </data>
+  <data name="jcbtnFitWindow.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnFitWindow.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnAddCP.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnAddCP.Text" xml:space="preserve">
+    <value>CP Ekle</value>
+  </data>
+  <data name="jcbtnAddCP.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnAddCP.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_PipingHorizontal.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_PipingHorizontal.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Piping_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Piping_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblScale.Text" xml:space="preserve">
+    <value>Ölçek %</value>
+  </data>
+  <data name="jclblScale.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblScale.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutdoor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 14</value>
+  </data>
+  <data name="jclblOutdoor.Text" xml:space="preserve">
+    <value>sistem</value>
+  </data>
+  <data name="jclblOutdoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutdoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_PipingLength.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_PipingLength.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbOutdoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbOutdoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCMBOutdoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCMBOutdoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_PipingVertical.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_PipingVertical.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbScale.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbScale.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Piping_3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Piping_3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInfoAddRefrigeration.Text" xml:space="preserve">
+    <value>Soğutucu akışkan dolum miktarını hesaplamadan önce uzunluk verisini elle girmek için, lütfen bağlantı hattına çift tıklayın! </value>
+  </data>
+  <data name="jclblInfoAddRefrigeration.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInfoAddRefrigeration.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Piping_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Piping_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnCollapsePiping.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnCollapsePiping.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Piping_1_btn.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Piping_1_btn.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbOver.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbOver.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitPiping.Panel2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitPiping.Panel2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitPiping.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitPiping.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Wiring_Tree.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Wiring_Tree.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbDeleteOutdoorOfWiring.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbDeleteOutdoorOfWiring.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbCopyOutdoorOfWiring.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbCopyOutdoorOfWiring.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Wiring_Tree_Toolbar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Wiring_Tree_Toolbar.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Wiring_Tree_Toolbar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Wiring_Tree_Toolbar.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_WiringLeft.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_WiringLeft.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitWiring.Panel1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitWiring.Panel1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="addFlowWiring.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="addFlowWiring.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Wiring_4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Wiring_4.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnFitWindow1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnFitWindow1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnFitWindow1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblScale1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 16</value>
+  </data>
+  <data name="jclblScale1.Text" xml:space="preserve">
+    <value>Ölçek %</value>
+  </data>
+  <data name="jclblScale1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblScale1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbScale1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbScale1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCMBOutdoor1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCMBOutdoor1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutdoor1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 16</value>
+  </data>
+  <data name="jclblOutdoor1.Text" xml:space="preserve">
+    <value>sistem</value>
+  </data>
+  <data name="jclblOutdoor1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutdoor1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Wiring_3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Wiring_3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Wiring_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Wiring_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnCollapseWiring.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnCollapseWiring.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Wiring_1_btn.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Wiring_1_btn.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitWiring.Panel2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitWiring.Panel2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitWiring.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="splitWiring.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tbtnNew.Text" xml:space="preserve">
+    <value>Yeni</value>
+  </data>
+  <data name="tbtnOpen.Text" xml:space="preserve">
+    <value>Aç</value>
+  </data>
+  <data name="tbtnSave.Text" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="tbtnSaveAs.Text" xml:space="preserve">
+    <value>Farklı Kaydet</value>
+  </data>
+  <data name="tbtnImport.Text" xml:space="preserve">
+    <value>İçe Aktar</value>
+  </data>
+  <data name="tbtnSetting.Text" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="tbtnAbout.Text" xml:space="preserve">
+    <value>Hakkında</value>
+  </data>
+  <data name="tbtnExit.Text" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="toolStrip1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="toolStrip1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridViewImageColumn1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="tbtnLanguage_en.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="tbtnLanguage_zh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="tbtnLanguage_es.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="tbtnLanguage_fr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="tbtnLanguage_tr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>148, 22</value>
+  </data>
+  <data name="tbtnLanguage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="tbtnLanguage.Text" xml:space="preserve">
+    <value>Dil</value>
+  </data>
+  <data name="statusStrip1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="statusStrip1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAD+
+        CwAAAk1TRnQBSQFMAgEBBQEAAYgBDgHEAQ4BEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/4IAAfMN9AHzMQAB9Az/
+        AfMB9DEAAfQB8wv/AfMB9DEAAfQL/wH0AfMB9DEAAfQB8wr/AvMB9DEAAfQB8wH0CQAB9AHzAfQxAAH0
+        AfMB9AkAAfQB8wH0MQAB9AHzAfQJAAH0AfMB9DEAAfQB8wH0CQAB9AHzAfQxAAH0AfMB9AkAAfQB8wH0
+        MQAB9AHzC/QB8wH0MQAB9AH/C/QB8wH0MQAB8w30AfNzAAP0AfIB8AEaAfEB8wP0NAAB9AHzAfABjgGI
+        AYICiAGOAbYB8gHzAfQEAAH0CPMXAAn0BQAC8wG2CGgBbgHyAvMDAAH0Ae8CBwLvAwcB/wQAAfMN9AHz
+        AwAB9An/BAAB/wG2CmgBbwG9AfQDAAH0AfcC9AHzAfQB/wH0AfMB/wQAAfQB7wr3Ae8B8QH0AwAB9AH/
+        AvQB/wH0Af8B9AHzAf8EAAHyAYgLaAG2AfQDAAH0AfcC9AHyAe8B8QH0AfMB/wQAAfQC8grzAfIB9AMA
+        AfQB/wP0Af8C9AHzAf8EAAGTDGgBjgH0AwAB9AH3AfMB9AHzAfcBBwL0Af8EAAH0AbwK7wHwAfIB9AMA
+        AfQB/wL0BP8B9AH/BAABjgJoCWkBaAGIAfEDAAH0AfcB/wHyAfEB9wHvAfIB9AH/BAAB9AHxAQcJ7wLy
+        AfQDAAH0Av8B8wH0Av8C9AH/BAABbgJoCP8BBwFoAYgBGgMAAfQB9wHzAQcB7wH3Ae8C9AH/BAAB9AHy
+        AfQJAAH0AfIB9AMAAfQH/wH0Af8EAAGOAmgIGgGTAWgBggHwAwAB9AH3AfIBBwHvAfcB8QHzAfQB/wQA
+        AfQB8gH0CQAB9AHyAfQDAAH0Af8B9AT/AvQB/wQAAZMCaAiIAmgBiAHyAwAB9AH3AfIBBwHwAfcBBwG8
+        AfMB/wQAAfQB8gH0CQAB9AHyAfQDAAH0Af8B9AH/AfQD/wH0Af8EAAG8AYILaAGOAfQDAAH0AfcB8gEH
+        AfEB9wHvAfAB8wH/BAAB9AHyAfQJAAH0AfIB9AMAAfQD/wH0Av8C9AH/BAAB9AGOC2gB8AH0AwAB9AH3
+        Af8B8gH0AfcB7wL0Af8EAAH0AfIB9AkAAfQB8gH0AwAB9AL/AfME/wH0Af8EAAH0AfEBjgloAbYC8wMA
+        AfQB9wH0AvMB8QHyAfMB8gH/BAAB9AHyC/QB8gH0AwAB9AT/AfQB/wH0AfMB/wQAAfMB/wHxAY4BggVo
+        AYgBtgHzAfQEAAH0Ae8GBwG8Af8EAAH0AbwKBwG8AfIB9AMAAfQB/wL0A/8B9AL/BQAD9AHwAZMBbwFu
+        AW8BkwHyAf8B9AUACfQFAAHzDfQB8wMACfREAAFCAU0BPgcAAT4DAAEoAwABQAMAASADAAEBAQABAQYA
+        AQEWAAP/AQAC/wYAAv8GAAGABwABgAcAAYAHAAGABwABgAcAAY8B+AYAAY8B+AYAAY8B+AYAAY8B+AYA
+        AY8B+AYAAYAHAAGABwABgAcAAv8GAAHgAQMG/wHAAQEB4AEPAv8B4AEPAYABAAHgAQcBgAEAAeABBwGA
+        AQAB4AEHAYABAAHgAQcBgAEAAeABBwGAAQAB4AEHAYABAAHgAQcBgAEAAeABBwGAAQAB4AEHAYABAAHg
+        AQcBgAEAAeABBwGPAfgB4AEHAYABAAHgAQcBjwH4AeABBwGAAQAB4AEHAY8B+AHgAQcBgAEAAeABBwGP
+        AfgB4AEHAYABAAHgAQcBjwH4AeABBwGAAQAB4AEHAYABAAHgAQcBgAEBAeABBwGAAQAB4AEHAcABAwHg
+        AQ8BgAEAAeABDwj/FgAL
+</value>
+  </data>
+  <data name="pnlSpan_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="imageListController.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADM
+        CAAAAk1TRnQBSQFMAgEBBAEAAYgBCAHEAQgBDQEAAQ0BAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABNAMAARoDAAEBAQABCAUAAUgBBRgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
+        AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
+        AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
+        AwABZgMAAZkDAAHMAgABMwMAAjMCAAEzAWYCAAEzAZkCAAEzAcwCAAEzAf8CAAFmAwABZgEzAgACZgIA
+        AWYBmQIAAWYBzAIAAWYB/wIAAZkDAAGZATMCAAGZAWYCAAKZAgABmQHMAgABmQH/AgABzAMAAcwBMwIA
+        AcwBZgIAAcwBmQIAAswCAAHMAf8CAAH/AWYCAAH/AZkCAAH/AcwBAAEzAf8CAAH/AQABMwEAATMBAAFm
+        AQABMwEAAZkBAAEzAQABzAEAATMBAAH/AQAB/wEzAgADMwEAAjMBZgEAAjMBmQEAAjMBzAEAAjMB/wEA
+        ATMBZgIAATMBZgEzAQABMwJmAQABMwFmAZkBAAEzAWYBzAEAATMBZgH/AQABMwGZAgABMwGZATMBAAEz
+        AZkBZgEAATMCmQEAATMBmQHMAQABMwGZAf8BAAEzAcwCAAEzAcwBMwEAATMBzAFmAQABMwHMAZkBAAEz
+        AswBAAEzAcwB/wEAATMB/wEzAQABMwH/AWYBAAEzAf8BmQEAATMB/wHMAQABMwL/AQABZgMAAWYBAAEz
+        AQABZgEAAWYBAAFmAQABmQEAAWYBAAHMAQABZgEAAf8BAAFmATMCAAFmAjMBAAFmATMBZgEAAWYBMwGZ
+        AQABZgEzAcwBAAFmATMB/wEAAmYCAAJmATMBAANmAQACZgGZAQACZgHMAQABZgGZAgABZgGZATMBAAFm
+        AZkBZgEAAWYCmQEAAWYBmQHMAQABZgGZAf8BAAFmAcwCAAFmAcwBMwEAAWYBzAGZAQABZgLMAQABZgHM
+        Af8BAAFmAf8CAAFmAf8BMwEAAWYB/wGZAQABZgH/AcwBAAHMAQAB/wEAAf8BAAHMAQACmQIAAZkBMwGZ
+        AQABmQEAAZkBAAGZAQABzAEAAZkDAAGZAjMBAAGZAQABZgEAAZkBMwHMAQABmQEAAf8BAAGZAWYCAAGZ
+        AWYBMwEAAZkBMwFmAQABmQFmAZkBAAGZAWYBzAEAAZkBMwH/AQACmQEzAQACmQFmAQADmQEAApkBzAEA
+        ApkB/wEAAZkBzAIAAZkBzAEzAQABZgHMAWYBAAGZAcwBmQEAAZkCzAEAAZkBzAH/AQABmQH/AgABmQH/
+        ATMBAAGZAcwBZgEAAZkB/wGZAQABmQH/AcwBAAGZAv8BAAHMAwABmQEAATMBAAHMAQABZgEAAcwBAAGZ
+        AQABzAEAAcwBAAGZATMCAAHMAjMBAAHMATMBZgEAAcwBMwGZAQABzAEzAcwBAAHMATMB/wEAAcwBZgIA
+        AcwBZgEzAQABmQJmAQABzAFmAZkBAAHMAWYBzAEAAZkBZgH/AQABzAGZAgABzAGZATMBAAHMAZkBZgEA
+        AcwCmQEAAcwBmQHMAQABzAGZAf8BAALMAgACzAEzAQACzAFmAQACzAGZAQADzAEAAswB/wEAAcwB/wIA
+        AcwB/wEzAQABmQH/AWYBAAHMAf8BmQEAAcwB/wHMAQABzAL/AQABzAEAATMBAAH/AQABZgEAAf8BAAGZ
+        AQABzAEzAgAB/wIzAQAB/wEzAWYBAAH/ATMBmQEAAf8BMwHMAQAB/wEzAf8BAAH/AWYCAAH/AWYBMwEA
+        AcwCZgEAAf8BZgGZAQAB/wFmAcwBAAHMAWYB/wEAAf8BmQIAAf8BmQEzAQAB/wGZAWYBAAH/ApkBAAH/
+        AZkBzAEAAf8BmQH/AQAB/wHMAgAB/wHMATMBAAH/AcwBZgEAAf8BzAGZAQAB/wLMAQAB/wHMAf8BAAL/
+        ATMBAAHMAf8BZgEAAv8BmQEAAv8BzAEAAmYB/wEAAWYB/wFmAQABZgL/AQAB/wJmAQAB/wFmAf8BAAL/
+        AWYBAAEhAQABpQEAA18BAAN3AQADhgEAA5YBAAPLAQADsgEAA9cBAAPdAQAD4wEAA+oBAAPxAQAD+AEA
+        AfAB+wH/AQABpAKgAQADgAMAAf8CAAH/AwAC/wEAAf8DAAH/AQAB/wEAAv8CAAP//wD/AKcABW0B6wH0
+        AesEbQHsDf8FbQHrAf8B6wXsDf8FZgHqAfQB6gRmAW0N/wVmAeoB/wHrAfQD/wHsCP8B9AT/BWYB6gHz
+        AeoEZgFtDf8FZgHqAf8B6wH0AgAB/wHsCP8B9AIAAv8FZgHqAf8B6gRmAW0N/wVmAeoB/wHrAfQCAAH/
+        AewI/wH0AgAC/wVmAeoB9AHqBGYBbQ3/BWYB6gH/AesB8wP0AewI/wT0Af8D6gESAWwBbQH/AesCbALq
+        AewH/wH0Bf8F6gHrAf8F6wHsB/8B9AX/BPMB8gHzAf8B8wLyA/ME9AHzAfQB/wPzA/Qa/wTqARIB6wH0
+        AesCEgLqAesN/wHqBewB/wHrBOoB6w3/BWYB6gH0AeoEZgFtDf8BZgH0A/8B7AH/AeoEZgFtAf8B9Av/
+        BWYB6gH0AeoEZgFtDf8BZgH0AgAB/wHsAf8B6gRmAW0B/wH0AgAJ/wVmAeoB/wHqBGYBbQ3/AWYB9AIA
+        Af8B7AH/AeoEZgFtAf8B9AIACf8FZgHqAfQB6gRmAW0N/wFmAfMD9AHsAf8B6gRmAW0B/wT0CP8FZgHq
+        Af8B6gRmAW0N/wVmAeoB/wHqBGYBbQ3/AUIBTQE+BwABPgMAASgDAAE0AwABGgMAAQEBAAEBBQAB0BcA
+        A/99AAEYAQABwAUAARgBAAHALAABDAEAAWAFAAEMAQABYCgACw==
+</value>
+  </data>
+  <data name="pictureBox2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_ProjectInfo.Text" xml:space="preserve">
+    <value>Proje Bilgileri</value>
+  </data>
+  <data name="lbl_ProjectInfo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_ProjectInfo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlProject_Left_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlProject_Left_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Project_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Project_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlProject_left.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlProject_left.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Line_Project_3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>883, 1</value>
+  </data>
+  <data name="Line_Project_3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Line_Project_3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Project_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>883, 1</value>
+  </data>
+  <data name="line_Project_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Project_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjProductType.Text" xml:space="preserve">
+    <value>Ürün Türü</value>
+  </data>
+  <data name="lblProjProductType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjProductType.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_Heating.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_Heating.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_Cooling.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_Cooling.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjAltitude.Text" xml:space="preserve">
+    <value>Rakım *</value>
+  </data>
+  <data name="lblProjAltitude.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjAltitude.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblSelectionMode.Text" xml:space="preserve">
+    <value>Seçim Modu</value>
+  </data>
+  <data name="jclblSelectionMode.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblSelectionMode.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblSoldTo.Text" xml:space="preserve">
+    <value>Satış Yapılan</value>
+  </data>
+  <data name="jclblSoldTo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblSoldTo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRemarks.Text" xml:space="preserve">
+    <value>Açıklamalar</value>
+  </data>
+  <data name="jclblRemarks.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRemarks.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjLocation.Text" xml:space="preserve">
+    <value>Projenin Konumu</value>
+  </data>
+  <data name="lblProjLocation.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjLocation.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblDeliveryDate.Text" xml:space="preserve">
+    <value>Sevkıyat yapılması gereken tarih</value>
+  </data>
+  <data name="jclblDeliveryDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblDeliveryDate.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtSalesName.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtSalesName.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="timeDeliveryDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="timeDeliveryDate.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblPurchaseOrderNo.Text" xml:space="preserve">
+    <value>Satın Alma Siparişi No.</value>
+  </data>
+  <data name="jclblPurchaseOrderNo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblPurchaseOrderNo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtSalesOffice.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtSalesOffice.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="timeOrderDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="timeOrderDate.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOrderDate.Text" xml:space="preserve">
+    <value>Sipariş tarihi</value>
+  </data>
+  <data name="jclblOrderDate.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOrderDate.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtSalesYINo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtSalesYINo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtSoldTo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtSoldTo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblSalesYINo.Text" xml:space="preserve">
+    <value>Satış Mühendisinin YI No.</value>
+  </data>
+  <data name="jclblSalesYINo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblSalesYINo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblShipTo.Text" xml:space="preserve">
+    <value>Sevk Adresi</value>
+  </data>
+  <data name="jclblShipTo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblShipTo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtRemarks.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtRemarks.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtShipTo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtShipTo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjSalesName.Text" xml:space="preserve">
+    <value>Satış Mühendisi</value>
+  </data>
+  <data name="lblProjSalesName.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjSalesName.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjContractNo.Text" xml:space="preserve">
+    <value>Sözleşme No.</value>
+  </data>
+  <data name="lblProjContractNo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjContractNo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtLocation.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtLocation.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtPurchaseOrderNo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtPurchaseOrderNo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblSalesOffice.Text" xml:space="preserve">
+    <value>Satış Ofisi</value>
+  </data>
+  <data name="jclblSalesOffice.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblSalesOffice.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtContractNo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtContractNo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjRegion.Text" xml:space="preserve">
+    <value>Satış Bölgesi</value>
+  </data>
+  <data name="lblProjRegion.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjRegion.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtAltitude.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtAltitude.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbProductType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbProductType.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbSubRegion.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbSubRegion.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblUnitAltitude_m.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblUnitAltitude_m.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjName.Text" xml:space="preserve">
+    <value>Projenin Adı</value>
+  </data>
+  <data name="lblProjName.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblProjName.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtProjName.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtProjName.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Project.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Project.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_7px_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_7px_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_HelpInfo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_HelpInfo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_HelpInfo.Text" xml:space="preserve">
+    <value>Yardım Bilgileri</value>
+  </data>
+  <data name="lbl_HelpInfo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_HelpInfo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pb_HelpInfo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pb_HelpInfo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHelpInfo_Icon.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHelpInfo_Icon.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Project_2.Text" xml:space="preserve">
+    <value>2. Üç seçim modu bulunmaktadır: Soğutma, Isıtma, Soğutma ve Isıtma.</value>
+  </data>
+  <data name="jclblHelp_Project_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Project_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Project_1.Text" xml:space="preserve">
+    <value>1. Yazılımdan çıkış yapıldığı zaman, program değiştirilen tüm bilgileri kaydedecektir.</value>
+  </data>
+  <data name="jclblHelp_Project_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Project_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHelpInfo_Project.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHelpInfo_Project.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgProject.Text" xml:space="preserve">
+    <value>Proje</value>
+  </data>
+  <data name="tpgProject.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgProject.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvIndoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvIndoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Indoor_3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Indoor_3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Indoor_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Indoor_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnManageRoom.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAAAaCAIAAADOqG6yAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAACH
+        DwAAjA8AAP1SAACBQAAAfXkAAOmLAAA85QAAGcxzPIV3AAAKOWlDQ1BQaG90b3Nob3AgSUNDIHByb2Zp
+        bGUAAEjHnZZ3VFTXFofPvXd6oc0wAlKG3rvAANJ7k15FYZgZYCgDDjM0sSGiAhFFRJoiSFDEgNFQJFZE
+        sRAUVLAHJAgoMRhFVCxvRtaLrqy89/Ly++Osb+2z97n77L3PWhcAkqcvl5cGSwGQyhPwgzyc6RGRUXTs
+        AIABHmCAKQBMVka6X7B7CBDJy82FniFyAl8EAfB6WLwCcNPQM4BOB/+fpFnpfIHomAARm7M5GSwRF4g4
+        JUuQLrbPipgalyxmGCVmvihBEcuJOWGRDT77LLKjmNmpPLaIxTmns1PZYu4V8bZMIUfEiK+ICzO5nCwR
+        3xKxRoowlSviN+LYVA4zAwAUSWwXcFiJIjYRMYkfEuQi4uUA4EgJX3HcVyzgZAvEl3JJS8/hcxMSBXQd
+        li7d1NqaQffkZKVwBALDACYrmcln013SUtOZvBwAFu/8WTLi2tJFRbY0tba0NDQzMv2qUP91829K3NtF
+        ehn4uWcQrf+L7a/80hoAYMyJarPziy2uCoDOLQDI3fti0zgAgKSobx3Xv7oPTTwviQJBuo2xcVZWlhGX
+        wzISF/QP/U+Hv6GvvmckPu6P8tBdOfFMYYqALq4bKy0lTcinZ6QzWRy64Z+H+B8H/nUeBkGceA6fwxNF
+        hImmjMtLELWbx+YKuGk8Opf3n5r4D8P+pMW5FonS+BFQY4yA1HUqQH7tBygKESDR+8Vd/6NvvvgwIH55
+        4SqTi3P/7zf9Z8Gl4iWDm/A5ziUohM4S8jMX98TPEqABAUgCKpAHykAd6ABDYAasgC1wBG7AG/iDEBAJ
+        VgMWSASpgA+yQB7YBApBMdgJ9oBqUAcaQTNoBcdBJzgFzoNL4Bq4AW6D+2AUTIBnYBa8BgsQBGEhMkSB
+        5CEVSBPSh8wgBmQPuUG+UBAUCcVCCRAPEkJ50GaoGCqDqqF6qBn6HjoJnYeuQIPQXWgMmoZ+h97BCEyC
+        qbASrAUbwwzYCfaBQ+BVcAK8Bs6FC+AdcCXcAB+FO+Dz8DX4NjwKP4PnEIAQERqiihgiDMQF8UeikHiE
+        j6xHipAKpAFpRbqRPuQmMorMIG9RGBQFRUcZomxRnqhQFAu1BrUeVYKqRh1GdaB6UTdRY6hZ1Ec0Ga2I
+        1kfboL3QEegEdBa6EF2BbkK3oy+ib6Mn0K8xGAwNo42xwnhiIjFJmLWYEsw+TBvmHGYQM46Zw2Kx8lh9
+        rB3WH8vECrCF2CrsUexZ7BB2AvsGR8Sp4Mxw7rgoHA+Xj6vAHcGdwQ3hJnELeCm8Jt4G749n43PwpfhG
+        fDf+On4Cv0CQJmgT7AghhCTCJkIloZVwkfCA8JJIJKoRrYmBRC5xI7GSeIx4mThGfEuSIemRXEjRJCFp
+        B+kQ6RzpLuklmUzWIjuSo8gC8g5yM/kC+RH5jQRFwkjCS4ItsUGiRqJDYkjiuSReUlPSSXK1ZK5kheQJ
+        yeuSM1J4KS0pFymm1HqpGqmTUiNSc9IUaVNpf+lU6RLpI9JXpKdksDJaMm4ybJkCmYMyF2TGKQhFneJC
+        YVE2UxopFykTVAxVm+pFTaIWU7+jDlBnZWVkl8mGyWbL1sielh2lITQtmhcthVZKO04bpr1borTEaQln
+        yfYlrUuGlszLLZVzlOPIFcm1yd2WeydPl3eTT5bfJd8p/1ABpaCnEKiQpbBf4aLCzFLqUtulrKVFS48v
+        vacIK+opBimuVTyo2K84p6Ss5KGUrlSldEFpRpmm7KicpFyufEZ5WoWiYq/CVSlXOavylC5Ld6Kn0Cvp
+        vfRZVUVVT1Whar3qgOqCmrZaqFq+WpvaQ3WCOkM9Xr1cvUd9VkNFw08jT6NF454mXpOhmai5V7NPc15L
+        Wytca6tWp9aUtpy2l3audov2Ax2yjoPOGp0GnVu6GF2GbrLuPt0berCehV6iXo3edX1Y31Kfq79Pf9AA
+        bWBtwDNoMBgxJBk6GWYathiOGdGMfI3yjTqNnhtrGEcZ7zLuM/5oYmGSYtJoct9UxtTbNN+02/R3Mz0z
+        llmN2S1zsrm7+QbzLvMXy/SXcZbtX3bHgmLhZ7HVosfig6WVJd+y1XLaSsMq1qrWaoRBZQQwShiXrdHW
+        ztYbrE9Zv7WxtBHYHLf5zdbQNtn2iO3Ucu3lnOWNy8ft1OyYdvV2o/Z0+1j7A/ajDqoOTIcGh8eO6o5s
+        xybHSSddpySno07PnU2c+c7tzvMuNi7rXM65Iq4erkWuA24ybqFu1W6P3NXcE9xb3Gc9LDzWepzzRHv6
+        eO7yHPFS8mJ5NXvNelt5r/Pu9SH5BPtU+zz21fPl+3b7wX7efrv9HqzQXMFb0ekP/L38d/s/DNAOWBPw
+        YyAmMCCwJvBJkGlQXlBfMCU4JvhI8OsQ55DSkPuhOqHC0J4wybDosOaw+XDX8LLw0QjjiHUR1yIVIrmR
+        XVHYqLCopqi5lW4r96yciLaILoweXqW9KnvVldUKq1NWn46RjGHGnIhFx4bHHol9z/RnNjDn4rziauNm
+        WS6svaxnbEd2OXuaY8cp40zG28WXxU8l2CXsTphOdEisSJzhunCruS+SPJPqkuaT/ZMPJX9KCU9pS8Wl
+        xqae5Mnwknm9acpp2WmD6frphemja2zW7Fkzy/fhN2VAGasyugRU0c9Uv1BHuEU4lmmfWZP5Jiss60S2
+        dDYvuz9HL2d7zmSue+63a1FrWWt78lTzNuWNrXNaV78eWh+3vmeD+oaCDRMbPTYe3kTYlLzpp3yT/LL8
+        V5vDN3cXKBVsLBjf4rGlpVCikF84stV2a9021DbutoHt5turtn8sYhddLTYprih+X8IqufqN6TeV33za
+        Eb9joNSydP9OzE7ezuFdDrsOl0mX5ZaN7/bb3VFOLy8qf7UnZs+VimUVdXsJe4V7Ryt9K7uqNKp2Vr2v
+        Tqy+XeNc01arWLu9dn4fe9/Qfsf9rXVKdcV17w5wD9yp96jvaNBqqDiIOZh58EljWGPft4xvm5sUmoqb
+        PhziHRo9HHS4t9mqufmI4pHSFrhF2DJ9NProje9cv+tqNWytb6O1FR8Dx4THnn4f+/3wcZ/jPScYJ1p/
+        0Pyhtp3SXtQBdeR0zHYmdo52RXYNnvQ+2dNt293+o9GPh06pnqo5LXu69AzhTMGZT2dzz86dSz83cz7h
+        /HhPTM/9CxEXbvUG9g5c9Ll4+ZL7pQt9Tn1nL9tdPnXF5srJq4yrndcsr3X0W/S3/2TxU/uA5UDHdavr
+        XTesb3QPLh88M+QwdP6m681Lt7xuXbu94vbgcOjwnZHokdE77DtTd1PuvriXeW/h/sYH6AdFD6UeVjxS
+        fNTws+7PbaOWo6fHXMf6Hwc/vj/OGn/2S8Yv7ycKnpCfVEyqTDZPmU2dmnafvvF05dOJZ+nPFmYKf5X+
+        tfa5zvMffnP8rX82YnbiBf/Fp99LXsq/PPRq2aueuYC5R69TXy/MF72Rf3P4LeNt37vwd5MLWe+x7ys/
+        6H7o/ujz8cGn1E+f/gUDmPP8usTo0wAAAAlwSFlzAAAOvAAADrwBlbxySQAAAPFJREFUWEft2bFqwgAA
+        hOG+/+rkbAd9DTVGY2glpYoBpYFItDFNorZzTzgQSrna/X7uCb71Hrr9Qaf36P05QF2x2tPpy8lAZKx7
+        M9Y/umE1bfvpZCAy1r3dsOqmuTgZiIj1UddnJwMRsY5V1ToZiIj1Xpa1k4GIWPvDoXIyEBGrKIrSyUBE
+        rDzf7Z0MRMR6y7LcyUBErM12mzkZiIi1TtONk4GIWMvVKnUyEBErSV5enQxExHpeLBInAxGx5nH85GQg
+        ItYsimInAxGxwuk0cjIQEWsShjMnAxGxxkEQOhmIiDUcjQInAxGxfryJ3q/r9gffFbIh/WAKfCMAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnManageRoom.Text" xml:space="preserve">
+    <value>Odayı Yönet</value>
+  </data>
+  <data name="jcbtnManageRoom.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnManageRoom.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_IsRoomBase.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_IsRoomBase.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Indoor_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Indoor_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbCopyIndoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbCopyIndoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbClearIndoorOption.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbClearIndoorOption.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbAddIndoorOption.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbAddIndoorOption.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbDeleteIndoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbDeleteIndoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbEditIndoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbEditIndoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbAddIndoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbAddIndoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbHelpIndoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbHelpIndoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Indoor_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Indoor_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Indoor_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Indoor_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Indoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Indoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_7px_3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_7px_3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Indoor_2.Text" xml:space="preserve">
+    <value>2. Eğer "Oda temelinde" seçilmezse, gerekli iç ünite doğrudan seçilebilir.</value>
+  </data>
+  <data name="jclblHelp_Indoor_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Indoor_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Indoor_1.Text" xml:space="preserve">
+    <value>1. Eğer "Oda temelinde" seçilirse, iç ünitenin odanın durumu ile eşleştirilmesine olanak sağlanır.</value>
+  </data>
+  <data name="jclblHelp_Indoor_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Indoor_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHelpInfo_Indoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHelpInfo_Indoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgIndoor.Text" xml:space="preserve">
+    <value>İç Ünite</value>
+  </data>
+  <data name="tpgIndoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgIndoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvIndoorNotAssigned.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvIndoorNotAssigned.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndoorList.Text" xml:space="preserve">
+    <value>Atama yapılmamış iç üniteler</value>
+  </data>
+  <data name="jclblIndoorList.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndoorList.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIndoorNotAttached.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIndoorNotAttached.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_7px_6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_7px_6.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_Span_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_Span_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblTemperatureC1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblTemperatureC1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblCapacityC1.Text" xml:space="preserve">
+    <value>Kapasite</value>
+  </data>
+  <data name="jclblCapacityC1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblCapacityC1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblSensibleHeatC.Text" xml:space="preserve">
+    <value>Hissedilebilir Isı</value>
+  </data>
+  <data name="jclblSensibleHeatC.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblSensibleHeatC.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Outdoor_3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Outdoor_3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIndoorInfo_Content_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIndoorInfo_Content_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInWBCoolValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInWBCoolValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInDBCoolValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInDBCoolValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInDBCool.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInDBCool.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInWBCool.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInWBCool.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndRH.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndRH.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndRHValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndRHValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredC2.Text" xml:space="preserve">
+    <value>Gerekli</value>
+  </data>
+  <data name="jclblRequiredC2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredC2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblCooling1.Text" xml:space="preserve">
+    <value>Soğutma</value>
+  </data>
+  <data name="jclblCooling1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblCooling1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableC1.Text" xml:space="preserve">
+    <value>Kullanılabilir</value>
+  </data>
+  <data name="jclblAvailableC1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableC1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredCValue2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredCValue2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableCValue1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableCValue1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableC2.Text" xml:space="preserve">
+    <value>Kullanılabilir</value>
+  </data>
+  <data name="jclblAvailableC2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableC2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredC1.Text" xml:space="preserve">
+    <value>Gerekli</value>
+  </data>
+  <data name="jclblRequiredC1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredC1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableCValue2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableCValue2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredCValue1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredCValue1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCoolingInd.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCoolingInd.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHeating1.Text" xml:space="preserve">
+    <value>Isıtma</value>
+  </data>
+  <data name="jclblHeating1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHeating1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Outdoor_4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Outdoor_4.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInDBHeatValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInDBHeatValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredH1.Text" xml:space="preserve">
+    <value>Gerekli</value>
+  </data>
+  <data name="jclblRequiredH1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredH1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInDBHeat.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblInDBHeat.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredHValue1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredHValue1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableHValue1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableHValue1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableH1.Text" xml:space="preserve">
+    <value>Kullanılabilir</value>
+  </data>
+  <data name="jclblAvailableH1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableH1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHeatingInd.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHeatingInd.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tableLayoutPanel_IndoorInfo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tableLayoutPanel_IndoorInfo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndModelValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndModelValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndModel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndModel.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndoorType.Text" xml:space="preserve">
+    <value>İç Ünite Tipi</value>
+  </data>
+  <data name="jclblIndoorType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndoorType.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndoorTypeValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIndoorTypeValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIndoorInfo_Content_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIndoorInfo_Content_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIndoorInfo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlIndoorInfo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_Span_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbl_Span_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblTemperatureC.Text" xml:space="preserve">
+    <value>Sıcaklık</value>
+  </data>
+  <data name="jclblTemperatureC.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblTemperatureC.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Outdoor_6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Outdoor_6.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblCapacityC.Text" xml:space="preserve">
+    <value>Kapasite</value>
+  </data>
+  <data name="jclblCapacityC.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblCapacityC.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlOutdoorInfo_Content_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlOutdoorInfo_Content_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutIWCoolValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutIWCoolValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutIWCool.Text" xml:space="preserve">
+    <value>giriş Su</value>
+  </data>
+  <data name="jclblOutIWCool.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutIWCool.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredC.Text" xml:space="preserve">
+    <value>Gerekli</value>
+  </data>
+  <data name="jclblRequiredC.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredC.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblCooling.Text" xml:space="preserve">
+    <value>Soğutma</value>
+  </data>
+  <data name="jclblCooling.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblCooling.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutDBCool.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutDBCool.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableC.Text" xml:space="preserve">
+    <value>Kullanılabilir</value>
+  </data>
+  <data name="jclblAvailableC.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableC.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutDBCoolValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutDBCoolValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredCValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredCValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableCValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableCValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCoolingOut.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlCoolingOut.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutIWHeatValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutIWHeatValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutIWHeat.Text" xml:space="preserve">
+    <value>giriş Su</value>
+  </data>
+  <data name="jclblOutIWHeat.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutIWHeat.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutWBHeatValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutWBHeatValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutWBHeat.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutWBHeat.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHeating.Text" xml:space="preserve">
+    <value>Isıtma</value>
+  </data>
+  <data name="jclblHeating.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHeating.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Outdoor_7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Outdoor_7.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutRHValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutRHValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutRH.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutRH.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutDBHeatValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutDBHeatValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutDBHeat.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutDBHeat.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredH.Text" xml:space="preserve">
+    <value>Gerekli</value>
+  </data>
+  <data name="jclblRequiredH.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredH.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableH.Text" xml:space="preserve">
+    <value>Kullanılabilir</value>
+  </data>
+  <data name="jclblAvailableH.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableH.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredHValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRequiredHValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableHValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblAvailableHValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHeatingOut.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHeatingOut.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tableLayoutPanel_OutdoorInfo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tableLayoutPanel_OutdoorInfo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutModel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutModel.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblProductType.Text" xml:space="preserve">
+    <value>Ürün Türü</value>
+  </data>
+  <data name="jclblProductType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblProductType.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblConnectionRadio.Text" xml:space="preserve">
+    <value>Oran</value>
+  </data>
+  <data name="jclblConnectionRadio.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblConnectionRadio.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutModelValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutModelValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutdoorTypeValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutdoorTypeValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblProductTypeValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblProductTypeValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblActualRatioValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblActualRatioValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutdoorType.Text" xml:space="preserve">
+    <value>Ürün Türü</value>
+  </data>
+  <data name="jclblOutdoorType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblOutdoorType.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblMaxRatioValue.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblMaxRatioValue.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblMaxRatio.Text" xml:space="preserve">
+    <value>Maksimum</value>
+  </data>
+  <data name="jclblMaxRatio.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblMaxRatio.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblActualRatio.Text" xml:space="preserve">
+    <value>Mevcut</value>
+  </data>
+  <data name="jclblActualRatio.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblActualRatio.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlOutdoorInfo_Content_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlOutdoorInfo_Content_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlOutdoorInfo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlOutdoorInfo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblUnitInfo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblUnitInfo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlUnitInfo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlUnitInfo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tvOutdoor.Nodes" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAAB1TeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQsAAAAEVGV4dAtUb29sVGlwVGV4dAROYW1lCUlzQ2hlY2tl
+        ZApJbWFnZUluZGV4CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRleBBTZWxlY3RlZEltYWdlS2V5CkNo
+        aWxkQ291bnQJY2hpbGRyZW4wCWNoaWxkcmVuMQEBAQAAAQABAAQEAQgICB1TeXN0ZW0uV2luZG93cy5G
+        b3Jtcy5UcmVlTm9kZQIAAAAdU3lzdGVtLldpbmRvd3MuRm9ybXMuVHJlZU5vZGUCAAAAAgAAAAYDAAAA
+        FE91dDEgW1lET0g0MjBFVk0tMEJdBgQAAAAABgUAAAAFTm9kZTAA/////wkEAAAA/////wkEAAAAAgAA
+        AAkHAAAACQgAAAAFBwAAAB1TeXN0ZW0uV2luZG93cy5Gb3Jtcy5UcmVlTm9kZQkAAAAEVGV4dAtUb29s
+        VGlwVGV4dAROYW1lCUlzQ2hlY2tlZApJbWFnZUluZGV4CEltYWdlS2V5ElNlbGVjdGVkSW1hZ2VJbmRl
+        eBBTZWxlY3RlZEltYWdlS2V5CkNoaWxkQ291bnQBAQEAAAEAAQABCAgIAgAAAAYJAAAAGEluZDEgW1lE
+        Q0swMjhIME5ORUEtMkMzXQkEAAAABgsAAAAFTm9kZTMA/////wkEAAAA/////wkEAAAAAAAAAAUIAAAA
+        HVN5c3RlbS5XaW5kb3dzLkZvcm1zLlRyZWVOb2RlCQAAAARUZXh0C1Rvb2xUaXBUZXh0BE5hbWUJSXND
+        aGVja2VkCkltYWdlSW5kZXgISW1hZ2VLZXkSU2VsZWN0ZWRJbWFnZUluZGV4EFNlbGVjdGVkSW1hZ2VL
+        ZXkKQ2hpbGRDb3VudAEBAQAAAQABAAEICAgCAAAABg0AAAAYSW5kMSBbWURDSzAyOEgwTk5FQS0yQzNd
+        CQQAAAAGDwAAAAVOb2RlMgD/////CQQAAAD/////CQQAAAAAAAAACw==
+</value>
+  </data>
+  <data name="tvOutdoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tvOutdoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlTreeViewOutdoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlTreeViewOutdoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Outdoor_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Outdoor_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbDeleteOutdoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbDeleteOutdoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbCopyOutdoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbCopyOutdoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbEditOutdoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbEditOutdoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbAddOutdoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbAddOutdoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Outdoor_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="line_Outdoor_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Outdoor_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Outdoor_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Outdoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Outdoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_7px_4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_7px_4.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Outdoor_2.Text" xml:space="preserve">
+    <value>2. Mevcut dış üniteyi düzenlemek için, lütfen "Düzenle" simgesinin üzerine tıklayın veya dış ünite simgesinin üzerine çift tıklayın.</value>
+  </data>
+  <data name="jclblHelp_Outdoor_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Outdoor_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Outdoor_1.Text" xml:space="preserve">
+    <value>1. İlgili iç üniteyi bu dış üniteye sürüklemek için, lütfen "Yeni" üzerine tıklayın.</value>
+  </data>
+  <data name="jclblHelp_Outdoor_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Outdoor_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHelpInfo_Outdoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHelpInfo_Outdoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgOutdoor.Text" xml:space="preserve">
+    <value>Dış Ünite</value>
+  </data>
+  <data name="tpgOutdoor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgOutdoor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgPiping.Text" xml:space="preserve">
+    <value>Boru Tesisatı</value>
+  </data>
+  <data name="tpgPiping.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgPiping.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgWiring.Text" xml:space="preserve">
+    <value>Kablo Tesisatı</value>
+  </data>
+  <data name="tpgWiring.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgWiring.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvMaterialList.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvMaterialList.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_help2.Text" xml:space="preserve">
+    <value>2. Bir Modbus protokolü kontrol sistemine, aralarında BAS, Açma/Kapatma kumandası veya merkezi kumanda bulunan sadece 1 master kumanda bağlanabilir.</value>
+  </data>
+  <data name="jclblController_help2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_help2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_help1.Text" xml:space="preserve">
+    <value>1. Bir BACnet protokolü kontrol sistemine, aralarında BAS, Açma/Kapatma kumandası bulunan en fazla 16 master kumanda veya en fazla 4 merkezi kumanda bağlanabilir.</value>
+  </data>
+  <data name="jclblController_help1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_help1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Right_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Right_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnCCVarification.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnCCVarification.Text" xml:space="preserve">
+    <value>Doğrulama</value>
+  </data>
+  <data name="jcbtnCCVarification.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnCCVarification.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblMaterialList.Text" xml:space="preserve">
+    <value>Malzeme Listesi</value>
+  </data>
+  <data name="jclblMaterialList.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblMaterialList.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Right_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Right_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_right.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_right.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_Controller_3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_Controller_3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Center.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Center.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcLabel5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcLabel5.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcLabel4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcLabel4.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcLabel3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcLabel3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Center_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Center_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Center_Parent.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Center_Parent.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lvController_OutdoorList.Items" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkMAwAAAFFTeXN0
+        ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2Vu
+        PWIwM2Y1ZjdmMTFkNTBhM2EFAQAAACFTeXN0ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0l0ZW0HAAAA
+        BFRleHQKSW1hZ2VJbmRleAlCYWNrQ29sb3IHQ2hlY2tlZARGb250CUZvcmVDb2xvchdVc2VJdGVtU3R5
+        bGVGb3JTdWJJdGVtcwEABAAEBAAIFFN5c3RlbS5EcmF3aW5nLkNvbG9yAwAAAAETU3lzdGVtLkRyYXdp
+        bmcuRm9udAMAAAAUU3lzdGVtLkRyYXdpbmcuQ29sb3IDAAAAAQIAAAAGBAAAAAlPdXQgMSAoNSkAAAAA
+        Bfv///8UU3lzdGVtLkRyYXdpbmcuQ29sb3IEAAAABG5hbWUFdmFsdWUKa25vd25Db2xvcgVzdGF0ZQEA
+        AAAJBwcDAAAACgAAAAAAAAAAGAABAAAJBgAAAAH5////+////woAAAAAAAAAABoAAQABBQYAAAATU3lz
+        dGVtLkRyYXdpbmcuRm9udAQAAAAETmFtZQRTaXplBVN0eWxlBFVuaXQBAAQECxhTeXN0ZW0uRHJhd2lu
+        Zy5Gb250U3R5bGUDAAAAG1N5c3RlbS5EcmF3aW5nLkdyYXBoaWNzVW5pdAMAAAADAAAABggAAAAFQXJp
+        YWwAABxBBff///8YU3lzdGVtLkRyYXdpbmcuRm9udFN0eWxlAQAAAAd2YWx1ZV9fAAgDAAAAAAAAAAX2
+        ////G1N5c3RlbS5EcmF3aW5nLkdyYXBoaWNzVW5pdAEAAAAHdmFsdWVfXwAIAwAAAAMAAAAL
+</value>
+  </data>
+  <data name="lvController_OutdoorList.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lvController_OutdoorList.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Left_2_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Left_2_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_LeftTitle2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_LeftTitle2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_Step2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_Step2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Left_2_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Left_2_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Left_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Left_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_Controller_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_Controller_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbController1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pbController1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox4.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox5.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox6.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox7.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox8.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox9.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlControllerList.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlControllerList.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_LeftTitle1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_LeftTitle1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_Step1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_Step1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Left_1_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Left_1_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Left_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Left_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_Controller_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_Controller_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbControllerType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbControllerType.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_Controller_4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_Controller_4.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbControllerProductType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jccmbControllerProductType.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_ProductType.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_ProductType.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Left.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlController_Left.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgController.Text" xml:space="preserve">
+    <value>Kumanda</value>
+  </data>
+  <data name="tpgController.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgController.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptAllSystem.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptAllSystem.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptSystemIn.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptSystemIn.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gbRptSystem.Text" xml:space="preserve">
+    <value>Rapor içerikleri</value>
+  </data>
+  <data name="gbRptSystem.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gbRptSystem.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIncluded.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 16</value>
+  </data>
+  <data name="jclblIncluded.Text" xml:space="preserve">
+    <value>Dahildir</value>
+  </data>
+  <data name="jclblIncluded.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblIncluded.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptSystemEx.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptSystemEx.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbRptOutdoorIncluded.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbRptOutdoorIncluded.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbRptOutdoorExcept.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lbRptOutdoorExcept.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Report_1_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Report_1_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_7px_7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_7px_7.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclbl6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 16</value>
+  </data>
+  <data name="jclbl6.Text" xml:space="preserve">
+    <value>Kumanda</value>
+  </data>
+  <data name="jclbl6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclbl6.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclbl5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 16</value>
+  </data>
+  <data name="jclbl5.Text" xml:space="preserve">
+    <value>Kablo Tesisatı</value>
+  </data>
+  <data name="jclbl5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclbl5.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclbl4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 16</value>
+  </data>
+  <data name="jclbl4.Text" xml:space="preserve">
+    <value>Boru Tesisatı</value>
+  </data>
+  <data name="jclbl4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclbl4.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclbl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 16</value>
+  </data>
+  <data name="jclbl3.Text" xml:space="preserve">
+    <value>Dış Ünite Detayı</value>
+  </data>
+  <data name="jclbl3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclbl3.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclbl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="jclbl2.Text" xml:space="preserve">
+    <value>İç Ünite Detayı</value>
+  </data>
+  <data name="jclbl2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclbl2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclbl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 16</value>
+  </data>
+  <data name="jclbl1.Text" xml:space="preserve">
+    <value>Oda Bilgileri</value>
+  </data>
+  <data name="jclbl1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclbl1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptOptionPrice.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptOptionPrice.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptSelectAllModule.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptSelectAllModule.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptController.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptController.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptWiring.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptWiring.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptPiping.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptPiping.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptOutdoorDetail.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptOutdoorDetail.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptIndoorDetail.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptIndoorDetail.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptRoomInfo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="uc_CheckBox_RptRoomInfo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlReportItems.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlReportItems.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gbRptContents.Text" xml:space="preserve">
+    <value>Rapor içerikleri</value>
+  </data>
+  <data name="gbRptContents.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gbRptContents.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Report_1_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Report_1_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Report_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Report_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnOutputPdf.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnOutputPdf.Text" xml:space="preserve">
+    <value>Çıktı pdf</value>
+  </data>
+  <data name="jcbtnOutputPdf.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnOutputPdf.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPriceActivation.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPriceActivation.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnPriceOK.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnPriceOK.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnPriceOK.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtPriceActivation.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jctxtPriceActivation.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlActivationPrice.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlActivationPrice.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnOutputSpreadsheet.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnOutputSpreadsheet.Text" xml:space="preserve">
+    <value>Hesap tablosunu çıktı olarak ver</value>
+  </data>
+  <data name="jcbtnOutputSpreadsheet.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnOutputSpreadsheet.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnOutputReport.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnOutputReport.Text" xml:space="preserve">
+    <value>Raporu çıktı olarak ver</value>
+  </data>
+  <data name="jcbtnOutputReport.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnOutputReport.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptPathClear.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnRptPathClear.Text" xml:space="preserve">
+    <value>Temizle</value>
+  </data>
+  <data name="jcbtnRptPathClear.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptPathClear.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptBrowse.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnRptBrowse.Text" xml:space="preserve">
+    <value>Gözat...</value>
+  </data>
+  <data name="jcbtnRptBrowse.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptBrowse.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gbRptFilePath.Text" xml:space="preserve">
+    <value>Rapor dosyalarını çıktı olarak ver</value>
+  </data>
+  <data name="gbRptFilePath.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gbRptFilePath.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRptFilePath.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblRptFilePath.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Report_2_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Report_2_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_7px_8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlSpan_7px_8.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptDXFOutput.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnRptDXFOutput.Text" xml:space="preserve">
+    <value>dxf dosyalarını çıktı olarak ver</value>
+  </data>
+  <data name="jcbtnRptDXFOutput.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptDXFOutput.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptDXFPathClear.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnRptDXFPathClear.Text" xml:space="preserve">
+    <value>Temizle</value>
+  </data>
+  <data name="jcbtnRptDXFPathClear.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptDXFPathClear.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptDXFBrowse.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="jcbtnRptDXFBrowse.Text" xml:space="preserve">
+    <value>Gözat...</value>
+  </data>
+  <data name="jcbtnRptDXFBrowse.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnRptDXFBrowse.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gbRptDXFFilePath.Text" xml:space="preserve">
+    <value>dxf dosyalarını çıktı olarak ver</value>
+  </data>
+  <data name="gbRptDXFFilePath.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="gbRptDXFFilePath.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblDXFFilePath.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblDXFFilePath.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Report_2_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Report_2_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Report_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlContent_Report_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Report_2.Text" xml:space="preserve">
+    <value>2. "DFX" dosya biçimi genellikle AutoCAD yazılımı içe aktarma için kullanılır.</value>
+  </data>
+  <data name="jclblHelp_Report_2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Report_2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Report_1.Text" xml:space="preserve">
+    <value>1. Çıktı raporu için içerik, sistem aralığı ve dosyaların biçimi seçilebilir.</value>
+  </data>
+  <data name="jclblHelp_Report_1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblHelp_Report_1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHelpInfo_Report.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pnlHelpInfo_Report.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgReport.Text" xml:space="preserve">
+    <value>Rapor</value>
+  </data>
+  <data name="tpgReport.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tpgReport.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAFBQAAAEACAAIBgAAFgAAACgAAAAUAAAAKAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AABHFgAASxQAAE0dAABBJhIAay4GAGUtCwBlOAUAZTEJAGwzFAB2PhUAeT0TAHk1GABNMyIATzgiAGY4
+        IAB0PiMAfD0hAG5AEABiQBwAbEcbAHFMGQBWSzcAaE4mAGtAKwB2RygAblUtAGlLMAB2TjEAd1s4AHxb
+        SwB6Z0EAhmAfAItkGgCSZh8AlU0vAJFRKACaWzUAmGsiAI5sPgCXYzsAlnU2AJd+OACpfTYAh2tCAIZ5
+        RQCffk0AmXNQAJx8VACVcl4AmX1eAK5nRgCgeUUApXFJALd3TgCSfHAAWY9UAE2ZXwBSnFQAfI5TAGCd
+        WQBonFwAQ4t3AFa3dQBzs3gArI49AI+JTgCdhlgAr4JPAK6CUwC8ilUAs51VALieUgCXmmkAsY9rAKmW
+        YwCxl2kAqY50AKmVfACEr3AArqNpALigZgCvpnQAuKp1ALyqewC+sXkAyKhVAMyiXwDKhmMAzIhlANia
+        cgDSqGcA26ZtAM+wawDZsmMA2Lp6AOfFeQBSl4IAWZqKAGzMjAB6zoAAedSVAJeLgQCjno8ArZyTAIes
+        jACPuoEAq6eOALaqhgC8rooAubyPAKG7nQC0vpAAhrqwAOefgQDOuYYA0bCDAOy9hQDksIsA9q2RAOe0
+        lADzt5MA+rqXAMu0pADDsKgAy7+tAMS+twD/vaMAhdKVAIPXnACuwo0AqM2PAK3AmQCLxK8Ancm8AIfb
+        uQCK3rsAvc2lAL3htwC9/7wAz8GXAMvDmADM0JwA1tKXANvQlwDnzo4A5NCJAP7WgwD/2ogA6s2UAODR
+        mQD51JoA/9mdAP/mnQD/7Z4AyMmiANDHpgDZwakA1s2oANzVtADS078A3N69APvGqADx0aAA/96oAPXM
+        tgD/zrMA/8+4AP7UtADG5aIAzeasANTjqgDU660Az/GrAN/ptADe4LwA2POzAPflpADz4qoA/+WrAO7t
+        uwD64bkA//i9AKzQwgCs3MQAsN7SAKHtzQC47ssArO/SAKn51AC6/9oA1dvCANzZ0QDh1c8A9dTDAPra
+        wwD2388A6N7UANfxwwDZ/MQAweXfANPi1ADQ6NwAxPLcANXx3gDh48YA6eXIAPbnxwD54sIA8+PMAP3u
+        zQDp8cwA8ffCAP/2xAD09swA/fzNAOfr3gDx49cA9uvVAP/v1wD/590A/uvZAOf12QD28tYA//fTAPT/
+        1gD9/tIA9fbcAP/62wDM7ucA2u/tAPPt5QDi9eYA7PLhAO/x6wD/9OcA9P/kAPz85QDy9O0A+fPsAPT8
+        7QD+/usA5e3+AO7z8gDn8/8A7PT8AOL/+wDs/PwA9fXyAPj08wD0+/MA/f3zAPH0+AD99vsA9Pv8APz9
+        /AAAAAAA+/73/v7y/u7q2vDj7Oj+/v7+/v77/f7++u36ZwxMz2uu8Oj5/v7+/v3y+PrAe9vBDgImcrNv
+        iPrt/v7+/f36+noDMNp3BwaUjjrGief9/v7+6fCc7EkSLt80ATNBqIo4t/b+/P360Bxz1C0TdXUEEU+s
+        Yz67x/v++fDRSxSWoxQnpyQAUq85Yrlw5f76zIvhKB+1Qwl5VwJKqzlkhmHk9vCuLJCYIFp0ClhxBUKq
+        O4CHPbj18OFUKZldIbIjMnYFL608f7xghfXw1bVGVZIllzUifggr004/vYS29vCaj5FAkypbWQulDxbW
+        gje6ysn28OxRsEdfVkV4EKEYGY3gaWjL/vn67IyVXlxeRKEPphseSKngbsj35v75zYuxUKIvphekGmxt
+        gcXd7/7+/f7sntZTtDHCHcENm9KIg/r5+v7x/vri453OTcM23BVqoNLd7+33/PH9+fri3tl82GXEZp++
+        6/r+/v7+8/30/ujw7Obmfb/X+ujv7/r+/v708/3+6Pr6+v7+9/n61/r6/v7+/gAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA
+</value>
+  </data>
+  <data name="$this.Text1" xml:space="preserve">
+    <value>Yeni VRF Ürünler</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jcbtnManualPiping.Text" xml:space="preserve">
+    <value>Manuel Borulama</value>
+  </data>
+  <data name="jclblLayoutType.Text" xml:space="preserve">
+    <value>Yerleşim Türü</value>
+  </data>
+  <data name="uc_CheckBox_PipingHorizontal.TextString" xml:space="preserve">
+    <value>Yatay</value>
+  </data>
+  <data name="uc_CheckBox_PipingVertical.TextString" xml:space="preserve">
+    <value>Dikey</value>
+  </data>
+  <data name="tpgExchanger.Text" xml:space="preserve">
+    <value>Eşanjör</value>
+  </data>
+  <data name="jcbtnManageRoom1.Text" xml:space="preserve">
+    <value>Odayı Yönet</value>
+  </data>
+  <data name="jclblHelp_Exchanger_1.Text" xml:space="preserve">
+    <value>1. Eğer "Oda temelinde" seçilirse, iç ünitenin odanın durumu ile eşleştirilmesine olanak sağlanır.</value>
+  </data>
+  <data name="jclblHelp_Exchanger_2.Text" xml:space="preserve">
+    <value>2. Eğer "Oda temelinde" seçilmezse, gerekli iç ünite doğrudan seçilebilir.</value>
+  </data>
+  <data name="jcbtnControllerWiringFitWindow.Text" xml:space="preserve">
+    <value>Pencereye Sığdır</value>
+  </data>
+  <data name="jcbtnRptPipingOutput.Text" xml:space="preserve">
+    <value>Çıktı Boru Biçimi Görüntüsü</value>
+  </data>
+  <data name="jcbtnRptWiringOutput.Text" xml:space="preserve">
+    <value>Çıkış Bağlantısı Görüntüsü</value>
+  </data>
+  <data name="jclblControllerWiringGroups.Text" xml:space="preserve">
+    <value>Kontrol Grupları</value>
+  </data>
+  <data name="jclblControllerWiringScale.Text" xml:space="preserve">
+    <value>Ölçek %</value>
+  </data>
+  <data name="tpgControllerGrouping.Text" xml:space="preserve">
+    <value>Kontrol Grupları</value>
+  </data>
+  <data name="tpgControllerWiring.Text" xml:space="preserve">
+    <value>Kontrol Cihazları Kablolama</value>
+  </data>
+  <data name="uc_CheckBox_PipingLength.TextString" xml:space="preserve">
+    <value>Boru hatları uzunluklarını manuel olarak girin</value>
+  </data>
+  <data name="convertToCHBoxToolStripMenuItem.Text" xml:space="preserve">
+    <value>CH Kutusuna Dönüştür</value>
+  </data>
+  <data name="deleteMultiCHBoxToolStripMenuItem.Text" xml:space="preserve">
+    <value>Birden Çok CH Kutu Silme</value>
+  </data>
+  <data name="jcbtnAddMultipleCHBox.Text" xml:space="preserve">
+    <value>Birden Çok Kutu Ekle</value>
+  </data>
+  <data name="jclblProjectRevision.Text" xml:space="preserve">
+    <value>Proje revizyonu</value>
+  </data>
+  <data name="jclbProjectUpdateDate.Text" xml:space="preserve">
+    <value>son Güncelleme Tarihi</value>
+  </data>
+  <data name="jcbtnPipingRules.Text" xml:space="preserve">
+    <value>Boru kuralları</value>
+  </data>
+  <data name="jclblAddress.Text" xml:space="preserve">
+    <value>adres</value>
+  </data>
+  <data name="jclblClientName.Text" xml:space="preserve">
+    <value>Müşteri adı</value>
+  </data>
+  <data name="jclblCompany.Text" xml:space="preserve">
+    <value>şirket</value>
+  </data>
+  <data name="jclblDeliveryDate1.Text" xml:space="preserve">
+    <value>Teslim tarihi</value>
+  </data>
+  <data name="jclblLastUpdateDate1.Text" xml:space="preserve">
+    <value>Son Güncelleme Tarihi</value>
+  </data>
+  <data name="jclblMail.Text" xml:space="preserve">
+    <value>posta</value>
+  </data>
+  <data name="jclblOrderDate1.Text" xml:space="preserve">
+    <value>Sipariş tarihi</value>
+  </data>
+  <data name="jclblPhoneNo.Text" xml:space="preserve">
+    <value>Telefon numarası</value>
+  </data>
+  <data name="jclblPostCode.Text" xml:space="preserve">
+    <value>Posta Kodu</value>
+  </data>
+  <data name="jclblProjectLocation1.Text" xml:space="preserve">
+    <value>Proje Yeri</value>
+  </data>
+  <data name="jclblProjectRevision1.Text" xml:space="preserve">
+    <value>Proje Revizyonu</value>
+  </data>
+  <data name="jclblPurchaseOrderNo1.Text" xml:space="preserve">
+    <value>Satınalma Siparişi Numarası</value>
+  </data>
+  <data name="jclblRemarks1.Text" xml:space="preserve">
+    <value>Açıklamalar</value>
+  </data>
+  <data name="jclblSalesEngineer1.Text" xml:space="preserve">
+    <value>Satış Mühendisi</value>
+  </data>
+  <data name="jclblTel.Text" xml:space="preserve">
+    <value>Tel</value>
+  </data>
+  <data name="uc_CheckBox_Actual.TextString" xml:space="preserve">
+    <value>Fiili Kapasiteyi Göster</value>
+  </data>
+  <data name="uc_CheckBox_Nominal.TextString" xml:space="preserve">
+    <value>Nominal Kapasite Göster</value>
+  </data>
+  <data name="pbAddIndoor.Tooltips" xml:space="preserve">
+    <value>eklemek</value>
+  </data>
+  <data name="pbAddIndoorOption.Tooltips" xml:space="preserve">
+    <value>Set Seçeneği</value>
+  </data>
+  <data name="pbAddOutdoor.Tooltips" xml:space="preserve">
+    <value>eklemek</value>
+  </data>
+  <data name="pbClearIndoorOption.Tooltips" xml:space="preserve">
+    <value>Net Seçeneği</value>
+  </data>
+  <data name="pbCopyIndoor.Tooltips" xml:space="preserve">
+    <value>kopya</value>
+  </data>
+  <data name="pbCopyOutdoor.Tooltips" xml:space="preserve">
+    <value>kopya</value>
+  </data>
+  <data name="pbDeleteIndoor.Tooltips" xml:space="preserve">
+    <value>Silmek</value>
+  </data>
+  <data name="pbDeleteOutdoor.Tooltips" xml:space="preserve">
+    <value>Silmek</value>
+  </data>
+  <data name="pbEditIndoor.Tooltips" xml:space="preserve">
+    <value>Düzenlemek</value>
+  </data>
+  <data name="pbEditOutdoor.Tooltips" xml:space="preserve">
+    <value>Düzenlemek</value>
+  </data>
+  <data name="pbHelpIndoor.Tooltips" xml:space="preserve">
+    <value>Yardım</value>
+  </data>
+  <data name="pbPipingRule.Tooltips" xml:space="preserve">
+    <value>Yardım</value>
+  </data>
+  <data name="uc_CheckBox_Cooling.TextString" xml:space="preserve">
+    <value>Soğutma</value>
+  </data>
+  <data name="uc_CheckBox_Heating.TextString" xml:space="preserve">
+    <value>Isıtma</value>
+  </data>
+  <data name="uc_CheckBox_IsRoomBase.TextString" xml:space="preserve">
+    <value>Oda temelinde</value>
+  </data>
+  <data name="uc_CheckBox_RptAllSystem.TextString" xml:space="preserve">
+    <value>Tüm Sistem</value>
+  </data>
+  <data name="uc_CheckBox_RptController.TextString" xml:space="preserve">
+    <value>Kumanda</value>
+  </data>
+  <data name="uc_CheckBox_RptExchanger.TextString" xml:space="preserve">
+    <value>Eşanjör</value>
+  </data>
+  <data name="uc_CheckBox_RptIndoorDetail.TextString" xml:space="preserve">
+    <value>İç Ünite Detayı</value>
+  </data>
+  <data name="uc_CheckBox_RptOutdoorDetail.TextString" xml:space="preserve">
+    <value>Dış Ünite Detayı</value>
+  </data>
+  <data name="uc_CheckBox_RptPiping.TextString" xml:space="preserve">
+    <value>Boru Tesisatı</value>
+  </data>
+  <data name="uc_CheckBox_RptRoomInfo.TextString" xml:space="preserve">
+    <value>Oda Bilgileri</value>
+  </data>
+  <data name="uc_CheckBox_RptSelectAllModule.TextString" xml:space="preserve">
+    <value>Tüm Sistem</value>
+  </data>
+  <data name="uc_CheckBox_RptWiring.TextString" xml:space="preserve">
+    <value>Kablo Tesisatı</value>
+  </data>
+  <data name="jclabExchangertxt.Text" xml:space="preserve">
+    <value>Eşanjör</value>
+  </data>
+  <data name="jclabExc_Accessorytxt.Text" xml:space="preserve">
+    <value>Aksesuarlar</value>
+  </data>
+  <data name="jclabIDU_Accessorytxt.Text" xml:space="preserve">
+    <value>Aksesuarlar</value>
+  </data>
+  <data name="jclabIndoortxt.Text" xml:space="preserve">
+    <value>İç Ünite</value>
+  </data>
+  <data name="jclabODU_Accessorytxt.Text" xml:space="preserve">
+    <value>Aksesuarlar</value>
+  </data>
+  <data name="jclabOuddoortxt.Text" xml:space="preserve">
+    <value>Dış Ünite</value>
+  </data>
+  <data name="jclblHelp_Indoor_3.Text" xml:space="preserve">
+    <value>3.Uzaktan kumandaları ve aksesuarları seçmek için Seçenekleri Ayarla'ya tıklayın</value>
+  </data>
+  <data name="jclblHelp_Indoor_1_EU.Text" xml:space="preserve">
+    <value>1."Oda olmadan kapalı mekanı seç" seçeneğini seçerseniz, gerekli iç üniteyi doğrudan seçmeye izin verin.</value>
+  </data>
+  <data name="jclblHelp_Indoor_2_EU.Text" xml:space="preserve">
+    <value>2."Oda ile iç mekanı seç" seçeneğini seçerseniz, iç üniteyi oda durumuyla eşleştirmeye izin verin.</value>
+  </data>
+  <data name="jclblController_help3.Text" xml:space="preserve">
+    <value>Merkezi kontroller ve ağ geçitleri serbestçe seçilebilir, kullanıcı yapılandırmayı teknik dokümanlarla kontrol etmelidir.</value>
+  </data>
+  <data name="cancelCoolingOnlyToolStripMenuItem.Text" xml:space="preserve">
+    <value>İptal Kullanım Soğutma İşlemi</value>
+  </data>
+  <data name="jcLabel3.Text" xml:space="preserve">
+    <value>Kontrol grupları</value>
+  </data>
+  <data name="jcLabel4.Text" xml:space="preserve">
+    <value>kontrolör</value>
+  </data>
+  <data name="jclblAddress1.Text" xml:space="preserve">
+    <value>Sokak Adresi</value>
+  </data>
+  <data name="jclblClientName1.Text" xml:space="preserve">
+    <value>Müşteri adı</value>
+  </data>
+  <data name="jclblController_LeftTitle1.Text" xml:space="preserve">
+    <value>Sürücüler ve Yüklemeler</value>
+  </data>
+  <data name="jclblController_LeftTitle2.Text" xml:space="preserve">
+    <value>sistem</value>
+  </data>
+  <data name="jclblController_ProductType.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jclblController_Step1.Text" xml:space="preserve">
+    <value>1. Adım</value>
+  </data>
+  <data name="jclblController_Step2.Text" xml:space="preserve">
+    <value>2. Adım</value>
+  </data>
+  <data name="jclblMail1.Text" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="jclblPhoneNo1.Text" xml:space="preserve">
+    <value>Telefon değil</value>
+  </data>
+  <data name="jclblPostCode1.Text" xml:space="preserve">
+    <value>Posta Kodu</value>
+  </data>
+  <data name="jclblTel1.Text" xml:space="preserve">
+    <value>Tel</value>
+  </data>
+  <data name="jclbProjectUpdateDate1.Text" xml:space="preserve">
+    <value>Son Güncelleme Tarihi</value>
+  </data>
+  <data name="uc_CheckBox_IsRoomBase1.TextString" xml:space="preserve">
+    <value>Oda temelinde</value>
+  </data>
+  <data name="uc_CheckBox_PipingBinaryTree.TextString" xml:space="preserve">
+    <value>İkili ağaç</value>
+  </data>
+  <data name="tbtnExport.Text" xml:space="preserve">
+    <value>ihracat</value>
+  </data>
+  <data name="pbCopyOutdoorOfPiping.Tooltips" xml:space="preserve">
+    <value>kopya</value>
+  </data>
+  <data name="pbCopyOutdoorOfWiring.Tooltips" xml:space="preserve">
+    <value>kopya</value>
+  </data>
+  <data name="pbDeleteOutdoorOfPiping.Tooltips" xml:space="preserve">
+    <value>Silmek</value>
+  </data>
+  <data name="pbDeleteOutdoorOfWiring.Tooltips" xml:space="preserve">
+    <value>Silmek</value>
+  </data>
+  <data name="uc_CheckBox_IduCapacityW.TextString" xml:space="preserve">
+    <value>IDU Kapasite (W) olarak</value>
+  </data>
+  <data name="jclblAssignedindoor.Text" xml:space="preserve">
+    <value>Atanan iç üniteler</value>
+  </data>
+  <data name="jclblIndoorNumbers.Text" xml:space="preserve">
+    <value>Numara</value>
+  </data>
+  <data name="jclbltotalNominalCapacity.Text" xml:space="preserve">
+    <value>Toplam nominal kapasite</value>
+  </data>
+</root>

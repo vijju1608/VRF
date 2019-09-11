@@ -1,0 +1,13 @@
+﻿Create Table Creator (
+ Id  counter PRIMARY KEY ,
+CompanyName VARCHAR,
+ContactName VARCHAR,
+StreetAddress VARCHAR,
+Suburb VARCHAR,
+Town VARCHAR,
+Country VARCHAR,
+Phone VARCHAR,
+ContactEmail VARCHAR,
+GPSPosition VARCHAR,
+IdNumber VARCHAR
+ )

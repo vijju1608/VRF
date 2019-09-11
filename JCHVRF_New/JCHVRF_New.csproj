@@ -1,0 +1,2570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{078FEA38-6601-43D6-9595-D0B010064DB9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JCHVRF_New</RootNamespace>
+    <AssemblyName>JCHVRF_New</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Jci.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CDF, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\CDF.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.4\lib\net46\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\FontAwesome.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\packages\itextsharp.pdfa.5.5.13\lib\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\packages\itextsharp.xtra.5.5.13\lib\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="JCBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\JCBase.dll</HintPath>
+    </Reference>
+    <Reference Include="JCBase.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\JCBase.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="JCBase.Utility">
+      <HintPath>..\dll\JCBase.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Lassalle.Flow, Version=2.3.2.1, Culture=neutral, PublicKeyToken=bfc5c756e54a9d2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\Lassalle.Flow.DLL</HintPath>
+    </Reference>
+    <Reference Include="Lassalle.WPF.Flow">
+      <HintPath>..\dll\Lassalle.WPF.Flow.dll</HintPath>
+    </Reference>
+    <Reference Include="Lassalle.WPF.Flow.Layout">
+      <HintPath>..\dll\Lassalle.WPF.Flow.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.0.1205, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.0.1205\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicrosoftExpressionInteractions.3.0.40218.0\lib\net45\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Outlook.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Outlook.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Dev\VRFDesktopApplication\JCHVRF\dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="PresentationFramework.Classic" />
+    <Reference Include="Prism, Version=7.1.0.431, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.7.1.0.431\lib\net45\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Unity.Wpf, Version=7.1.0.431, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Unity.7.1.0.431\lib\net45\Prism.Unity.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Wpf, Version=7.1.0.431, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Wpf.7.1.0.431\lib\net45\Prism.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Svg, Version=3.0.0.0, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Svg.3.0.20-g594db9696a\lib\net452\Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Wpf.7.1.0.431\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="Unity.Abstractions, Version=3.3.1.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Abstractions.3.3.1\lib\net46\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.8.11.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Container.5.8.11\lib\net46\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="YAMIntegration, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dll\YAMIntegration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Common\Constants\ViewKeys.cs" />
+    <Compile Include="Common\Contracts\IGlobalProperties.cs" />
+    <Compile Include="Common\Contracts\IModalWindowService.cs" />
+    <Compile Include="Common\Controls\JCHAlertDialog.cs" />
+    <Compile Include="Common\Controls\JCHAnchorable.cs" />
+    <Compile Include="Common\Controls\JCHButton.cs" />
+    <Compile Include="Common\Controls\JCHIcon.cs" />
+    <Compile Include="Common\Controls\JCHModalWindow.cs" />
+    <Compile Include="Common\Controls\JCHPanel.cs" />
+    <Compile Include="Common\Controls\JCHTreeComparer.xaml.cs">
+      <DependentUpon>JCHTreeComparer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controls\JCHUpDown.xaml.cs">
+      <DependentUpon>JCHUpDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Helpers\ExtensionMethods.cs" />
+    <Compile Include="Common\Helpers\GlobalProperties.cs" />
+    <Compile Include="Common\Helpers\JCHMessageBox.cs" />
+    <Compile Include="Common\Helpers\JCHNodeExtensions.cs" />
+    <Compile Include="Common\Helpers\ModalWindowService.cs" />
+    <Compile Include="Common\Helpers\StringExtensionMethods.cs" />
+    <Compile Include="Common\Helpers\SystemValidationHelper.cs" />
+    <Compile Include="Common\Helpers\XMLFlow.cs" />
+    <Compile Include="Common\UI\Converters\BoolCombineToVisibiltyConverter.cs" />
+    <Compile Include="Common\UI\Converters\BoolToFontAwesomeIconConverter.cs" />
+    <Compile Include="Common\UI\Converters\BoolToSolidColorBrushConverter.cs" />
+    <Compile Include="Common\UI\Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Common\UI\Converters\CollectionCountToBooleanConverter.cs" />
+    <Compile Include="Common\UI\Converters\CreateBtnVisibilty.cs" />
+    <Compile Include="Common\UI\Converters\CreateBtnVisibiltySystem.cs" />
+    <Compile Include="Common\UI\Converters\DivideByParameterConverter.cs" />
+    <Compile Include="Common\UI\Converters\DoubleGreaterThanParameterConverter.cs" />
+    <Compile Include="Common\UI\Converters\EmptyStringConverter.cs" />
+    <Compile Include="Common\UI\Converters\EnumToVisibilityConverter.cs" />
+    <Compile Include="Common\UI\Converters\HeightToSideMarginConverter.cs" />
+    <Compile Include="Common\UI\Converters\IconKeyToGeometryConverter.cs" />
+    <Compile Include="Common\UI\Converters\IntComparerToBooleanConverter.cs" />
+    <Compile Include="Common\UI\Converters\InvertBoolConverter.cs" />
+    <Compile Include="Common\UI\Converters\ListContainsDateConverter.cs" />
+    <Compile Include="Common\UI\Converters\NextBtnVisibility.cs" />
+    <Compile Include="Common\UI\Converters\NextBtnVisibilitySystem.cs" />
+    <Compile Include="Common\UI\Converters\ObjectToBooleanConverter.cs" />
+    <Compile Include="Common\UI\Converters\ObjectToVisibilityConverter.cs" />
+    <Compile Include="Common\UI\Converters\SourceToControlConverter.cs" />
+    <Compile Include="Common\UI\Converters\SourceToControlWithUnitConverter.cs" />
+    <Compile Include="Common\UI\Converters\TabItemToIsLastTabConverter.cs" />
+    <Compile Include="Common\UI\Extensions\ExtensionMethods.cs" />
+    <Compile Include="Common\UI\Extensions\JCHDockerService.cs" />
+    <Compile Include="Common\UI\Extensions\JCHInputService.cs" />
+    <Compile Include="Helpers\TreeViewHelper.cs" />
+    <Compile Include="LanguageData\LanguageViewModel.cs" />
+    <Compile Include="LanguageData\Constants.cs" />
+    <Compile Include="LanguageData\LanguageNameConverter.cs" />
+    <Compile Include="LanguageData\LocalisedTextExtension.cs" />
+    <Compile Include="LanguageData\UILanguageDefn.cs" />
+    <Compile Include="LanguageData\UITextLookupConverter.cs" />
+    <Compile Include="LanguageData\ViewModelBase.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Model\ActivationModel.cs" />
+    <Compile Include="Model\AnchorableHandle.cs" />
+    <Compile Include="Model\AutoSelectODUModel.cs" />
+    <Compile Include="Model\CanvasProperties.cs" />
+    <Compile Include="Model\HeatExchangerCanvasEquipment.cs" />
+    <Compile Include="Model\HeatExEquipmentInfoModel.cs" />
+    <Compile Include="Model\HelpModel.cs" />
+    <Compile Include="Model\IDUODUCapacityDetails.cs" />
+    <Compile Include="Model\CanvasListItems.cs" />
+    <Compile Include="Model\Language.cs" />
+    <Compile Include="Model\LightProject.cs" />
+    <Compile Include="Model\MaterialListDetails.cs" />
+    <Compile Include="Model\OutDoorUnitInfo.cs" />
+    <Compile Include="Model\IDUModel.cs" />
+    <Compile Include="Model\PlottingScaleHandler.cs" />
+    <Compile Include="Model\SeriesModel.cs" />
+    <Compile Include="LanguageData\SettingsModel.cs" />
+    <Compile Include="Model\SvgParser.cs" />
+    <Compile Include="Model\SystemType.cs" />
+    <Compile Include="Model\ToolsModel.cs" />
+    <Compile Include="Utility\AutoControlWiring.cs" />
+    <Compile Include="Utility\AutoPiping.cs" />
+    <Compile Include="Utility\CentralControllerWiring.cs" />
+    <Compile Include="Utility\ControllerUtilEMF.cs" />
+    <Compile Include="Utility\PipingValidation.cs" />
+    <Compile Include="Utility\UndoRedoSetup.cs" />
+    <Compile Include="Utility\WarningMessage.cs" />
+    <Compile Include="Utility\Wiring.cs" />
+    <Compile Include="Utility\WebClientCall.cs" />
+    <Compile Include="ViewModels\AddEventViewModel.cs" />
+    <Compile Include="ViewModels\AddHEAccessoriesTemplateViewModel.cs" />
+    <Compile Include="Utility\UtilTrace.cs" />
+    <Compile Include="ViewModels\CentralControllerSystemDetailViewModel.cs" />
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\EventListViewModel.cs" />
+    <Compile Include="ViewModels\HeatExchangerCanvasEquipmentViewModel.cs" />
+    <Compile Include="ViewModels\EditSystemDetailsViewModel.cs" />
+    <Compile Include="ViewModels\FindZeroLengthViewModel.cs" />
+    <Compile Include="ViewModels\InputPipeLengthPopupViewModel.cs" />
+    <Compile Include="ViewModels\NavigatorViewModel.cs" />
+    <Compile Include="ViewModels\PipingLengthSettingsViewModel.cs" />
+    <Compile Include="ViewModels\SalesDataInfoViewModel.cs" />
+    <Compile Include="ViewModels\SplashViewModel.cs" />
+    <Compile Include="ViewModels\TotalHeatExchDetailsInfoViewModel.cs" />
+    <Compile Include="Model\TotalHeatExUnitInfoModel.cs" />
+    <Compile Include="ViewModels\PropertyInfoViewModel.cs" />
+    <Compile Include="Views\AddEvent.xaml.cs">
+      <DependentUpon>AddEvent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddHEAccessoriesTemplate.xaml.cs">
+      <DependentUpon>AddHEAccessoriesTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CentralControllerSystemDetail.xaml.cs">
+      <DependentUpon>CentralControllerSystemDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EnterCodeView.xaml.cs">
+      <DependentUpon>EnterCodeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EventList.xaml.cs">
+      <DependentUpon>EventList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HeatExchangerCanvasEquipment.xaml.cs">
+      <DependentUpon>HeatExchangerCanvasEquipment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditSystemDetails.xaml.cs">
+      <DependentUpon>EditSystemDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginSignup.xaml.cs">
+      <DependentUpon>LoginSignup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginSignupEmail.xaml.cs">
+      <DependentUpon>LoginSignupEmail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginSignupEmailPass.xaml.cs">
+      <DependentUpon>LoginSignupEmailPass.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RecoveryEmailText.xaml.cs">
+      <DependentUpon>RecoveryEmailText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RecoveryEmail.xaml.cs">
+      <DependentUpon>RecoveryEmail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemDetails.xaml.cs">
+      <DependentUpon>SystemDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FindZeroLength.xaml.cs">
+      <DependentUpon>FindZeroLength.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InputPipeLengthPopup.xaml.cs">
+      <DependentUpon>InputPipeLengthPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PipingLengthSettings.xaml.cs">
+      <DependentUpon>PipingLengthSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SalesDataInfo.xaml.cs">
+      <DependentUpon>SalesDataInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Splash.xaml.cs">
+      <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TotalHeatExchDetailsInfo.xaml.cs">
+      <DependentUpon>TotalHeatExchDetailsInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\AutoSelectOutdoor.cs" />
+    <Compile Include="Views\PropertyInfo.xaml.cs">
+      <DependentUpon>PropertyInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ucDesignerCanvas.xaml.cs" />
+    <Compile Include="ViewModels\ActivationViewModel.cs" />
+    <!--<Compile Include="UCEditSystem.xaml.cs">
+      <DependentUpon>UCEditSystem.xaml</DependentUpon>
+    </Compile>-->
+    <Compile Include="ViewModels\AddEditRoomViewModel.cs" />
+    <Compile Include="ViewModels\BulkFloorPopupViewModel.cs" />
+    <Compile Include="ViewModels\BulkRoomPopupViewModel.cs" />
+    <Compile Include="ViewModels\CanvasPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\CHBoxPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\CreateSystemWizardViewModel.cs" />
+    <Compile Include="ViewModels\EditReportContentsViewModel.cs" />
+    <Compile Include="ViewModels\HelpViewModel.cs" />
+    <Compile Include="ViewModels\IDUPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\MainAppViewModel.cs" />
+    <Compile Include="ViewModels\MasterDesignerViewModel.cs" />
+    <Compile Include="ViewModels\NotificationsBarViewModel.cs" />
+    <Compile Include="ViewModels\ODUPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\OutDoorUnitInfoViewModel.cs" />
+    <Compile Include="ViewModels\ProjectDetailsViewModel.cs" />
+    <Compile Include="ViewModels\ProjectSettingsViewModel.cs" />
+    <Compile Include="ViewModels\PropertiesViewModel.cs" />
+    <Compile Include="ViewModels\VRFSystemDetailsViewModel.cs" />
+    <Compile Include="ViewModels\SystemPropertyWizardViewModel.cs" />
+    <Compile Include="ViewModels\ucDesignerCanvasViewModel.cs" />
+    <Compile Include="ViewModels\SystemTabViewModel.cs" />
+    <Compile Include="ViewModels\ToolsViewModel.cs" />
+    <Compile Include="ViewModels\TotalHeatExUnitInfoViewModel.cs" />
+    <Compile Include="ViewModels\WorkFlowContext.cs" />
+    <Compile Include="Views\Activation.xaml.cs">
+      <DependentUpon>Activation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddEditRoom.xaml.cs">
+      <DependentUpon>AddEditRoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BulkFloorPopup.xaml.cs">
+      <DependentUpon>BulkFloorPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Common\Contracts\IClosable.cs" />
+    <Compile Include="Common\Constants\RegionNames.cs" />
+    <Compile Include="Common\Helpers\CustomValidations.cs" />
+    <Compile Include="Common\Helpers\ViewModelBase.cs" />
+    <Compile Include="Common\Helpers\PubSubEvents.cs" />
+    <Compile Include="Common\UI\Converters\EnumToBooleanConvertere.cs" />
+    <Compile Include="Common\UI\Converters\InvertIntComparerToVisibilityConverter.cs" />
+    <Compile Include="Common\UI\Converters\IntComparerToVisibilityConverter.cs" />
+    <Compile Include="Common\UI\Converters\IntegerALessThanBConverter.cs" />
+    <Compile Include="Common\UI\Converters\TabItemToIndexConverter.cs" />
+    <Compile Include="Model\LeftSideBarItems.cs" />
+    <Compile Include="ViewModels\AddNewClientViewModel.cs" />
+    <Compile Include="Common\UI\Extensions\JCHUIService.cs" />
+    <Compile Include="Model\PipingInfoModel.cs" />
+    <Compile Include="ViewModels\CreateProjectWizardViewModel.cs" />
+    <Compile Include="Views\AddNewClient.xaml.cs">
+      <DependentUpon>AddNewClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\FloorTabViewModel.cs" />
+    <Compile Include="ViewModels\PipingInfoPropertiesViewModel.cs" />
+    <Compile Include="Views\BulkRoomPopup.xaml.cs">
+      <DependentUpon>BulkRoomPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CanvasProperties.xaml.cs">
+      <DependentUpon>CanvasProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\NewCreatorInformationViewModel.cs" />
+    <Compile Include="Views\CHBoxProperties.xaml.cs">
+      <DependentUpon>CHBoxProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateProjectWizard.xaml.cs">
+      <DependentUpon>CreateProjectWizard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CircularProgress.cs" />
+    <Compile Include="Views\Dashboard.xaml.cs">
+      <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Global\Global.cs" />
+    <Compile Include="Model\AccessoryModel.cs" />
+    <Compile Include="Model\Enums.cs" />
+    <Compile Include="Model\NamePrefixModel.cs" />
+    <Compile Include="Model\SideBarItems.cs" />
+    <Compile Include="Model\ErrorModel.cs" />
+    <Compile Include="Model\IDUEquipmentModel.cs" />
+    <Compile Include="CustomControl\CustomControl1.cs" />
+    <Compile Include="Views\EditReportContents.xaml.cs">
+      <DependentUpon>EditReportContents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Help.xaml.cs">
+      <DependentUpon>Help.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainApp.xaml.cs">
+      <DependentUpon>MainApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IDUProperties.xaml.cs">
+      <DependentUpon>IDUProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MasterDesigner.xaml.cs">
+      <DependentUpon>MasterDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\PowerModel.cs" />
+    <Compile Include="Model\TypeModel.cs" />
+    <Compile Include="CustomControl\NumericUpDown.cs" />
+    <Compile Include="Model\NodeItems.cs" />
+    <Compile Include="Common\Helpers\ModelBase.cs" />
+    <Compile Include="Views\Navigator.xaml.cs">
+      <DependentUpon>Navigator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewCreatorInformation.xaml.cs">
+      <DependentUpon>NewCreatorInformation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\NamePrefixDefaultValueUtility.cs" />
+    <Compile Include="Utility\UtilityValidation.cs" />
+    <Compile Include="Utility\UtilityWiring.cs" />
+    <Compile Include="Utility\Validation.cs" />
+    <Compile Include="Utility\WiringBLL.cs" />
+    <Compile Include="ViewModels\AddAccessoriesTemplateViewModel.cs" />
+    <Compile Include="ViewModels\AddIndoorUnitViewModel.cs" />
+    <Compile Include="ViewModels\CombobBox.cs" />
+    <Compile Include="ViewModels\DesignerConditionViewModel.cs" />
+    <Compile Include="ViewModels\ErrorLogViewModel.cs" />
+    <Compile Include="ViewModels\IDUEquipmentPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\IndoorUnitInfoViewModel.cs" />
+    <Compile Include="ViewModels\ODUEquipmentPropertiesViewModel.cs" />
+    <Compile Include="ViewModels\ProjectInfoViewModel.cs" />
+    <Compile Include="ViewModels\ProjectTemplateViewModel.cs" />
+    <Compile Include="ViewModels\RelayCommand.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\SystemPropertiesViewmodel.cs" />
+    <Compile Include="ViewModels\TypeInfoViewModel.cs" />
+    <Compile Include="Views\AddAccessoriesTemplate.xaml.cs">
+      <DependentUpon>AddAccessoriesTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddIndoorUnitView.xaml.cs">
+      <DependentUpon>AddIndoorUnitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DesignerCondition.xaml.cs">
+      <DependentUpon>DesignerCondition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ErrorLog.xaml.cs">
+      <DependentUpon>ErrorLog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FloorTab.xaml.cs">
+      <DependentUpon>FloorTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IDUEquipmentProperties.xaml.cs">
+      <DependentUpon>IDUEquipmentProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IndoorUnitInfoView.xaml.cs">
+      <DependentUpon>IndoorUnitInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NotificationsBar.xaml.cs">
+      <DependentUpon>NotificationsBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ODUEquipmentProperties.xaml.cs">
+      <DependentUpon>ODUEquipmentProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ODUProperties.xaml.cs">
+      <DependentUpon>ODUProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OutDoorUnitInfoView.xaml.cs">
+      <DependentUpon>OutDoorUnitInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProjectDetails.xaml.cs">
+      <DependentUpon>ProjectDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PipingInfoProperties.xaml.cs">
+      <DependentUpon>PipingInfoProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProjectInfo.xaml.cs">
+      <DependentUpon>ProjectInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProjectSettingsView.xaml.cs">
+      <DependentUpon>ProjectSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ProjectTemplate.xaml.cs">
+      <DependentUpon>ProjectTemplate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Properties.xaml.cs">
+      <DependentUpon>Properties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shell.xaml.cs">
+      <DependentUpon>Shell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Start.xaml.cs">
+      <DependentUpon>Start.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateSystemWizard.xaml.cs">
+      <DependentUpon>CreateSystemWizard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VRFSystemDetails.xaml.cs">
+      <DependentUpon>VRFSystemDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemProperties.xaml.cs">
+      <DependentUpon>SystemProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemPropertyWizard.xaml.cs">
+      <DependentUpon>SystemPropertyWizard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SystemTab.xaml.cs">
+      <DependentUpon>SystemTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tools.xaml.cs">
+      <DependentUpon>Tools.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TotalHeatExUnitInfo.xaml.cs">
+      <DependentUpon>TotalHeatExUnitInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TypeInfo.xaml.cs">
+      <DependentUpon>TypeInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VML\ViewModelLocator.cs" />
+    <Compile Include="WiringUserControl.xaml.cs">
+      <DependentUpon>WiringUserControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Common\Controls\JCHTreeComparer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Common\Controls\JCHUpDown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Common\UI\Resources\Converters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Common\UI\Resources\Styles\AvalonDockStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Common\UI\Resources\Styles\ComboboxStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Common\UI\Resources\Styles\CustomControlStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Common\UI\Resources\Styles\RibbonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Common\UI\Resources\Styles\TabControlStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddEvent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddHEAccessoriesTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CentralControllerSystemDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EnterCodeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EventList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HeatExchangerCanvasEquipment.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EditSystemDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginSignup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginSignupEmail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginSignupEmailPass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RecoveryEmailText.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RecoveryEmail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FindZeroLength.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\InputPipeLengthPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PipingLengthSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SalesDataInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Splash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TotalHeatExchDetailsInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PropertyInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ucDesignerCanvas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Activation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Common\UI\Resources\VectorImages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <!--<Page Include="UCEditSystem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>-->
+    <Page Include="Views\AddEditRoom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BulkFloorPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Common\UI\Resources\Brushes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Common\UI\Resources\Styles\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Common\UI\Resources\Styles\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddNewClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\BulkRoomPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CanvasProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CHBoxProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateProjectWizard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\EditReportContents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Help.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainApp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\IDUProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MasterDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Navigator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewCreatorInformation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Common\UI\Resources\Styles\StyleTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AddAccessoriesTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AddIndoorUnitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DesignerCondition.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ErrorLog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\FloorTab.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\IDUEquipmentProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IndoorUnitInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NotificationsBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ODUEquipmentProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ODUProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OutDoorUnitInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PipingInfoProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProjectDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProjectInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ProjectSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProjectTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Properties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Shell.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Start.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\CreateSystemWizard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\VRFSystemDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SystemProperties.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SystemPropertyWizard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\SystemTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Tools.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TotalHeatExUnitInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TypeInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WiringUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DatabaseScript\VRFDB\ODUImportScript.ps1" />
+    <None Include="DB\VRF.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DB\VRFPS.dat" />
+    <None Include="DB\VRFPS_Update.dat" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report\Template\DoorSelection.doc" />
+    <None Include="Report\Template\DoorSelection_CN.doc" />
+    <None Include="Report\Template\NewReport\AppendixBOMbySystem.doc" />
+    <None Include="Report\Template\NewReport\AppendixBOMbySystem_DE.doc" />
+    <None Include="Report\Template\NewReport\AppendixBOMbySystem_FR.doc" />
+    <None Include="Report\Template\NewReport\AppendixBOMbySystem_IT.doc" />
+    <None Include="Report\Template\NewReport\AppendixBOMbySystem_PT_BR.doc" />
+    <None Include="Report\Template\NewReport\AppendixBOMbySystem_SP.doc" />
+    <None Include="Report\Template\NewReport\AppendixBOMbySystem_ZHT.doc" />
+    <None Include="Report\Template\NewReport\EquipmentListAndInformation.doc" />
+    <None Include="Report\Template\NewReport\EquipmentListAndInformation_DE.doc" />
+    <None Include="Report\Template\NewReport\EquipmentListAndInformation_FR.doc" />
+    <None Include="Report\Template\NewReport\EquipmentListAndInformation_IT.doc" />
+    <None Include="Report\Template\NewReport\EquipmentListAndInformation_PT_BR.doc" />
+    <None Include="Report\Template\NewReport\EquipmentListAndInformation_SP.doc" />
+    <None Include="Report\Template\NewReport\EquipmentListAndInformation_ZHT.doc" />
+    <None Include="Report\Template\NewReport\IndoorUnits.doc" />
+    <None Include="Report\Template\NewReport\IndoorUnits_DE.doc" />
+    <None Include="Report\Template\NewReport\IndoorUnits_FR.doc" />
+    <None Include="Report\Template\NewReport\IndoorUnits_IT.doc" />
+    <None Include="Report\Template\NewReport\IndoorUnits_PT_BR.doc" />
+    <None Include="Report\Template\NewReport\IndoorUnits_SP.doc" />
+    <None Include="Report\Template\NewReport\IndoorUnits_ZHT.doc" />
+    <None Include="Report\Template\NewReport\NewReport.doc" />
+    <None Include="Report\Template\NewReport\NewReportYork.doc" />
+    <None Include="Report\Template\NewReport\NewReportYork_FR.doc" />
+    <None Include="Report\Template\NewReport\NewReportYork_IT.doc" />
+    <None Include="Report\Template\NewReport\NewReportYork_PT_BR.doc" />
+    <None Include="Report\Template\NewReport\NewReportYork_SP.doc" />
+    <None Include="Report\Template\NewReport\NewReportYork_ZHT.doc" />
+    <None Include="Report\Template\NewReport\NewReport_ANZ.doc" />
+    <None Include="Report\Template\NewReport\NewReport_DE.doc" />
+    <None Include="Report\Template\NewReport\NewReport_DE_ANZ.doc" />
+    <None Include="Report\Template\NewReport\NewReport_FR.doc" />
+    <None Include="Report\Template\NewReport\NewReport_FR_ANZ.doc" />
+    <None Include="Report\Template\NewReport\NewReport_IT.doc" />
+    <None Include="Report\Template\NewReport\NewReport_IT_ANZ.doc" />
+    <None Include="Report\Template\NewReport\NewReport_PT_BR.doc" />
+    <None Include="Report\Template\NewReport\NewReport_PT_BR_ANZ.doc" />
+    <None Include="Report\Template\NewReport\NewReport_SP.doc" />
+    <None Include="Report\Template\NewReport\NewReport_SP_ANZ.doc" />
+    <None Include="Report\Template\NewReport\NewReport_ZHT.doc" />
+    <None Include="Report\Template\NewReport\NewReport_ZHT_ANZ.doc" />
+    <None Include="Report\Template\NewReport\OutdoorUnits.doc" />
+    <None Include="Report\Template\NewReport\OutdoorUnitsTW.doc" />
+    <None Include="Report\Template\NewReport\OutdoorUnits_DE.doc" />
+    <None Include="Report\Template\NewReport\OutdoorUnits_FR.doc" />
+    <None Include="Report\Template\NewReport\OutdoorUnits_IT.doc" />
+    <None Include="Report\Template\NewReport\OutdoorUnits_PT_BR.doc" />
+    <None Include="Report\Template\NewReport\OutdoorUnits_SP.doc" />
+    <None Include="Report\Template\NewReport\OutdoorUnits_ZHT.doc" />
+    <None Include="Report\Template\NewReport\PipingDesign.doc" />
+    <None Include="Report\Template\NewReport\PipingDesign_DE.doc" />
+    <None Include="Report\Template\NewReport\PipingDesign_FR.doc" />
+    <None Include="Report\Template\NewReport\PipingDesign_IT.doc" />
+    <None Include="Report\Template\NewReport\PipingDesign_PT_BR.doc" />
+    <None Include="Report\Template\NewReport\PipingDesign_SP.doc" />
+    <None Include="Report\Template\NewReport\PipingDesign_ZHT.doc" />
+    <None Include="Report\Template\NewReport\ReportYork.doc" />
+    <None Include="Report\Template\NewReport\SystemDesign.doc" />
+    <None Include="Report\Template\NewReport\SystemDesign_DE.doc" />
+    <None Include="Report\Template\NewReport\SystemDesign_FR.doc" />
+    <None Include="Report\Template\NewReport\SystemDesign_IT.doc" />
+    <None Include="Report\Template\NewReport\SystemDesign_PT_BR.doc" />
+    <None Include="Report\Template\NewReport\SystemDesign_SP.doc" />
+    <None Include="Report\Template\NewReport\SystemDesign_ZHT.doc" />
+    <None Include="Report\Template\NewReport\WiringDesignCE.doc" />
+    <None Include="Report\Template\NewReport\WiringDesign.doc" />
+    <None Include="Report\Template\NewReport\WiringDesign_DE.doc" />
+    <None Include="Report\Template\NewReport\WiringDesign_FR.doc" />
+    <None Include="Report\Template\NewReport\WiringDesign_IT.doc" />
+    <None Include="Report\Template\NewReport\WiringDesign_PT_BR.doc" />
+    <None Include="Report\Template\NewReport\WiringDesign_SP.doc" />
+    <None Include="Report\Template\NewReport\WiringDesign_ZHT.doc" />
+    <None Include="Report\Template\Report.doc" />
+    <None Include="Report\Template\ReportYork.doc" />
+    <None Include="Report\Template\Selection Report Template.xlt" />
+    <None Include="Report\Template\Selection Report Template_H.xlt" />
+    <None Include="Report\Template\SystemDrawing.doc" />
+    <None Include="Report\Template\SystemDrawing_CN.doc" />
+    <None Include="Report\Template\SystemWiring.doc" />
+    <None Include="Report\Template\SystemWiring.docx" />
+    <None Include="Report\Template\VRF_Report.doc" />
+    <None Include="Report\Template\VRF_Report_CN.doc" />
+    <None Include="TotalHeatExchangerPDFFiles\English\20190424 Installation guide idea.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\20190613 IoM JDTH020H0NAGQ-JDTH050H0NAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\20190613 IoM JDTH0650NAGQ - JDTH500H0NEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH020H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH030H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH040H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH050H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH065H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH080H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH100H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH125H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH150H0NOEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH200H0NOEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH250H0NOEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH300H0NOEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH400H0NOEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_JDTH500H0NOEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPF-400H-E-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPF-500H-E-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-10021.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-1002E4E.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-100H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-125H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-1502E4E.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-150H-E-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-2002E4E.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-200H-E-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-20H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-250H-E-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-2521.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-252E4E.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-300H-E-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-30H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-40H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-5021.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-502E4E.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-50H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-65H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-8021.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-802E4E.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\FA_KPI-80H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH020H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH030H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH040H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH050H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH065H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH080H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH100H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH125H0NOAGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH150H0NOEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH200H0NOEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH250H0NOEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH300H0NOEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH400H0NOEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_JDTH500H0NOEGQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPF-400H-E-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPF-500H-E-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-10021.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-1002E4E.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-100H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-125H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-1502E4E.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-150H-E-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-2002E4E.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-200H-E-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-20H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-250H-E-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-2521.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-252E4E.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-300H-E-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-30H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-40H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-5021.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-502E4E.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-50H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-65H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-8021.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-802E4E.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\English\GD_KPI-80H-A-GQ.pdf" />
+    <None Include="TotalHeatExchangerPDFFiles\Total Heat Exchanger Models Data Extraction.xls" />
+    <None Include="TotalHeatExchangerPDFFiles\Total Heat Exchanger Models Data Extraction.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\IDU_Image.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\ODU_Image.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JCHVRF.BLL\JCHVRF.BLL.csproj">
+      <Project>{C7829FB6-7909-4467-A603-FE8F78DF33BF}</Project>
+      <Name>JCHVRF.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Const\JCHVRF.Const.csproj">
+      <Project>{ACD40089-8738-4D59-A97F-F8EF8CB0BF91}</Project>
+      <Name>JCHVRF.Const</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.DALFactory\JCHVRF.DALFactory.csproj">
+      <Project>{69a59513-d8c7-41e2-9df3-95c0a7ea787c}</Project>
+      <Name>JCHVRF.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.DAL\JCHVRF.DAL.csproj">
+      <Project>{B472C47D-C465-4867-8589-AAF860A26046}</Project>
+      <Name>JCHVRF.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Entity\JCHVRF.Entity.csproj">
+      <Project>{798A74B8-F22C-4B72-8CFB-3835306CE2C4}</Project>
+      <Name>JCHVRF.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Model\JCHVRF.Model.csproj">
+      <Project>{53F606C7-5CCF-48C4-8420-C2EE4F7FC29A}</Project>
+      <Name>JCHVRF.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.MyPipingBLL\JCHVRF.MyPipingBLL.csproj">
+      <Project>{62dae7e0-fc30-470e-905c-a39e985427f2}</Project>
+      <Name>JCHVRF.MyPipingBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.Report\JCHVRF.Report.csproj">
+      <Project>{75856CC4-F1C7-42F8-834E-F7FA42E158CD}</Project>
+      <Name>JCHVRF.Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JCHVRF.VRFMessage\JCHVRF.VRFMessage.csproj">
+      <Project>{b11207c8-c702-43fa-ae96-f1bb2aa4ba38}</Project>
+      <Name>JCHVRF.VRFMessage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Register\Register.csproj">
+      <Project>{c3c491b1-8c66-4923-8c7f-8697869a0fc9}</Project>
+      <Name>Register</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Ellipse.png" />
+    <Resource Include="Image\TypeImages\HARC-BXE.png" />
+    <Resource Include="Image\TypeImages\HARC70-P1.png" />
+    <Resource Include="Image\TypeImages\Harc70BX-01.png" />
+    <Resource Include="Image\TypeImages\HC-A%288-64%29MB.png" />
+    <Resource Include="Image\TypeImages\HC-A16KNX.PNG" />
+    <Resource Include="Image\TypeImages\HC-A64BNP1.png" />
+    <Resource Include="Image\TypeImages\HC-A64LNP.png" />
+    <Resource Include="Image\TypeImages\HC-A64NET_HC-A8_64MB.PNG" />
+    <Resource Include="Image\TypeImages\HC-A8-64MB.png" />
+    <Resource Include="Image\u1283.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\u1003.png" />
+    <Resource Include="Image\u1009.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\loc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\gmap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\vrfimg.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Hitachi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\York.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\4_Way_Cassette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Error.png" />
+    <Resource Include="Image\TypeImages\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\0043_90_4-WAY1.png" />
+    <Resource Include="Image\TypeImages\0072_90_1-WAY1.png" />
+    <Resource Include="Image\TypeImages\00_New_Wall_L.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\TypeImages\2-Way-Cassette-copy.png" />
+    <Resource Include="Image\TypeImages\4-way-cassette1.png" />
+    <Resource Include="Image\TypeImages\4-way-mini-cassette-photo_sm1.png" />
+    <Resource Include="Image\TypeImages\All-fresh-type1.png" />
+    <Resource Include="Image\TypeImages\Ceiling-Suspended-photo1.png" />
+    <Resource Include="Image\TypeImages\Compact-Ducted-copy.png" />
+    <Resource Include="Image\TypeImages\Ducted-Unit1.png" />
+    <Resource Include="Image\TypeImages\EXV-E2.png" />
+    <Resource Include="Image\TypeImages\FLoor-concealed1.png" />
+    <Resource Include="Image\TypeImages\Floor-type1.png" />
+    <Resource Include="Image\TypeImages\Front-flow-cooling-only-large1.png" />
+    <Resource Include="Image\TypeImages\Front-flow-cooling-only-medium1.png" />
+    <Resource Include="Image\TypeImages\Front-flow-cooling-only-small1.png" />
+    <Resource Include="Image\TypeImages\front-flow1.png" />
+    <Resource Include="Image\TypeImages\FSNYW1Q-1-copy.png" />
+    <Resource Include="Image\TypeImages\FSNYW1Q-2-copy.png" />
+    <Resource Include="Image\TypeImages\high-wall-large1.png" />
+    <Resource Include="Image\TypeImages\high-wall1.png" />
+    <Resource Include="Image\TypeImages\IDU-RPK_FSNK1_2-copy.png" />
+    <Resource Include="Image\TypeImages\In-the-ceiling-type%28small%29%28RPI%29.png" />
+    <Resource Include="Image\TypeImages\In-the-ceiling-type1.png" />
+    <Resource Include="Image\TypeImages\IVXmini.png" />
+    <Resource Include="Image\TypeImages\johnson_u_0007-Indoor-sized.png" />
+    <Resource Include="Image\TypeImages\JTWH-1.png" />
+    <Resource Include="Image\TypeImages\JTWH-2.png" />
+    <Resource Include="Image\TypeImages\JTWH-3.png" />
+    <Resource Include="Image\TypeImages\KPI-15032Q2E-30032Q2E.png" />
+    <Resource Include="Image\TypeImages\KPI-1522Q2E-10022Q2E.png" />
+    <Resource Include="Image\TypeImages\KPI-40032Q2E-50032Q2E.png" />
+    <Resource Include="Image\TypeImages\KPI-JCH-ES.png" />
+    <Resource Include="Image\TypeImages\KPI-SMZ.png" />
+    <Resource Include="Image\TypeImages\KPI.png" />
+    <Resource Include="Image\TypeImages\Low-ambient-VRF-Single-module.png" />
+    <Resource Include="Image\TypeImages\Mid-&amp;-High-ESP-Ducted.png" />
+    <Resource Include="Image\TypeImages\module-large.png" />
+    <Resource Include="Image\TypeImages\module-small.png" />
+    <Resource Include="Image\TypeImages\RAM-112~155FSQB.png" />
+    <Resource Include="Image\TypeImages\RAM-140~160FB.png" />
+    <Resource Include="Image\TypeImages\RAM-160FS%28B%29.png" />
+    <Resource Include="Image\TypeImages\RAM-200~250FSQ%28D%29.png" />
+    <Resource Include="Image\TypeImages\RAM-200~270F%28D%29.png" />
+    <Resource Include="Image\TypeImages\RAM-200~335FS%28D%29.png" />
+    <Resource Include="Image\TypeImages\RAM-5~6FNS%28B%29.png" />
+    <Resource Include="Image\TypeImages\RAS-12-18FSXNK.png" />
+    <Resource Include="Image\TypeImages\RAS-14-16FSXN1.png" />
+    <Resource Include="Image\TypeImages\RAS-14-18FSNSE.png" />
+    <Resource Include="Image\TypeImages\RAS-14-18FSXN.png" />
+    <Resource Include="Image\TypeImages\RAS-14FSXNH.png" />
+    <Resource Include="Image\TypeImages\RAS-16-24FSXNH-YORK.png" />
+    <Resource Include="Image\TypeImages\RAS-16-24FSXNH.png" />
+    <Resource Include="Image\TypeImages\RAS-18-20FSXN1.png" />
+    <Resource Include="Image\TypeImages\RAS-2-2.5HVNP.png" />
+    <Resource Include="Image\TypeImages\RAS-20-24FSNP.png" />
+    <Resource Include="Image\TypeImages\RAS-20-24FSNSE.png" />
+    <Resource Include="Image\TypeImages\RAS-20-24FSXNK.png" />
+    <Resource Include="Image\TypeImages\RAS-20FSXN.png" />
+    <Resource Include="Image\TypeImages\RAS-22-26FSXN.png" />
+    <Resource Include="Image\TypeImages\RAS-22-26FSXN1.png" />
+    <Resource Include="Image\TypeImages\RAS-26-30FSNS.png" />
+    <Resource Include="Image\TypeImages\RAS-26-30FSNSE.png" />
+    <Resource Include="Image\TypeImages\RAS-26-32FSNP.png" />
+    <Resource Include="Image\TypeImages\RAS-26-32FSXNK.png" />
+    <Resource Include="Image\TypeImages\RAS-26-36FSXNH-YORK.png" />
+    <Resource Include="Image\TypeImages\RAS-26-36FSXNH.png" />
+    <Resource Include="Image\TypeImages\RAS-28-32FSXN1.png" />
+    <Resource Include="Image\TypeImages\RAS-28-36FSXN.png" />
+    <Resource Include="Image\TypeImages\RAS-32-36FSNS.png" />
+    <Resource Include="Image\TypeImages\RAS-32-36FSNSE.png" />
+    <Resource Include="Image\TypeImages\RAS-34-36FSNP.png" />
+    <Resource Include="Image\TypeImages\RAS-34-36FSXN1.png" />
+    <Resource Include="Image\TypeImages\RAS-34FSXNK.png" />
+    <Resource Include="Image\TypeImages\RAS-36-54FSXNK.png" />
+    <Resource Include="Image\TypeImages\RAS-38-40FSXN1.png" />
+    <Resource Include="Image\TypeImages\RAS-38-42FSNP.png" />
+    <Resource Include="Image\TypeImages\RAS-38-42FSNS.png" />
+    <Resource Include="Image\TypeImages\RAS-38-42FSNSE.png" />
+    <Resource Include="Image\TypeImages\RAS-38-42FSXN.png" />
+    <Resource Include="Image\TypeImages\RAS-3HVNC.png" />
+    <Resource Include="Image\TypeImages\RAS-4-7HVRNM2.png" />
+    <Resource Include="Image\TypeImages\RAS-42-44FSXN1.png" />
+    <Resource Include="Image\TypeImages\RAS-44-46FSNP.png" />
+    <Resource Include="Image\TypeImages\RAS-44-46FSNPE.png" />
+    <Resource Include="Image\TypeImages\RAS-44-48FSNS.png" />
+    <Resource Include="Image\TypeImages\RAS-44-48FSNSE.png" />
+    <Resource Include="Image\TypeImages\RAS-44-48FSXN.png" />
+    <Resource Include="Image\TypeImages\RAS-46-48FSXN1.png" />
+    <Resource Include="Image\TypeImages\RAS-48-50FSNP.png" />
+    <Resource Include="Image\TypeImages\RAS-48-50FSNPE.png" />
+    <Resource Include="Image\TypeImages\RAS-4_6HVNC1.png" />
+    <Resource Include="Image\TypeImages\RAS-5-6FSXNH.png" />
+    <Resource Include="Image\TypeImages\RAS-50-54FSNS.png" />
+    <Resource Include="Image\TypeImages\RAS-50-54FSNSE.png" />
+    <Resource Include="Image\TypeImages\RAS-50-54FSXN.png" />
+    <Resource Include="Image\TypeImages\RAS-50-54FSXN1.png" />
+    <Resource Include="Image\TypeImages\RAS-52-54FSNP.png" />
+    <Resource Include="Image\TypeImages\RAS-52-54FSNPE.png" />
+    <Resource Include="Image\TypeImages\RAS-56-60FSNSB.png" />
+    <Resource Include="Image\TypeImages\RAS-62-66FSNSB.png" />
+    <Resource Include="Image\TypeImages\RAS-68-72FSNSB.png" />
+    <Resource Include="Image\TypeImages\RAS-74-78FSXNSE.png" />
+    <Resource Include="Image\TypeImages\RAS-8-10FSXNK.png" />
+    <Resource Include="Image\TypeImages\RAS-8-12FSNSE.png" />
+    <Resource Include="Image\TypeImages\RAS-8-12FSNX1.png" />
+    <Resource Include="Image\TypeImages\RAS-8-12FSXN.png" />
+    <Resource Include="Image\TypeImages\RAS-8-12FSXNH-YORK.png" />
+    <Resource Include="Image\TypeImages\RAS-8-12FSXNH.png" />
+    <Resource Include="Image\TypeImages\RAS-80-84FSXNSE.png" />
+    <Resource Include="Image\TypeImages\RAS-86-90FSXNSE.png" />
+    <Resource Include="Image\TypeImages\RAS-92-96FSXNSE.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS-FSNP-large-cabiinet.png" />
+    <Resource Include="Image\TypeImages\RCD-FSN3.png" />
+    <Resource Include="Image\TypeImages\RCI-F.png" />
+    <Resource Include="Image\TypeImages\RCI-FSN1Q.png" />
+    <Resource Include="Image\TypeImages\RCI-FSN3.png" />
+    <Resource Include="Image\TypeImages\RCI-FSN3Ei.png" />
+    <Resource Include="Image\TypeImages\RCI-FSN3Ek.png" />
+    <Resource Include="Image\TypeImages\RCI-FSNB4.png" />
+    <Resource Include="Image\TypeImages\RCIM-FSN4.png" />
+    <Resource Include="Image\TypeImages\RCI_FSNK.png" />
+    <Resource Include="Image\TypeImages\RCS-FSN.png" />
+    <Resource Include="Image\TypeImages\RPC-FSN3%28EU%29.png" />
+    <Resource Include="Image\TypeImages\RPC-FSN3.png" />
+    <Resource Include="Image\TypeImages\RPC-FSN3E.png" />
+    <Resource Include="Image\TypeImages\RPC-FSNB4.png" />
+    <Resource Include="Image\TypeImages\RPDT-RPDV-FSNB.png" />
+    <Resource Include="Image\TypeImages\RPF-1.0-2.5FSNE.png" />
+    <Resource Include="Image\TypeImages\RPF-1.0~2.5FSNE.png" />
+    <Resource Include="Image\TypeImages\RPF-FSN2E.png" />
+    <Resource Include="Image\TypeImages\RPF.png" />
+    <Resource Include="Image\TypeImages\RPFC-%281%29-copy.png" />
+    <Resource Include="Image\TypeImages\RPFC-%282%29.png" />
+    <Resource Include="Image\TypeImages\RPFC-%283%29.png" />
+    <Resource Include="Image\TypeImages\RPFI-1.0-2.5FSNE.png" />
+    <Resource Include="Image\TypeImages\RPFI-1.0~2.5FSNE.png" />
+    <Resource Include="Image\TypeImages\RPFI-FSN2E.png" />
+    <Resource Include="Image\TypeImages\RPFI.png" />
+    <Resource Include="Image\TypeImages\RPI-%280.6-1.png" />
+    <Resource Include="Image\TypeImages\RPI-%282.0-3.png" />
+    <Resource Include="Image\TypeImages\RPI-%284.0-6.png" />
+    <Resource Include="Image\TypeImages\RPI-0.png" />
+    <Resource Include="Image\TypeImages\RPI-06-1.png" />
+    <Resource Include="Image\TypeImages\RPI-16-20MD.png" />
+    <Resource Include="Image\TypeImages\RPI-8-10.png" />
+    <Resource Include="Image\TypeImages\RPI-8-10FSN1.png" />
+    <Resource Include="Image\TypeImages\RPI-D&amp;F.png" />
+    <Resource Include="Image\TypeImages\RPI-FSN2.png" />
+    <Resource Include="Image\TypeImages\RPI-FSN3.png" />
+    <Resource Include="Image\TypeImages\RPI-FSNB2.png" />
+    <Resource Include="Image\TypeImages\RPI-FSNB3.png" />
+    <Resource Include="Image\TypeImages\RPI-N.png" />
+    <Resource Include="Image\TypeImages\RPI.png" />
+    <Resource Include="Image\TypeImages\RPIM-FSN3.png" />
+    <Resource Include="Image\TypeImages\RPIM.png" />
+    <Resource Include="Image\TypeImages\RPIZ-FSN1Q.png" />
+    <Resource Include="Image\TypeImages\RPIZ-FSNQS.png" />
+    <Resource Include="Image\TypeImages\RPI_20-60.png" />
+    <Resource Include="Image\TypeImages\RPI_4.0_10.png" />
+    <Resource Include="Image\TypeImages\RPK-1.0-1.5FSNSM3.png" />
+    <Resource Include="Image\TypeImages\RPK-2.0-4.0FSN4M.png" />
+    <Resource Include="Image\TypeImages\RPK-2.0-4.0FSNSM3.png" />
+    <Resource Include="Image\TypeImages\RPK-FSN%28H%293M%28EU%29.png" />
+    <Resource Include="Image\TypeImages\RPK-FSN%28H%293M_%280_8-1_0%29.png" />
+    <Resource Include="Image\TypeImages\RPK-FSN%28H%293M_%281_5%29.png" />
+    <Resource Include="Image\TypeImages\RPK-FSN%28H%293M_%282_0-4_0%29.png" />
+    <Resource Include="Image\TypeImages\RPK_FSNK.png" />
+    <Resource Include="Image\TypeImages\RPV-N.png" />
+    <Resource Include="Image\TypeImages\RWHT-5.0VNFE.png" />
+    <Resource Include="Image\TypeImages\RWLT-10.0VNE.png" />
+    <Resource Include="Image\TypeImages\RWLT-3.0VNE.png" />
+    <Resource Include="Image\TypeImages\RWLT-5.0VNE.png" />
+    <Resource Include="Image\TypeImages\SFmini%28Hitachi%29.png" />
+    <Resource Include="Image\TypeImages\Sfmini.png" />
+    <Resource Include="Image\TypeImages\Side-Flow-ODU%28FSNMA%29.png" />
+    <Resource Include="Image\TypeImages\wall-mounted-%281%29-copy.png" />
+    <Resource Include="Image\TypeImages\wall-mounted-%282%29.png" />
+    <Resource Include="Image\TypeImages\wall-mounted.png" />
+    <Resource Include="Image\TypeImages\YDCC.png" />
+    <Resource Include="Image\TypeImages\YDCF.png" />
+    <Resource Include="Image\TypeImages\YDCK.png" />
+    <Resource Include="Image\TypeImages\YDCP.png" />
+    <Resource Include="Image\TypeImages\YDDK.png" />
+    <Resource Include="Image\TypeImages\YDEC.png" />
+    <Resource Include="Image\TypeImages\YDHW-2.png" />
+    <Resource Include="Image\TypeImages\YDHW.png" />
+    <Resource Include="Image\TypeImages\YDVC.png" />
+    <Resource Include="Image\TypeImages\YVOH-HM.png" />
+    <Resource Include="Image\TypeImages\YVOH-HS.png" />
+    <Resource Include="Image\TypeImages\YVOH-HSME.png" />
+    <Resource Include="Image\TypeImages\YVOH-VNEE-2.png" />
+    <Resource Include="Image\TypeImages\YVOH-VNEE-3.png" />
+    <Resource Include="Image\TypeImages\YVOH-VVEE.png" />
+    <Resource Include="Image\TypeImages\YVOH080-120.png" />
+    <Resource Include="Image\TypeImages\YVOH140-180.png" />
+    <Resource Include="Image\TypeImages\YVOH200-240.png" />
+    <Resource Include="Image\TypeImages\YVOH260-480.png" />
+    <Resource Include="Image\TypeImages\YVOH500-720.png" />
+    <Resource Include="Image\TypeImages\YVOH740-960.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\News.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Notifications.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Planner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Piping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Wiring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\WiringPic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Jci.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\ZoomIn.png" />
+    <Resource Include="Image\TypeImages\ZoomOut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Left caret.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Image\NodeImageWiring\CH.png" />
+    <Resource Include="Image\NodeImageWiring\CH.txt" />
+    <EmbeddedResource Include="Image\NodeImageWiring\Ground.png" />
+    <Resource Include="Image\NodeImageWiring\Ground.txt" />
+    <EmbeddedResource Include="Image\NodeImageWiring\Ind.png" />
+    <Resource Include="Image\NodeImageWiring\Ind.txt" />
+    <EmbeddedResource Include="Image\NodeImageWiring\Out.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Resource Include="Image\NodeImageWiring\Out.txt" />
+    <EmbeddedResource Include="Image\NodeImageWiring\Out1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Resource Include="Image\NodeImageWiring\Out1.txt" />
+    <EmbeddedResource Include="Image\NodeImageWiring\Out2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Resource Include="Image\NodeImageWiring\Out2.txt" />
+    <EmbeddedResource Include="Image\NodeImageWiring\Out3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Resource Include="Image\NodeImageWiring\Out3.txt" />
+    <EmbeddedResource Include="Image\NodeImageWiring\Out4.png" />
+    <Resource Include="Image\NodeImageWiring\Out4.txt" />
+    <EmbeddedResource Include="Image\NodeImageWiring\RemoteControler.png" />
+    <Resource Include="Image\NodeImageWiring\RemoteControler.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\CH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Ground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Ind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Out.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Out1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Out2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Out3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Out4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\RemoteControler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\CH.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Ground.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Ind.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Out.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Out1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Out2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Out3.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Out4.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\RemoteControler.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\Pann.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\ReAlign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\TypeImages\KPI JCH-ES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\u621.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Report\ProjectFiles\1_piping.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Report\ProjectFiles\1_wiring.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Report\NodeImagePiping\AllInverterOut1.png" />
+    <Resource Include="Report\NodeImagePiping\AllInverterOut1.txt" />
+    <Resource Include="Report\NodeImagePiping\AllInverterOut2.png" />
+    <Resource Include="Report\NodeImagePiping\AllInverterOut2.txt" />
+    <Resource Include="Report\NodeImagePiping\AllInverterOut3.png" />
+    <Resource Include="Report\NodeImagePiping\AllInverterOut3.txt" />
+    <Resource Include="Report\NodeImagePiping\CHbox.png" />
+    <Resource Include="Report\NodeImagePiping\CHbox.txt" />
+    <Resource Include="Report\NodeImagePiping\EXV-E2.png" />
+    <Resource Include="Report\NodeImagePiping\EXV-E2.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_1.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_1.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_2.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_2.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_2_1.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_2_1.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_2_2.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_2_2.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_2_2_2.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_2_2_2.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_2.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_2.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_2_2.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_2_2.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_2_2_2.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_2_2_2.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_3.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_3.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_3_2.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_3_2.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_3_2_2.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_3_2_2.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_3_3.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_3_3.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_3_3_2.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_3_3_2.txt" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_3_3_3.png" />
+    <Resource Include="Report\NodeImagePiping\FSNS_FSNP_3_3_3_3.txt" />
+    <Resource Include="Report\NodeImagePiping\IDU_01.png" />
+    <Resource Include="Report\NodeImagePiping\IDU_01.txt" />
+    <Resource Include="Report\NodeImagePiping\IDU_02.png" />
+    <Resource Include="Report\NodeImagePiping\IDU_02.txt" />
+    <Resource Include="Report\NodeImagePiping\IDU_03.png" />
+    <Resource Include="Report\NodeImagePiping\IDU_03.txt" />
+    <Resource Include="Report\NodeImagePiping\IDU_04.png" />
+    <Resource Include="Report\NodeImagePiping\IDU_04.txt" />
+    <Resource Include="Report\NodeImagePiping\KPI.png" />
+    <Resource Include="Report\NodeImagePiping\KPI.txt" />
+    <Resource Include="Report\NodeImagePiping\MultiCHbox.png" />
+    <Resource Include="Report\NodeImagePiping\MultiCHbox.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_01_1.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_01_1.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_01_2.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_01_2.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_02_1.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_02_1.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_02_2.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_02_2.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_03.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_03.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_04.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_04.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_05.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_05.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_06.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_06.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_07.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_07.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_08.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_08.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_09.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_09.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_10.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_10.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_11.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_11.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_HAPB_WS_01.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_HAPB_WS_01.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_HAPB_WS_02.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_HAPB_WS_02.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_HAPB_WS_03.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_HAPB_WS_03.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_HAPQ_WS_01.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_HAPQ_WS_01.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_HAPQ_WS_02.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_HAPQ_WS_02.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_02.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_02.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_03.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_03.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_04.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_04.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_05.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_05.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_06.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_06.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_07.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_07.txt" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_08.png" />
+    <Resource Include="Report\NodeImagePiping\ODU_NA_08.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-14-18FSNSE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-14-18FSNSE.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-20-24FSNSE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-20-24FSNSE.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-26-30FSNSE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-26-30FSNSE.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-32-36FSNSE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-32-36FSNSE.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-38-42FSNSE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-38-42FSNSE.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-44-46FSNPE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-44-46FSNPE.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-44-48FSNSE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-44-48FSNSE.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-48-50FSNPE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-48-50FSNPE.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-50-54FSNSE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-50-54FSNSE.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-52-54FSNPE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-52-54FSNPE.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-56-96FSNSE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-56-96FSNSE.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-74-96FSNSE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-74-96FSNSE.txt" />
+    <Resource Include="Report\NodeImagePiping\RAS-8-12FSNSE.png" />
+    <Resource Include="Report\NodeImagePiping\RAS-8-12FSNSE.txt" />
+    <Resource Include="Report\NodeImagePiping\RPV-N.png" />
+    <Resource Include="Report\NodeImagePiping\RPV-N.txt" />
+    <Resource Include="Report\NodeImagePiping\RWLT.png" />
+    <Resource Include="Report\NodeImagePiping\RWLT.txt" />
+    <Resource Include="Report\NodeImagePiping\top_flow_1.png" />
+    <Resource Include="Report\NodeImagePiping\top_flow_1.txt" />
+    <Resource Include="Report\NodeImagePiping\top_flow_2.png" />
+    <Resource Include="Report\NodeImagePiping\top_flow_2.txt" />
+    <Resource Include="Report\NodeImagePiping\top_flow_3.png" />
+    <Resource Include="Report\NodeImagePiping\top_flow_3.txt" />
+    <Resource Include="Report\NodeImagePiping\top_flow_4.png" />
+    <Resource Include="Report\NodeImagePiping\top_flow_4.txt" />
+    <Resource Include="Report\NodeImagePiping\top_flow_5.png" />
+    <Resource Include="Report\NodeImagePiping\top_flow_5.txt" />
+    <Resource Include="Report\NodeImagePiping\top_flow_6.png" />
+    <Resource Include="Report\NodeImagePiping\top_flow_6.txt" />
+    <Resource Include="Report\NodeImagePiping\YDCD.png" />
+    <Resource Include="Report\NodeImagePiping\YDCD.txt" />
+    <Resource Include="Report\NodeImagePiping\YDCF.png" />
+    <Resource Include="Report\NodeImagePiping\YDCF.txt" />
+    <Resource Include="Report\NodeImagePiping\YDCH.png" />
+    <Resource Include="Report\NodeImagePiping\YDCH.txt" />
+    <Resource Include="Report\NodeImagePiping\YDCK.png" />
+    <Resource Include="Report\NodeImagePiping\YDCK.txt" />
+    <Resource Include="Report\NodeImagePiping\YDCM.png" />
+    <Resource Include="Report\NodeImagePiping\YDCM.txt" />
+    <Resource Include="Report\NodeImagePiping\YDCP.png" />
+    <Resource Include="Report\NodeImagePiping\YDCP.txt" />
+    <Resource Include="Report\NodeImagePiping\YDDK.png" />
+    <Resource Include="Report\NodeImagePiping\YDDK.txt" />
+    <Resource Include="Report\NodeImagePiping\YDEC.png" />
+    <Resource Include="Report\NodeImagePiping\YDEC.txt" />
+    <Resource Include="Report\NodeImagePiping\YDHW.png" />
+    <Resource Include="Report\NodeImagePiping\YDHW.txt" />
+    <Resource Include="Report\NodeImagePiping\YDVC.png" />
+    <Resource Include="Report\NodeImagePiping\YDVC.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH001.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH001.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH002.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH002.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH003.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH003.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH200.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH200.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH220.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH220.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH240.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH240.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH260.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH260.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH280.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH280.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH300.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH300.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH320.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH320.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH340.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH340.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH360.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH360.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH380.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH380.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH400.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH400.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH420.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH420.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH440.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH440.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH460.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH460.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH480.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH480.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH500.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH500.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH520.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH520.txt" />
+    <Resource Include="Report\NodeImagePiping\YVOH540.png" />
+    <Resource Include="Report\NodeImagePiping\YVOH540.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Report\NodeImageWiring\CH.png" />
+    <Resource Include="Report\NodeImageWiring\CH.txt" />
+    <Resource Include="Report\NodeImageWiring\Ground.png" />
+    <Resource Include="Report\NodeImageWiring\Ground.txt" />
+    <Resource Include="Report\NodeImageWiring\Ind.png" />
+    <Resource Include="Report\NodeImageWiring\Ind.txt" />
+    <Resource Include="Report\NodeImageWiring\Out.png" />
+    <Resource Include="Report\NodeImageWiring\Out.txt" />
+    <Resource Include="Report\NodeImageWiring\Out1.png" />
+    <Resource Include="Report\NodeImageWiring\Out1.txt" />
+    <Resource Include="Report\NodeImageWiring\Out2.png" />
+    <Resource Include="Report\NodeImageWiring\Out2.txt" />
+    <Resource Include="Report\NodeImageWiring\Out3.png" />
+    <Resource Include="Report\NodeImageWiring\Out3.txt" />
+    <Resource Include="Report\NodeImageWiring\Out4.png" />
+    <Resource Include="Report\NodeImageWiring\Out4.txt" />
+    <Resource Include="Report\NodeImageWiring\RemoteControler.png" />
+    <Resource Include="Report\NodeImageWiring\RemoteControler.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\u1480.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\u1483.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\u1486.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\u1489.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DatabaseScript\ProjectDB\Create_Table_Creator.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DatabaseScript\ProjectDB\Create_Table_Client.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DatabaseScript\ProjectDB\Alter_Table_ProjectInfo_ADD_COLUMN_SubRegion.txt" />
+    <Resource Include="Common\UI\Resources\Cursors\grab %281%29.cur" />
+    <Resource Include="Common\UI\Resources\Cursors\Hand Move Grab.cur" />
+    <Resource Include="DatabaseScript\ProjectDB\Create_Table_JCHVRF_Language.txt" />
+    <Resource Include="DatabaseScript\ProjectDB\CreateTable_JCHVRF_EVENT.txt" />
+    <Content Include="DB\VRF.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DB\VRFPS.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Image\TypeImageProjectCreation\0043_90_4 WAY.png" />
+    <Resource Include="Image\TypeImageProjectCreation\0072_90_1 WAY.png" />
+    <Resource Include="Image\TypeImageProjectCreation\00_New_Wall_L.png" />
+    <Resource Include="Image\TypeImageProjectCreation\2-Way Cassette.png" />
+    <Resource Include="Image\TypeImageProjectCreation\4 way mini cassette photo_sm.png" />
+    <Resource Include="Image\TypeImageProjectCreation\4-way cassette.png" />
+    <Resource Include="Image\TypeImageProjectCreation\All fresh type.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Ceiling Suspended photo.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Compact Ducted.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Cooling only front flow-Medium%28Hitachi%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Cooling only front flow-Small %28Hitachi%29.tif" />
+    <Resource Include="Image\TypeImageProjectCreation\Ducted Unit.png" />
+    <Resource Include="Image\TypeImageProjectCreation\EXV-E2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\FLoor concealed.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Floor type.png" />
+    <Resource Include="Image\TypeImageProjectCreation\front flow %28Hitachi-1%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Front flow cooling only large.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Front flow cooling only medium.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Front flow cooling only small.png" />
+    <Resource Include="Image\TypeImageProjectCreation\front flow%28Hitachi%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\front flow%28Hitachi-1%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\front flow%28Hitachi-2%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\front flow%28Hitachi-4%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\front flow%28York-1%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\front flow%28York-2%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\front flow%28York-4%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\front flow.png" />
+    <Resource Include="Image\TypeImageProjectCreation\FSNYW1Q 1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\FSNYW1Q 2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\high wall large.png" />
+    <Resource Include="Image\TypeImageProjectCreation\high wall.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 12-16, HNCQ 14-18.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 18-22, HNCQ 20-24.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 24-32, HNCQ 30-34.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 34, HNCQ 36-42.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 36-40, HNCQ 44-48.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 42-48, HNCQ 50.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 50, HNCQ 52-58.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 52, HNCQ 60-66.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 54-60, HNCQ 68-72.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 62, HNCQ 74.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 64-66, HNCQ 76-78.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 68-70.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 72-88, HNCQ 80-96.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNBQ 8-10, HNCQ 8-12.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNCQ 14-18.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNCQ 20-24.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNCQ 26-28.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNCQ 26-48.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNCQ 50-72.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNCQ 74-96.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HNCQ 8-12.png" />
+    <Resource Include="Image\TypeImageProjectCreation\IDU RPK_FSNK1_2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\In-the-ceiling type.png" />
+    <Resource Include="Image\TypeImageProjectCreation\In-the-ceiling-type%28small%29%28RPI%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\IVXmini HAPQ.png" />
+    <Resource Include="Image\TypeImageProjectCreation\IVXmini.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 12-16.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 18.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 20-22.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 24-32.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 34.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 36.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 38-48.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 50.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 52.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 54.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 56-60.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 62.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 64-66.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 68-70.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 72.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\JNBBQ 8-10.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\johnson_u_0007 Indoor-sized.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JTWH-1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JTWH-2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JTWH-3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 080-120.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 140-180.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 200-240.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 260-280.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 300-340.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 360-420.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 440-480.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 500.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 520-580.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 600-660.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 680-720.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 740.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 760-780.png" />
+    <Resource Include="Image\TypeImageProjectCreation\JVOHQ 800-960.png" />
+    <Resource Include="Image\TypeImageProjectCreation\KPI JCH-ES.png" />
+    <Resource Include="Image\TypeImageProjectCreation\KPI SMZ.png" />
+    <Resource Include="Image\TypeImageProjectCreation\KPI-15032Q2E-30032Q2E.png" />
+    <Resource Include="Image\TypeImageProjectCreation\KPI-1522Q2E-10022Q2E.png" />
+    <Resource Include="Image\TypeImageProjectCreation\KPI-40032Q2E-50032Q2E.png" />
+    <Resource Include="Image\TypeImageProjectCreation\KPI.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Low ambient VRF 2 modules.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Low ambient VRF 3 modules.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Low ambient VRF Single module.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Mid &amp; High ESP Ducted.png" />
+    <Resource Include="Image\TypeImageProjectCreation\module Combination 2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\module combination 3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\module large.png" />
+    <Resource Include="Image\TypeImageProjectCreation\module small.png" />
+    <Resource Include="Image\TypeImageProjectCreation\module type combination 2%28Hitachi%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\module type combination 3%28Hitachi%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\module type%28Hitachi%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\R-Way Cassette.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RAM-112~155FSQB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAM-140~160FB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAM-160FS%28B%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAM-200~250FSQ%28D%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAM-200~270F%28D%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAM-200~335FS%28D%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAM-5~6FNS%28B%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-12-18FSXNK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-14-16FSXN1 RAS-8-12FSXNH - Logo.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-14-16FSXN1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-14-18FSNSE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-14-18FSXN.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-14FSXNH.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-16-24FSXNH-YORK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-16-24FSXNH.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-18-20FSXN1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-2-2.5HVNP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-20-24FSNP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-20-24FSNSE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-20-24FSXNK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-20FSXN.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-22-26FSXN.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-22-26FSXN1 RAS-14FSXNH W_RAS0714.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-22-26FSXN1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-26-30FSNS.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-26-30FSNSE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-26-32FSNP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-26-32FSXNK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-26-36FSXNH-YORK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-26-36FSXNH.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-28-32FSXN1 RAS-16-24FSXNH W_RAS0715.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-28-32FSXN1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-28-36FSXN.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-32-36FSNS.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-32-36FSNSE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-34-36FSNP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-34-36FSXN1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-34FSXNK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-36-54FSXNK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-38-40FSXN1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-38-42FSNP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-38-42FSNS.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-38-42FSNSE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-38-42FSXN.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-3HVNC.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-4-7HVRNM2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-42-44FSXN1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-44-46FSNP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-44-46FSNPE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-44-48FSNS.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-44-48FSNSE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-44-48FSXN.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-46-48FSXN1 RAS-26-36FSXNH W_RAS0719.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-46-48FSXN1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-48-50FSNP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-48-50FSNPE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-4_6HVNC1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-5-6FSXNH.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-50-54FSNS.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-50-54FSNSE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-50-54FSXN.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-50-54FSXN1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-52-54FSNP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-52-54FSNPE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-56-60FSNSB.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-62-66FSNSB.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-68-72FSNSB.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-74-78FSXNSE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-8-10FSXNK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-8-12FSNSE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-8-12FSNX1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-8-12FSXN.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-8-12FSXN1 RAS-5-6FSXNH - Logo.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-8-12FSXNH-YORK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-8-12FSXNH.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-80-84FSXNSE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-86-90FSXNSE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-92-96FSXNSE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNP 56-58HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNP 60HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNP 62HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNP 64-72HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS 56-60HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS 62-66HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS 68-72HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS 74-78HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS 80-84HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS 86-90HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS 92-96HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS FSNP large cabiinet.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS FSNP midium cabinet.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS FSNP small cabinet.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS,FSNP 56-60HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS,FSNP 62-66HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-FSNS,FSNP 68-72HP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RCD-FSN3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RCI-F.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RCI-FSN1Q.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RCI-FSN3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RCI-FSN3Ei.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RCI-FSN3Ek.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RCI-FSN4.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RCI-FSNB4.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RCIM-FSN4.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RCI_FSNK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RCS-FSN.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPC-FSN3%28EU%29.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RPC-FSN3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPC-FSN3E.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RPC-FSNB4.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPDT-RPDV-FSNB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPF-1.0-2.5FSNE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPF-1.0~2.5FSNE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPF-FSN2E.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPF.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPFC %281%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPFC %282%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPFC %283%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPFI-1.0-2.5FSNE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPFI-1.0~2.5FSNE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPFI-FSN2E.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPFI.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI 20_1_5_3_0FSNK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-%280.6-1.5%29FSN5E.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-%282.0-3.0%29FSN5E.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-%284.0-6.0%29FSN5E.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-0.4FSN5E.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-06-1.5-FSN4E.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-16-20MD.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-8 10FSN1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-8-10.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-D&amp;F.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-FSN2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-FSN3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-FSNB2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-FSNB3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI-N.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPIM-FSN3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPIM.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPIZ-FSN1Q.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPIZ-FSNQS.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI_20-60.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPI_4.0_10.0FSNK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPK-1.0-1.5FSNSM3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPK-2.0-4.0FSN4M.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPK-2.0-4.0FSNSM3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPK-FSN%28H%293M%28EU%29.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RPK-FSN%28H%293M_%280_8-1_0%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPK-FSN%28H%293M_%281_5%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPK-FSN%28H%293M_%282_0-4_0%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPK_FSNK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPV-N.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RWHT-5.0VNFE.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RWLT-10.0VNE.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RWLT-3.0VNE.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\RWLT-5.0VNE.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\SFmini%28Hitachi%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Sfmini.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Side Flow ODU%28FSNMA%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\wall mounted %281%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\wall mounted %282%29.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Wall Mounted.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YDCC.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YDCF.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YDCK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YDCP.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YDDK.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YDEC.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YDHW-2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YDHW.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YDVC.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVAHP 1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVAHP 2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVAHP 3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVAHP 4.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVOH-HM.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVOH-HS.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVOH-HSME.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVOH-VNEE-2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVOH-VNEE-3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVOH-VVEE.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVOH080-120.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVOH140-180.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVOH200-240.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVOH260-480.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVOH500-720.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YVOH740-960.png" />
+    <Resource Include="Image\TypeImages\CHbox.png" />
+    <Resource Include="Image\TypeImages\HeaderBranch_4Seperator.png" />
+    <Resource Include="Image\TypeImages\HeaderBranch_8Seperator.png" />
+    <Resource Include="Image\TypeImages\YBranch_Seperator.png" />
+    <Resource Include="Image\TypeImages\MultiCHbox.png" />
+    <Resource Include="Image\delete.gif" />
+    <Resource Include="Image\TypeImages\IDU-RPK_FSNK1_2.png" />
+    <Resource Include="Image\TypeImages\FLoor-concealed.png" />
+    <Resource Include="Image\TypeImages\All-fresh-type.png" />
+    <Resource Include="Image\TypeImages\Compact-Ducted.png" />
+    <Resource Include="Image\TypeImages\Ducted-Unit.png" />
+    <Resource Include="Image\TypeImages\high-wall.png" />
+    <Resource Include="Image\TypeImages\RPFC-%281%29.png" />
+    <Resource Include="Image\TypeImages\wall-mounted-%281%29.png" />
+    <Resource Include="Image\TypeImages\Mid &amp; High ESP Ducted.png" />
+    <Resource Include="Image\TypeImages\RPFC %283%29.png" />
+    <Resource Include="Image\TypeImages\high-wall-large.png" />
+    <Resource Include="Image\TypeImages\Tabular_view_Icon_CC.png" />
+    <Resource Include="Image\Tabular_view_Icon_CC.png" />
+    <Resource Include="Image\TypeImageProjectCreation\KPI-JCH-ES.png" />
+    <Resource Include="Image\TypeImageProjectCreation\KPI-HAPQ.png" />
+    <Resource Include="Image\TypeImages\Cooling only front flow Medium%28Hitachi%29-copy.png" />
+    <Resource Include="Image\TypeImages\Cooling only front flow Small %28Hitachi%29-copy.png" />
+    <Resource Include="Image\TypeImages\front flow %28Hitachi-1%29.png" />
+    <Resource Include="Image\TypeImages\front flow%28Hitachi%29.png" />
+    <Resource Include="Image\TypeImages\front flow%28Hitachi-1%29.png" />
+    <Resource Include="Image\TypeImages\front flow%28Hitachi-2%29.png" />
+    <Resource Include="Image\TypeImages\front flow%28Hitachi-4%29.png" />
+    <Resource Include="Image\TypeImages\front flow%28York-1%29.png" />
+    <Resource Include="Image\TypeImages\front flow%28York-2%29.png" />
+    <Resource Include="Image\TypeImages\front flow%28York-4%29.png" />
+    <Resource Include="Image\TypeImages\NodeCloseIcon.png" />
+    <Resource Include="Image\TypeImages\NodeExpandIcon.png" />
+    <Resource Include="Image\TypeImages\Front-flow-cooling-only-large.png" />
+    <Resource Include="Image\Clear.png" />
+    <Resource Include="Image\TypeImages\Accesories_Image.png" />
+    <Resource Include="Image\TypeImages\GA_Drawing.png" />
+    <Resource Include="Image\TypeImageProjectCreation\cooling only large capacity.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-4-6FS%28V%29NME.png" />
+    <Resource Include="Image\Plus_Icon_CC.png" />
+    <Resource Include="Image\TypeImageProjectCreation\14_Wall_mounted_small.png" />
+    <Resource Include="Image\TypeImageProjectCreation\15_Wall_mounted_medium.png" />
+    <Resource Include="Image\TypeImageProjectCreation\16_Wall_mounted_large.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-14~16-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-20~24-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-26~28-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-26~30-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-32~36-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-38~42-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-44~48-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-50~54-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-56~60-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-62~66-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-68~72-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-74~78-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-8-12FSXNME.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-80~84-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-86~90-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-8~12-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RAS-92~96-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPK-0.4-1.0FSN4M.png" />
+    <Resource Include="Image\TypeImageProjectCreation\RPK-1.5FSN4M.png" />
+    <Resource Include="Image\TypeImages\14_Wall_mounted_small.png" />
+    <Resource Include="Image\TypeImages\15_Wall_mounted_medium.png" />
+    <Resource Include="Image\TypeImages\Cooling only front flow Small %28Hitachi%29.png" />
+    <Resource Include="Image\TypeImages\cooling only large capacity.png" />
+    <Resource Include="Image\TypeImages\4-way-cassette.png" />
+    <Resource Include="Image\TypeImages\0043_90_4-WAY.png" />
+    <Resource Include="Image\TypeImages\0072_90_1-WAY.png" />
+    <Resource Include="Image\TypeImages\16_Wall_mounted_large.png" />
+    <Resource Include="Image\TypeImages\2-Way-Cassette.png" />
+    <Resource Include="Image\TypeImages\4-way-mini-cassette-photo_sm.png" />
+    <Resource Include="Image\TypeImages\Cooling only front flow Medium%28Hitachi%29.png" />
+    <Resource Include="Image\TypeImages\Floor-type.png" />
+    <Resource Include="Image\TypeImages\Front-flow-cooling-only-medium.png" />
+    <Resource Include="Image\TypeImages\Front-flow-cooling-only-small.png" />
+    <Resource Include="Image\TypeImages\front-flow.png" />
+    <Resource Include="Image\TypeImages\FSNYW1Q-1.png" />
+    <Resource Include="Image\TypeImages\FSNYW1Q-2.png" />
+    <Resource Include="Image\TypeImages\Ceiling-Suspended-photo.png" />
+    <Resource Include="Image\TypeImages\All fresh type.png" />
+    <Resource Include="Image\TypeImages\0043_90_4 WAY.png" />
+    <Resource Include="Image\TypeImages\0072_90_1 WAY.png" />
+    <Resource Include="Image\TypeImages\4 way mini cassette photo_sm.png" />
+    <Resource Include="Image\TypeImages\4-way cassette.png" />
+    <Resource Include="Image\TypeImages\Ceiling Suspended photo.png" />
+    <Resource Include="Image\TypeImages\Ducted Unit.png" />
+    <Resource Include="Image\TypeImages\FLoor concealed.png" />
+    <Resource Include="Image\TypeImages\Floor type.png" />
+    <Resource Include="Image\TypeImages\Front flow cooling only large.png" />
+    <Resource Include="Image\TypeImages\Front flow cooling only medium.png" />
+    <Resource Include="Image\TypeImages\Front flow cooling only small.png" />
+    <Resource Include="Image\TypeImages\front flow.png" />
+    <Resource Include="Image\TypeImages\FSNYW1Q 1.png" />
+    <Resource Include="Image\TypeImages\FSNYW1Q 2.png" />
+    <Resource Include="Image\TypeImages\Compact Ducted.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H2_H1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H2_H2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H2_H2_H2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H3_H2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H3_H2_H2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H3_H2_H2_H2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H3_H3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H3_H3_H2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H3_H3_H2_H2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H3_H3_H3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H3_H3_H3_H2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\H3_H3_H3_H3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HC1.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\HC1_HC1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HC2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HC2_HC1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HC2_HC2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HC2_HC2_HC2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\HC2_HC2_HC2_HC2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\HC3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HC3_HC2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\HC3_HC2_HC2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\HC3_HC2_HC2_HC2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\HC3_HC3.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\HC3_HC3_HC2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\HC3_HC3_HC2_HC2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\HC3_HC3_HC3.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\HC3_HC3_HC3_HC2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\HC3_HC3_HC3_HC3.PNG" />
+    <Resource Include="Image\ControllerSwitchImage\PC-ARFPE.PNG" />
+    <Resource Include="Image\ControllerSwitchImage\PC-ARFWE.PNG" />
+    <Resource Include="Image\ControllerSwitchImage\PC-ARH.PNG" />
+    <Resource Include="Image\ControllerSwitchImage\PC-AWR.PNG" />
+    <Resource Include="Image\ControllerSwitchImage\PC-LH3A.PNG" />
+    <Resource Include="Image\ControllerSwitchImage\PC-LH3B.PNG" />
+    <Resource Include="Image\ControllerImage\BAC001_002.png" />
+    <Resource Include="Image\ControllerImage\CC_controller.png" />
+    <Resource Include="Image\ControllerImage\Central station DX1.png" />
+    <Resource Include="Image\ControllerImage\Central station DX2.png" />
+    <Resource Include="Image\ControllerImage\Central station DX3.png" />
+    <Resource Include="Image\ControllerImage\CS-NET MANAGER.PNG" />
+    <Resource Include="Image\ControllerImage\CS-NET WEB.png" />
+    <Resource Include="Image\ControllerImage\CSNET2T10.png" />
+    <Resource Include="Image\ControllerImage\CSNET2T15.png" />
+    <Resource Include="Image\ControllerImage\HARC-BXE.png" />
+    <Resource Include="Image\ControllerImage\HARC70-P1.png" />
+    <Resource Include="Image\ControllerImage\Harc70BX-01.png" />
+    <Resource Include="Image\ControllerImage\HC-A%288-64%29MB.png" />
+    <Resource Include="Image\ControllerImage\HC-A16KNX.PNG" />
+    <Resource Include="Image\ControllerImage\HC-A64BNP1.png" />
+    <Resource Include="Image\ControllerImage\HC-A64LNP.png" />
+    <Resource Include="Image\ControllerImage\HC-A64NET_HC-A8_64MB.PNG" />
+    <Resource Include="Image\ControllerImage\HC-A8-64MB.png" />
+    <Resource Include="Image\ControllerImage\KNX001.PNG" />
+    <Resource Include="Image\ControllerImage\On_Off_controller.png" />
+    <Resource Include="Image\ControllerImage\PC-A1IO.PNG" />
+    <Resource Include="Image\ControllerImage\psc-5hr.png" />
+    <Resource Include="Image\ControllerImage\PSC-5S.png" />
+    <Resource Include="Image\ControllerImage\PSC-6RAD.png" />
+    <Resource Include="Image\ControllerImage\PSC-A128EX.png" />
+    <Resource Include="Image\ControllerImage\PSC-A128WEB3.png" />
+    <Resource Include="Image\ControllerImage\PSC-A128WX2.png" />
+    <Resource Include="Image\ControllerImage\PSC-A160BNP1.png" />
+    <Resource Include="Image\ControllerImage\PSC-A160WEB1.png" />
+    <Resource Include="Image\ControllerImage\PSC-A16RS.png" />
+    <Resource Include="Image\ControllerImage\PSC-A16RS1.png" />
+    <Resource Include="Image\ControllerImage\PSC-A1T.png" />
+    <Resource Include="Image\ControllerImage\PSC-A32MN.png" />
+    <Resource Include="Image\ControllerImage\PSC-A64.png" />
+    <Resource Include="Image\ControllerImage\PSC-A64GT.png" />
+    <Resource Include="Image\ControllerImage\PSC-A64S.png" />
+    <Resource Include="Image\ControllerImage\PSC-A64S1.png" />
+    <Resource Include="Image\ControllerImage\PSC-A80T.png" />
+    <Resource Include="Image\ControllerImage\PSC-AD128EX.png" />
+    <Resource Include="Image\ControllerImage\PSC-AS2048WXB 1.png" />
+    <Resource Include="Image\ControllerImage\PSC-AS2048WXB 2.png" />
+    <Resource Include="Image\ControllerImage\RC-H01CT.png" />
+    <Resource Include="Image\ControllerImage\RC-H01XD.png" />
+    <Resource Include="Image\TypeImageProjectCreation\mini_VRF_left_3-4hp.png" />
+    <Resource Include="Image\TypeImageProjectCreation\mini_VRF_left_4.5-6hp.png" />
+    <Resource Include="Image\TypeImageProjectCreation\mini_VRF_left_6.5-7hp.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Y1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Y2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Y2_Y1.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\Y2_Y2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\Y2_Y2_Y2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\Y3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\Y3_Y2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\Y3_Y2_Y2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\Y3_Y2_Y2_Y2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\Y3_Y3.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\Y3_Y3_Y2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\Y3_Y3_Y2_Y2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\Y3_Y3_Y3.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\Y3_Y3_Y3_Y2.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\Y3_Y3_Y3_Y3.PNG" />
+    <Resource Include="Image\TypeImageProjectCreation\YC1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC2_YC1.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC2_YC2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC2_YC2_YC2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC3_YC2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC3_YC2_YC2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC3_YC3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC3_YC3_YC2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC3_YC3_YC2_YC2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC3_YC3_YC3.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC3_YC3_YC3_YC2.png" />
+    <Resource Include="Image\TypeImageProjectCreation\YC3_YC3_YC3_YC3.png" />
+    <Resource Include="Image\TypeImages\H1.png" />
+    <Resource Include="Image\TypeImages\H2.png" />
+    <Resource Include="Image\TypeImages\H3.png" />
+    <Resource Include="Image\TypeImages\HC1.png" />
+    <Resource Include="Image\TypeImages\HC2.png" />
+    <Resource Include="Image\TypeImages\HC3.png" />
+    <Resource Include="Image\TypeImages\Central station DX1.png" />
+    <Resource Include="Image\TypeImages\Central station DX2.png" />
+    <Resource Include="Image\TypeImages\Central station DX3.png" />
+    <Resource Include="Image\TypeImages\auto wiring icon.png" />
+    <Resource Include="Image\TypeImages\BAC001_002.png" />
+    <Resource Include="Image\TypeImages\CC_controller.png" />
+    <Resource Include="Image\TypeImages\CS-NET MANAGER.PNG" />
+    <Resource Include="Image\TypeImages\CS-NET WEB.png" />
+    <Resource Include="Image\CC_minus.png" />
+    <Resource Include="Image\cc_plus.png" />
+    <Resource Include="Image\HE_icon.png" />
+    <Resource Include="Image\PinFill.png" />
+    <Content Include="Image\TypeImages\HeaderBranch_4Seperator.svg" />
+    <Content Include="Image\TypeImages\HeaderBranch_8Seperator.svg" />
+    <Resource Include="Image\TypeImages\HNBQ 12-16, HNCQ 14-18.png" />
+    <Resource Include="Image\TypeImages\HNBQ 18-22, HNCQ 20-24.png" />
+    <Resource Include="Image\TypeImages\HNBQ 24-32, HNCQ 30-34.png" />
+    <Resource Include="Image\TypeImages\HNBQ 34, HNCQ 36-42.png" />
+    <Resource Include="Image\TypeImages\HNBQ 36-40, HNCQ 44-48.png" />
+    <Resource Include="Image\TypeImages\HNBQ 42-48, HNCQ 50.png" />
+    <Resource Include="Image\TypeImages\HNBQ 50, HNCQ 52-58.png" />
+    <Resource Include="Image\TypeImages\HNBQ 52, HNCQ 60-66.png" />
+    <Resource Include="Image\TypeImages\HNBQ 54-60, HNCQ 68-72.png" />
+    <Resource Include="Image\TypeImages\HNBQ 62, HNCQ 74.png" />
+    <Resource Include="Image\TypeImages\HNBQ 64-66, HNCQ 76-78.png" />
+    <Resource Include="Image\TypeImages\HNBQ 68-70.png" />
+    <Resource Include="Image\TypeImages\HNBQ 72-88, HNCQ 80-96.png" />
+    <Resource Include="Image\TypeImages\HNBQ 8-10, HNCQ 8-12.png" />
+    <Resource Include="Image\TypeImages\HNCQ 14-18.png" />
+    <Resource Include="Image\TypeImages\HNCQ 20-24.png" />
+    <Resource Include="Image\TypeImages\HNCQ 26-28.png" />
+    <Resource Include="Image\TypeImages\HNCQ 26-48.png" />
+    <Resource Include="Image\TypeImages\HNCQ 50-72.png" />
+    <Resource Include="Image\TypeImages\HNCQ 74-96.png" />
+    <Resource Include="Image\TypeImages\HNCQ 8-12.png" />
+    <Resource Include="Image\TypeImages\IVXmini HAPQ.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 12-16.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 18.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 20-22.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 24-32.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 34.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 36.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 38-48.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 50.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 52.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 54.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 56-60.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 62.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 64-66.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 68-70.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 72.png" />
+    <Resource Include="Image\TypeImages\JNBBQ 8-10.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 080-120.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 140-180.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 200-240.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 260-280.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 300-340.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 360-420.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 440-480.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 500.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 520-580.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 600-660.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 680-720.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 740.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 760-780.png" />
+    <Resource Include="Image\TypeImages\JVOHQ 800-960.png" />
+    <Resource Include="Image\TypeImages\Low ambient VRF 2 modules.png" />
+    <Resource Include="Image\TypeImages\Low ambient VRF 3 modules.png" />
+    <Resource Include="Image\TypeImages\module Combination 2.png" />
+    <Resource Include="Image\TypeImages\module combination 3.png" />
+    <Resource Include="Image\TypeImages\module type combination 2%28Hitachi%29.png" />
+    <Resource Include="Image\TypeImages\module type combination 3%28Hitachi%29.png" />
+    <Resource Include="Image\TypeImages\module type%28Hitachi%29.png" />
+    <Resource Include="Image\TypeImages\RAS-14-16FSXN1 RAS-8-12FSXNH - Logo.png" />
+    <Resource Include="Image\TypeImages\RAS-22-26FSXN1 RAS-14FSXNH W_RAS0714.png" />
+    <Resource Include="Image\TypeImages\RAS-28-32FSXN1 RAS-16-24FSXNH W_RAS0715.png" />
+    <Resource Include="Image\TypeImages\RAS-46-48FSXN1 RAS-26-36FSXNH W_RAS0719.png" />
+    <Resource Include="Image\TypeImages\RAS-8-12FSXN1 RAS-5-6FSXNH - Logo.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNP 56-58HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNP 60HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNP 62HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNP 64-72HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS 56-60HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS 62-66HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS 68-72HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS 74-78HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS 80-84HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS 86-90HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS 92-96HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS FSNP midium cabinet.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS FSNP small cabinet.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS,FSNP 56-60HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS,FSNP 62-66HP.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS,FSNP 68-72HP.png" />
+    <Resource Include="Image\TypeImages\RPI-%280.6-1.5%29FSN5E.png" />
+    <Resource Include="Image\TypeImages\Side Flow ODU%28FSNMA%29.png" />
+    <Resource Include="Image\TypeImages\RPI-%284.0-6.0%29FSN5E.png" />
+    <Resource Include="Image\TypeImages\YBranch_Seperator_Symmetrical.png" />
+    <Resource Include="Image\TypeImages\RPFC %282%29.png" />
+    <Resource Include="Image\TypeImages\RPI-0.4FSN5E.png" />
+    <Resource Include="Image\TypeImages\R-Way Cassette.png" />
+    <Resource Include="Image\TypeImages\RPI 20_1_5_3_0FSNK.png" />
+    <Resource Include="Image\TypeImages\Installation_Guide.png" />
+    <Resource Include="Image\TypeImages\Sales_Data.png" />
+    <Resource Include="Image\TypeImages\RAS-4-6FS%28V%29NME.png" />
+    <Resource Include="Image\TypeImages\KPI-HAPQ.png" />
+    <Resource Include="Image\TypeImages\RAS-14~16-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-20~24-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-26~28-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-26~30-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-32~36-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-38~42-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-44~48-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-50~54-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-56~60-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-62~66-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-68~72-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-74~78-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-8-12FSXNME.png" />
+    <Resource Include="Image\TypeImages\RAS-80~84-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-86~90-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-8~12-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RAS-92~96-FSNSB-FSNCB.png" />
+    <Resource Include="Image\TypeImages\RPK-0.4-1.0FSN4M.png" />
+    <Resource Include="Image\TypeImages\RPK-1.5FSN4M.png" />
+    <Resource Include="Image\TypeImages\Wall Mounted.png" />
+    <Resource Include="Image\TypeImages\high wall.png" />
+    <Resource Include="Image\TypeImages\RCI-FSN4.PNG" />
+    <Resource Include="Image\TypeImages\In-the-ceiling type.png" />
+    <Resource Include="Image\TypeImages\high wall large.png" />
+    <Resource Include="Image\TypeImages\IDU RPK_FSNK1_2.png" />
+    <Resource Include="Image\TypeImages\johnson_u_0007 Indoor-sized.png" />
+    <Resource Include="Image\TypeImages\KPI SMZ.png" />
+    <Resource Include="Image\TypeImages\Low ambient VRF Single module.png" />
+    <Resource Include="Image\TypeImages\module large.png" />
+    <Resource Include="Image\TypeImages\module small.png" />
+    <Resource Include="Image\TypeImages\RAS-FSNS FSNP large cabiinet.png" />
+    <Resource Include="Image\TypeImages\RCI-FSN4 %283%29.PNG" />
+    <Resource Include="Image\TypeImages\RPI-%282.0-3.0%29FSN5E.png" />
+    <Resource Include="Image\TypeImages\RPI-06-1.5-FSN4E.png" />
+    <Resource Include="Image\TypeImages\RPI-8 10FSN1.png" />
+    <Resource Include="Image\TypeImages\RPI_4.0_10.0FSNK.png" />
+    <Resource Include="Image\TypeImages\wall mounted %282%29.png" />
+    <Resource Include="Image\TypeImages\RPFC %281%29.png" />
+    <Resource Include="Image\TypeImages\mini_VRF_left_3-4hp.png" />
+    <Resource Include="Image\TypeImages\mini_VRF_left_4.5-6hp.png" />
+    <Resource Include="Image\TypeImages\mini_VRF_left_6.5-7hp.png" />
+    <Resource Include="Image\TypeImages\Y1.png" />
+    <Resource Include="Image\TypeImages\Y2.png" />
+    <Resource Include="Image\TypeImages\Y2_Y1.PNG" />
+    <Resource Include="Image\TypeImages\Y2_Y2.PNG" />
+    <Resource Include="Image\TypeImages\Y2_Y2_Y2.PNG" />
+    <Resource Include="Image\TypeImages\Y3.png" />
+    <Resource Include="Image\TypeImages\Y3_Y2.PNG" />
+    <Resource Include="Image\TypeImages\Y3_Y2_Y2.PNG" />
+    <Resource Include="Image\TypeImages\Y3_Y2_Y2_Y2.PNG" />
+    <Resource Include="Image\TypeImages\Y3_Y3.PNG" />
+    <Resource Include="Image\TypeImages\Y3_Y3_Y2.PNG" />
+    <Resource Include="Image\TypeImages\Y3_Y3_Y2_Y2.PNG" />
+    <Resource Include="Image\TypeImages\Y3_Y3_Y3.PNG" />
+    <Resource Include="Image\TypeImages\Y3_Y3_Y3_Y2.PNG" />
+    <Resource Include="Image\TypeImages\Y3_Y3_Y3_Y3.PNG" />
+    <Resource Include="Image\TypeImages\psc-5hr.png" />
+    <Resource Include="Image\TypeImages\PSC-5S.png" />
+    <Resource Include="Image\TypeImages\PSC-6RAD.png" />
+    <Resource Include="Image\TypeImages\PSC-A128EX.png" />
+    <Resource Include="Image\TypeImages\PSC-A128WEB3.png" />
+    <Resource Include="Image\TypeImages\PSC-A128WX2.png" />
+    <Resource Include="Image\TypeImages\PSC-A160BNP1.png" />
+    <Resource Include="Image\TypeImages\PSC-A160WEB1.png" />
+    <Resource Include="Image\TypeImages\PSC-A16RS.png" />
+    <Resource Include="Image\TypeImages\PSC-A16RS1.png" />
+    <Resource Include="Image\TypeImages\PSC-A1T.png" />
+    <Resource Include="Image\TypeImages\PSC-A32MN.png" />
+    <Resource Include="Image\TypeImages\PSC-A64GT.png" />
+    <Resource Include="Image\TypeImages\PSC-A64S.png" />
+    <Resource Include="Image\TypeImages\PSC-A64S1.png" />
+    <Resource Include="Image\TypeImages\PSC-A80T.png" />
+    <Resource Include="Image\TypeImages\PSC-AD128EX.png" />
+    <Resource Include="Image\TypeImages\PSC-AS2048WXB 1.png" />
+    <Resource Include="Image\TypeImages\PSC-AS2048WXB 2.png" />
+    <Resource Include="Image\TypeImages\KNX001.PNG" />
+    <Resource Include="Image\TypeImages\Locate.png" />
+    <Resource Include="Image\TypeImages\On_Off_controller.png" />
+    <Resource Include="Image\TypeImages\Pan tool.png" />
+    <Resource Include="Image\TypeImages\PC-A1IO.PNG" />
+    <Resource Include="Image\TypeImages\RC-H01CT.png" />
+    <Resource Include="Image\TypeImages\RC-H01XD.png" />
+    <Content Include="Image\TypeImages\YBranch.svg" />
+    <Content Include="Image\TypeImages\YBranchMirror.svg" />
+    <Content Include="Image\TypeImages\YBranchVertical.svg" />
+    <Content Include="Image\TypeImages\YBranchVerticalMirror.svg" />
+    <Content Include="Image\TypeImages\YBranch_Seperator.svg" />
+    <Content Include="Image\TypeImages\YBranch_Seperator_Old.svg" />
+    <Resource Include="Image\TypeImages\YVAHP 1.png" />
+    <Resource Include="Image\TypeImages\YVAHP 2.png" />
+    <Resource Include="Image\TypeImages\YVAHP 3.png" />
+    <Resource Include="Image\TypeImages\YVAHP 4.png" />
+    <Content Include="Image\TypeImages\YBranch_Seperator_Symmetrical.svg" />
+    <Resource Include="LanguageData\LanguageNames.xml" />
+    <Resource Include="LanguageData\LangEN.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="LanguageData\LangPT_BR.xml" />
+    <Resource Include="LanguageData\LangIT.xml" />
+    <Resource Include="LanguageData\LangFR.xml" />
+    <Resource Include="LanguageData\LangDE.xml" />
+    <Resource Include="LanguageData\LangSP.xml" />
+    <Resource Include="LanguageData\LangTK.xml" />
+    <Resource Include="LanguageData\LangZH.xml" />
+    <Resource Include="LanguageData\LangZHT.xml" />
+    <Resource Include="Image\TypeImages\YC1.png" />
+    <Resource Include="Image\TypeImages\YC2.png" />
+    <Resource Include="Image\TypeImages\YC2_YC1.png" />
+    <Resource Include="Image\TypeImages\YC2_YC2.png" />
+    <Resource Include="Image\TypeImages\YC2_YC2_YC2.png" />
+    <Resource Include="Image\TypeImages\YC3.png" />
+    <Resource Include="Image\TypeImages\YC3_YC2.png" />
+    <Resource Include="Image\TypeImages\YC3_YC2_YC2.png" />
+    <Resource Include="Image\TypeImages\YC3_YC3.png" />
+    <Resource Include="Image\TypeImages\YC3_YC3_YC2.png" />
+    <Resource Include="Image\TypeImages\YC3_YC3_YC2_YC2.png" />
+    <Resource Include="Image\TypeImages\YC3_YC3_YC3.png" />
+    <Resource Include="Image\TypeImages\YC3_YC3_YC3_YC2.png" />
+    <Resource Include="Image\TypeImages\YC3_YC3_YC3_YC3.png" />
+    <Resource Include="Image\VRFoncc.PNG" />
+    <Content Include="Project.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Image\VRF.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Path 111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Path 112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\Path 113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="JCHVRF\Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

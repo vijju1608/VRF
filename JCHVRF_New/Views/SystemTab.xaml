@@ -1,0 +1,153 @@
+﻿<UserControl x:Class="JCHVRF_New.Views.SystemTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JCHVRF_New.Views"
+             xmlns:view="clr-namespace:JCHVRF_New.Views"
+             xmlns:viewModel="clr-namespace:JCHVRF_New.ViewModels"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ext="clr-namespace:JCHVRF_New.Common.UI.Extensions"
+             mc:Ignorable="d" 
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             d:DesignHeight="300" d:DesignWidth="300" Loaded="SystemTab_Loaded" Unloaded="SystemTab_Unloaded" >
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <TextBlock x:Key="CursorGrab" Cursor="/../Common/UI/Resources/Cursors/grab (1).cur"/>
+            <TextBlock x:Key="CursorGrabbing" Cursor="/../Common/UI/Resources/Cursors/Hand Move Grab.cur"/>            
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <DockPanel LastChildFill="True">
+
+        <!-- Moved this code to SystemTab.xaml-->
+        <Border  Visibility="{Binding Path=HeatExchangerReqdVis}" DockPanel.Dock="Top" Height="40" BorderThickness="0.5" BorderBrush="LightGray">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="160"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <!--<StackPanel Grid.Row="0" Grid.Column="0">
+                    <TextBlock Text="Regular Mode"  Height="17" Width="100"  Margin="30,5,10,10" FontSize="12" FontStyle="Normal" HorizontalAlignment="Center"/>
+                </StackPanel>-->
+                <StackPanel Visibility="{Binding Path=HeatExchangerReqdVis}" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" Margin="10,0,10,0">
+                    <ToggleButton Content="All" IsChecked="{Binding IsAllSelected}" Style="{StaticResource SelectorButton}" Visibility="{Binding Path=SelectedVRFType}"/>
+                    <ToggleButton Margin="10,0,0,0" IsChecked="{Binding IsIDUSelected}" Content="IDU" Style="{StaticResource SelectorButton}" Visibility="{Binding Path=SelectedVRFType}"/>
+                    <ToggleButton Margin="10,0,0,0" IsChecked="{Binding IsPipeSelected}" Content="Pipe" Style="{StaticResource SelectorButton}" Visibility="{Binding Path=SelectedVRFType}"/>
+
+                    <Button Name="btnAllSYS" Style="{StaticResource styleColorChangeOnFloorButtonStyle}"  Height="25" Width="Auto"  Visibility="{Binding Path=SelectedControllerType}"  Command="{Binding OnAllSysClickCommand}" Margin="10,0,0,0" Click="btnAllSYS_Click" >
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="All Systems"  Height="17"  Margin="3,0,3,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                            <Border Height="17" CornerRadius="5" BorderThickness="1" Background="#1c65b0" Margin="3,0,3,0" >
+                                <TextBlock Text="{Binding AllSystemCount}" Height="17" Margin="3,0,3,0" FontSize="12" Background="#1c65b0" Foreground="White" Padding="2,0,2,0"/>
+                            </Border>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="btnHeatExchanger" Style="{StaticResource styleColorChangeOnFloorButtonStyle}"  Height="25" Width="Auto"  Visibility="{Binding Path=SelectedControllerType}"  Command="{Binding OnHEClickCommand}" Margin="10,0,0,0" Click="btnHeatExchanger_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Heat Exchanger"  Height="17"  Margin="3,0,3,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                            <Border Height="17" CornerRadius="5" BorderThickness="1" Background="#1c65b0" Margin="3,0,3,0" >
+                                <TextBlock Text="{Binding HECount}" Height="17" Margin="3,0,3,0" FontSize="12" Background="#1c65b0" Foreground="White" Padding="2,0,2,0"/>
+                            </Border>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="btnVRF" Style="{StaticResource styleColorChangeOnFloorButtonStyle}"  Height="25" Width="Auto"  Visibility="{Binding Path=SelectedControllerType}"  Command="{Binding OnVRFClickCommand}" Margin="10,0,0,0" Click="btnVRF_Click" >
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="VRF"  Height="17"  Margin="3,0,3,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                            <Border Height="17" CornerRadius="5" BorderThickness="1" Background="#1c65b0" Margin="3,0,3,0" >
+                                <TextBlock Text="{Binding VRFCount}" Height="17" Margin="3,0,3,0" FontSize="12" Background="#1c65b0" Foreground="White" Padding="2,0,2,0"/>
+                            </Border>
+                        </StackPanel>
+                    </Button>
+                    <Button Name="btnAllCC" Style="{StaticResource styleColorChangeBlueWhiteOnFloorButtonStyle}"  Height="25" Width="Auto"  Visibility="{Binding Path=SelectedControllerType}"  Command="{Binding OnCCClickCommand}" Margin="10,0,0,0" Background="White" Click="btnAllCC_Click">
+                        <TextBlock Text="All Controllers"  Height="17"  Margin="3,0,3,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                    </Button>
+                    <Button Name="btnBACNET" Style="{StaticResource styleColorChangeBlueWhiteOnFloorButtonStyle}"  Height="25" Width="75" Visibility="{Binding Path=FilterBacnet}" Command="{Binding OnBACNETClickCommand}" Margin="10,0,0,0" Background="White" Click="btnBACNET_Click">
+                        <TextBlock Text="BACNET"  Height="17"  Margin="0,0,0,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                    </Button>
+                    <Button Name="btnNoBMS" Style="{StaticResource styleColorChangeBlueWhiteOnFloorButtonStyle}"  Height="25" Width="75" Visibility="{Binding Path=FilterNoBMS}" Command="{Binding OnNOBMSClickCommand}" Margin="10,0,0,0" Background="White" Click="btnNoBMS_Click">
+                        <TextBlock Text="No BMS"  Height="17"  Margin="0,0,0,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                    </Button>
+                    <Button Name="btnModbus" Style="{StaticResource styleColorChangeBlueWhiteOnFloorButtonStyle}"  Height="25" Width="75" Visibility="{Binding Path=FilterModbus}" Command="{Binding OnMODBUSClickCommand}" Margin="10,0,0,0" Background="White" Click="btnModbus_Click">
+                        <TextBlock Text="ModBus"  Height="17"  Margin="0,0,0,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                    </Button>
+                    <Button Name="btnKNX" Style="{StaticResource styleColorChangeBlueWhiteOnFloorButtonStyle}"  Height="25" Width="75" Visibility="{Binding Path=FilterKnx}" Command="{Binding OnKNXClickCommand}" Margin="10,0,0,0" Background="White" Click="btnKNX_Click" >
+                        <TextBlock Text="KNX"  Height="17"  Margin="0,0,0,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                    </Button>
+                    <Button Name="btnLonWorks" Style="{StaticResource styleColorChangeBlueWhiteOnFloorButtonStyle}"  Height="25" Width="75" Visibility="{Binding Path=FilterLonWorks}" Command="{Binding OnLonWorksClickCommand}" Margin="10,0,0,0" Background="White" Click="btnLonWorks_Click">
+                        <TextBlock Text="Lon Works"  Height="17"  Margin="0,0,0,0" FontSize="12" FontStyle="Normal"></TextBlock>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0" Grid.Row="0" Grid.Column="2">
+                    <TextBox ext:JCHInputService.InputMask="AlphaNumeric" MaxLength="30" md:HintAssist.Hint="Search"  x:Name ="txtSearch" FontSize="12" Opacity="0.6" Width="150"  Height="25" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                          Visibility="{Binding Path=HeatExchangerReqdVis}" VerticalContentAlignment="Center" VerticalAlignment="Center" >
+                    </TextBox>
+                    <Button Name="BtnSearch" Background="Transparent" BorderThickness="0" VerticalAlignment="Center" Margin="-40,0,0,0" Command="{Binding OnSearchClickCommand}" >
+                        <fa:ImageAwesome Icon="Search" HorizontalAlignment="Left"   VerticalAlignment="Center"  Height="15" Width="15" Visibility="{Binding HeatExchangerReqdVis}"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+        </Border>
+        <Border DockPanel.Dock="Top" Height="Auto" BorderThickness="0.5" BorderBrush="LightGray" Visibility="{Binding Path=HeatExchangerReqdVis}">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Visibility="{Binding Path=HeatExchangerReqdVis}" >
+                <StackPanel Orientation="Horizontal" >
+                    <ItemsControl Background="{Binding EquipmentListBckClr}" ItemsSource="{Binding EquipmentList}" HorizontalContentAlignment="Left" >
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                </StackPanel>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate >
+                                <Border BorderThickness=".3" BorderBrush="LightGray">
+                                    <!--<StackPanel Orientation="Horizontal">-->
+                                    <Border CornerRadius="3" BorderThickness="2" Style="{StaticResource styleBorderEuipmentsListonMouseOver}">
+                                        <StackPanel  Orientation="Vertical" Width="Auto" ToolTip="{Binding imageName}" Cursor="Hand" MouseLeftButtonDown="DragImage" GiveFeedback="StackPanel_GiveFeedback" >
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="{Binding SysStatusIcon}" Height="15" Width="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,5,0,0"></Image>
+                                                <Image  Height="35" Width="60" Source="{Binding imagePath}" ContextMenu="{Binding imageName}" Margin="0,5,20,0" MouseDown="SelectLineStyle"/>
+                                            </StackPanel>
+                                            <TextBlock Height="Auto" Width="Auto" MaxWidth="60" TextAlignment="Center" TextTrimming="None"  Margin="0,0,0,0" FontSize="10" FontStretch="Expanded" Text="{Binding imageName}" TextWrapping="Wrap" FontStyle="Normal" HorizontalAlignment="Center"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <!--<Separator Background="Black" BorderThickness="1" Height="40" Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />-->
+                                    <!--</StackPanel>-->
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+        <Border>
+
+            <view:ucDesignerCanvas x:Name="designerCanvas"></view:ucDesignerCanvas>
+            <!--<Grid HorizontalAlignment="Right" Width="50" Margin="0,0,10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="1*"></RowDefinition>
+                        <RowDefinition Height="4*"></RowDefinition>
+                    </Grid.RowDefinitions>          
+                    <Image Grid.Row="0" Source="/Image/TypeImages/Wiring.png" Name="ToggleImage" VerticalAlignment="Top" Height="50" Width="50" Margin="6,72,5,0"></Image>
+                    <Image Grid.Row="1" Source="/Image/TypeImages/Pann.png" VerticalAlignment="Top" Name="btnPanning" Width="50" Height="50" Margin="0,5,0,0"  />
+                    <Image Grid.Row="2" Source="/Image/TypeImages/ZoomIn.png" VerticalAlignment="Bottom" Name="btnZoomIn" Width="60" Height="60" Margin="0,0,0,-30"  />
+                    <Image Grid.Row="3" Source="/Image/TypeImages/ZoomOut.png" VerticalAlignment="Top" Name="btnZoomOut" Width="60" Height="60" Margin="0,5,0,0"  />
+                    <Image Grid.Row="4" Source="/Image/TypeImages/ReAlign.png" VerticalAlignment="Top" Name="btnReAlign" Width="50" Height="50" Margin="0,10,0,0" />
+                </Grid>-->
+
+        </Border>
+
+    </DockPanel>
+</UserControl>

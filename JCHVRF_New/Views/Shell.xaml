@@ -1,0 +1,22 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:models="clr-namespace:JCHVRF_New.Model"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:Converters="clr-namespace:MaterialDesignThemes.Wpf.Converters;assembly=MaterialDesignThemes.Wpf" 
+        x:Class="JCHVRF_New.Views.Shell"
+        xmlns:const="clr-namespace:JCHVRF_New.Common.Constants"
+        mc:Ignorable="d"
+        prism:ViewModelLocator.AutoWireViewModel="True" WindowState="Maximized">
+    <ContentControl prism:RegionManager.RegionName="{x:Static const:RegionNames.MainAppRegion}"/>
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding ShellLoadedCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+</Window>

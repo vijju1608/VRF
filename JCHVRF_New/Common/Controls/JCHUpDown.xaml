@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="JCHVRF_New.Common.Controls.JCHUpDown"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JCHVRF_New.Common.Controls"
+             xmlns:xc="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d"
+             IsEnabled="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:JCHUpDown}, Path=IsEnabled}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="14" Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:JCHUpDown}, Path=Header}"/>
+        <StackPanel Grid.Row="1"  Margin="0,4,0,0" Orientation="Horizontal">
+            <xc:DecimalUpDown Height="40" Width="90" LostFocus="DecimalUpDown_LostFocus" DisplayDefaultValueOnEmptyText="True" DefaultValue="0" Value="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:JCHUpDown}, Path=Value, Mode=TwoWay}" FormatString="N1"/>
+            <TextBlock Margin="5,0,0,0" VerticalAlignment="Center" FontSize="14" Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:JCHUpDown}, Path=UnitText}"/>
+        </StackPanel>
+        <TextBlock Margin="0,2,0,0" Visibility="Collapsed" x:Name="txtError" Grid.Row="2" FontSize="10" Foreground="{StaticResource DangerColor}" Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:JCHUpDown}, Path=ErrorText}"/>
+    </Grid>
+</UserControl>
